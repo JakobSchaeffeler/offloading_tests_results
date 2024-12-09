@@ -1,0 +1,72 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 -c ../cmp-cuda/reference.cpp -o reference.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 -c ../cmp-cuda/su_cdp.cpp -o su_cdp.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 -c ../cmp-cuda/su_gather.cpp -o su_gather.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 -c ../cmp-cuda/su_trace.cpp -o su_trace.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 -c ../cmp-cuda/log.cpp -o log.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 -c ../cmp-cuda/parser.cpp -o parser.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../cmp-cuda -O3 main.o reference.o su_cdp.o su_gather.o su_trace.o log.o parser.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

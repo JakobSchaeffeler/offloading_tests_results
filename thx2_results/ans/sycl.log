@@ -1,0 +1,330 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_output_buffer.o src/multians_output_buffer.cc
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/main.o src/main.cc
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_util.o src/multians_util.cc
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_codetable.o src/multians_codetable.cc
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/ans_encoder.o src/ans_encoder.cc
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_input_buffer.o src/multians_input_buffer.cc
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/ans_table_generator.o src/ans_table_generator.cc
+src/ans_table_generator.cc:141:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  141 |     SYMBOL_TYPE symbols[num_states];
+      |                         ^~~~~~~~~~
+src/ans_table_generator.cc:141:25: note: function parameter 'num_states' with unknown value cannot be used in a constant expression
+src/ans_table_generator.cc:137:12: note: declared here
+  137 |     size_t num_states,
+      |            ^
+1 warning generated.
+src/ans_table_generator.cc:141:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  141 |     SYMBOL_TYPE symbols[num_states];
+      |                         ^~~~~~~~~~
+src/ans_table_generator.cc:141:25: note: function parameter 'num_states' with unknown value cannot be used in a constant expression
+src/ans_table_generator.cc:137:12: note: declared here
+  137 |     size_t num_states,
+      |            ^
+1 warning generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_gpu_decoder.o src/multians_gpu_decoder.cc
+src/multians_gpu_decoder.cc:614:20: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  614 |       input_buffer.get_pointer(),
+      |                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:614:20: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  614 |       input_buffer.get_pointer(),
+      |                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:615:13: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  615 |       table.get_pointer(),
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:615:13: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  615 |       table.get_pointer(),
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:616:17: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  616 |       sync_info.get_pointer(),
+      |                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:616:17: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  616 |       sync_info.get_pointer(),
+      |                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:610:7: error: no matching function for call to 'phase1_decode_subseq'
+  610 |       phase1_decode_subseq(
+      |       ^~~~~~~~~~~~~~~~~~~~
+src/multians_gpu_decoder.cc:192:6: note: candidate function not viable: no known conversion from 'global_ptr<value_type>' (aka 'multi_ptr<const unsigned int, access::address_space::global_space, (access::decorated)2>') to 'std::uint32_t *' (aka 'unsigned int *') for 4th argument
+  192 | void phase1_decode_subseq(
+      |      ^
+  193 |     std::uint32_t subsequence_size,
+  194 |     std::uint32_t total_num_subsequences,
+  195 |     std::uint32_t table_size,
+  196 |     UNIT_TYPE* in_ptr,
+      |     ~~~~~~~~~~~~~~~~~
+src/multians_gpu_decoder.cc:642:24: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  642 |           input_buffer.get_pointer(),
+      |                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:642:24: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  642 |           input_buffer.get_pointer(),
+      |                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:643:17: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  643 |           table.get_pointer(),
+      |                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:643:17: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  643 |           table.get_pointer(),
+      |                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:644:21: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  644 |           sync_info.get_pointer(),
+      |                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:644:21: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  644 |           sync_info.get_pointer(),
+      |                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:645:27: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  645 |           sequence_synced.get_pointer(),
+      |                           ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:645:27: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  645 |           sequence_synced.get_pointer(),
+      |                           ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:637:7: error: no matching function for call to 'phase2_synchronise_blocks'
+  637 |       phase2_synchronise_blocks(
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/multians_gpu_decoder.cc:361:6: note: candidate function not viable: no known conversion from 'global_ptr<value_type>' (aka 'multi_ptr<const unsigned int, access::address_space::global_space, (access::decorated)2>') to 'std::uint32_t *' (aka 'unsigned int *') for 5th argument
+  361 | void phase2_synchronise_blocks(
+      |      ^
+  362 |     std::uint32_t subsequence_size,
+  363 |     std::uint32_t total_num_subsequences,
+  364 |     std::uint32_t table_size,
+  365 |     std::uint32_t num_blocks,
+  366 |     UNIT_TYPE* in_ptr,
+      |     ~~~~~~~~~~~~~~~~~
+src/multians_gpu_decoder.cc:688:19: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  688 |         sync_info.get_pointer(),
+      |                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:688:19: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  688 |         sync_info.get_pointer(),
+      |                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:689:22: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  689 |         output_sizes.get_pointer(),
+      |                      ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:689:22: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  689 |         output_sizes.get_pointer(),
+      |                      ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:720:19: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  720 |         sync_info.get_pointer(),
+      |                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:720:19: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  720 |         sync_info.get_pointer(),
+      |                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:721:22: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  721 |         output_sizes.get_pointer(),
+      |                      ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:721:22: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  721 |         output_sizes.get_pointer(),
+      |                      ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:740:20: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  740 |       input_buffer.get_pointer(),
+      |                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:740:20: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  740 |       input_buffer.get_pointer(),
+      |                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:741:21: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  741 |       output_buffer.get_pointer(),
+      |                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:741:21: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  741 |       output_buffer.get_pointer(),
+      |                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:743:13: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  743 |       table.get_pointer(),
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:743:13: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  743 |       table.get_pointer(),
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:744:17: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  744 |       sync_info.get_pointer(),
+      |                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+src/multians_gpu_decoder.cc:744:17: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  744 |       sync_info.get_pointer(),
+      |                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+src/multians_gpu_decoder.cc:736:7: error: no matching function for call to 'phase4_decode_write_output'
+  736 |       phase4_decode_write_output(
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/multians_gpu_decoder.cc:493:6: note: candidate function not viable: no known conversion from 'global_ptr<value_type>' (aka 'multi_ptr<const unsigned int, access::address_space::global_space, (access::decorated)2>') to 'std::uint32_t *' (aka 'unsigned int *') for 4th argument
+  493 | void phase4_decode_write_output(
+      |      ^
+  494 |     std::uint32_t subsequence_size,
+  495 |     std::uint32_t total_num_subsequences,
+  496 |     std::uint32_t table_size,
+  497 |     UNIT_TYPE* in_ptr,
+      |     ~~~~~~~~~~~~~~~~~
+30 warnings and 3 errors generated.
+make: *** [Makefile:73: bin/multians_gpu_decoder.o] Error 1

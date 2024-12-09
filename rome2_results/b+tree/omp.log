@@ -1,0 +1,61 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908   ./main.c \
+	-c \
+	-o ./main.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+./main.c:852:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  852 |       else
+      |       ^
+./main.c:910:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  910 |       printf("(%x)", n);
+      |                ~~    ^
+./main.c:913:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  913 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.c:921:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  921 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.c:923:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  923 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+./main.c:852:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  852 |       else
+      |       ^
+./main.c:910:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  910 |       printf("(%x)", n);
+      |                ~~    ^
+./main.c:913:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  913 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.c:921:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  921 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.c:923:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  923 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 	 ./kernel/kernel_wrapper.c \
+	-c \
+	-o ./kernel/kernel_wrapper.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 	 ./kernel/kernel2_wrapper.c \
+	-c \
+	-o ./kernel/kernel2_wrapper.o 
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	./util/timer/timer.c \
+	-c \
+	-o ./util/timer/timer.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	./util/num/num.c \
+	-c \
+	-o ./util/num/num.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 	./main.o \
+		./kernel/kernel_wrapper.o \
+		./kernel/kernel2_wrapper.o \
+		./util/timer/timer.o \
+		./util/num/num.o \
+		-lm \
+                -o b+tree.out

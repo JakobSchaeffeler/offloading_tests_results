@@ -1,0 +1,40 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c main.cpp -o main.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 main.o -o sycl 
+lld: error: undefined symbol: __mulsc3
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced 17 more times
+
+lld: error: undefined symbol: cabsf
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced 5 more times
+
+lld: error: undefined symbol: __divsc3
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda2'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(_ZTSZZ4mainENKUlRN4sycl3_V17handlerEE2_clES2_EUlNS0_7nd_itemILi1EEEE__with_offset)
+>>> referenced 1 more times
+
+lld: error: undefined symbol: __muldc3
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced 17 more times
+
+lld: error: undefined symbol: cabs
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced 5 more times
+
+lld: error: undefined symbol: __divdc3
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(typeinfo name for main::'lambda4'(sycl::_V1::handler&)::operator()(sycl::_V1::handler&) const::'lambda'(sycl::_V1::nd_item<1>))
+>>> referenced by /tmp/main-gfx908-a037db-73fbd0.out.lto.o:(_ZTSZZ4mainENKUlRN4sycl3_V17handlerEE4_clES2_EUlNS0_7nd_itemILi1EEEE__with_offset)
+>>> referenced 1 more times
+llvm-foreach: 
+clang++: error: amdgcn-link command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile:68: sycl] Error 1

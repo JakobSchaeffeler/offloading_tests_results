@@ -1,0 +1,156 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c main.cpp -o main.o
+In file included from main.cpp:6:
+./kernels.h:24:25: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   24 |     c = (float*)((sycl::uchar*)c + step);
+      |                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:6:
+./kernels.h:52:25: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   52 |     c = (float*)((sycl::uchar*)c + step);
+      |                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:6:
+./kernels.h:59:25: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   59 |     c = (float*)((sycl::uchar*)c - step);
+      |                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:6:
+./kernels.h:74:35: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   74 |     float* line = (float*)((sycl::uchar*)image + y * pitch);  //direct access
+      |                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:90:41: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   90 |     const sycl::uchar *t = (const sycl::uchar*)(&image[i]);
+      |                                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:90:17: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   90 |     const sycl::uchar *t = (const sycl::uchar*)(&image[i]);
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+6 warnings generated.
+In file included from main.cpp:6:
+./kernels.h:24:25: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   24 |     c = (float*)((sycl::uchar*)c + step);
+      |                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:6:
+./kernels.h:52:25: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   52 |     c = (float*)((sycl::uchar*)c + step);
+      |                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:6:
+./kernels.h:59:25: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   59 |     c = (float*)((sycl::uchar*)c - step);
+      |                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:6:
+./kernels.h:74:35: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   74 |     float* line = (float*)((sycl::uchar*)image + y * pitch);  //direct access
+      |                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:90:41: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   90 |     const sycl::uchar *t = (const sycl::uchar*)(&image[i]);
+      |                                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:90:17: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   90 |     const sycl::uchar *t = (const sycl::uchar*)(&image[i]);
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+6 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 main.o -o sycl 

@@ -1,0 +1,682 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c main.cpp -o main.o
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:54:3: warning: 'gpu_selector' is deprecated: Use the callable sycl::gpu_selector_v instead. [-Wdeprecated-declarations]
+   54 |   gpu_selector dev_sel;
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/device_selector.hpp:66:21: note: 'gpu_selector' has been explicitly marked deprecated here
+   66 | class __SYCL_EXPORT __SYCL2020_DEPRECATED(
+      |                     ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:59:9: warning: 'queue' is deprecated: SYCL 1.2.1 device selectors are deprecated. Please use SYCL 2020 device selectors instead. [-Wdeprecated-declarations]
+   59 |   queue q(dev_sel);
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/queue.hpp:191:3: note: 'queue' has been explicitly marked deprecated here
+  191 |   __SYCL2020_DEPRECATED("SYCL 1.2.1 device selectors are deprecated. Please "
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+6 warnings generated.
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:54:3: warning: 'gpu_selector' is deprecated: Use the callable sycl::gpu_selector_v instead. [-Wdeprecated-declarations]
+   54 |   gpu_selector dev_sel;
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/device_selector.hpp:66:21: note: 'gpu_selector' has been explicitly marked deprecated here
+   66 | class __SYCL_EXPORT __SYCL2020_DEPRECATED(
+      |                     ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:59:9: warning: 'queue' is deprecated: SYCL 1.2.1 device selectors are deprecated. Please use SYCL 2020 device selectors instead. [-Wdeprecated-declarations]
+   59 |   queue q(dev_sel);
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/queue.hpp:191:3: note: 'queue' has been explicitly marked deprecated here
+  191 |   __SYCL2020_DEPRECATED("SYCL 1.2.1 device selectors are deprecated. Please "
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+6 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c process.cpp -o process.o
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:217:13: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:217:13: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:217:32: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:217:32: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:217:51: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:217:51: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:228:55: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  228 |     accessor<int, 1, sycl_read_write, access::target::local> sm (threadsPerBlock, cgh);
+      |                                                       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:231:13: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:231:13: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:231:49: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:231:49: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:310:55: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  310 |     accessor<int, 1, sycl_read_write, access::target::local> sm (nThreads, cgh);
+      |                                                       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:313:29: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:313:29: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:313:47: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:313:47: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:313:65: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:313:65: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+22 warnings generated.
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from process.cpp:1:
+In file included from ./utils.h:29:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:217:13: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:217:13: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:217:32: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:217:32: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:217:51: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:217:51: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  217 |         ria.get_pointer(), rrn.get_pointer(), arr.get_pointer(), 
+      |                                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:228:55: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  228 |     accessor<int, 1, sycl_read_write, access::target::local> sm (threadsPerBlock, cgh);
+      |                                                       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:231:13: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:231:13: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:231:49: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:231:49: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  231 |         aar.get_pointer(), averageSetScore, ata.get_pointer(), nRandomGenerations);
+      |                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:310:55: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  310 |     accessor<int, 1, sycl_read_write, access::target::local> sm (nThreads, cgh);
+      |                                                       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:313:29: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:313:29: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:313:47: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:313:47: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+process.cpp:313:65: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1779:26: note: 'get_pointer' has been explicitly marked deprecated here
+ 1779 |   global_ptr<value_type> get_pointer() const noexcept {
+      |                          ^
+process.cpp:313:65: warning: 'get_pointer<sycl::access::target::global_buffer, void>' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  313 |         sm.get_pointer(), t.get_pointer(), v1.get_pointer(), v2.get_pointer(), vLength);
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:1777:3: note: 'get_pointer<sycl::access::target::global_buffer, void>' has been explicitly marked deprecated here
+ 1777 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+22 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -include "utils.h" -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c ../cm-cuda/io.cpp -o io.o
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+4 warnings generated.
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from <built-in>:1:
+In file included from ./utils.h:29:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+4 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 main.o process.o io.o -o sycl 

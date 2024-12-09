@@ -1,0 +1,112 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../fpdc-cuda -I../fpdc-cuda -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from main.cu:46:
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:33:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register ull diff, prev;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:33:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register ull diff, prev;
+  ^~~~~~~~~
+15 warnings generated when compiling for gfx908.
+In file included from main.cu:46:
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:32:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register int offset, code, bcount, tmp, off, beg, end, lane, warp, iindex, lastidx, start, term;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:33:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register ull diff, prev;
+  ^~~~~~~~~
+../fpdc-cuda/kernels.h:33:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  register ull diff, prev;
+  ^~~~~~~~~
+15 warnings generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../fpdc-cuda -I../fpdc-cuda -O3 -O3 main.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

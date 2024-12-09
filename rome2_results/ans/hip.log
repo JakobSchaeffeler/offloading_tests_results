@@ -1,0 +1,17 @@
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/multians_util.o src/multians_util.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/multians_output_buffer.o src/multians_output_buffer.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/multians_input_buffer.o src/multians_input_buffer.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/multians_codetable.o src/multians_codetable.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/ans_table_generator.o src/ans_table_generator.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/ans_encoder.o src/ans_encoder.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/multians_gpu_decoder.obj src/multians_gpu_decoder.cu
+hipcc  --std=c++14 -O3 --offload-arch=gfx908 -pthread -I include -c -o bin/main.obj src/main.cu
+hipcc bin/multians_util.o bin/multians_output_buffer.o bin/multians_input_buffer.o bin/multians_codetable.o bin/ans_table_generator.o bin/ans_encoder.o bin/multians_gpu_decoder.obj bin/main.obj -o bin/demo
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

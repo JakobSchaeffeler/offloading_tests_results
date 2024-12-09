@@ -1,0 +1,310 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../include -I../include -I../include -Ddfloat=float -Ddlong=int -DUSE_GPU -Ddfloat=float -Ddlong=int -DUSE_GPU -Ddfloat=float -Ddlong=int -DUSE_GPU -O3 -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:7:
+In file included from ../include/common.h:4:
+/home/ga27mex2/repos/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from main.cpp:7:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:7:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:7:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:22:
+./axhelmReference.cpp:32:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:32:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:32:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:32:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:32:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:32:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:33:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:33:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:33:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:33:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:33:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:33:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:34:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:34:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:34:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:34:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+./axhelmReference.cpp:34:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:34:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:40: note: declared here
+   24 | static void axhelmElementReference(int cubNq,
+      |                                        ^
+main.cpp:84:5: warning: 'gpu_selector' is deprecated: Use the callable sycl::gpu_selector_v instead. [-Wdeprecated-declarations]
+   84 |     gpu_selector dev_sel;
+      |     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/device_selector.hpp:66:21: note: 'gpu_selector' has been explicitly marked deprecated here
+   66 | class __SYCL_EXPORT __SYCL2020_DEPRECATED(
+      |                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:88:11: warning: 'queue' is deprecated: SYCL 1.2.1 device selectors are deprecated. Please use SYCL 2020 device selectors instead. [-Wdeprecated-declarations]
+   88 |     queue Q(dev_sel);
+      |           ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/queue.hpp:191:3: note: 'queue' has been explicitly marked deprecated here
+  191 |   __SYCL2020_DEPRECATED("SYCL 1.2.1 device selectors are deprecated. Please "
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:109:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  109 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_D(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:110:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  110 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_U(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:111:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  111 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_V(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:112:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  112 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_W(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:113:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  113 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_GUr(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:114:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  114 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_GUs(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:115:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  115 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_GVr(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:116:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  116 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_GVs(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:117:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  117 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_GWr(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:118:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  118 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_GWs(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:233:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  233 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_D(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:234:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  234 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_q(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:235:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  235 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_Gqr(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:236:66: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+  236 |             accessor<dfloat, 1, sycl_read_write, access::target::local> s_Gqs(64, cgh);
+      |                                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:314:19: error: no member named 'fabs' in namespace 'std'; did you mean simply 'fabs'?
+  314 |     dfloat diff = std::fabs(q[n]-Aq[n]);
+      |                   ^~~~~~~~~
+      |                   fabs
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:139:23: note: 'fabs' declared here
+  139 | BUILTIN_GENF(ONE_ARG, fabs)
+      |                       ^
+29 warnings and 1 error generated.
+make: *** [Makefile:70: main.o] Error 1

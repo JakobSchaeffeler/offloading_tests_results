@@ -1,0 +1,10 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c euler3d.cpp -o euler3d.o
+euler3d.cpp:45:2: warning: "the kernels may fail too launch on some systems if the block length is too large" [-W#warnings]
+   45 | #warning "the kernels may fail too launch on some systems if the block length is too large"
+      |  ^
+1 warning generated.
+euler3d.cpp:45:2: warning: "the kernels may fail too launch on some systems if the block length is too large" [-W#warnings]
+   45 | #warning "the kernels may fail too launch on some systems if the block length is too large"
+      |  ^
+1 warning generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 euler3d.o -o sycl 

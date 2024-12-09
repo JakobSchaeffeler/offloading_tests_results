@@ -1,0 +1,2 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I. -I../bonds-sycl -I. -I../bonds-sycl -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c bondsEngine.cpp -o bondsEngine.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I. -I../bonds-sycl -I. -I../bonds-sycl -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 bondsEngine.o -o omp 

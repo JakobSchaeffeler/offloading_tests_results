@@ -1,0 +1,364 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c main.cpp -o main.o
+main.cpp:91:16: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                ^
+main.cpp:88:66: note: while substituting into a lambda expression here
+   88 |         sycl::nd_range<2>(gws, lws), [=] (sycl::nd_item<2> item) {
+      |                                                                  ^
+main.cpp:81:39: note: while substituting into a lambda expression here
+   81 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:141:3: note: in instantiation of function template specialization 'test<float>' requested here
+  141 |   test<float>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:91:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                                    ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:21: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                     ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:46: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                              ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:65: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:101:40: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  101 |            item, d_output, d_cost, sum.get_pointer(), size, size, nblocks);
+      |                                        ^
+main.cpp:99:69: note: while substituting into a lambda expression here
+   99 |          sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                     ^
+main.cpp:96:39: note: while substituting into a lambda expression here
+   96 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:141:3: note: in instantiation of function template specialization 'test<float>' requested here
+  141 |   test<float>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:91:16: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                ^
+main.cpp:88:66: note: while substituting into a lambda expression here
+   88 |         sycl::nd_range<2>(gws, lws), [=] (sycl::nd_item<2> item) {
+      |                                                                  ^
+main.cpp:81:39: note: while substituting into a lambda expression here
+   81 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:144:3: note: in instantiation of function template specialization 'test<double>' requested here
+  144 |   test<double>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:91:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                                    ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:21: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                     ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:46: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                              ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:65: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:101:40: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  101 |            item, d_output, d_cost, sum.get_pointer(), size, size, nblocks);
+      |                                        ^
+main.cpp:99:69: note: while substituting into a lambda expression here
+   99 |          sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                     ^
+main.cpp:96:39: note: while substituting into a lambda expression here
+   96 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:144:3: note: in instantiation of function template specialization 'test<double>' requested here
+  144 |   test<double>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+12 warnings generated.
+main.cpp:91:16: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                ^
+main.cpp:88:66: note: while substituting into a lambda expression here
+   88 |         sycl::nd_range<2>(gws, lws), [=] (sycl::nd_item<2> item) {
+      |                                                                  ^
+main.cpp:81:39: note: while substituting into a lambda expression here
+   81 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:141:3: note: in instantiation of function template specialization 'test<float>' requested here
+  141 |   test<float>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:91:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                                    ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:21: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                     ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:46: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                              ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:65: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:101:40: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  101 |            item, d_output, d_cost, sum.get_pointer(), size, size, nblocks);
+      |                                        ^
+main.cpp:99:69: note: while substituting into a lambda expression here
+   99 |          sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                     ^
+main.cpp:96:39: note: while substituting into a lambda expression here
+   96 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:141:3: note: in instantiation of function template specialization 'test<float>' requested here
+  141 |   test<float>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:91:16: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                ^
+main.cpp:88:66: note: while substituting into a lambda expression here
+   88 |         sycl::nd_range<2>(gws, lws), [=] (sycl::nd_item<2> item) {
+      |                                                                  ^
+main.cpp:81:39: note: while substituting into a lambda expression here
+   81 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:144:3: note: in instantiation of function template specialization 'test<double>' requested here
+  144 |   test<double>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:91:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   91 |           sh_A.get_pointer(), sh_B.get_pointer(), 
+      |                                    ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:21: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                     ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:46: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                              ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:92:65: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   92 |           sh_scaleA.get_pointer(), sh_scaleB.get_pointer(), sum.get_pointer());
+      |                                                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:101:40: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  101 |            item, d_output, d_cost, sum.get_pointer(), size, size, nblocks);
+      |                                        ^
+main.cpp:99:69: note: while substituting into a lambda expression here
+   99 |          sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                     ^
+main.cpp:96:39: note: while substituting into a lambda expression here
+   96 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:144:3: note: in instantiation of function template specialization 'test<double>' requested here
+  144 |   test<double>(size, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+12 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 main.o -o sycl 

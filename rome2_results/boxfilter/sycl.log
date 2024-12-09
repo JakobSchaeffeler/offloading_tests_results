@@ -1,0 +1,78 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c main.cpp -o main.o
+main.cpp:190:33: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  190 |   shrLoadPPM4ub(argv[1], (sycl::uchar **)&uiInput, &uiImageWidth, &uiImageHeight);
+      |                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+main.cpp:190:33: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  190 |   shrLoadPPM4ub(argv[1], (sycl::uchar **)&uiInput, &uiImageWidth, &uiImageHeight);
+      |                                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c shrUtils.cpp -o shrUtils.o
+shrUtils.cpp:373:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:373:47: note: treat the string as an argument to avoid this
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:377:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:377:63: note: treat the string as an argument to avoid this
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:380:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:380:67: note: treat the string as an argument to avoid this
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+3 warnings generated.
+shrUtils.cpp:150:1: warning: non-void function does not return a value [-Wreturn-type]
+  150 | } 
+      | ^
+shrUtils.cpp:373:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:373:47: note: treat the string as an argument to avoid this
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:377:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:377:63: note: treat the string as an argument to avoid this
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:380:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:380:67: note: treat the string as an argument to avoid this
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+4 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c cmd_arg_reader.cpp -o cmd_arg_reader.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c reference.cpp -o reference.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 main.o shrUtils.o cmd_arg_reader.o reference.o -o sycl 

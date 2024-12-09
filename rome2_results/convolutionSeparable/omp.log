@@ -1,0 +1,4 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -O3 -c conv.cpp -o conv.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -O3 -c conv_gold.cpp -o conv_gold.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -O3 main.o conv.o conv_gold.o -o omp 

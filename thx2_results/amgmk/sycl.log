@@ -1,0 +1,202 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c csr_matrix.cpp -o csr_matrix.o
+csr_matrix.cpp:423:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  423 |    hypre_assert( num_rows == hypre_CSRMatrixNumRows(B) );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:280:1: note: expanded from here
+  280 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:424:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  424 |    if ( col_map_offd_B ) hypre_assert( col_map_offd_A );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:283:1: note: expanded from here
+  283 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:425:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  425 |    if ( col_map_offd_A ) hypre_assert( col_map_offd_B );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:286:1: note: expanded from here
+  286 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:547:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  547 |    hypre_assert( mc == num_nonzeros );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:289:1: note: expanded from here
+  289 | "csr_matrix.cpp"
+      | ^
+4 warnings generated.
+csr_matrix.cpp:423:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  423 |    hypre_assert( num_rows == hypre_CSRMatrixNumRows(B) );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:279:1: note: expanded from here
+  279 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:424:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  424 |    if ( col_map_offd_B ) hypre_assert( col_map_offd_A );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:282:1: note: expanded from here
+  282 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:425:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  425 |    if ( col_map_offd_A ) hypre_assert( col_map_offd_B );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:285:1: note: expanded from here
+  285 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:547:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  547 |    hypre_assert( mc == num_nonzeros );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:288:1: note: expanded from here
+  288 | "csr_matrix.cpp"
+      | ^
+4 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c csr_matvec.cpp -o csr_matvec.o
+csr_matvec.cpp:94:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   94 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:43:1: note: expanded from here
+   43 | "csr_matvec.cpp"
+      | ^
+csr_matvec.cpp:263:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  263 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:46:1: note: expanded from here
+   46 | "csr_matvec.cpp"
+      | ^
+2 warnings generated.
+csr_matvec.cpp:94:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   94 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:279:1: note: expanded from here
+  279 | "csr_matvec.cpp"
+      | ^
+csr_matvec.cpp:263:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  263 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:282:1: note: expanded from here
+  282 | "csr_matvec.cpp"
+      | ^
+2 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c hypre_error.cpp -o hypre_error.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c hypre_memory.cpp -o hypre_memory.o
+hypre_memory.cpp:78:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   78 |    hypre_error(HYPRE_ERROR_MEMORY);
+      |    ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:56:1: note: expanded from here
+   56 | "hypre_memory.cpp"
+      | ^
+1 warning generated.
+hypre_memory.cpp:78:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   78 |    hypre_error(HYPRE_ERROR_MEMORY);
+      |    ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:54:1: note: expanded from here
+   54 | "hypre_memory.cpp"
+      | ^
+1 warning generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c laplace.cpp -o laplace.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c vector.cpp -o vector.o
+vector.cpp:177:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  177 |    hypre_assert( hypre_VectorNumVectors(vector) == 1 );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:43:1: note: expanded from here
+   43 | "vector.cpp"
+      | ^
+1 warning generated.
+vector.cpp:177:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  177 |    hypre_assert( hypre_VectorNumVectors(vector) == 1 );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:279:1: note: expanded from here
+  279 | "vector.cpp"
+      | ^
+1 warning generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 csr_matrix.o csr_matvec.o hypre_error.o hypre_memory.o laplace.o main.o vector.o -o sycl 

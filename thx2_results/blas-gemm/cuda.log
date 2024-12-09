@@ -1,0 +1,2 @@
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o cuda -lcublas

@@ -1,0 +1,9 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/multians_util.o src/multians_util.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/multians_output_buffer.o src/multians_output_buffer.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/multians_input_buffer.o src/multians_input_buffer.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/multians_gpu_decoder.o src/multians_gpu_decoder.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/multians_codetable.o src/multians_codetable.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/main.o src/main.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/ans_table_generator.o src/ans_table_generator.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  -I include -c -o bin/ans_encoder.o src/ans_encoder.cc
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908  bin/multians_util.o bin/multians_output_buffer.o bin/multians_input_buffer.o bin/multians_gpu_decoder.o bin/multians_codetable.o bin/main.o bin/ans_table_generator.o bin/ans_encoder.o -o bin/demo
