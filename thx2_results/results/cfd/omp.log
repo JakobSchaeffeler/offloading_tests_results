@@ -1,0 +1,10 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -DOUTPUT -D__STRICT_ANSI__ -DOUTPUT -O3 -O3 -c euler3d.cpp -o euler3d.o
+euler3d.cpp:44:2: warning: "the kernels may fail too launch on some systems if the block length is too large" [-W#warnings]
+   44 | #warning "the kernels may fail too launch on some systems if the block length is too large"
+      |  ^
+1 warning generated.
+euler3d.cpp:44:2: warning: "the kernels may fail too launch on some systems if the block length is too large" [-W#warnings]
+   44 | #warning "the kernels may fail too launch on some systems if the block length is too large"
+      |  ^
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -DOUTPUT -D__STRICT_ANSI__ -DOUTPUT -O3 -O3 euler3d.o -o omp 

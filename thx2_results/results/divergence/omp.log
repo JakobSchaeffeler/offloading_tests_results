@@ -1,0 +1,13 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c divergence.cpp -o divergence.o
+In file included from divergence.cpp:7:
+./divergence.hpp:16:9: warning: G++ <4.9 Does not support vectorization pragmas [-W#pragma-messages]
+   16 | #pragma message( \
+      |         ^
+1 warning generated.
+In file included from divergence.cpp:7:
+./divergence.hpp:16:9: warning: G++ <4.9 Does not support vectorization pragmas [-W#pragma-messages]
+   16 | #pragma message( \
+      |         ^
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c timer/timer.cpp -o timer.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 divergence.o timer.o -o omp 

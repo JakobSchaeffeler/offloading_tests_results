@@ -1,0 +1,62 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../ace-cuda -I../ace-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:6:
+../ace-cuda/reference.h:8:35: error: use of undeclared identifier 'DATAYSIZE'
+    8 | double GradientX_ref(double phi[][DATAYSIZE][DATAXSIZE], 
+      |                                   ^
+../ace-cuda/reference.h:8:46: error: use of undeclared identifier 'DATAXSIZE'
+    8 | double GradientX_ref(double phi[][DATAYSIZE][DATAXSIZE], 
+      |                                              ^
+../ace-cuda/reference.h:15:35: error: use of undeclared identifier 'DATAYSIZE'
+   15 | double GradientY_ref(double phi[][DATAYSIZE][DATAXSIZE], 
+      |                                   ^
+../ace-cuda/reference.h:15:46: error: use of undeclared identifier 'DATAXSIZE'
+   15 | double GradientY_ref(double phi[][DATAYSIZE][DATAXSIZE], 
+      |                                              ^
+../ace-cuda/reference.h:22:35: error: use of undeclared identifier 'DATAYSIZE'
+   22 | double GradientZ_ref(double phi[][DATAYSIZE][DATAXSIZE], 
+      |                                   ^
+../ace-cuda/reference.h:22:46: error: use of undeclared identifier 'DATAXSIZE'
+   22 | double GradientZ_ref(double phi[][DATAYSIZE][DATAXSIZE], 
+      |                                              ^
+../ace-cuda/reference.h:29:37: error: use of undeclared identifier 'DATAYSIZE'
+   29 | double Divergence_ref(double phix[][DATAYSIZE][DATAXSIZE], 
+      |                                     ^
+../ace-cuda/reference.h:29:48: error: use of undeclared identifier 'DATAXSIZE'
+   29 | double Divergence_ref(double phix[][DATAYSIZE][DATAXSIZE], 
+      |                                                ^
+../ace-cuda/reference.h:30:33: error: use of undeclared identifier 'DATAYSIZE'
+   30 |                   double phiy[][DATAYSIZE][DATAXSIZE],
+      |                                 ^
+../ace-cuda/reference.h:30:44: error: use of undeclared identifier 'DATAXSIZE'
+   30 |                   double phiy[][DATAYSIZE][DATAXSIZE],
+      |                                            ^
+../ace-cuda/reference.h:31:33: error: use of undeclared identifier 'DATAYSIZE'
+   31 |                   double phiz[][DATAYSIZE][DATAXSIZE], 
+      |                                 ^
+../ace-cuda/reference.h:31:44: error: use of undeclared identifier 'DATAXSIZE'
+   31 |                   double phiz[][DATAYSIZE][DATAXSIZE], 
+      |                                            ^
+../ace-cuda/reference.h:40:35: error: use of undeclared identifier 'DATAYSIZE'
+   40 | double Laplacian_ref(double phi[][DATAYSIZE][DATAXSIZE],
+      |                                   ^
+../ace-cuda/reference.h:40:46: error: use of undeclared identifier 'DATAXSIZE'
+   40 | double Laplacian_ref(double phi[][DATAYSIZE][DATAXSIZE],
+      |                                              ^
+../ace-cuda/reference.h:43:75: error: use of undeclared identifier 'SQ'
+   43 |   double phixx = (phi[x+1][y][z] + phi[x-1][y][z] - 2.0 * phi[x][y][z]) / SQ(dx);
+      |                                                                           ^
+../ace-cuda/reference.h:44:75: error: use of undeclared identifier 'SQ'
+   44 |   double phiyy = (phi[x][y+1][z] + phi[x][y-1][z] - 2.0 * phi[x][y][z]) / SQ(dy);
+      |                                                                           ^
+../ace-cuda/reference.h:45:75: error: use of undeclared identifier 'SQ'
+   45 |   double phizz = (phi[x][y][z+1] + phi[x][y][z-1] - 2.0 * phi[x][y][z]) / SQ(dz);
+      |                                                                           ^
+../ace-cuda/reference.h:54:14: error: use of undeclared identifier 'SQ'
+   54 |            ((SQ(phix)*SQ(phix)+SQ(phiy)*SQ(phiy)+SQ(phiz)*SQ(phiz)) /
+      |              ^
+../ace-cuda/reference.h:54:23: error: use of undeclared identifier 'SQ'
+   54 |            ((SQ(phix)*SQ(phix)+SQ(phiy)*SQ(phiy)+SQ(phiz)*SQ(phiz)) /
+      |                       ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile:57: main.o] Error 1

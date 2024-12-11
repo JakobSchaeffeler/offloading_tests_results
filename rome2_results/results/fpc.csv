@@ -1,0 +1,35 @@
+,omp 256 100,sycl 256 100,hip 256 100
+Runtime,31925157.0,12677405.0,11139540.0
+SALU Instructions per wave,346.38,13.31,19.78
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,1.34,0.25,0.45
+L1 Requests per wave,80.0,76.0,80.0
+L1 Hit Rate,49.23,24.62,49.23
+L2 Requests per wave,8.25,5.7,8.27
+L2 Hit Rate,3.03,1.52,3.03
+Wavefront Occupancy (% of peak),3374.7,1529.97,3132.94
+Dependency Wait Cycles per wave,6973.38,3881.52,4103.51
+Issue Wait Cycles per wave,3326.65,197.54,218.32
+Grid Size,4194304.0,2097280.0,4194304.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,512.0,256.0,512.0
+Shared Memory Instructions per wave,2.75,0.88,1.5
+Shared Memory Bank Conflicts (%),0.0,55.36,64.58
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,1.25,1.38,1.25
+Global Memory Read Instructions per wave,1.0,0.62,1.0
+Global Memory Write Instructions per wave,0.0,0.12,0.0
+Coalesced Instructions (% of peak),25.0,62.5,25.0
+Global Atomic Operations per wave,0.25,0.62,0.25
+SALU Instructions,22700359.68,436168.7,1296302.08
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,5242880.0,2490520.0,5242880.0
+L2 Requests,540672.0,186789.0,541982.72
+Dependency Wait Cycles,457007431.68,127197410.4,268927631.36
+Issue Wait Cycles,218015334.4,6473385.8,14307819.52
+Shared Memory Instructions,180224.0,28837.6,98304.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,81920.0,45222.6,81920.0
+Global Memory Read Instructions,65536.0,20317.4,65536.0
+Global Memory Write Instructions,0.0,3932.3999999999996,0.0
+Global Atomic Operations,16384.0,20317.4,16384.0

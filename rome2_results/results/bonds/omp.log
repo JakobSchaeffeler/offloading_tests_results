@@ -1,0 +1,2 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I. -I../bonds-sycl -D__STRICT_ANSI__ -O3 -c bondsEngine.cpp -o bondsEngine.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I. -I../bonds-sycl -D__STRICT_ANSI__ -O3 bondsEngine.o -o omp 

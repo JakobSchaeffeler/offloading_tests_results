@@ -1,0 +1,738 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+main.cpp:201:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  201 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:165:17: note: previous definition is here
+  165 |         #define sigma_real(i, j) (sigma_id + 2 * ((i) * dim + (j)))
+      |                 ^
+main.cpp:202:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  202 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:166:17: note: previous definition is here
+  166 |         #define sigma_imag(i, j) (sigma_id + 2 * ((i) * dim + (j)) + 1)
+      |                 ^
+main.cpp:204:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  204 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:167:17: note: previous definition is here
+  167 |         #define ham_real(i, j) (2 * ((i) * dim + (j)))
+      |                 ^
+main.cpp:205:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  205 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:168:17: note: previous definition is here
+  168 |         #define ham_imag(i, j) (2 * ((i) * dim + (k)) + 1)
+      |                 ^
+main.cpp:238:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  238 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:198:17: note: previous definition is here
+  198 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |                 ^
+main.cpp:241:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  241 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:201:17: note: previous definition is here
+  201 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:242:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  242 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:202:17: note: previous definition is here
+  202 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:244:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  244 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:204:17: note: previous definition is here
+  204 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:245:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  245 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:205:17: note: previous definition is here
+  205 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:334:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  334 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |                 ^
+main.cpp:279:17: note: previous definition is here
+  279 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:337:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  337 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:282:17: note: previous definition is here
+  282 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:338:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  338 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:283:17: note: previous definition is here
+  283 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:339:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  339 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:285:17: note: previous definition is here
+  285 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:340:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  340 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:286:17: note: previous definition is here
+  286 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:370:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  370 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:334:17: note: previous definition is here
+  334 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |                 ^
+main.cpp:373:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  373 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:337:17: note: previous definition is here
+  337 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:374:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  374 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:338:17: note: previous definition is here
+  338 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:375:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  375 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:339:17: note: previous definition is here
+  339 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:376:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  376 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:340:17: note: previous definition is here
+  340 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:446:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  446 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:406:17: note: previous definition is here
+  406 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:447:17: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+  447 |         #define sigma_id (v)
+      |                 ^
+main.cpp:407:17: note: previous definition is here
+  407 |         #define sigma_id (gid % VEC_LENGTH_AUTO)
+      |                 ^
+main.cpp:449:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  449 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:409:17: note: previous definition is here
+  409 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:450:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  450 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:410:17: note: previous definition is here
+  410 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:451:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  451 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:411:17: note: previous definition is here
+  411 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:452:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  452 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:412:17: note: previous definition is here
+  412 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:488:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  488 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:446:17: note: previous definition is here
+  446 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:491:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  491 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:449:17: note: previous definition is here
+  449 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:492:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  492 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:450:17: note: previous definition is here
+  450 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:494:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  494 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:451:17: note: previous definition is here
+  451 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:495:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  495 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:452:17: note: previous definition is here
+  452 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:585:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  585 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:530:17: note: previous definition is here
+  530 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:588:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  588 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:533:17: note: previous definition is here
+  533 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:589:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  589 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:534:17: note: previous definition is here
+  534 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:590:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  590 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:535:17: note: previous definition is here
+  535 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:591:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  591 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:536:17: note: previous definition is here
+  536 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:622:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  622 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:585:17: note: previous definition is here
+  585 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:625:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  625 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:588:17: note: previous definition is here
+  588 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:626:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  626 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:589:17: note: previous definition is here
+  589 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:627:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  627 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:590:17: note: previous definition is here
+  590 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:628:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  628 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:591:17: note: previous definition is here
+  591 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:700:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  700 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:659:17: note: previous definition is here
+  659 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:702:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  702 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:662:17: note: previous definition is here
+  662 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:703:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  703 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:663:17: note: previous definition is here
+  663 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:705:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  705 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:664:17: note: previous definition is here
+  664 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:706:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  706 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:665:17: note: previous definition is here
+  665 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:738:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  738 |         #define package_id (gid * DIM * DIM * 2)
+      |                 ^
+main.cpp:700:17: note: previous definition is here
+  700 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:740:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  740 |         #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+      |                 ^
+main.cpp:702:17: note: previous definition is here
+  702 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:741:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  741 |         #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+      |                 ^
+main.cpp:703:17: note: previous definition is here
+  703 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:743:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  743 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:705:17: note: previous definition is here
+  705 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:744:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  744 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:706:17: note: previous definition is here
+  706 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:866:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  866 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:828:17: note: previous definition is here
+  828 |         #define package_id (gid * DIM * DIM * 2)
+      |                 ^
+main.cpp:868:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  868 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:830:17: note: previous definition is here
+  830 |         #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+      |                 ^
+main.cpp:869:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  869 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:831:17: note: previous definition is here
+  831 |         #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+      |                 ^
+main.cpp:871:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  871 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:833:17: note: previous definition is here
+  833 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:872:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  872 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:834:17: note: previous definition is here
+  834 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:900:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  900 |         #define package_id (gid * DIM * DIM * 2)
+      |                 ^
+main.cpp:866:17: note: previous definition is here
+  866 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:902:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  902 |         #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+      |                 ^
+main.cpp:868:17: note: previous definition is here
+  868 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:903:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  903 |         #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+      |                 ^
+main.cpp:869:17: note: previous definition is here
+  869 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:905:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  905 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:871:17: note: previous definition is here
+  871 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:906:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  906 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:872:17: note: previous definition is here
+  872 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:1010:17: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+ 1010 |         #define sigma_id(i,j,m) ((m) * DIM * DIM + ((i) * DIM + (j)))
+      |                 ^
+main.cpp:660:17: note: previous definition is here
+  660 |         #define sigma_id (v)
+      |                 ^
+61 warnings generated.
+main.cpp:201:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  201 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:165:17: note: previous definition is here
+  165 |         #define sigma_real(i, j) (sigma_id + 2 * ((i) * dim + (j)))
+      |                 ^
+main.cpp:202:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  202 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:166:17: note: previous definition is here
+  166 |         #define sigma_imag(i, j) (sigma_id + 2 * ((i) * dim + (j)) + 1)
+      |                 ^
+main.cpp:204:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  204 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:167:17: note: previous definition is here
+  167 |         #define ham_real(i, j) (2 * ((i) * dim + (j)))
+      |                 ^
+main.cpp:205:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  205 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:168:17: note: previous definition is here
+  168 |         #define ham_imag(i, j) (2 * ((i) * dim + (k)) + 1)
+      |                 ^
+main.cpp:238:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  238 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:198:17: note: previous definition is here
+  198 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |                 ^
+main.cpp:241:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  241 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:201:17: note: previous definition is here
+  201 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:242:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  242 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:202:17: note: previous definition is here
+  202 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:244:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  244 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:204:17: note: previous definition is here
+  204 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:245:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  245 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:205:17: note: previous definition is here
+  205 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:334:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  334 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |                 ^
+main.cpp:279:17: note: previous definition is here
+  279 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:337:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  337 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:282:17: note: previous definition is here
+  282 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:338:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  338 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:283:17: note: previous definition is here
+  283 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:339:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  339 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:285:17: note: previous definition is here
+  285 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:340:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  340 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:286:17: note: previous definition is here
+  286 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:370:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  370 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:334:17: note: previous definition is here
+  334 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |                 ^
+main.cpp:373:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  373 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:337:17: note: previous definition is here
+  337 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:374:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  374 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:338:17: note: previous definition is here
+  338 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:375:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  375 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:339:17: note: previous definition is here
+  339 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:376:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  376 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:340:17: note: previous definition is here
+  340 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:446:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  446 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:406:17: note: previous definition is here
+  406 |         #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |                 ^
+main.cpp:447:17: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+  447 |         #define sigma_id (v)
+      |                 ^
+main.cpp:407:17: note: previous definition is here
+  407 |         #define sigma_id (gid % VEC_LENGTH_AUTO)
+      |                 ^
+main.cpp:449:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  449 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:409:17: note: previous definition is here
+  409 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |                 ^
+main.cpp:450:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  450 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:410:17: note: previous definition is here
+  410 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |                 ^
+main.cpp:451:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  451 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:411:17: note: previous definition is here
+  411 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:452:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  452 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:412:17: note: previous definition is here
+  412 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:488:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  488 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:446:17: note: previous definition is here
+  446 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:491:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  491 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:449:17: note: previous definition is here
+  449 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:492:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  492 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:450:17: note: previous definition is here
+  450 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:494:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  494 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:451:17: note: previous definition is here
+  451 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:495:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  495 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:452:17: note: previous definition is here
+  452 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:585:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  585 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:530:17: note: previous definition is here
+  530 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:588:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  588 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:533:17: note: previous definition is here
+  533 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:589:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  589 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:534:17: note: previous definition is here
+  534 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:590:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  590 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:535:17: note: previous definition is here
+  535 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:591:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  591 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:536:17: note: previous definition is here
+  536 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:622:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  622 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:585:17: note: previous definition is here
+  585 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |                 ^
+main.cpp:625:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  625 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:588:17: note: previous definition is here
+  588 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:626:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  626 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:589:17: note: previous definition is here
+  589 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:627:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  627 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:590:17: note: previous definition is here
+  590 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:628:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  628 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:591:17: note: previous definition is here
+  591 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:700:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  700 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:659:17: note: previous definition is here
+  659 |         #define package_id ((PACKAGES_PER_WG * g + p) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |                 ^
+main.cpp:702:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  702 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:662:17: note: previous definition is here
+  662 |         #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |                 ^
+main.cpp:703:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  703 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:663:17: note: previous definition is here
+  663 |         #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |                 ^
+main.cpp:705:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  705 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:664:17: note: previous definition is here
+  664 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:706:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  706 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:665:17: note: previous definition is here
+  665 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:738:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  738 |         #define package_id (gid * DIM * DIM * 2)
+      |                 ^
+main.cpp:700:17: note: previous definition is here
+  700 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:740:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  740 |         #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+      |                 ^
+main.cpp:702:17: note: previous definition is here
+  702 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:741:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  741 |         #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+      |                 ^
+main.cpp:703:17: note: previous definition is here
+  703 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:743:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  743 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:705:17: note: previous definition is here
+  705 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:744:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  744 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:706:17: note: previous definition is here
+  706 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:866:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  866 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:828:17: note: previous definition is here
+  828 |         #define package_id (gid * DIM * DIM * 2)
+      |                 ^
+main.cpp:868:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  868 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:830:17: note: previous definition is here
+  830 |         #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+      |                 ^
+main.cpp:869:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  869 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:831:17: note: previous definition is here
+  831 |         #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+      |                 ^
+main.cpp:871:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  871 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:833:17: note: previous definition is here
+  833 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:872:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  872 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:834:17: note: previous definition is here
+  834 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:900:17: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  900 |         #define package_id (gid * DIM * DIM * 2)
+      |                 ^
+main.cpp:866:17: note: previous definition is here
+  866 |         #define package_id (gid * dim * dim * 2)
+      |                 ^
+main.cpp:902:17: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  902 |         #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+      |                 ^
+main.cpp:868:17: note: previous definition is here
+  868 |         #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |                 ^
+main.cpp:903:17: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  903 |         #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+      |                 ^
+main.cpp:869:17: note: previous definition is here
+  869 |         #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |                 ^
+main.cpp:905:17: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  905 |         #define ham_real(i, j) ((i) * DIM + (j))
+      |                 ^
+main.cpp:871:17: note: previous definition is here
+  871 |         #define ham_real(i, j) ((i) * dim + (j))
+      |                 ^
+main.cpp:906:17: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  906 |         #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |                 ^
+main.cpp:872:17: note: previous definition is here
+  872 |         #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |                 ^
+main.cpp:1010:17: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+ 1010 |         #define sigma_id(i,j,m) ((m) * DIM * DIM + ((i) * DIM + (j)))
+      |                 ^
+main.cpp:660:17: note: previous definition is here
+  660 |         #define sigma_id (v)
+      |                 ^
+61 warnings generated.
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c utils.cpp -o utils.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c reference.cpp -o reference.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 main.o utils.o reference.o -o omp 

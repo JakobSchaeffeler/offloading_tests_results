@@ -1,0 +1,36 @@
+clang++	-DOUTPUT  ./main.cpp \
+	  -I./util/timer/ \
+	  -I./util/file/ \
+		-c \
+		-o ./main.o 
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3  	./kernel/kernel.cpp \
+		-c \
+		-o ./kernel/kernel.o 
+clang++	-fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 ./util/avi/avilib.c \
+	  -I./util/avi \
+		-c \
+		-o ./util/avi/avilib.o 
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	-fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 ./util/avi/avimod.c \
+	  -I./util/avi \
+		-c \
+		-o ./util/avi/avimod.o 
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	-fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 ./util/file/file.c \
+	  -I./util/file \
+	  -I./util/timer \
+		-c \
+		-o ./util/file/file.o 
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	-fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 ./util/timer/timer.c \
+	  -I./util/timer \
+		-c \
+		-o ./util/timer/timer.o 
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	-fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 ./main.o \
+	  ./kernel/kernel.o \
+		./util/avi/avilib.o \
+		./util/avi/avimod.o \
+		./util/file/file.o \
+		./util/timer/timer.o \
+		-lm -o heartwall

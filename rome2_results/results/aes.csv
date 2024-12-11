@@ -1,0 +1,35 @@
+,URNG_Input.bmp
+Runtime,149584429.0
+SALU Instructions per wave,6390.0
+VALU Instructions per wave,0.0
+IPC,0.93
+L1 Requests per wave,1328.0
+L1 Hit Rate,98.76
+L2 Requests per wave,2.2
+L2 Hit Rate,75.53
+Wavefront Occupancy (% of peak),343.45
+Dependency Wait Cycles per wave,5451.19
+Issue Wait Cycles per wave,2313.83
+Grid Size,65536.0
+#Threads,4.0
+Shared Memory Allocated,16896.0
+Shared Memory Instructions per wave,83.0
+Shared Memory Bank Conflicts (%),0.0
+Register Spill Instructions per wave,0.0
+Global Memory Instructions per wave,53.0
+Global Memory Read Instructions per wave,52.0
+Global Memory Write Instructions per wave,1.0
+Coalesced Instructions (% of peak),63.86
+Global Atomic Operations per wave,0.0
+SALU Instructions,6543360.0
+VALU Instructions,0.0
+L1 Requests,1359872.0
+L2 Requests,2252.8
+Dependency Wait Cycles,5582018.56
+Issue Wait Cycles,2369361.92
+Shared Memory Instructions,84992.0
+Register Spill Instructions,0.0
+Global Memory Instructions,54272.0
+Global Memory Read Instructions,53248.0
+Global Memory Write Instructions,1024.0
+Global Atomic Operations,0.0

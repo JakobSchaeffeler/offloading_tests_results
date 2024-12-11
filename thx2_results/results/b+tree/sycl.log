@@ -1,0 +1,7 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70   ./main.c -c -o main.o
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+./main.c:30:10: fatal error: 'timer.h' file not found
+   30 | #include "timer.h"
+      |          ^~~~~~~~~
+1 error generated.
+make: *** [Makefile:93: main.o] Error 1

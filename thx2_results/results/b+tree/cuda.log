@@ -1,0 +1,40 @@
+nvcc	 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3  ./main.cu \
+		-c \
+		-o ./main.o
+./main.cu: In function ‘void print_tree(node*)’:
+./main.cu:913:8: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘node*’ [-Wformat=]
+       printf("(%x)", n);
+        ^~~~~~  ~
+./main.cu:916:8: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void*’ [-Wformat=]
+         printf("%x ", n->pointers[i]);
+        ^~~~~  ~~~~~~~~~~~~~~~~
+./main.cu:924:8: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void*’ [-Wformat=]
+         printf("%x ", n->pointers[order - 1]);
+        ^~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~
+./main.cu:926:8: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void*’ [-Wformat=]
+         printf("%x ", n->pointers[n->num_keys]);
+        ^~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+./main.cu: In function ‘int main(int, char**)’:
+./main.cu:1920:12: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘long int’ [-Wsign-compare]
+   if (result != lSize) {fputs ("Command file reading error",stderr); exit (3);}
+     ~~~~~~~^~~~~~~~
+nvcc  ./kernel/kernel_wrapper.cu \
+			-c \
+			-o ./kernel/kernel_wrapper.o \
+			 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3
+nvcc  ./kernel/kernel2_wrapper.cu \
+			-c \
+			-o ./kernel/kernel2_wrapper.o \
+			 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3
+nvcc	./util/timer/timer.c \
+		-c \
+		-o ./util/timer/timer.o 
+nvcc	./util/num/num.c \
+		-c \
+		-o ./util/num/num.o 
+nvcc	 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 ./main.o \
+		./kernel/kernel_wrapper.o \
+		./kernel/kernel2_wrapper.o \
+		./util/timer/timer.o \
+		./util/num/num.o \
+		-lm  -o b+tree.out

@@ -1,0 +1,10 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c euler3d.cpp -o euler3d.o
+euler3d.cpp:45:2: warning: "the kernels may fail too launch on some systems if the block length is too large" [-W#warnings]
+   45 | #warning "the kernels may fail too launch on some systems if the block length is too large"
+      |  ^
+1 warning generated.
+euler3d.cpp:45:2: warning: "the kernels may fail too launch on some systems if the block length is too large" [-W#warnings]
+   45 | #warning "the kernels may fail too launch on some systems if the block length is too large"
+      |  ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 euler3d.o -o sycl 

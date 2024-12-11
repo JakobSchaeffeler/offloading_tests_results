@@ -1,0 +1,50 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../idivide-cuda -I../idivide-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:9:
+./kernels.h:15:17: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   15 |   if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                 ^~~~~~~~~~~~
+./kernels.h:15:17: note: place parentheses around the '==' expression to silence this warning
+   15 |   if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                 ^           
+      |                   (         )
+./kernels.h:15:17: note: place parentheses around the & expression to evaluate it first
+   15 |   if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                 ^
+      |       (                )
+./kernels.h:45:9: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   45 |   if (x & dummy == 1) buf[0] = x;
+      |         ^~~~~~~~~~~~
+./kernels.h:45:9: note: place parentheses around the '==' expression to silence this warning
+   45 |   if (x & dummy == 1) buf[0] = x;
+      |         ^           
+      |           (         )
+./kernels.h:45:9: note: place parentheses around the & expression to evaluate it first
+   45 |   if (x & dummy == 1) buf[0] = x;
+      |         ^
+      |       (        )
+2 warnings generated.
+In file included from main.cpp:9:
+./kernels.h:15:17: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   15 |   if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                 ^~~~~~~~~~~~
+./kernels.h:15:17: note: place parentheses around the '==' expression to silence this warning
+   15 |   if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                 ^           
+      |                   (         )
+./kernels.h:15:17: note: place parentheses around the & expression to evaluate it first
+   15 |   if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                 ^
+      |       (                )
+./kernels.h:45:9: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   45 |   if (x & dummy == 1) buf[0] = x;
+      |         ^~~~~~~~~~~~
+./kernels.h:45:9: note: place parentheses around the '==' expression to silence this warning
+   45 |   if (x & dummy == 1) buf[0] = x;
+      |         ^           
+      |           (         )
+./kernels.h:45:9: note: place parentheses around the & expression to evaluate it first
+   45 |   if (x & dummy == 1) buf[0] = x;
+      |         ^
+      |       (        )
+2 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../idivide-cuda -I../idivide-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 

@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c bondsEngine.cu -o bondsEngine.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 bondsEngine.o -o cuda 

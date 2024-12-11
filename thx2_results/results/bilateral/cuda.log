@@ -1,0 +1,8 @@
+nvcc  -std=c++14 -Xcompiler -fopenmp -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+reference.h:22: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+       for(int i = -R; i <= R; i++)
+ 
+reference.h:24: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         for(int j = -R; j <= R; j++) {
+ 
+nvcc  -std=c++14 -Xcompiler -fopenmp -Xcompiler -Wall -arch=sm_70 -O3 main.o -o cuda 

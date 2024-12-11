@@ -1,0 +1,23 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c gaussianElim.cpp -o gaussianElim.o
+gaussianElim.cpp:20:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   20 |   float coe[2*size-1];
+      |             ^~~~~~~~
+gaussianElim.cpp:20:15: note: function parameter 'size' with unknown value cannot be used in a constant expression
+   20 |   float coe[2*size-1];
+      |               ^
+gaussianElim.cpp:17:32: note: declared here
+   17 | void init_matrix(float *m, int size){
+      |                                ^
+1 warning generated.
+gaussianElim.cpp:20:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   20 |   float coe[2*size-1];
+      |             ^~~~~~~~
+gaussianElim.cpp:20:15: note: function parameter 'size' with unknown value cannot be used in a constant expression
+   20 |   float coe[2*size-1];
+      |               ^
+gaussianElim.cpp:17:32: note: declared here
+   17 | void init_matrix(float *m, int size){
+      |                                ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c utils.cpp -o utils.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 gaussianElim.o utils.o -o sycl 

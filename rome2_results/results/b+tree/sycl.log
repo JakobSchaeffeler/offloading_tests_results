@@ -1,0 +1,59 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3  ./main.c -c -o main.o
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+./main.c:700:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  700 |       else
+      |       ^
+./main.c:755:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  755 |       printf("(%x)", n);
+      |                ~~    ^
+./main.c:758:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  758 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.c:766:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  766 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.c:768:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  768 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+./main.c:700:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  700 |       else
+      |       ^
+./main.c:755:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  755 |       printf("(%x)", n);
+      |                ~~    ^
+./main.c:758:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  758 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.c:766:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  766 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.c:768:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  768 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3	 ./kernel/kernel_wrapper.c \
+	-c \
+	-o ./kernel/kernel_wrapper.o
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3	 ./kernel/kernel2_wrapper.c \
+	-c \
+	-o ./kernel/kernel2_wrapper.o 
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+~/sycl_workspace/llvm/build/bin/clang++	./util/timer/timer.c \
+	-c \
+	-o ./util/timer/timer.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/sycl_workspace/llvm/build/bin/clang++	./util/num/num.c \
+	-c \
+	-o ./util/num/num.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -I. -I./util/num -I./util/timer -I./kernel -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3	./main.o \
+		./kernel/kernel_wrapper.o \
+		./kernel/kernel2_wrapper.o \
+		./util/timer/timer.o \
+		./util/num/num.o \
+		 \
+                -o b+tree.out

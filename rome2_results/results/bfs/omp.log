@@ -1,0 +1,10 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../bfs-sycl -I../bfs-sycl -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c bfs.cpp -o bfs.o
+bfs.cpp:64:41: error: ISO C++17 does not allow dynamic exception specifications [-Wdynamic-exception-spec]
+   64 |     char *d_graph_visited, int *d_cost) throw(std::string)
+      |                                         ^~~~~~~~~~~~~~~~~~
+bfs.cpp:64:41: note: use 'noexcept(false)' instead
+   64 |     char *d_graph_visited, int *d_cost) throw(std::string)
+      |                                         ^~~~~~~~~~~~~~~~~~
+      |                                         noexcept(false)
+1 error generated.
+make: *** [Makefile:57: bfs.o] Error 1

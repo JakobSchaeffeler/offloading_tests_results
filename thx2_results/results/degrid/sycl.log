@@ -1,0 +1,91 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DPRECISION=double -DUSE_GPU -DPRECISION=double -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:5:
+./kernels.cpp:48:41: error: no member named 'shuffle_down' in 'sycl::sub_group'
+   48 |         sum.x() += item.get_sub_group().shuffle_down(sum.x(),s);
+      |                    ~~~~~~~~~~~~~~~~~~~~ ^
+./kernels.cpp:49:41: error: no member named 'shuffle_down' in 'sycl::sub_group'
+   49 |         sum.y() += item.get_sub_group().shuffle_down(sum.y(),s);
+      |                    ~~~~~~~~~~~~~~~~~~~~ ^
+main.cpp:13:27: error: call to 'sin' is ambiguous
+   13 |           PRECISION tmp = sin(6.28*x/size/GCF_GRID)*exp(-(1.0*x*x+1.0*y*y*sub_y)/size/size/2);
+      |                           ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:77:37: note: candidate function
+   77 | extern __DPCPP_SYCL_EXTERNAL double sin(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:187:34: note: candidate function
+  187 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, sin)
+      |                                  ^
+main.cpp:13:53: error: call to 'exp' is ambiguous
+   13 |           PRECISION tmp = sin(6.28*x/size/GCF_GRID)*exp(-(1.0*x*x+1.0*y*y*sub_y)/size/size/2);
+      |                                                     ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:35:37: note: candidate function
+   35 | extern __DPCPP_SYCL_EXTERNAL double exp(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:180:34: note: candidate function
+  180 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, exp)
+      |                                  ^
+main.cpp:14:68: error: call to 'sin' is ambiguous
+   14 |           gcf[size*size*(sub_x+sub_y*GCF_GRID)+x+y*size].x() = tmp*sin(1.0*x*sub_x/(y+1));
+      |                                                                    ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:77:37: note: candidate function
+   77 | extern __DPCPP_SYCL_EXTERNAL double sin(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:187:34: note: candidate function
+  187 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, sin)
+      |                                  ^
+main.cpp:15:68: error: call to 'cos' is ambiguous
+   15 |           gcf[size*size*(sub_x+sub_y*GCF_GRID)+x+y*size].y() = tmp*cos(1.0*x*sub_x/(y+1));
+      |                                                                    ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:79:37: note: candidate function
+   79 | extern __DPCPP_SYCL_EXTERNAL double cos(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:179:34: note: candidate function
+  179 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, cos)
+      |                                  ^
+main.cpp:32:18: error: call to 'floor' is ambiguous
+   32 |     int main_x = floor(in[n].x()); 
+      |                  ^~~~~
+/usr/include/bits/mathcalls.h:165:14: note: candidate function
+  165 | __MATHCALLX (floor,, (_Mdouble_ __x), (__const__));
+      |              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:140:23: note: candidate function
+  140 | BUILTIN_GENF(ONE_ARG, floor)
+      |                       ^
+main.cpp:33:18: error: call to 'floor' is ambiguous
+   33 |     int main_y = floor(in[n].y()); 
+      |                  ^~~~~
+/usr/include/bits/mathcalls.h:165:14: note: candidate function
+  165 | __MATHCALLX (floor,, (_Mdouble_ __x), (__const__));
+      |              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:140:23: note: candidate function
+  140 | BUILTIN_GENF(ONE_ARG, floor)
+      |                       ^
+main.cpp:94:31: error: call to 'exp' is ambiguous
+   94 |       img[x+IMG_SIZE*y].x() = exp(-((x-1400.0)*(x-1400.0)+(y-3800.0)*(y-3800.0))/8000000.0)+1.0;
+      |                               ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:35:37: note: candidate function
+   35 | extern __DPCPP_SYCL_EXTERNAL double exp(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:180:34: note: candidate function
+  180 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, exp)
+      |                                  ^
+main.cpp:120:9: error: call to 'fabs' is ambiguous
+  120 |     if (fabs(out[n].x()-out_cpu[n].x()) > EPS ||
+      |         ^~~~
+/usr/include/bits/mathcalls.h:162:14: note: candidate function
+  162 | __MATHCALLX (fabs,, (_Mdouble_ __x), (__const__));
+      |              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:139:23: note: candidate function
+  139 | BUILTIN_GENF(ONE_ARG, fabs)
+      |                       ^
+main.cpp:121:9: error: call to 'fabs' is ambiguous
+  121 |         fabs(out[n].y()-out_cpu[n].y()) > EPS ) {
+      |         ^~~~
+/usr/include/bits/mathcalls.h:162:14: note: candidate function
+  162 | __MATHCALLX (fabs,, (_Mdouble_ __x), (__const__));
+      |              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:139:23: note: candidate function
+  139 | BUILTIN_GENF(ONE_ARG, fabs)
+      |                       ^
+11 errors generated.
+make: *** [Makefile:71: main.o] Error 1

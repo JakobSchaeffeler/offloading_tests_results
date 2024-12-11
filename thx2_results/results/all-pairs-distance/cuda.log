@@ -1,0 +1,8 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+main.cu:22: warning: ignoring #pragma omp parallel [-Wunknown-pragmas]
+ #pragma omp parallel for collapse(2)
+ 
+main.cu:170: warning: ignoring #pragma omp parallel [-Wunknown-pragmas]
+ #pragma omp parallel for collapse(2)
+ 
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o cuda 

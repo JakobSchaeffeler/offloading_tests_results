@@ -1,0 +1,4 @@
+nvcc  -std=c++14 -DMILC_COMPLEX -DLDIM=32 -DPRECISION=1 -Xcompiler -Wall -arch=sm_70 -Xcompiler -fopenmp -I../include -O3 -use_fast_math -c main.cu -o main.o
+nvcc  -std=c++14 -DMILC_COMPLEX -DLDIM=32 -DPRECISION=1 -Xcompiler -Wall -arch=sm_70 -Xcompiler -fopenmp -I../include -O3 -use_fast_math -c dslash.cu -o dslash.o
+nvcc  -std=c++14 -DMILC_COMPLEX -DLDIM=32 -DPRECISION=1 -Xcompiler -Wall -arch=sm_70 -Xcompiler -fopenmp -I../include -O3 -use_fast_math -c kernels.cu -o kernels.o
+nvcc  -std=c++14 -DMILC_COMPLEX -DLDIM=32 -DPRECISION=1 -Xcompiler -Wall -arch=sm_70 -Xcompiler -fopenmp -I../include -O3 -use_fast_math main.o dslash.o kernels.o -o cuda 

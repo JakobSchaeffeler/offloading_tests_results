@@ -1,0 +1,12 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 
+ptxas fatal   : Unresolved extern function 'cabsf'
+llvm-foreach: 
+clang++: error: ptxas command failed with exit code 255 (use -v to see invocation)
+clang version 20.0.0git (https://github.com/intel/llvm.git 89c2503697148dff903fb0592bee4288f6fed05c)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/ga27mex2/repos/llvm/build/bin
+Build config: +assertions
+clang++: note: diagnostic msg: Error generating preprocessed source(s) - no preprocessable inputs.
+make: *** [Makefile:68: sycl] Error 1

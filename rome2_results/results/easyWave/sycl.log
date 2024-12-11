@@ -1,0 +1,106 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c main.cpp -o main.o
+main.cpp:887:9: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  887 |         sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:887:9: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  887 |         sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:963:7: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  963 |       sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:963:7: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  963 |       sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+4 warnings generated.
+main.cpp:887:9: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  887 |         sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:887:9: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  887 |         sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:963:7: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  963 |       sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:963:7: warning: 'nd_range' is deprecated: offsets are deprecated in SYCL2020 [-Wdeprecated-declarations]
+  963 |       sycl::nd_range<2>(sycl::range<2>((Imax-Imin+16)/16*16, (Jmax-Jmin+16)/16*16), 
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/nd_range.hpp:34:3: note: 'nd_range' has been explicitly marked deprecated here
+   34 |   __SYCL2020_DEPRECATED("offsets are deprecated in SYCL2020")
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+4 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c cOgrd.cpp -o cOgrd.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c cOkadaFault.cpp -o cOkadaFault.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c cOkadaEarthquake.cpp -o cOkadaEarthquake.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c cSphere.cpp -o cSphere.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c okada.cpp -o okada.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c utilits.cpp -o utilits.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 main.o cOgrd.o cOkadaFault.o cOkadaEarthquake.o cSphere.o okada.o utilits.o -o sycl 

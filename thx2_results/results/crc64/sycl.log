@@ -1,0 +1,33 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c CRC64.cpp -o CRC64.o
+CRC64.cpp:549:24: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  549 |     uint64_t thread_cs[nthreads];
+      |                        ^~~~~~~~
+CRC64.cpp:549:24: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+CRC64.cpp:550:22: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  550 |     size_t thread_sz[nthreads];
+      |                      ^~~~~~~~
+CRC64.cpp:550:22: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+2 warnings generated.
+CRC64.cpp:549:24: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  549 |     uint64_t thread_cs[nthreads];
+      |                        ^~~~~~~~
+CRC64.cpp:549:24: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+CRC64.cpp:550:22: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  550 |     size_t thread_sz[nthreads];
+      |                      ^~~~~~~~
+CRC64.cpp:550:22: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+2 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c CRC64Test.cpp -o CRC64Test.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 CRC64.o CRC64Test.o -o sycl 

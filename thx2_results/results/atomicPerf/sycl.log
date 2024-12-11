@@ -1,0 +1,382 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -O3 -c main.cpp -o main.o
+main.cpp:180:62: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  180 |         BlockRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                              ^
+main.cpp:179:80: note: while substituting into a lambda expression here
+  179 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:177:39: note: while substituting into a lambda expression here
+  177 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:241:3: note: in instantiation of function template specialization 'atomicPerf<double>' requested here
+  241 |   atomicPerf<double>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:197:61: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  197 |         WarpRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                             ^
+main.cpp:196:80: note: while substituting into a lambda expression here
+  196 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:194:39: note: while substituting into a lambda expression here
+  194 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:241:3: note: in instantiation of function template specialization 'atomicPerf<double>' requested here
+  241 |   atomicPerf<double>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:215:55: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  215 |                                         n, item, smem.get_pointer());
+      |                                                       ^
+main.cpp:213:80: note: while substituting into a lambda expression here
+  213 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:211:39: note: while substituting into a lambda expression here
+  211 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:241:3: note: in instantiation of function template specialization 'atomicPerf<double>' requested here
+  241 |   atomicPerf<double>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:180:62: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  180 |         BlockRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                              ^
+main.cpp:179:80: note: while substituting into a lambda expression here
+  179 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:177:39: note: while substituting into a lambda expression here
+  177 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:244:3: note: in instantiation of function template specialization 'atomicPerf<int>' requested here
+  244 |   atomicPerf<int>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:197:61: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  197 |         WarpRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                             ^
+main.cpp:196:80: note: while substituting into a lambda expression here
+  196 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:194:39: note: while substituting into a lambda expression here
+  194 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:244:3: note: in instantiation of function template specialization 'atomicPerf<int>' requested here
+  244 |   atomicPerf<int>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:215:55: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  215 |                                         n, item, smem.get_pointer());
+      |                                                       ^
+main.cpp:213:80: note: while substituting into a lambda expression here
+  213 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:211:39: note: while substituting into a lambda expression here
+  211 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:244:3: note: in instantiation of function template specialization 'atomicPerf<int>' requested here
+  244 |   atomicPerf<int>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:180:62: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  180 |         BlockRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                              ^
+main.cpp:179:80: note: while substituting into a lambda expression here
+  179 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:177:39: note: while substituting into a lambda expression here
+  177 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:247:3: note: in instantiation of function template specialization 'atomicPerf<float>' requested here
+  247 |   atomicPerf<float>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:197:61: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  197 |         WarpRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                             ^
+main.cpp:196:80: note: while substituting into a lambda expression here
+  196 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:194:39: note: while substituting into a lambda expression here
+  194 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:247:3: note: in instantiation of function template specialization 'atomicPerf<float>' requested here
+  247 |   atomicPerf<float>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:215:55: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  215 |                                         n, item, smem.get_pointer());
+      |                                                       ^
+main.cpp:213:80: note: while substituting into a lambda expression here
+  213 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:211:39: note: while substituting into a lambda expression here
+  211 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:247:3: note: in instantiation of function template specialization 'atomicPerf<float>' requested here
+  247 |   atomicPerf<float>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+9 warnings generated.
+main.cpp:180:62: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  180 |         BlockRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                              ^
+main.cpp:179:80: note: while substituting into a lambda expression here
+  179 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:177:39: note: while substituting into a lambda expression here
+  177 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:241:3: note: in instantiation of function template specialization 'atomicPerf<double>' requested here
+  241 |   atomicPerf<double>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:197:61: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  197 |         WarpRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                             ^
+main.cpp:196:80: note: while substituting into a lambda expression here
+  196 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:194:39: note: while substituting into a lambda expression here
+  194 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:241:3: note: in instantiation of function template specialization 'atomicPerf<double>' requested here
+  241 |   atomicPerf<double>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:215:55: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  215 |                                         n, item, smem.get_pointer());
+      |                                                       ^
+main.cpp:213:80: note: while substituting into a lambda expression here
+  213 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:211:39: note: while substituting into a lambda expression here
+  211 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:241:3: note: in instantiation of function template specialization 'atomicPerf<double>' requested here
+  241 |   atomicPerf<double>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:180:62: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  180 |         BlockRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                              ^
+main.cpp:179:80: note: while substituting into a lambda expression here
+  179 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:177:39: note: while substituting into a lambda expression here
+  177 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:244:3: note: in instantiation of function template specialization 'atomicPerf<int>' requested here
+  244 |   atomicPerf<int>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:197:61: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  197 |         WarpRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                             ^
+main.cpp:196:80: note: while substituting into a lambda expression here
+  196 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:194:39: note: while substituting into a lambda expression here
+  194 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:244:3: note: in instantiation of function template specialization 'atomicPerf<int>' requested here
+  244 |   atomicPerf<int>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:215:55: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  215 |                                         n, item, smem.get_pointer());
+      |                                                       ^
+main.cpp:213:80: note: while substituting into a lambda expression here
+  213 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:211:39: note: while substituting into a lambda expression here
+  211 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:244:3: note: in instantiation of function template specialization 'atomicPerf<int>' requested here
+  244 |   atomicPerf<int>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:180:62: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  180 |         BlockRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                              ^
+main.cpp:179:80: note: while substituting into a lambda expression here
+  179 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:177:39: note: while substituting into a lambda expression here
+  177 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:247:3: note: in instantiation of function template specialization 'atomicPerf<float>' requested here
+  247 |   atomicPerf<float>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:197:61: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  197 |         WarpRangeAtomicOnSharedMem<T>(d_data, n, item, smem.get_pointer());
+      |                                                             ^
+main.cpp:196:80: note: while substituting into a lambda expression here
+  196 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:194:39: note: while substituting into a lambda expression here
+  194 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:247:3: note: in instantiation of function template specialization 'atomicPerf<float>' requested here
+  247 |   atomicPerf<float>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:215:55: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  215 |                                         n, item, smem.get_pointer());
+      |                                                       ^
+main.cpp:213:80: note: while substituting into a lambda expression here
+  213 |       cgh.parallel_for(sycl::nd_range<1>(gws, lws), [=](sycl::nd_item<1> item) {
+      |                                                                                ^
+main.cpp:211:39: note: while substituting into a lambda expression here
+  211 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:247:3: note: in instantiation of function template specialization 'atomicPerf<float>' requested here
+  247 |   atomicPerf<float>(n, len, repeat); 
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+9 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -O3 main.o -o sycl 

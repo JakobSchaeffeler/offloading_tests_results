@@ -1,0 +1,45 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../cm-cuda/ -I../cm-cuda/ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c ../cm-cuda/main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../cm-cuda/ -I../cm-cuda/ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c ../cm-cuda/io.cpp -o io.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../cm-cuda/ -I../cm-cuda/ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c process.cpp -o process.o
+process.cpp:110:33: error: no matching function for call to 'computeDotProduct'
+  110 |     double cumulativeSetScore = computeDotProduct(refRegValues, qIndex, dotProductResult,
+      |                                 ^~~~~~~~~~~~~~~~~
+../cm-cuda/utils.h:159:8: note: candidate function not viable: requires 5 arguments, but 6 were provided
+  159 | double computeDotProduct(
+      |        ^
+  160 |     const int *device_v1,
+      |     ~~~~~~~~~~~~~~~~~~~~~
+  161 |     const int *device_v2,
+      |     ~~~~~~~~~~~~~~~~~~~~~
+  162 |     const int vLength,
+      |     ~~~~~~~~~~~~~~~~~~
+  163 |     const int blockSize,
+      |     ~~~~~~~~~~~~~~~~~~~~
+  164 |     const int nThreads);
+      |     ~~~~~~~~~~~~~~~~~~
+process.cpp:122:21: error: no matching function for call to 'computePValue'
+  122 |     double pValue = computePValue(nRandomGenerations, blocksPerGrid_Gen, threadsPerBlock,
+      |                     ^~~~~~~~~~~~~
+../cm-cuda/utils.h:144:8: note: candidate function not viable: requires 9 arguments, but 11 were provided
+  144 | double computePValue(
+      |        ^
+  145 |     const int nRandomGenerations,
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  146 |     const int threadsPerBlock,
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  147 |     const double averageSetScore,
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  148 |     const int setSize,
+      |     ~~~~~~~~~~~~~~~~~~
+  149 |     const int signatureByRNGs,
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  150 |     const double UCmax,
+      |     ~~~~~~~~~~~~~~~~~~~
+  151 |     const float *device_randomIndexArray,
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  152 |     const int *device_refRegNum,
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  153 |     float *device_arraysAdded);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+make: *** [Makefile:63: process.o] Error 1

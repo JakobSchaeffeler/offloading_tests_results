@@ -1,0 +1,523 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../include -I../include -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+main.cpp:136:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  136 | constexpr int64_t lsb = 1;
+      |                   ^
+main.cpp:202:27: note: used here
+  202 |   constexpr int64_t msb = lsb << (int64_t)(n - 1);
+      |                           ^~~
+main.cpp:136:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  136 | constexpr int64_t lsb = 1;
+      |                   ^
+main.cpp:203:27: note: used here
+  203 |   constexpr int64_t nn1 = lsb << (2 * n - 1);
+      |                           ^~~
+main.cpp:137:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  137 | constexpr int32_t lsb32 = 1;
+      |                   ^
+main.cpp:249:7: note: used here
+  249 |       place_macro(1);
+      |       ^~~~~~~~~~~~~~
+main.cpp:241:15: note: expanded from macro 'place_macro'
+  241 |     avail ^= (lsb32 << m); \
+      |               ^~~~~
+main.cpp:137:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  137 | constexpr int32_t lsb32 = 1;
+      |                   ^
+main.cpp:251:7: note: used here
+  251 |       place_macro(0);
+      |       ^~~~~~~~~~~~~~
+main.cpp:241:15: note: expanded from macro 'place_macro'
+  241 |     avail ^= (lsb32 << m); \
+      |               ^~~~~
+main.cpp:127:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  127 | constexpr int64_t kLimit = 100000000;
+      |                   ^
+main.cpp:262:13: note: used here
+  262 |   if (cnt < kLimit) {
+      |             ^~~~~~
+main.cpp:188:15: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  188 | constexpr int kNumLogicalThreads = 16383;
+      |               ^
+main.cpp:277:7: note: used here
+  277 |   if (kNumLogicalThreads > 1 &&
+      |       ^~~~~~~~~~~~~~~~~~
+main.cpp:188:15: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  188 | constexpr int kNumLogicalThreads = 16383;
+      |               ^
+main.cpp:280:64: note: used here
+  280 |       uint64_t(131071 * (openings[1] - openings[0]) + avail) % kNumLogicalThreads != logical_thread_index) {
+      |                                                                ^~~~~~~~~~~~~~~~~~
+In file included from main.cpp:116:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/vector:66:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:369:35: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+  369 |                       _M_impl._M_end_of_storage - _M_impl._M_start);
+      |                                                 ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:531:7: note: in instantiation of member function 'std::_Vector_base<std::array<signed char, 7>, std::allocator<std::array<signed char, 7>>>::~_Vector_base' requested here
+  531 |       vector() = default;
+      |       ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:44:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/ios_base.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/locale_classes.h:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string:43:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/allocator.h:46:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:33:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/new_allocator.h:165:6: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+  165 |         if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+      |             ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:513:13: note: in instantiation of member function 'std::__new_allocator<std::array<signed char, 7>>::deallocate' requested here
+  513 |       { __a.deallocate(__p, __n); }
+      |             ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:389:9: note: in instantiation of member function 'std::allocator_traits<std::allocator<std::array<signed char, 7>>>::deallocate' requested here
+  389 |           _Tr::deallocate(_M_impl, __p, __n);
+      |                ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:368:2: note: in instantiation of member function 'std::_Vector_base<std::array<signed char, 7>, std::allocator<std::array<signed char, 7>>>::_M_deallocate' requested here
+  368 |         _M_deallocate(_M_impl._M_start,
+      |         ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:531:7: note: in instantiation of member function 'std::_Vector_base<std::array<signed char, 7>, std::allocator<std::array<signed char, 7>>>::~_Vector_base' requested here
+  531 |       vector() = default;
+      |       ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:44:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/ios_base.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/locale_classes.h:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string:43:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/allocator.h:46:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:33:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/new_allocator.h:172:27: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+  172 |         _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+      |                                  ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/new_allocator.h:159:50: note: expanded from macro '_GLIBCXX_SIZED_DEALLOC'
+  159 | # define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
+      |                                                  ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/exception:166:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/exception_ptr.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/move.h:37:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/type_traits:1049:21: error: static assertion failed due to requirement 'std::__is_complete_or_unbounded(std::__type_identity<std::array<signed char, 7>>{})': template argument must be a complete class or an unbounded array
+ 1049 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_construct.h:188:21: note: in instantiation of template class 'std::is_destructible<std::array<signed char, 7>>' requested here
+  188 |       static_assert(is_destructible<_Value_type>::value,
+      |                     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:944:12: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 7> *>' requested here
+  944 |       std::_Destroy(__first, __last);
+      |            ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:735:7: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 7> *, std::array<signed char, 7>>' requested here
+  735 |         std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |              ^
+main.cpp:415:14: note: in instantiation of member function 'std::vector<std::array<signed char, 7>>::~vector' requested here
+  415 |   Results<n> final_results;
+      |              ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:44:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/ios_base.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/locale_classes.h:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string:54:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/basic_string.h:39:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ext/alloc_traits.h:34:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:33:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_construct.h:195:25: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+  195 |       std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
+      |                         ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:944:12: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 7> *>' requested here
+  944 |       std::_Destroy(__first, __last);
+      |            ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:735:7: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 7> *, std::array<signed char, 7>>' requested here
+  735 |         std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |              ^
+main.cpp:415:14: note: in instantiation of member function 'std::vector<std::array<signed char, 7>>::~vector' requested here
+  415 |   Results<n> final_results;
+      |              ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+main.cpp:390:18: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+  390 |     Positions<n> pos;
+      |                  ^
+main.cpp:417:3: note: in instantiation of function template specialization 'run_gpu_d<7>' requested here
+  417 |   run_gpu_d<n>(&count, final_results);
+      |   ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+main.cpp:319:20: error: invalid operands to binary expression ('value_type' (aka 'std::array<signed char, 7>') and 'value_type')
+  319 |     if (results[i] == results[i-1]) {
+      |         ~~~~~~~~~~ ^  ~~~~~~~~~~~~
+main.cpp:420:11: note: in instantiation of function template specialization 'unique_count<7>' requested here
+  420 |   total = unique_count<n>(final_results);
+      |           ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/system_error:449:3: note: candidate function not viable: cannot convert argument of incomplete type 'value_type' (aka 'std::array<signed char, 7>') to 'const error_code' for 1st argument
+  449 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^          ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/system_error:465:3: note: candidate function not viable: cannot convert argument of incomplete type 'value_type' (aka 'std::array<signed char, 7>') to 'const error_code' for 1st argument
+  465 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^          ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/system_error:480:3: note: candidate function not viable: cannot convert argument of incomplete type 'value_type' (aka 'std::array<signed char, 7>') to 'const error_condition' for 1st argument
+  480 |   operator==(const error_condition& __lhs,
+      |   ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/system_error:517:3: note: candidate function not viable: cannot convert argument of incomplete type 'value_type' (aka 'std::array<signed char, 7>') to 'const error_condition' for 1st argument
+  517 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |   ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/postypes.h:192:5: note: candidate template ignored: could not match 'fpos' against 'array'
+  192 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/allocator.h:235:5: note: candidate template ignored: could not match 'allocator' against 'array'
+  235 |     operator==(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:441:5: note: candidate template ignored: could not match 'reverse_iterator' against 'array'
+  441 |     operator==(const reverse_iterator<_Iterator>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:486:5: note: candidate template ignored: could not match 'reverse_iterator' against 'array'
+  486 |     operator==(const reverse_iterator<_IteratorL>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1667:5: note: candidate template ignored: could not match 'move_iterator' against 'array'
+ 1667 |     operator==(const move_iterator<_IteratorL>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1737:5: note: candidate template ignored: could not match 'move_iterator' against 'array'
+ 1737 |     operator==(const move_iterator<_Iterator>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:1033:5: note: candidate template ignored: could not match 'pair' against 'array'
+ 1033 |     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string_view:626:5: note: candidate template ignored: could not match 'basic_string_view' against 'array'
+  626 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string_view:634:5: note: candidate template ignored: could not match 'basic_string_view' against 'array'
+  634 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string_view:641:5: note: candidate template ignored: could not match 'basic_string_view' against 'array'
+  641 |     operator==(__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/basic_string.h:3755:5: note: candidate template ignored: could not match 'basic_string' against 'array'
+ 3755 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/basic_string.h:3772:5: note: candidate template ignored: could not match 'basic_string' against 'array'
+ 3772 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/basic_string.h:3819:5: note: candidate template ignored: could not match 'const _CharT *' against 'value_type' (aka 'std::array<signed char, 7>')
+ 3819 |     operator==(const _CharT* __lhs,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/tuple:2556:5: note: candidate template ignored: could not match 'tuple' against 'array'
+ 2556 |     operator==(const tuple<_TElements...>& __t,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/streambuf_iterator.h:234:5: note: candidate template ignored: could not match 'istreambuf_iterator' against 'array'
+  234 |     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:2050:5: note: candidate template ignored: could not match 'vector' against 'array'
+ 2050 |     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:993:50: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+  993 |       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+      |                                                  ^
+main.cpp:312:27: note: in instantiation of member function 'std::vector<std::array<signed char, 7>>::size' requested here
+  312 |   int64_t total = results.size();
+      |                           ^
+main.cpp:420:11: note: in instantiation of function template specialization 'unique_count<7>' requested here
+  420 |   total = unique_count<n>(final_results);
+      |           ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:44:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/ios_base.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/locale_classes.h:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string:48:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1328:27: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+ 1328 |     { return __lhs.base() - __rhs.base(); }
+      |                           ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:1906:22: note: in instantiation of function template specialization '__gnu_cxx::operator-<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>' requested here
+ 1906 |                                 std::__lg(__last - __first) * 2,
+      |                                                  ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:4771:12: note: in instantiation of function template specialization 'std::__sort<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>, __gnu_cxx::__ops::_Iter_less_iter>' requested here
+ 4771 |       std::__sort(__first, __last, __gnu_cxx::__ops::__iter_less_iter());
+      |            ^
+main.cpp:314:3: note: in instantiation of function template specialization 'std::sort<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>>' requested here
+  314 |   sort(results.begin(), results.end());
+      |   ^
+main.cpp:420:11: note: in instantiation of function template specialization 'unique_count<7>' requested here
+  420 |   total = unique_count<n>(final_results);
+      |           ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:117:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/algorithm:61:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:1880:21: error: invalid operands to binary expression ('__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>' and '__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>')
+ 1880 |       while (__last - __first > int(_S_threshold))
+      |              ~~~~~~ ^ ~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:1905:9: note: in instantiation of function template specialization 'std::__introsort_loop<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>, long, __gnu_cxx::__ops::_Iter_less_iter>' requested here
+ 1905 |           std::__introsort_loop(__first, __last,
+      |                ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:4771:12: note: in instantiation of function template specialization 'std::__sort<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>, __gnu_cxx::__ops::_Iter_less_iter>' requested here
+ 4771 |       std::__sort(__first, __last, __gnu_cxx::__ops::__iter_less_iter());
+      |            ^
+main.cpp:314:3: note: in instantiation of function template specialization 'std::sort<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>>' requested here
+  314 |   sort(results.begin(), results.end());
+      |   ^
+main.cpp:420:11: note: in instantiation of function template specialization 'unique_count<7>' requested here
+  420 |   total = unique_count<n>(final_results);
+      |           ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:618:5: note: candidate template ignored: could not match 'reverse_iterator' against '__gnu_cxx::__normal_iterator'
+  618 |     operator-(const reverse_iterator<_IteratorL>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1312:5: note: candidate template ignored: substitution failure [with _IteratorL = std::array<signed char, 7> *, _IteratorR = std::array<signed char, 7> *, _Container = std::vector<std::array<signed char, 7>>]: implicit instantiation of undefined template 'std::array<signed char, 7>'
+ 1312 |     operator-(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     ^
+ 1313 |               const __normal_iterator<_IteratorR, _Container>& __rhs) noexcept
+ 1314 |     -> decltype(__lhs.base() - __rhs.base())
+      |                              ~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1325:5: note: candidate template ignored: substitution failure [with _Iterator = std::array<signed char, 7> *, _Container = std::vector<std::array<signed char, 7>>]
+ 1325 |     operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1789:5: note: candidate template ignored: could not match 'move_iterator' against '__gnu_cxx::__normal_iterator'
+ 1789 |     operator-(const move_iterator<_IteratorL>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1148:7: note: candidate function not viable: no known conversion from '__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>' to 'difference_type' (aka 'long') for 1st argument
+ 1148 |       operator-(difference_type __n) const _GLIBCXX_NOEXCEPT
+      |       ^         ~~~~~~~~~~~~~~~~~~~
+In file included from main.cpp:117:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/algorithm:61:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:1815:18: error: invalid operands to binary expression ('__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>' and '__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>')
+ 1815 |       if (__last - __first > int(_S_threshold))
+      |           ~~~~~~ ^ ~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:1908:9: note: in instantiation of function template specialization 'std::__final_insertion_sort<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>, __gnu_cxx::__ops::_Iter_less_iter>' requested here
+ 1908 |           std::__final_insertion_sort(__first, __last, __comp);
+      |                ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_algo.h:4771:12: note: in instantiation of function template specialization 'std::__sort<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>, __gnu_cxx::__ops::_Iter_less_iter>' requested here
+ 4771 |       std::__sort(__first, __last, __gnu_cxx::__ops::__iter_less_iter());
+      |            ^
+main.cpp:314:3: note: in instantiation of function template specialization 'std::sort<__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>>' requested here
+  314 |   sort(results.begin(), results.end());
+      |   ^
+main.cpp:420:11: note: in instantiation of function template specialization 'unique_count<7>' requested here
+  420 |   total = unique_count<n>(final_results);
+      |           ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:618:5: note: candidate template ignored: could not match 'reverse_iterator' against '__gnu_cxx::__normal_iterator'
+  618 |     operator-(const reverse_iterator<_IteratorL>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1312:5: note: candidate template ignored: substitution failure [with _IteratorL = std::array<signed char, 7> *, _IteratorR = std::array<signed char, 7> *, _Container = std::vector<std::array<signed char, 7>>]: implicit instantiation of undefined template 'std::array<signed char, 7>'
+ 1312 |     operator-(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     ^
+ 1313 |               const __normal_iterator<_IteratorR, _Container>& __rhs) noexcept
+ 1314 |     -> decltype(__lhs.base() - __rhs.base())
+      |                              ~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1325:5: note: candidate template ignored: substitution failure [with _Iterator = std::array<signed char, 7> *, _Container = std::vector<std::array<signed char, 7>>]
+ 1325 |     operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1789:5: note: candidate template ignored: could not match 'move_iterator' against '__gnu_cxx::__normal_iterator'
+ 1789 |     operator-(const move_iterator<_IteratorL>& __x,
+      |     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_iterator.h:1148:7: note: candidate function not viable: no known conversion from '__gnu_cxx::__normal_iterator<std::array<signed char, 7> *, std::vector<std::array<signed char, 7>>>' to 'difference_type' (aka 'long') for 1st argument
+ 1148 |       operator-(difference_type __n) const _GLIBCXX_NOEXCEPT
+      |       ^         ~~~~~~~~~~~~~~~~~~~
+In file included from main.cpp:116:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/vector:66:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:1131:34: error: implicit instantiation of undefined template 'std::array<signed char, 7>'
+ 1131 |         return *(this->_M_impl._M_start + __n);
+      |                                         ^
+main.cpp:316:14: note: in instantiation of member function 'std::vector<std::array<signed char, 7>>::operator[]' requested here
+  316 |     print<n>(results[0]);
+      |              ^
+main.cpp:420:11: note: in instantiation of function template specialization 'unique_count<7>' requested here
+  420 |   total = unique_count<n>(final_results);
+      |           ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+main.cpp:466:14: error: type 'const Positions<7>' (aka 'const array<signed char, 7>') does not provide a subscript operator
+  466 |     int k2 = pos[m-1];
+      |              ^~~ ~~~
+main.cpp:316:5: note: in instantiation of function template specialization 'print<7>' requested here
+  316 |     print<n>(results[0]);
+      |     ^
+main.cpp:420:11: note: in instantiation of function template specialization 'unique_count<7>' requested here
+  420 |   total = unique_count<n>(final_results);
+      |           ^
+main.cpp:488:3: note: in instantiation of function template specialization 'run_gpu<7>' requested here
+  488 |   run_gpu<7>(known_results);
+      |   ^
+In file included from main.cpp:116:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/vector:66:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:369:35: error: implicit instantiation of undefined template 'std::array<signed char, 8>'
+  369 |                       _M_impl._M_end_of_storage - _M_impl._M_start);
+      |                                                 ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:531:7: note: in instantiation of member function 'std::_Vector_base<std::array<signed char, 8>, std::allocator<std::array<signed char, 8>>>::~_Vector_base' requested here
+  531 |       vector() = default;
+      |       ^
+main.cpp:489:3: note: in instantiation of function template specialization 'run_gpu<8>' requested here
+  489 |   run_gpu<8>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:44:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/ios_base.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/locale_classes.h:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string:43:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/allocator.h:46:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:33:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/new_allocator.h:165:6: error: implicit instantiation of undefined template 'std::array<signed char, 8>'
+  165 |         if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+      |             ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:513:13: note: in instantiation of member function 'std::__new_allocator<std::array<signed char, 8>>::deallocate' requested here
+  513 |       { __a.deallocate(__p, __n); }
+      |             ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:389:9: note: in instantiation of member function 'std::allocator_traits<std::allocator<std::array<signed char, 8>>>::deallocate' requested here
+  389 |           _Tr::deallocate(_M_impl, __p, __n);
+      |                ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:368:2: note: in instantiation of member function 'std::_Vector_base<std::array<signed char, 8>, std::allocator<std::array<signed char, 8>>>::_M_deallocate' requested here
+  368 |         _M_deallocate(_M_impl._M_start,
+      |         ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:531:7: note: in instantiation of member function 'std::_Vector_base<std::array<signed char, 8>, std::allocator<std::array<signed char, 8>>>::~_Vector_base' requested here
+  531 |       vector() = default;
+      |       ^
+main.cpp:489:3: note: in instantiation of function template specialization 'run_gpu<8>' requested here
+  489 |   run_gpu<8>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:44:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/ios_base.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/locale_classes.h:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string:43:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/allocator.h:46:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:33:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/new_allocator.h:172:27: error: implicit instantiation of undefined template 'std::array<signed char, 8>'
+  172 |         _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+      |                                  ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/new_allocator.h:159:50: note: expanded from macro '_GLIBCXX_SIZED_DEALLOC'
+  159 | # define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
+      |                                                  ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/exception:166:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/exception_ptr.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/move.h:37:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/type_traits:1049:21: error: static assertion failed due to requirement 'std::__is_complete_or_unbounded(std::__type_identity<std::array<signed char, 8>>{})': template argument must be a complete class or an unbounded array
+ 1049 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_construct.h:188:21: note: in instantiation of template class 'std::is_destructible<std::array<signed char, 8>>' requested here
+  188 |       static_assert(is_destructible<_Value_type>::value,
+      |                     ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:944:12: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 8> *>' requested here
+  944 |       std::_Destroy(__first, __last);
+      |            ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:735:7: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 8> *, std::array<signed char, 8>>' requested here
+  735 |         std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |              ^
+main.cpp:415:14: note: in instantiation of member function 'std::vector<std::array<signed char, 8>>::~vector' requested here
+  415 |   Results<n> final_results;
+      |              ^
+main.cpp:489:3: note: in instantiation of function template specialization 'run_gpu<8>' requested here
+  489 |   run_gpu<8>(known_results);
+      |   ^
+In file included from main.cpp:113:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/iostream:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ostream:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ios:44:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/ios_base.h:41:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/locale_classes.h:40:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/string:54:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/basic_string.h:39:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/ext/alloc_traits.h:34:
+In file included from /home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:33:
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_construct.h:195:25: error: implicit instantiation of undefined template 'std::array<signed char, 8>'
+  195 |       std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
+      |                         ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/alloc_traits.h:944:12: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 8> *>' requested here
+  944 |       std::_Destroy(__first, __last);
+      |            ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_vector.h:735:7: note: in instantiation of function template specialization 'std::_Destroy<std::array<signed char, 8> *, std::array<signed char, 8>>' requested here
+  735 |         std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |              ^
+main.cpp:415:14: note: in instantiation of member function 'std::vector<std::array<signed char, 8>>::~vector' requested here
+  415 |   Results<n> final_results;
+      |              ^
+main.cpp:489:3: note: in instantiation of function template specialization 'run_gpu<8>' requested here
+  489 |   run_gpu<8>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+main.cpp:390:18: error: implicit instantiation of undefined template 'std::array<signed char, 8>'
+  390 |     Positions<n> pos;
+      |                  ^
+main.cpp:417:3: note: in instantiation of function template specialization 'run_gpu_d<8>' requested here
+  417 |   run_gpu_d<n>(&count, final_results);
+      |   ^
+main.cpp:489:3: note: in instantiation of function template specialization 'run_gpu<8>' requested here
+  489 |   run_gpu<8>(known_results);
+      |   ^
+/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-13.1.0/gcc-14.2.0-xlpqn36xkc4cerhd6hjcatncxwe362si/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/bits/stl_pair.h:99:12: note: template is declared here
+   99 |     struct array;
+      |            ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+7 warnings and 20 errors generated.
+make: *** [Makefile:56: main.o] Error 1

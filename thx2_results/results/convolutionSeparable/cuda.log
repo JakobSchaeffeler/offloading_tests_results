@@ -1,0 +1,4 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c conv.cu -o conv.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c conv_gold.cu -o conv_gold.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o conv.o conv_gold.o -o cuda 

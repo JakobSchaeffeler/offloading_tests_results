@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c chi2.cu -o chi2.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 chi2.o -o cuda 

@@ -1,0 +1,87 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from main.cu:16:
+./lapl_ss.c:49:12: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    __m128 register vnorm = _mm_load1_ps(&norm);
+           ^~~~~~~~~
+./lapl_ss.c:50:12: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    __m128 register vdelta = _mm_load1_ps(&delta);
+           ^~~~~~~~~
+./lapl_ss.c:62:9: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+        __m128 register in00 = _mm_load_ps(&in[v00].site4[0]);
+               ^~~~~~~~~
+./lapl_ss.c:63:9: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+        __m128 register in0p = _mm_load_ps(&in[v0p].site4[0]);
+               ^~~~~~~~~
+./lapl_ss.c:64:9: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+        __m128 register in0m = _mm_load_ps(&in[v0m].site4[0]);
+               ^~~~~~~~~
+./lapl_ss.c:65:9: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+        __m128 register inp0 = _mm_load_ps(&in[vp0].site4[0]);
+               ^~~~~~~~~
+./lapl_ss.c:66:9: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+        __m128 register inm0 = _mm_load_ps(&in[vm0].site4[0]);
+               ^~~~~~~~~
+./lapl_ss.c:68:9: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+        __m128 register hop = _mm_add_ps(inm0, inp0);
+               ^~~~~~~~~
+./lapl_ss.c:72:9: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+        __m128 register dia = _mm_mul_ps(vnorm, in00);
+               ^~~~~~~~~
+./lapl_ss.c:87:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register in00 = _mm_load_ps(&in[v00].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:88:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register in0p = _mm_load_ps(&in[v0p].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:89:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register in0m = _mm_load_ps(&in[v0m].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:91:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register inp0 = _mm_load_ps(&in[vp0].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:92:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register inm0 = _mm_load_ps(&in[vm0].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:94:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register hop = _mm_add_ps(inm0, inp0);
+             ^~~~~~~~~
+./lapl_ss.c:98:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register dia = _mm_mul_ps(vnorm, in00);
+             ^~~~~~~~~
+./lapl_ss.c:113:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register in00 = _mm_load_ps(&in[v00].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:114:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register in0p = _mm_load_ps(&in[v0p].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:116:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register in0m = _mm_load_ps(&in[v0m].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:117:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register inp0 = _mm_load_ps(&in[vp0].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:118:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register inm0 = _mm_load_ps(&in[vm0].site4[0]);
+             ^~~~~~~~~
+./lapl_ss.c:120:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register hop = _mm_add_ps(inm0, inp0);
+             ^~~~~~~~~
+./lapl_ss.c:124:14: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+      __m128 register dia = _mm_mul_ps(vnorm, in00);
+             ^~~~~~~~~
+main.cu:106:3: error: expected ')'
+         Lx*Ly*sizeof(float)*2.0/(t0*1.0e3), 
+         ^
+main.cu:104:9: note: to match this '('
+  printf(" iters = %8d, (Lx,Ly) = %6d, %6d, t = %8.1f usec/iter, BW = %6.3f GB/s, P = %6.3f Gflop/s\n",
+        ^
+23 warnings and 1 error generated when compiling for gfx908.
+make: *** [Makefile:50: main.o] Error 1
