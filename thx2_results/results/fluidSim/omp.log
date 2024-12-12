@@ -1,0 +1,69 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DVERIFY -D__STRICT_ANSI__ -DVERIFY -D__STRICT_ANSI__ -DVERIFY -D__STRICT_ANSI__ -DVERIFY -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c ../fluidSim-cuda/main.cpp -o main.o
+In file included from ../fluidSim-cuda/main.cpp:3:
+../fluidSim-cuda/utils.h:10:26: error: expected unqualified-id
+   10 | typedef struct __align__(32)
+      |                          ^
+../fluidSim-cuda/utils.h:10:26: error: expected ')'
+../fluidSim-cuda/utils.h:10:25: note: to match this '('
+   10 | typedef struct __align__(32)
+      |                         ^
+../fluidSim-cuda/utils.h:14:1: error: a type specifier is required for all declarations
+   14 | int8;
+      | ^
+../fluidSim-cuda/utils.h:16:26: error: expected unqualified-id
+   16 | typedef struct __align__(64)
+      |                          ^
+../fluidSim-cuda/utils.h:16:26: error: expected ')'
+../fluidSim-cuda/utils.h:16:25: note: to match this '('
+   16 | typedef struct __align__(64)
+      |                         ^
+../fluidSim-cuda/utils.h:20:1: error: a type specifier is required for all declarations
+   20 | double8;
+      | ^
+../fluidSim-cuda/utils.h:27:3: error: unknown type name 'double2'; did you mean 'double'?
+   27 |   double2 *u,
+      |   ^~~~~~~
+      |   double
+../fluidSim-cuda/utils.h:29:9: error: unknown type name 'double8'; did you mean 'double'?
+   29 |   const double8 dirX,
+      |         ^~~~~~~
+      |         double
+../fluidSim-cuda/utils.h:30:9: error: unknown type name 'double8'; did you mean 'double'?
+   30 |   const double8 dirY,
+      |         ^~~~~~~
+      |         double
+../fluidSim-cuda/main.cpp:28:10: error: expected ';' after expression
+   28 |   double8 dirX, dirY; // Directions
+      |          ^
+      |          ;
+../fluidSim-cuda/main.cpp:28:11: error: use of undeclared identifier 'dirX'
+   28 |   double8 dirX, dirY; // Directions
+      |           ^
+../fluidSim-cuda/main.cpp:28:17: error: use of undeclared identifier 'dirY'
+   28 |   double8 dirX, dirY; // Directions
+      |                 ^
+../fluidSim-cuda/main.cpp:32:45: error: use of undeclared identifier 'double4'
+   32 |   double *h_if1234 = (double*)malloc(sizeof(double4) * temp);
+      |                                             ^
+../fluidSim-cuda/main.cpp:33:45: error: use of undeclared identifier 'double4'
+   33 |   double *h_if5678 = (double*)malloc(sizeof(double4) * temp);
+      |                                             ^
+../fluidSim-cuda/main.cpp:38:45: error: use of undeclared identifier 'double4'
+   38 |   double *v_of1234 = (double*)malloc(sizeof(double4) * temp);
+      |                                             ^
+../fluidSim-cuda/main.cpp:39:45: error: use of undeclared identifier 'double4'
+   39 |   double *v_of5678 = (double*)malloc(sizeof(double4) * temp);
+      |                                             ^
+../fluidSim-cuda/main.cpp:44:45: error: use of undeclared identifier 'double4'
+   44 |   double *h_of1234 = (double*)malloc(sizeof(double4) * temp);
+      |                                             ^
+../fluidSim-cuda/main.cpp:45:45: error: use of undeclared identifier 'double4'
+   45 |   double *h_of5678 = (double*)malloc(sizeof(double4) * temp);
+      |                                             ^
+../fluidSim-cuda/main.cpp:54:3: error: unknown type name 'double2'; did you mean 'double'?
+   54 |   double2 *u = (double2*)malloc(sizeof(double2) * temp);
+      |   ^~~~~~~
+      |   double
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile:63: main.o] Error 1

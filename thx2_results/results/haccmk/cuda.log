@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c haccmk.cu -o haccmk.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 haccmk.o -o cuda 

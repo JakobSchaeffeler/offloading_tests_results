@@ -1,0 +1,3 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../gd-sycl -I../gd-sycl -I../gd-sycl -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../gd-sycl -I../gd-sycl -I../gd-sycl -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c ../gd-sycl/utils.cpp -o utils.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../gd-sycl -I../gd-sycl -I../gd-sycl -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 main.o utils.o  -o omp 

@@ -11,7 +11,7 @@ hipcc	-DOUTPUT  ./main.cu \
   line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
 /opt/rocm-5.4.3/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
   target_search_term = re.compile("1002:\w+")
-hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -O3 -O3 -O3 -O3 -O3 -O3   ./kernel/kernel.cu \
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -O3 -O3 -O3 -O3 -O3   ./kernel/kernel.cu \
 	-c \
 	-o ./kernel/kernel.o 
 /opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
@@ -22,7 +22,7 @@ hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/L
   line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
 /opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
   target_search_term = re.compile("1002:\w+")
-hipcc	--rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -O3 -O3 -O3 -O3 -O3 -O3 ./util/avi/avilib.c \
+hipcc	--rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -O3 -O3 -O3 -O3 -O3 ./util/avi/avilib.c \
 	-I./util/avi \
 	-c \
 	-o ./util/avi/avilib.o 

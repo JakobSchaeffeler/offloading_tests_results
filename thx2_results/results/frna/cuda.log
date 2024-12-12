@@ -1,0 +1,6 @@
+nvcc  -DINT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c main.c -o main.o
+nvcc  -DINT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c fbase.c -o fbase.o
+nvcc  -DINT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c fparam.c -o fparam.o
+nvcc  -DINT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c util.c -o util.o
+nvcc  -DINT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c frna.cu -o frna.o
+nvcc  -DINT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math main.o fbase.o fparam.o util.o frna.o  -o cuda 

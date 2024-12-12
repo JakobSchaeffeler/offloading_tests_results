@@ -1,0 +1,3 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../haversine-cuda -I../haversine-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c ../haversine-cuda/main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../haversine-cuda -I../haversine-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c distance.cpp -o distance.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../haversine-cuda -I../haversine-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 main.o distance.o -o omp 

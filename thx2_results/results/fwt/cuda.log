@@ -1,0 +1,10 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+kernels.cu: In function ‘void fwtBatchGPU(float*, int, int)’:
+kernels.cu:142:75: warning: passing argument 1 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+         fwtBatch2Kernel<<<grid, THREAD_N>>>(d_Data, d_Data, N / 4);
+                                                                           ^             
+kernels.cu:145:88: warning: passing argument 1 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+     fwtBatch1Kernel<<<M, N / 4, N *sizeof(float)>>>(
+                                                                                        ^             
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c reference.cu -o reference.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o reference.o -o cuda 

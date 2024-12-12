@@ -1,0 +1,7 @@
+nvcc  -std=c++14 -Xcompiler -Wall -Xcompiler -fopenmp -arch=sm_70 -O3 -c main.cu -o main.o
+In file included from main.cu:16:
+lapl_ss.c:1:10: fatal error: xmmintrin.h: No such file or directory
+ #include <xmmintrin.h>
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:51: main.o] Error 1
