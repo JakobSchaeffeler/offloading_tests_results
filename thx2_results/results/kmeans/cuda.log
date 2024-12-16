@@ -1,0 +1,16 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 cluster.cu -c
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 getopt.cpp -c
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 read_input.cpp -c
+read_input.cpp: In function ‘int setup(int, char**)’:
+read_input.cpp:80:8: warning: variable ‘len’ set but not used [-Wunused-but-set-variable]
+  float len;
+        ^~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 rmse.cpp -c
+rmse.cpp:72: warning: ignoring #pragma omp parallel [-Wunknown-pragmas]
+     #pragma omp parallel for \
+ 
+rmse.cpp: In function ‘float rms_err(float**, int, int, float**, int)’:
+rmse.cpp:84:47: warning: ‘index’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+          cluster_centres[nearest_cluster_index],
+                                               ^
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 cluster.o getopt.o read_input.o rmse.o kmeans.cpp -o kmeans 

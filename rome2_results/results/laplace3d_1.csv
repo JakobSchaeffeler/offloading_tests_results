@@ -1,15 +1,15 @@
 ,omp 512 512 512 100 0 omp offloading kernel,sycl 512 512 512 100 0 sycl kernel,hip 512 512 512 100 0 hip_kernel
-Runtime,313281589.0,157344547.0,157182983.0
+Runtime,311044974.0,157652003.0,156912156.0
 SALU Instructions per wave,60104.08,8987.25,12573.75
 VALU Instructions per wave,0.0,0.0,0.0
 IPC,0.83,0.55,0.63
 L1 Requests per wave,125987.53,23549.0,23549.0
 L1 Hit Rate,32.57,0.0,0.0
-L2 Requests per wave,26354.2,6999.83,7000.29
-L2 Hit Rate,41.4,39.75,39.93
-Wavefront Occupancy (% of peak),1635.76,3660.63,3657.91
-Dependency Wait Cycles per wave,2168388.35,1972307.91,1947507.81
-Issue Wait Cycles per wave,671374.33,92114.11,83577.74
+L2 Requests per wave,26353.77,6999.65,7000.2
+L2 Hit Rate,43.96,39.68,39.85
+Wavefront Occupancy (% of peak),1630.35,3667.41,3658.9
+Dependency Wait Cycles per wave,2103021.54,1966201.94,1946277.53
+Issue Wait Cycles per wave,675428.04,90959.06,83458.94
 Grid Size,122880.0,262144.0,262144.0
 #Threads,256.0,256.0,256.0
 Shared Memory Allocated,0.0,4096.0,4096.0
@@ -21,15 +21,19 @@ Global Memory Read Instructions per wave,6781.95,768.0,768.0
 Global Memory Write Instructions per wave,1092.27,512.0,512.0
 Coalesced Instructions (% of peak),100.0,86.97,86.97
 Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,669023.48,139108.88,138384.28
+Global Write/Atomic Bytes per wave,279620.27,130527.92,131061.99
 SALU Instructions,115399833.60000001,36811776.0,51502080.0
 VALU Instructions,0.0,0.0,0.0
 L1 Requests,241896057.6,96456704.0,96456704.0
-L2 Requests,50600064.0,28671303.68,28673187.84
-Dependency Wait Cycles,4163305632.0,8078573199.36,7976991989.76
-Issue Wait Cycles,1289038713.6,377299394.56,342334423.04
+L2 Requests,50599238.4,28670566.4,28672819.2
+Dependency Wait Cycles,4037801356.8,8053563146.24,7971952762.88
+Issue Wait Cycles,1296821836.8000002,372568309.76,341847818.24
 Shared Memory Instructions,15118502.4,24368087.04,24368087.04
 Register Spill Instructions,0.0,0.0,0.0
 Global Memory Instructions,15118502.4,5242880.0,5242880.0
 Global Memory Read Instructions,13021344.0,3145728.0,3145728.0
 Global Memory Write Instructions,2097158.4,2097152.0,2097152.0
 Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,1284525081.6,569789972.48,566822010.88
+Global Write/Atomic Bytes,536870918.4000001,534642360.32,536829911.04

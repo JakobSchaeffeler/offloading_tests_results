@@ -1,0 +1,7 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+In file included from main.cu:42:
+cpu_interval.h:41:10: fatal error: boost/numeric/interval.hpp: No such file or directory
+ #include <boost/numeric/interval.hpp>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:50: main.o] Error 1

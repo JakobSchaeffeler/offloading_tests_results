@@ -1,0 +1,4 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c util/num/num.cu -o util/num/num.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c util/timer/timer.cu -o util/timer/timer.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o ./util/num/num.o ./util/timer/timer.o -o cuda 

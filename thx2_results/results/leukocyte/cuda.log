@@ -1,0 +1,217 @@
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -I./meschach_lib --x cu -O3 detect_main.c -c
+In file included from /usr/include/c++/8/chrono:40,
+                 from find_ellipse.h:9,
+                 from track_ellipse.h:4,
+                 from detect_main.c:2:
+/usr/include/c++/8/limits:317:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return _Tp(); }
+           ^
+/usr/include/c++/8/limits:321:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return _Tp(); }
+           ^
+/usr/include/c++/8/limits:388:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return false; }
+           ^
+/usr/include/c++/8/limits:391:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return true; }
+           ^
+/usr/include/c++/8/limits:395:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:457:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return __glibcxx_min(char); }
+           ^
+/usr/include/c++/8/limits:460:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __glibcxx_max(char); }
+           ^
+/usr/include/c++/8/limits:464:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:524:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return -__SCHAR_MAX__ - 1; }
+           ^
+/usr/include/c++/8/limits:527:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __SCHAR_MAX__; }
+           ^
+/usr/include/c++/8/limits:531:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:594:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return 0; }
+           ^
+/usr/include/c++/8/limits:597:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __SCHAR_MAX__ * 2U + 1; }
+           ^
+/usr/include/c++/8/limits:601:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:667:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return __glibcxx_min (wchar_t); }
+           ^
+/usr/include/c++/8/limits:670:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __glibcxx_max (wchar_t); }
+           ^
+/usr/include/c++/8/limits:674:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:736:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() noexcept { return __glibcxx_min (char16_t); }
+           ^
+/usr/include/c++/8/limits:739:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() noexcept { return __glibcxx_max (char16_t); }
+           ^
+/usr/include/c++/8/limits:742:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:797:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() noexcept { return __glibcxx_min (char32_t); }
+           ^
+/usr/include/c++/8/limits:800:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() noexcept { return __glibcxx_max (char32_t); }
+           ^
+/usr/include/c++/8/limits:803:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:859:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return -__SHRT_MAX__ - 1; }
+           ^
+/usr/include/c++/8/limits:862:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __SHRT_MAX__; }
+           ^
+/usr/include/c++/8/limits:866:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:926:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return 0; }
+           ^
+/usr/include/c++/8/limits:929:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __SHRT_MAX__ * 2U + 1; }
+           ^
+/usr/include/c++/8/limits:933:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:999:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return -__INT_MAX__ - 1; }
+           ^
+/usr/include/c++/8/limits:1002:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __INT_MAX__; }
+           ^
+/usr/include/c++/8/limits:1006:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:1066:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return 0; }
+           ^
+/usr/include/c++/8/limits:1069:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __INT_MAX__ * 2U + 1; }
+           ^
+/usr/include/c++/8/limits:1073:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:1138:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return -__LONG_MAX__ - 1; }
+           ^
+/usr/include/c++/8/limits:1141:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __LONG_MAX__; }
+           ^
+/usr/include/c++/8/limits:1145:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:1205:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return 0; }
+           ^
+/usr/include/c++/8/limits:1208:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __LONG_MAX__ * 2UL + 1; }
+           ^
+/usr/include/c++/8/limits:1212:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:1278:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return -__LONG_LONG_MAX__ - 1; }
+           ^
+/usr/include/c++/8/limits:1281:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __LONG_LONG_MAX__; }
+           ^
+/usr/include/c++/8/limits:1285:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:1348:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return 0; }
+           ^
+/usr/include/c++/8/limits:1351:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __LONG_LONG_MAX__ * 2ULL + 1; }
+           ^
+/usr/include/c++/8/limits:1355:38: error: macro "min" requires 2 arguments, but only 1 given
+       lowest() noexcept { return min(); }
+                                      ^
+/usr/include/c++/8/limits:1599:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return __FLT_MIN__; }
+           ^
+/usr/include/c++/8/limits:1602:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __FLT_MAX__; }
+           ^
+/usr/include/c++/8/limits:1674:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return __DBL_MIN__; }
+           ^
+/usr/include/c++/8/limits:1677:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __DBL_MAX__; }
+           ^
+/usr/include/c++/8/limits:1749:11: error: macro "min" requires 2 arguments, but only 1 given
+       min() _GLIBCXX_USE_NOEXCEPT { return __LDBL_MIN__; }
+           ^
+/usr/include/c++/8/limits:1752:11: error: macro "max" requires 2 arguments, but only 1 given
+       max() _GLIBCXX_USE_NOEXCEPT { return __LDBL_MAX__; }
+           ^
+In file included from /usr/include/c++/8/chrono:42,
+                 from find_ellipse.h:9,
+                 from track_ellipse.h:4,
+                 from detect_main.c:2:
+/usr/include/c++/8/bits/parse_numbers.h:268:65: error: macro "max" requires 2 arguments, but only 1 given
+     : conditional_t<(_Val <= std::numeric_limits<_IntType>::max()),
+                                                                 ^
+In file included from find_ellipse.h:9,
+                 from track_ellipse.h:4,
+                 from detect_main.c:2:
+/usr/include/c++/8/chrono:282:6: error: macro "max" requires 2 arguments, but only 1 given
+  max() noexcept
+      ^
+/usr/include/c++/8/chrono:283:37: error: macro "max" requires 2 arguments, but only 1 given
+  { return numeric_limits<_Rep>::max(); }
+                                     ^
+/usr/include/c++/8/chrono:286:6: error: macro "min" requires 2 arguments, but only 1 given
+  min() noexcept
+      ^
+/usr/include/c++/8/chrono:437:6: error: macro "min" requires 2 arguments, but only 1 given
+  min() noexcept
+      ^
+/usr/include/c++/8/chrono:438:46: error: macro "min" requires 2 arguments, but only 1 given
+  { return duration(duration_values<rep>::min()); }
+                                              ^
+/usr/include/c++/8/chrono:441:6: error: macro "max" requires 2 arguments, but only 1 given
+  max() noexcept
+      ^
+/usr/include/c++/8/chrono:442:46: error: macro "max" requires 2 arguments, but only 1 given
+  { return duration(duration_values<rep>::max()); }
+                                              ^
+/usr/include/c++/8/chrono:659:6: error: macro "min" requires 2 arguments, but only 1 given
+  min() noexcept
+      ^
+/usr/include/c++/8/chrono:660:36: error: macro "min" requires 2 arguments, but only 1 given
+  { return time_point(duration::min()); }
+                                    ^
+/usr/include/c++/8/chrono:663:6: error: macro "max" requires 2 arguments, but only 1 given
+  max() noexcept
+      ^
+/usr/include/c++/8/chrono:664:36: error: macro "max" requires 2 arguments, but only 1 given
+  { return time_point(duration::max()); }
+                                    ^
+/usr/include/c++/8/chrono:825:49: error: macro "min" requires 2 arguments, but only 1 given
+       static_assert(system_clock::duration::min()
+                                                 ^
+/usr/include/c++/8/chrono:923:37: error: macro "min" requires 2 arguments, but only 1 given
+     operator""min(long double __mins)
+                                     ^
+/usr/include/c++/8/chrono:928:21: error: macro "min" requires 2 arguments, but only 1 given
+       operator""min()
+                     ^
+make: *** [Makefile:50: detect_main.o] Error 1

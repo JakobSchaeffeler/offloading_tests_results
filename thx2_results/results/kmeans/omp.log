@@ -1,0 +1,10 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64  cluster.c -c
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=nvptx64  getopt.c -c
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=nvptx64  read_input.c -c
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=nvptx64  rmse.c -c
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++  -fopenmp -fopenmp-targets=nvptx64  cluster.o getopt.o read_input.o rmse.o kmeans.c -o kmeans -lm
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]

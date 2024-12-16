@@ -1,0 +1,46 @@
+,omp 256 16777216 100,sycl 256 16777216 100,cuda 256 16777216 100
+Runtime,188611490.0,179183285.0,292351320.0
+HtoD copy time,159424840.0,154973230.0,157715350.0
+DtoH copy time,17301660.0,17233930.0,17331200.0
+#Threads,256.0,256.0,256.0
+#Teams,3200.0,65536.0,65536.0
+Instructions Executed,28362566651.019955,31426180573.950058,24983547183.08005
+IPC,1.5102000000000013,1.7395000000000007,0.830799999999999
+Shared Memory Stores,0.0,0.0,0.0
+Shared Memory Loads,0.0,0.0,0.0
+Shared Memory Store Bank Conflicts,0.0,0.0,0.0
+Shared Memory Load Bank Conflicts,0.0,0.0,0.0
+Global Memory Load Instructions,1362604800.0,1362605200.0,1362466000.0
+Global Memory Store Instructions,52428800.0,52428800.0,52428800.0
+Global Memory Load (MB),69470.69999999995,72945.07000000014,73390.09999999996
+Global Memory Store (MB),10461.14,10645.429999999998,9167.059999999996
+Global Memory Load Throughput (GB/s),693.3979,728.1507,731.7715999999999
+Global Memory Store Throughput (GB/s),36.276500000000006,38.25830000000001,23.449699999999996
+Global Memory Load Bank Conflicts,3831283034.0,4030244156.0,4382085745.0
+Global Memory Store Bank Conflicts,4562069.0,3841790.0,5384946.0
+L1 Cache Accesses (Bytes),697.9599999999981,768.2299999999983,667.5900000000021
+L1 Cache Hits (%),78.35440000000003,79.01190000000014,69.8857
+L1 Cache Throughput (GB/s),2.419599999999999,2.7622999999999975,1.7062999999999995
+L2 Cache Accesses (Bytes),55702.66000000009,61215.28999999987,52031.400000000016
+L2 Cache Hits (%),31.2519,34.2894,25.133799999999994
+L2 Cache Throughput (GB/s),555.9771,611.0629000000002,518.8045
+#Divergent Branches,767169200.0,767169200.0,819412300.0
+Warp Stalls - Barrier Not Issued,329755.0,0.0,0.0
+Warp Stalls - Branch Resolving Not Issued,134536.0,158042.0,105314.0
+Warp Stalls - Dispatch Stall Not Issued,2507.0,2923.0,901.0
+Warp Stalls - Drain Not Issued,88.0,43140.0,32321.0
+Warp Stalls - IMC Miss Not Issued,2485.0,2473.0,2072.0
+Warp Stalls - LG Throttle Not Issued,372019.0,1071007.0,436520.0
+Warp Stalls - Long Scoreboard Not Issued,3826563.0,3046309.0,4711059.0
+Warp Stalls - Math Pipe Throttle Not Issued,33834.0,37075.0,13267.0
+Warp Stalls - Membar Not Issued,0.0,0.0,0.0
+Warp Stalls - MIO Throttle Not Issued,760.0,2197.0,1786.0
+Warp Stalls - Misc Not Issued,1567.0,243.0,1173.0
+Warp Stalls - No Instructions Not Issued,30216.0,35708.0,27016.0
+Warp Stalls - Not Selected Not Issued,0.0,0.0,0.0
+Warp Stalls - Selected Not Issued,0.0,0.0,0.0
+Warp Stalls - Short Scoreboard Not Issued,28761.0,62414.0,36443.0
+Warp Stalls - Sleeping Not Issued,0.0,0.0,0.0
+Warp Stalls - TEX Throttle Not Issued,26.0,0.0,0.0
+Warp Stalls - Wait Not Issued,222036.0,300124.0,105248.0
+Occupancy,9964.539999999992,9174.55,9051.530000000004

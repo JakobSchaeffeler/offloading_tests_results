@@ -1,0 +1,100 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../include -I../include -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+main.cpp:136:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  136 | constexpr int64_t lsb = 1;
+      |                   ^
+main.cpp:202:27: note: used here
+  202 |   constexpr int64_t msb = lsb << (int64_t)(n - 1);
+      |                           ^~~
+main.cpp:136:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  136 | constexpr int64_t lsb = 1;
+      |                   ^
+main.cpp:203:27: note: used here
+  203 |   constexpr int64_t nn1 = lsb << (2 * n - 1);
+      |                           ^~~
+main.cpp:137:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  137 | constexpr int32_t lsb32 = 1;
+      |                   ^
+main.cpp:249:7: note: used here
+  249 |       place_macro(1);
+      |       ^~~~~~~~~~~~~~
+main.cpp:241:15: note: expanded from macro 'place_macro'
+  241 |     avail ^= (lsb32 << m); \
+      |               ^~~~~
+main.cpp:137:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  137 | constexpr int32_t lsb32 = 1;
+      |                   ^
+main.cpp:251:7: note: used here
+  251 |       place_macro(0);
+      |       ^~~~~~~~~~~~~~
+main.cpp:241:15: note: expanded from macro 'place_macro'
+  241 |     avail ^= (lsb32 << m); \
+      |               ^~~~~
+main.cpp:127:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  127 | constexpr int64_t kLimit = 100000000;
+      |                   ^
+main.cpp:262:13: note: used here
+  262 |   if (cnt < kLimit) {
+      |             ^~~~~~
+main.cpp:188:15: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  188 | constexpr int kNumLogicalThreads = 16383;
+      |               ^
+main.cpp:277:7: note: used here
+  277 |   if (kNumLogicalThreads > 1 &&
+      |       ^~~~~~~~~~~~~~~~~~
+main.cpp:188:15: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  188 | constexpr int kNumLogicalThreads = 16383;
+      |               ^
+main.cpp:280:64: note: used here
+  280 |       uint64_t(131071 * (openings[1] - openings[0]) + avail) % kNumLogicalThreads != logical_thread_index) {
+      |                                                                ^~~~~~~~~~~~~~~~~~
+7 warnings generated.
+main.cpp:136:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  136 | constexpr int64_t lsb = 1;
+      |                   ^
+main.cpp:202:27: note: used here
+  202 |   constexpr int64_t msb = lsb << (int64_t)(n - 1);
+      |                           ^~~
+main.cpp:136:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  136 | constexpr int64_t lsb = 1;
+      |                   ^
+main.cpp:203:27: note: used here
+  203 |   constexpr int64_t nn1 = lsb << (2 * n - 1);
+      |                           ^~~
+main.cpp:137:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  137 | constexpr int32_t lsb32 = 1;
+      |                   ^
+main.cpp:249:7: note: used here
+  249 |       place_macro(1);
+      |       ^~~~~~~~~~~~~~
+main.cpp:241:15: note: expanded from macro 'place_macro'
+  241 |     avail ^= (lsb32 << m); \
+      |               ^~~~~
+main.cpp:137:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  137 | constexpr int32_t lsb32 = 1;
+      |                   ^
+main.cpp:251:7: note: used here
+  251 |       place_macro(0);
+      |       ^~~~~~~~~~~~~~
+main.cpp:241:15: note: expanded from macro 'place_macro'
+  241 |     avail ^= (lsb32 << m); \
+      |               ^~~~~
+main.cpp:127:19: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  127 | constexpr int64_t kLimit = 100000000;
+      |                   ^
+main.cpp:262:13: note: used here
+  262 |   if (cnt < kLimit) {
+      |             ^~~~~~
+main.cpp:188:15: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  188 | constexpr int kNumLogicalThreads = 16383;
+      |               ^
+main.cpp:277:7: note: used here
+  277 |   if (kNumLogicalThreads > 1 &&
+      |       ^~~~~~~~~~~~~~~~~~
+main.cpp:188:15: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+  188 | constexpr int kNumLogicalThreads = 16383;
+      |               ^
+main.cpp:280:64: note: used here
+  280 |       uint64_t(131071 * (openings[1] - openings[0]) + avail) % kNumLogicalThreads != logical_thread_index) {
+      |                                                                ^~~~~~~~~~~~~~~~~~
+7 warnings generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../include -I../include -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 main.o -o omp 

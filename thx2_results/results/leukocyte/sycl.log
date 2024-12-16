@@ -1,0 +1,4 @@
+~/repos/llvm/build/bin/clang++  -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -O3 -O3; -O3 detect_main.c -c
+clang++: error: no input files
+/bin/sh: -O3: command not found
+make: *** [Makefile:98: detect_main.o] Error 127

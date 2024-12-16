@@ -1,0 +1,4 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c ../hypterm-cuda/main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c ../hypterm-cuda/reference.cpp -o reference.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c kernels.cpp -o kernels.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  main.o reference.o kernels.o -o omp 

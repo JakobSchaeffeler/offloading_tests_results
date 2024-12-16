@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c iso2dfd.cu -o iso2dfd.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 iso2dfd.o -o cuda 

@@ -1,0 +1,3 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c cpu.cpp -o cpu.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  main.o cpu.o -o omp 
