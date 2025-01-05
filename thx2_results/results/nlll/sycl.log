@@ -1,0 +1,244 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../nlll-cuda -I../nlll-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:29:10: warning: 'multi_ptr<float[64], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 64>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:215:3: note: in instantiation of function template specialization 'eval<float, int, 64>' requested here
+  215 |   EVAL(64);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[64], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[128], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 128>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:216:3: note: in instantiation of function template specialization 'eval<float, int, 128>' requested here
+  216 |   EVAL(128);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[128], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[256], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 256>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:217:3: note: in instantiation of function template specialization 'eval<float, int, 256>' requested here
+  217 |   EVAL(256);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[256], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[512], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 512>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:218:3: note: in instantiation of function template specialization 'eval<float, int, 512>' requested here
+  218 |   EVAL(512);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[512], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[1024], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 1024>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:219:3: note: in instantiation of function template specialization 'eval<float, int, 1024>' requested here
+  219 |   EVAL(1024);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[1024], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+5 warnings generated.
+main.cpp:29:10: warning: 'multi_ptr<float[64], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 64>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:215:3: note: in instantiation of function template specialization 'eval<float, int, 64>' requested here
+  215 |   EVAL(64);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[64], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[128], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 128>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:216:3: note: in instantiation of function template specialization 'eval<float, int, 128>' requested here
+  216 |   EVAL(128);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[128], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[256], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 256>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:217:3: note: in instantiation of function template specialization 'eval<float, int, 256>' requested here
+  217 |   EVAL(256);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[256], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[512], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 512>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:218:3: note: in instantiation of function template specialization 'eval<float, int, 512>' requested here
+  218 |   EVAL(512);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[512], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:10: warning: 'multi_ptr<float[1024], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   29 |    sycl::multi_ptr<accscalar_t[NLL_LOSS_THREADS], sycl::access::address_space::local_space>
+      |          ^
+main.cpp:119:9: note: in instantiation of function template specialization 'nll_loss_forward_reduce2d_kernel<float, float, int, 1024>' requested here
+  119 |         nll_loss_forward_reduce2d_kernel
+      |         ^
+main.cpp:219:3: note: in instantiation of function template specialization 'eval<float, int, 1024>' requested here
+  219 |   EVAL(1024);
+      |   ^
+main.cpp:211:3: note: expanded from macro 'EVAL'
+  211 |   eval<scalar_t, index_t, nThreads>(nframe, kdim, n_classes, \
+      |   ^
+main.cpp:234:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  234 |   driver<float, int>(argv);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[1024], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+5 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../nlll-cuda -I../nlll-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 

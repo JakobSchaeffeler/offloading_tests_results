@@ -1,0 +1,48 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:45:
+../rsc-cuda/support/verify.h:165:31: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  165 |   flowvector ego_vector_array[size_flow_vector_array];
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+../rsc-cuda/support/verify.h:165:31: note: function parameter 'size_flow_vector_array' with unknown value cannot be used in a constant expression
+../rsc-cuda/support/verify.h:155:84: note: declared here
+  155 | inline int estimate_ego_motion_first_order_flow(flowvector *flow_vector_array, int size_flow_vector_array,
+      |                                                                                    ^
+1 warning generated.
+In file included from main.cpp:45:
+../rsc-cuda/support/verify.h:165:31: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  165 |   flowvector ego_vector_array[size_flow_vector_array];
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+../rsc-cuda/support/verify.h:165:31: note: function parameter 'size_flow_vector_array' with unknown value cannot be used in a constant expression
+../rsc-cuda/support/verify.h:155:84: note: declared here
+  155 | inline int estimate_ego_motion_first_order_flow(flowvector *flow_vector_array, int size_flow_vector_array,
+      |                                                                                    ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c model_eval.cpp -o model_eval.o
+model_eval.cpp:121:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |       RANSAC_kernel_block(item, sm.get_pointer(), model_param_local, flowvectors, 
+      |                                    ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+model_eval.cpp:121:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |       RANSAC_kernel_block(item, sm.get_pointer(), model_param_local, flowvectors, 
+      |                                    ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c ../rsc-cuda/model_fitting.cpp -o model_fitting.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 main.o model_eval.o model_fitting.o  -o sycl -lpthread

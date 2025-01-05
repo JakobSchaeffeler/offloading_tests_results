@@ -1,0 +1,39 @@
+,SierrasRGB.ppm 1000 omp offloading kernel,SierrasRGB.ppm 1000 sycl kernel,SierrasRGB.ppm 1000 hip_kernel
+Runtime,150611933.0,134204729.0,144416412.0
+SALU Instructions per wave,110.0,101.99,121.98
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,1.03,1.14,1.17
+L1 Requests per wave,111.47,111.47,95.73
+L1 Hit Rate,3.71,3.33,2.76
+L2 Requests per wave,21.12,21.27,21.3
+L2 Hit Rate,61.43,62.28,62.35
+Wavefront Occupancy (% of peak),1971.87,2150.18,2133.92
+Dependency Wait Cycles per wave,4130.24,3586.55,3404.55
+Issue Wait Cycles per wave,7975.05,6991.47,7681.54
+Grid Size,2073600.0,2073600.0,2073600.0
+#Threads,64.0,64.0,64.0
+Shared Memory Allocated,512.0,512.0,512.0
+Shared Memory Instructions per wave,22.99,11.01,11.0
+Shared Memory Bank Conflicts (%),1.09,2.18,2.34
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,6.97,6.97,5.98
+Global Memory Read Instructions per wave,5.97,5.97,4.98
+Global Memory Write Instructions per wave,1.0,1.0,1.0
+Coalesced Instructions (% of peak),100.0,100.0,100.0
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,266.65,257.44,257.14
+Global Write/Atomic Bytes per wave,256.0,182.57,183.04
+SALU Instructions,3564000.0,3304476.0,3952152.0
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,3611628.0,3611628.0,3101652.0
+L2 Requests,684288.0,689148.0,690120.0
+Dependency Wait Cycles,133819776.0,116204220.0,110307420.0
+Issue Wait Cycles,258391620.0,226523628.0,248881896.0
+Shared Memory Instructions,744876.0,356724.0,356400.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,225828.0,225828.0,193752.0
+Global Memory Read Instructions,193428.0,193428.0,161352.0
+Global Memory Write Instructions,32400.0,32400.0,32400.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,8639460.0,8341056.0,8331336.0
+Global Write/Atomic Bytes,8294400.0,5915268.0,5930496.0

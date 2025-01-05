@@ -1,0 +1,16 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../qkv-sycl -I../qkv-sycl -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:7:
+../qkv-sycl/common.hpp:10:15: error: use of undeclared identifier 'dnnl'
+   10 | auto engine = dnnl::sycl_interop::make_engine(q.get_device(), q.get_context());
+      |               ^
+../qkv-sycl/common.hpp:11:15: error: use of undeclared identifier 'dnnl'
+   11 | auto stream = dnnl::sycl_interop::make_stream(engine, q);
+      |               ^
+../qkv-sycl/common.hpp:16:35: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   16 |         arr[i] = ((float)rand() / RAND_MAX) * 2.0 - 1.0; // range -1..1
+      |                                 ~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning and 2 errors generated.
+make: *** [Makefile:70: main.o] Error 1

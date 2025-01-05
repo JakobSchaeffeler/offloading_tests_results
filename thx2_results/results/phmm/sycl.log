@@ -1,0 +1,30 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../phmm-cuda -DUSE_GPU -O3 -c main.cpp -o main.o
+In file included from main.cpp:7:
+./kernel.h:22:9: warning: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   22 |   sycl::multi_ptr<double[1][batch][2], sycl::access::address_space::local_space>
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+In file included from main.cpp:7:
+./kernel.h:22:9: warning: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   22 |   sycl::multi_ptr<double[1][batch][2], sycl::access::address_space::local_space>
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../phmm-cuda -DUSE_GPU -O3 main.o -o sycl 

@@ -1,0 +1,83 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:4:
+./kernels.h:19:20: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+   19 | void kernel0_write(nd_item<1> &item, char* ptr, unsigned long size)
+      |                    ^~~~~~~
+      |                    sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:54:5: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+   54 |     nd_item<1> &item,
+      |     ^~~~~~~
+      |     sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:96:20: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+   96 | void kernel1_write(nd_item<1> &item, char* ptr, unsigned long size)
+      |                    ^~~~~~~
+      |                    sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:109:5: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+  109 |     nd_item<1> &item,
+      |     ^~~~~~~
+      |     sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:128:19: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+  128 | void kernel_write(nd_item<1> &item, char* ptr, unsigned long size, TYPE p1)
+      |                   ^~~~~~~
+      |                   sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:140:5: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+  140 |     nd_item<1> &item,
+      |     ^~~~~~~
+      |     sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:165:5: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+  165 |     nd_item<1> &item,
+      |     ^~~~~~~
+      |     sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:185:19: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+  185 | void kernel5_init(nd_item<1> &item, char* ptr, unsigned long size)
+      |                   ^~~~~~~
+      |                   sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:216:19: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+  216 | void kernel5_move(nd_item<1> &item, char* ptr, unsigned long size)
+      |                   ^~~~~~~
+      |                   sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+In file included from main.cpp:4:
+./kernels.h:238:5: error: no template named 'nd_item'; did you mean 'sycl::nd_item'?
+  238 |     nd_item<1> &item,
+      |     ^~~~~~~
+      |     sycl::nd_item
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/nd_item.hpp:48:37: note: 'sycl::nd_item' declared here
+   48 | template <int Dimensions = 1> class nd_item {
+      |                                     ^
+10 errors generated.
+make: *** [Makefile:71: main.o] Error 1

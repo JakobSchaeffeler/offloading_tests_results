@@ -1,0 +1,26 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3	 ./main.c \
+	-c \
+	-o ./main.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	./util/graphics/graphics.c \
+	-c \
+	-o ./util/graphics/graphics.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	./util/graphics/resize.c \
+	-c \
+	-o ./util/graphics/resize.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	./util/timer/timer.c \
+	-c \
+	-o ./util/timer/timer.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3	./main.o \
+	./util/graphics/graphics.o \
+	./util/graphics/resize.o \
+	./util/timer/timer.o \
+	-lm \
+	-lm -o srad

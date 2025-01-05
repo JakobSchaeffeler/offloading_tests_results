@@ -1,0 +1,25 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 ./main.c \
+	-c \
+	-o ./main.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3	./kernel/kernel_wrapper.c \
+	-c \
+	-o ./kernel/kernel_wrapper.o 
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	./util/file/file.c \
+	-c \
+	-o ./util/file/file.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++	./util/num/num.c \
+	-c \
+	-o ./util/num/num.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 ./main.o \
+	./kernel/kernel_wrapper.o \
+	./util/file/file.o \
+	./util/num/num.o \
+	-lm \
+	-o myocyte.out

@@ -1,4 +1,4 @@
-clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c main.cpp -o main.o
 main.cpp:42:21: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
    42 |   params.filename = TEMP_FILENAME;
       |                     ^
@@ -13,6 +13,6 @@ main.cpp:42:21: warning: ISO C++11 does not allow conversion from string literal
     9 | #define TEMP_FILENAME "assets/temperature.txt"
       |                       ^
 1 warning generated.
-clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c linear_iter.cpp -o linear_iter.o
-clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c linear_par.cpp -o linear_par.o
-clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 main.o linear_iter.o linear_par.o -o omp 
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c linear_iter.cpp -o linear_iter.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c linear_par.cpp -o linear_par.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 main.o linear_iter.o linear_par.o -o omp 

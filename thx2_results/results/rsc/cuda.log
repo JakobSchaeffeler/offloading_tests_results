@@ -1,0 +1,4 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c model_eval.cu -o model_eval.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c model_fitting.cpp -o model_fitting.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o model_eval.o model_fitting.o  -o cuda -lpthread

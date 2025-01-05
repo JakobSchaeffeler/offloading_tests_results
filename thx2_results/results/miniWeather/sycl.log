@@ -1,0 +1,6 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I"/usr/lib/x86_64-linux-gnu/openmpi/include" -I"/usr/lib/x86_64-linux-gnu/openmpi/include" -L"/usr/lib/x86_64-linux-gnu/openmpi/lib" -DNX=400 -DNZ=200 -DSIM_TIME=600 -DDATA_SPEC=DATA_SPEC_THERMAL -DUSE_GPU -DNX=400 -DNZ=200 -DSIM_TIME=600 -DDATA_SPEC=DATA_SPEC_THERMAL -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:13:10: fatal error: 'mpi.h' file not found
+   13 | #include <mpi.h>
+      |          ^~~~~~~
+1 error generated.
+make: *** [Makefile:85: main.o] Error 1

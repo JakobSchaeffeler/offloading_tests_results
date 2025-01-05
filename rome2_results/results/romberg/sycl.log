@@ -1,0 +1,58 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../romberg-cuda -I../romberg-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:6:
+../romberg-cuda/reference.h:22:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   22 |   double R1[max_steps], R2[max_steps]; // buffers
+      |             ^~~~~~~~~
+../romberg-cuda/reference.h:22:13: note: function parameter 'max_steps' with unknown value cannot be used in a constant expression
+../romberg-cuda/reference.h:21:67: note: declared here
+   21 | double reference (double (*f)(double), double a, double b, size_t max_steps, double acc) {
+      |                                                                   ^
+../romberg-cuda/reference.h:22:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   22 |   double R1[max_steps], R2[max_steps]; // buffers
+      |                            ^~~~~~~~~
+../romberg-cuda/reference.h:22:28: note: function parameter 'max_steps' with unknown value cannot be used in a constant expression
+../romberg-cuda/reference.h:21:67: note: declared here
+   21 | double reference (double (*f)(double), double a, double b, size_t max_steps, double acc) {
+      |                                                                   ^
+main.cpp:118:38: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  118 |         romberg(A, B, d_result, smem.get_pointer(), item);
+      |                                      ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+3 warnings generated.
+In file included from main.cpp:6:
+../romberg-cuda/reference.h:22:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   22 |   double R1[max_steps], R2[max_steps]; // buffers
+      |             ^~~~~~~~~
+../romberg-cuda/reference.h:22:13: note: function parameter 'max_steps' with unknown value cannot be used in a constant expression
+../romberg-cuda/reference.h:21:67: note: declared here
+   21 | double reference (double (*f)(double), double a, double b, size_t max_steps, double acc) {
+      |                                                                   ^
+../romberg-cuda/reference.h:22:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   22 |   double R1[max_steps], R2[max_steps]; // buffers
+      |                            ^~~~~~~~~
+../romberg-cuda/reference.h:22:28: note: function parameter 'max_steps' with unknown value cannot be used in a constant expression
+../romberg-cuda/reference.h:21:67: note: declared here
+   21 | double reference (double (*f)(double), double a, double b, size_t max_steps, double acc) {
+      |                                                                   ^
+main.cpp:118:38: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  118 |         romberg(A, B, d_result, smem.get_pointer(), item);
+      |                                      ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+3 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../romberg-cuda -I../romberg-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 

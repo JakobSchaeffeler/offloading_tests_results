@@ -1,0 +1,12 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+main.cpp:72:12: error: non-object type 'time_t (time_t *) throw()' (aka 'long (long *) throw()') is not assignable
+   72 |       time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+      |       ~~~~ ^
+main.cpp:79:34: error: use of undeclared identifier 'timeH2D'
+   79 |               << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
+      |                                  ^
+main.cpp:79:44: error: use of undeclared identifier 'timeD2H'
+   79 |               << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
+      |                                            ^
+3 errors generated.
+make: *** [Makefile:56: main.o] Error 1

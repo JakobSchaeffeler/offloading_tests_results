@@ -1,0 +1,10 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c genmtrand.cpp -o genmtrand.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c MT.cpp -o MT.o
+MT.cpp:205:27: error: no member named 'fabs' in namespace 'std'
+  205 |       double delta = std::fabs(rCPU - rGPU);
+      |                      ~~~~~^
+MT.cpp:207:25: error: no member named 'fabs' in namespace 'std'
+  207 |       sum_ref   += std::fabs(rCPU);
+      |                    ~~~~~^
+2 errors generated.
+make: *** [Makefile:71: MT.o] Error 1

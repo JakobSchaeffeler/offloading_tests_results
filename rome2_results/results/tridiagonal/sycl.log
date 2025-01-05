@@ -1,0 +1,180 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:44:
+./pcr_small_systems.h:78:41: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   78 |                                    lmem.get_pointer(),
+      |                                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:44:
+./pcr_small_systems.h:94:39: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   94 |                                  lmem.get_pointer(),
+      |                                       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:45:
+./cyclic_small_systems.h:80:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   80 |                                       lmem.get_pointer(),
+      |                                            ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:45:
+./cyclic_small_systems.h:96:42: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   96 |                                     lmem.get_pointer(),
+      |                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:46:
+./sweep_small_systems.h:63:42: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   63 |           transpose(item, d_t, d_a, lmem.get_pointer(), width, height);
+      |                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+5 warnings generated.
+In file included from main.cpp:44:
+./pcr_small_systems.h:78:41: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   78 |                                    lmem.get_pointer(),
+      |                                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:44:
+./pcr_small_systems.h:94:39: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   94 |                                  lmem.get_pointer(),
+      |                                       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:45:
+./cyclic_small_systems.h:80:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   80 |                                       lmem.get_pointer(),
+      |                                            ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:45:
+./cyclic_small_systems.h:96:42: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   96 |                                     lmem.get_pointer(),
+      |                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:46:
+./sweep_small_systems.h:63:42: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   63 |           transpose(item, d_t, d_a, lmem.get_pointer(), width, height);
+      |                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+5 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -O3 -O3 -O3 -O3 -c shrUtils.cpp -o shrUtils.o
+shrUtils.cpp:375:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  375 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:375:37: note: treat the string as an argument to avoid this
+  375 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^
+      |                                     "%s", 
+shrUtils.cpp:379:53: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  379 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:379:53: note: treat the string as an argument to avoid this
+  379 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^
+      |                                                     "%s", 
+shrUtils.cpp:382:55: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  382 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:382:55: note: treat the string as an argument to avoid this
+  382 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^
+      |                                                       "%s", 
+3 warnings generated.
+shrUtils.cpp:375:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  375 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:375:37: note: treat the string as an argument to avoid this
+  375 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^
+      |                                     "%s", 
+shrUtils.cpp:379:53: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  379 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:379:53: note: treat the string as an argument to avoid this
+  379 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^
+      |                                                     "%s", 
+shrUtils.cpp:382:55: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  382 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:382:55: note: treat the string as an argument to avoid this
+  382 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^
+      |                                                       "%s", 
+3 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -O3 -O3 -O3 -O3 -c cmd_arg_reader.cpp -o cmd_arg_reader.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -DUNIX -DBENCH_ITERATIONS=100 -DUSE_GPU -O3 -O3 -O3 -O3 main.o shrUtils.o cmd_arg_reader.o -o sycl 

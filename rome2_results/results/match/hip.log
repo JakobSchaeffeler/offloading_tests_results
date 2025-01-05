@@ -1,0 +1,44 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+main.cu:722:50: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+      sum1 += h_pts1[i*NDIM + d] = (float)rand()/RAND_MAX;
+                                                ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+#define RAND_MAX        2147483647
+                        ^~~~~~~~~~
+main.cu:723:50: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+      sum2 += h_pts2[i*NDIM + d] = (float)rand()/RAND_MAX;
+                                                ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+#define RAND_MAX        2147483647
+                        ^~~~~~~~~~
+2 warnings generated when compiling for gfx908.
+main.cu:722:50: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+      sum1 += h_pts1[i*NDIM + d] = (float)rand()/RAND_MAX;
+                                                ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+#define RAND_MAX        2147483647
+                        ^~~~~~~~~~
+main.cu:723:50: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+      sum2 += h_pts2[i*NDIM + d] = (float)rand()/RAND_MAX;
+                                                ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+#define RAND_MAX        2147483647
+                        ^~~~~~~~~~
+2 warnings generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 main.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I./common -O3 lud.cu ./common/common.cu  -o cuda 
+lud_kernels.cu(120): warning #550-D: variable "peri_row" was set but never used
+

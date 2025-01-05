@@ -1,0 +1,1 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -DPROFILE_TMP -D__STRICT_ANSI__ -O3 streamcluster.cpp -o streamcluster 

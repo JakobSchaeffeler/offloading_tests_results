@@ -1,0 +1,28 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../include -I../include -I../include -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c main.cpp -o main.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../include -I../include -I../include -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c reference.cpp -o reference.o
+reference.cpp:35:28: error: use of undeclared identifier 'powf'
+   35 |   result.x() = clamp(sqrtf(powf(gx.x(), 2.f) + powf(gy.x(), 2.f)) / 2.f);
+      |                            ^
+reference.cpp:35:48: error: use of undeclared identifier 'powf'
+   35 |   result.x() = clamp(sqrtf(powf(gx.x(), 2.f) + powf(gy.x(), 2.f)) / 2.f);
+      |                                                ^
+reference.cpp:36:28: error: use of undeclared identifier 'powf'
+   36 |   result.y() = clamp(sqrtf(powf(gx.y(), 2.f) + powf(gy.y(), 2.f)) / 2.f);
+      |                            ^
+reference.cpp:36:48: error: use of undeclared identifier 'powf'
+   36 |   result.y() = clamp(sqrtf(powf(gx.y(), 2.f) + powf(gy.y(), 2.f)) / 2.f);
+      |                                                ^
+reference.cpp:37:28: error: use of undeclared identifier 'powf'
+   37 |   result.z() = clamp(sqrtf(powf(gx.z(), 2.f) + powf(gy.z(), 2.f)) / 2.f);
+      |                            ^
+reference.cpp:37:48: error: use of undeclared identifier 'powf'
+   37 |   result.z() = clamp(sqrtf(powf(gx.z(), 2.f) + powf(gy.z(), 2.f)) / 2.f);
+      |                                                ^
+reference.cpp:38:28: error: use of undeclared identifier 'powf'
+   38 |   result.w() = clamp(sqrtf(powf(gx.w(), 2.f) + powf(gy.w(), 2.f)) / 2.f);
+      |                            ^
+reference.cpp:38:48: error: use of undeclared identifier 'powf'
+   38 |   result.w() = clamp(sqrtf(powf(gx.w(), 2.f) + powf(gy.w(), 2.f)) / 2.f);
+      |                                                ^
+8 errors generated.
+make: *** [Makefile:71: reference.o] Error 1

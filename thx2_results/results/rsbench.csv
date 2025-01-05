@@ -1,0 +1,46 @@
+,omp -s large -m event,sycl -s large -m event,cuda -s large -m event
+Runtime,2672034905.0,2484130810.0,2199494405.0
+HtoD copy time,3739330.0,7305130.0,9604195.0
+DtoH copy time,2400.0,10567250.0,7651430.0
+#Threads,128.0,256.0,256.0
+#Teams,3200.0,39844.0,39844.0
+Instructions Executed,277530223077.92004,281981250586.97,269130584963.05
+IPC,0.92,0.97,1.05
+Shared Memory Stores,2046826.0,0.0,0.0
+Shared Memory Loads,688704.0,0.0,0.0
+Shared Memory Store Bank Conflicts,2596.0,0.0,0.0
+Shared Memory Load Bank Conflicts,461.0,0.0,0.0
+Global Memory Load Instructions,8940355315.0,18711255606.0,17959251006.0
+Global Memory Store Instructions,2.0,318750.0,318750.0
+Global Memory Load (MB),439.27,431.31,584.65
+Global Memory Store (MB),22.44,35.96,159.87
+Global Memory Load Throughput (GB/s),109.07,114.76,170.63
+Global Memory Store Throughput (GB/s),5.57,9.57,46.66
+Global Memory Load Bank Conflicts,2116531574.0,2032682192.0,2138316691.0
+Global Memory Store Bank Conflicts,3.0,3323.0,7356.0
+L1 Cache Accesses (Bytes),857.0,941.33,3.62
+L1 Cache Hits (%),84.15,86.41,84.26
+L1 Cache Throughput (GB/s),854.41,938.74,1.06
+L2 Cache Accesses (Bytes),898.47,857.38,1020.63
+L2 Cache Hits (%),75.14,74.05,67.03
+L2 Cache Throughput (GB/s),223.09,228.13,297.87
+#Divergent Branches,131825657.0,131822453.0,131822453.0
+Warp Stalls - Barrier Not Issued,225687.0,0.0,0.0
+Warp Stalls - Branch Resolving Not Issued,282976.0,186827.0,100746.0
+Warp Stalls - Dispatch Stall Not Issued,7394.0,9994.0,9277.0
+Warp Stalls - Drain Not Issued,0.0,18.0,6.0
+Warp Stalls - IMC Miss Not Issued,593.0,1053.0,1331.0
+Warp Stalls - LG Throttle Not Issued,3476.0,4948.0,13212.0
+Warp Stalls - Long Scoreboard Not Issued,695803.0,701061.0,588931.0
+Warp Stalls - Math Pipe Throttle Not Issued,94475.0,120010.0,214395.0
+Warp Stalls - Membar Not Issued,1.0,0.0,0.0
+Warp Stalls - MIO Throttle Not Issued,6.0,0.0,162.0
+Warp Stalls - Misc Not Issued,4172.0,1260.0,1095.0
+Warp Stalls - No Instructions Not Issued,80213.0,101738.0,877427.0
+Warp Stalls - Not Selected Not Issued,0.0,0.0,0.0
+Warp Stalls - Selected Not Issued,0.0,0.0,0.0
+Warp Stalls - Short Scoreboard Not Issued,112375.0,105135.0,57283.0
+Warp Stalls - Sleeping Not Issued,0.0,0.0,0.0
+Warp Stalls - TEX Throttle Not Issued,0.0,0.0,0.0
+Warp Stalls - Wait Not Issued,1288666.0,1483179.0,798221.0
+Occupancy,12.46,11.54,22.44

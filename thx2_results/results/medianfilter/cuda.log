@@ -1,0 +1,22 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c shrUtils.cu -o shrUtils.o
+shrUtils.cu(86): warning #550-D: variable "szNumWritten" was set but never used
+
+shrUtils.cu: In function ‘int shrLogV(int, int, const char*, va_list)’:
+shrUtils.cu:86:10: warning: variable ‘szNumWritten’ set but not used [-Wunused-but-set-variable]
+     size_t szNumWritten = 0;
+          ^~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c MedianFilterHost.cu -o MedianFilterHost.o
+MedianFilterHost.cu(52): warning #186-D: pointless comparison of unsigned integer with zero
+
+MedianFilterHost.cu(67): warning #186-D: pointless comparison of unsigned integer with zero
+
+MedianFilterHost.cu(82): warning #186-D: pointless comparison of unsigned integer with zero
+
+MedianFilterHost.cu(52): warning #186-D: pointless comparison of unsigned integer with zero
+
+MedianFilterHost.cu(67): warning #186-D: pointless comparison of unsigned integer with zero
+
+MedianFilterHost.cu(82): warning #186-D: pointless comparison of unsigned integer with zero
+
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o shrUtils.o MedianFilterHost.o -o cuda 

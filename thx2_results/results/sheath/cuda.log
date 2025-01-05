@@ -1,0 +1,6 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+main.cu: In function ‘bool SolvePotential(double*, double*)’:
+main.cu:459:7: warning: ‘L2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   printf("Gauss-Seidel solver failed to converge, L2=%.3g!\n", L2);
+   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o cuda 

@@ -1,0 +1,68 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c genmtrand.cu -o genmtrand.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from genmtrand.cu:45:
+./dci.h:42:9: warning: 'UINT32_C' macro redefined [-Wmacro-redefined]
+#define UINT32_C(a) ((uint32_t)a)
+        ^
+/usr/include/stdint.h:260:10: note: previous definition is here
+# define UINT32_C(c)    c ## U
+         ^
+1 warning generated when compiling for gfx908.
+In file included from genmtrand.cu:45:
+./dci.h:42:9: warning: 'UINT32_C' macro redefined [-Wmacro-redefined]
+#define UINT32_C(a) ((uint32_t)a)
+        ^
+/usr/include/stdint.h:260:10: note: previous definition is here
+# define UINT32_C(c)    c ## U
+         ^
+1 warning generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c MT.cu -o MT.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c MT_gold.cu -o MT_gold.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from MT_gold.cu:15:
+./dci.h:42:9: warning: 'UINT32_C' macro redefined [-Wmacro-redefined]
+#define UINT32_C(a) ((uint32_t)a)
+        ^
+/usr/include/stdint.h:260:10: note: previous definition is here
+# define UINT32_C(c)    c ## U
+         ^
+1 warning generated when compiling for gfx908.
+In file included from MT_gold.cu:15:
+./dci.h:42:9: warning: 'UINT32_C' macro redefined [-Wmacro-redefined]
+#define UINT32_C(a) ((uint32_t)a)
+        ^
+/usr/include/stdint.h:260:10: note: previous definition is here
+# define UINT32_C(c)    c ## U
+         ^
+1 warning generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 genmtrand.o MT.o MT_gold.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

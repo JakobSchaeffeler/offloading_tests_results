@@ -1,0 +1,2 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../reaction-cuda -I../reaction-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../reaction-cuda -I../reaction-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 main.o -o omp 

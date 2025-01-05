@@ -1,0 +1,4 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c genmtrand.cpp -o genmtrand.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c MT.cpp -o MT.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c MT_gold.cpp -o MT_gold.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 genmtrand.o MT.o MT_gold.o -o omp 

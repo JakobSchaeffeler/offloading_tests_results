@@ -1,0 +1,18 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:7:
+./common.h:11:35: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   11 |         arr[i] = ((float)rand() / RAND_MAX) * 2.0 - 1.0; // range -1..1
+      |                                 ~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+In file included from main.cpp:7:
+./common.h:11:35: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   11 |         arr[i] = ((float)rand() / RAND_MAX) * 2.0 - 1.0; // range -1..1
+      |                                 ~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 main.o -o omp 

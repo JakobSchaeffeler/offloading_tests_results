@@ -1,0 +1,64 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from main.cu:98:
+./QuicksortKernels.cuh:97:19: warning: implicit conversion from 'unsigned int' to 'float' changes value from 4294967295 to 4294967296 [-Wimplicit-const-int-float-conversion]
+        temp[i] = UINT_MAX;
+                ~ ^~~~~~~~
+/opt/rocm-5.4.3/llvm/lib/clang/15.0.0/include/limits.h:56:37: note: expanded from macro 'UINT_MAX'
+#define UINT_MAX  (__INT_MAX__  *2U +1U)
+                   ~~~~~~~~~~~~~~~~~^~~
+./QuicksortKernels.cuh:430:7: note: in instantiation of function template specialization 'sort_threshold<float>' requested here
+      sort_threshold(sn, d+d_offset, start, start + ltsum, temp, localid);
+      ^
+main.cu:221:22: note: in instantiation of function template specialization 'lqsort_kernel<float>' requested here
+  hipLaunchKernelGGL(lqsort_kernel, dim3(done.size()), dim3(LQSORT_LOCAL_WORKGROUP_SIZE), 0, 0, db, dnb, doneb);
+                     ^
+main.cu:313:3: note: in instantiation of function template specialization 'lqsort<float>' requested here
+  lqsort<T>(db, dnb, done);
+  ^
+main.cu:396:5: note: in instantiation of function template specialization 'GPUQSort<float>' requested here
+    GPUQSort(arraySize, pArray, pArrayCopy);
+    ^
+main.cu:464:3: note: in instantiation of function template specialization 'test<float>' requested here
+  test<float>(arraySize, NUM_ITERATIONS, "float");
+  ^
+1 warning generated when compiling for gfx908.
+In file included from main.cu:98:
+./QuicksortKernels.cuh:97:19: warning: implicit conversion from 'unsigned int' to 'float' changes value from 4294967295 to 4294967296 [-Wimplicit-const-int-float-conversion]
+        temp[i] = UINT_MAX;
+                ~ ^~~~~~~~
+/opt/rocm-5.4.3/llvm/lib/clang/15.0.0/include/limits.h:56:37: note: expanded from macro 'UINT_MAX'
+#define UINT_MAX  (__INT_MAX__  *2U +1U)
+                   ~~~~~~~~~~~~~~~~~^~~
+./QuicksortKernels.cuh:430:7: note: in instantiation of function template specialization 'sort_threshold<float>' requested here
+      sort_threshold(sn, d+d_offset, start, start + ltsum, temp, localid);
+      ^
+main.cu:221:22: note: in instantiation of function template specialization 'lqsort_kernel<float>' requested here
+  hipLaunchKernelGGL(lqsort_kernel, dim3(done.size()), dim3(LQSORT_LOCAL_WORKGROUP_SIZE), 0, 0, db, dnb, doneb);
+                     ^
+main.cu:313:3: note: in instantiation of function template specialization 'lqsort<float>' requested here
+  lqsort<T>(db, dnb, done);
+  ^
+main.cu:396:5: note: in instantiation of function template specialization 'GPUQSort<float>' requested here
+    GPUQSort(arraySize, pArray, pArrayCopy);
+    ^
+main.cu:464:3: note: in instantiation of function template specialization 'test<float>' requested here
+  test<float>(arraySize, NUM_ITERATIONS, "float");
+  ^
+1 warning generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 main.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

@@ -1,0 +1,3 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c nearestNeighbor.cpp -o nearestNeighbor.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c utils.cpp -o utils.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 nearestNeighbor.o utils.o -o omp 

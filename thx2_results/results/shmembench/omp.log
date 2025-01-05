@@ -1,0 +1,3 @@
+clang++ -c -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 main.cpp
+clang++ -c -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 shmem_kernels.cpp
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 main.o shmem_kernels.o -o omp 

@@ -1,0 +1,16 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../qkv-sycl -I../qkv-sycl -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:7:
+../qkv-sycl/common.hpp:10:15: error: use of undeclared identifier 'dnnl'
+   10 | auto engine = dnnl::sycl_interop::make_engine(q.get_device(), q.get_context());
+      |               ^
+../qkv-sycl/common.hpp:11:15: error: use of undeclared identifier 'dnnl'
+   11 | auto stream = dnnl::sycl_interop::make_stream(engine, q);
+      |               ^
+../qkv-sycl/common.hpp:16:35: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   16 |         arr[i] = ((float)rand() / RAND_MAX) * 2.0 - 1.0; // range -1..1
+      |                                 ~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning and 2 errors generated.
+make: *** [Makefile:70: main.o] Error 1

@@ -1,0 +1,39 @@
+,streamcluster 10 20 256 65536 65536 1000 none output.txt 1 omp offloading kernel,sycl 10 20 256 65536 65536 1000 none output.txt 1 sycl kernel,streamcluster 10 20 256 65536 65536 1000 none output.txt 1 hip_kernel
+Runtime,409648295.0,212867978.0,225135201.0
+SALU Instructions per wave,142.38,163.25,183.92
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.15,0.1,0.12
+L1 Requests per wave,1859.8,1541.05,1541.05
+L1 Hit Rate,31.52,39.24,39.22
+L2 Requests per wave,380.32,383.58,376.0
+L2 Hit Rate,1.61,3.54,2.97
+Wavefront Occupancy (% of peak),1115.25,858.07,677.83
+Dependency Wait Cycles per wave,111927.81,47459.96,55159.65
+Issue Wait Cycles per wave,574.46,829.49,1092.45
+Grid Size,84650.67,81203.01,81203.01
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,512.0,341.0,341.0
+Shared Memory Instructions per wave,218.76,53.33,53.33
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,110.51,88.59,88.59
+Global Memory Read Instructions per wave,108.33,87.0,87.0
+Global Memory Write Instructions per wave,2.18,1.59,1.59
+Coalesced Instructions (% of peak),98.34,47.96,47.96
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,22877.62,22933.73,22855.55
+Global Write/Atomic Bytes per wave,619.67,474.71,368.2
+SALU Instructions,188321.287415625,207131.11535156248,233357.14998749996
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,2459895.5635312498,1955279.6650078122,1955279.6650078122
+L2 Requests,503036.606475,486685.16524687497,477067.68374999997
+Dependency Wait Cycles,148043189.18957344,60217056.35124374,69986400.16478907
+Issue Wait Cycles,759819.123253125,1052454.4494515625,1386097.3167890625
+Shared Memory Instructions,289346.57139374997,67664.9456765625,67664.9456765625
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,146167.8990890625,112402.7289984375,112402.7289984375
+Global Memory Read Instructions,143284.4856421875,110385.34171874999,110385.34171874999
+Global Memory Write Instructions,2883.4134468750003,2017.3872796875,2017.3872796875
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,30259466.578209374,29098248.53948906,28999053.987585936
+Global Write/Atomic Bytes,819616.8856078124,602310.6387046875,467171.06690624997

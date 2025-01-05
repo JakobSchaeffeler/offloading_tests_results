@@ -1,0 +1,6 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../openmp-omp -I../openmp-omp -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:30:10: fatal error: 'omp.h' file not found
+   30 | #include <omp.h>
+      |          ^~~~~~~
+1 error generated.
+make: *** [Makefile:71: main.o] Error 1

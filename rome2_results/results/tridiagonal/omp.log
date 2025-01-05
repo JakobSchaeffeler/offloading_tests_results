@@ -1,0 +1,34 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c shrUtils.cpp -o shrUtils.o
+shrUtils.cpp:374:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  374 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:374:37: note: treat the string as an argument to avoid this
+  374 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^
+      |                                     "%s", 
+shrUtils.cpp:378:53: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  378 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:378:53: note: treat the string as an argument to avoid this
+  378 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^
+      |                                                     "%s", 
+shrUtils.cpp:381:55: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  381 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:381:55: note: treat the string as an argument to avoid this
+  381 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^
+      |                                                       "%s", 
+3 warnings generated.
+shrUtils.cpp:374:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  374 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:374:37: note: treat the string as an argument to avoid this
+  374 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^
+      |                                     "%s", 
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c cmd_arg_reader.cpp -o cmd_arg_reader.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -DUNIX -DBENCH_ITERATIONS=100 -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 main.o shrUtils.o cmd_arg_reader.o -o omp 

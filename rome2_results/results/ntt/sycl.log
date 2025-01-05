@@ -1,0 +1,52 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../ntt-cuda -I../ntt-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:9:
+../ntt-cuda/modP.h:98:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   98 |   register uint64 tx = x;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:99:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   99 |   register uint32 buff[7];
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:179:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  179 |   register uint64 ret;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:188:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  188 |   register uint64 ret;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:280:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  280 |   register uint64 s[8], temp;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:280:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  280 |   register uint64 s[8], temp;
+      |   ^~~~~~~~
+main.cpp:17:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   17 |   register uint64 samples[8], s8[8];
+      |   ^~~~~~~~
+main.cpp:17:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   17 |   register uint64 samples[8], s8[8];
+      |   ^~~~~~~~
+main.cpp:18:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   18 |   register uint32 fmem, tmem, fbuf, tbuf;
+      |   ^~~~~~~~
+main.cpp:18:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   18 |   register uint32 fmem, tmem, fbuf, tbuf;
+      |   ^~~~~~~~
+main.cpp:18:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   18 |   register uint32 fmem, tmem, fbuf, tbuf;
+      |   ^~~~~~~~
+main.cpp:18:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   18 |   register uint32 fmem, tmem, fbuf, tbuf;
+      |   ^~~~~~~~
+main.cpp:89:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   89 |         intt_3_64k_modcrt(item, sm.get_pointer(), d_res, d_ntt);
+      |                                    ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning and 12 errors generated.
+make: *** [Makefile:71: main.o] Error 1

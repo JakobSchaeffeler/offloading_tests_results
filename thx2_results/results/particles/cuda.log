@@ -1,0 +1,17 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c bitonicSort.cu -o bitonicSort.o
+bitonicSort.cu: In function ‘void bitonicSort(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int, unsigned int, unsigned int)’:
+bitonicSort.cu:93:80: warning: passing argument 1 to restrict-qualified parameter aliases with argument 3 [-Wrestrict]
+           bitonicMergeGlobal<<<bmg_gws, bmg_lws>>>(
+                                                                                ^                           
+bitonicSort.cu:93:90: warning: passing argument 2 to restrict-qualified parameter aliases with argument 4 [-Wrestrict]
+           bitonicMergeGlobal<<<bmg_gws, bmg_lws>>>(
+                                                                                          ^                           
+bitonicSort.cu:113:79: warning: passing argument 1 to restrict-qualified parameter aliases with argument 3 [-Wrestrict]
+           bitonicMergeLocal<<<bml_gws, bml_lws>>>(
+                                                                               ^                           
+bitonicSort.cu:113:89: warning: passing argument 2 to restrict-qualified parameter aliases with argument 4 [-Wrestrict]
+           bitonicMergeLocal<<<bml_gws, bml_lws>>>(
+                                                                                         ^                           
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c particles.cu -o particles.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o bitonicSort.o particles.o -o cuda 

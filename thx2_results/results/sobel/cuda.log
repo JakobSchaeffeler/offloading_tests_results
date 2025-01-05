@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../include -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../include -O3 -c reference.cu -o reference.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../include -O3 main.o reference.o -o cuda 

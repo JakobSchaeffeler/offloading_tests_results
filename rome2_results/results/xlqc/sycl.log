@@ -1,0 +1,6 @@
+~/sycl_workspace/llvm/build/bin/clang++ -c -o basis.o ../xlqc-cuda/basis.cc -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -L/path/to/gsl/lib -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3
+../xlqc-cuda/basis.cc:27:10: fatal error: 'gsl/gsl_matrix.h' file not found
+   27 | #include <gsl/gsl_matrix.h>
+      |          ^~~~~~~~~~~~~~~~~~
+1 error generated.
+make: *** [Makefile:79: basis.o] Error 1

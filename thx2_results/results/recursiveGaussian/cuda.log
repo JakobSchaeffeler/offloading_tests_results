@@ -1,0 +1,10 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../include -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../include -O3 -c RecursiveGaussianHost.cu -o RecursiveGaussianHost.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../include -O3 -c shrUtils.cu -o shrUtils.o
+shrUtils.cu(85): warning #550-D: variable "szNumWritten" was set but never used
+
+shrUtils.cu: In function ‘int shrLogV(int, int, const char*, va_list)’:
+shrUtils.cu:85:10: warning: variable ‘szNumWritten’ set but not used [-Wunused-but-set-variable]
+     size_t szNumWritten = 0;
+          ^~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../include -O3 main.o RecursiveGaussianHost.o shrUtils.o -o cuda 

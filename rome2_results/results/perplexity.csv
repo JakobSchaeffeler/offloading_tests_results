@@ -1,0 +1,39 @@
+,omp 10000 50 100 omp offloading kernel,sycl 10000 50 100 sycl kernel,hip 10000 50 100 hip_kernel
+Runtime,2170301623.0,2162022857.0,1811936757.0
+SALU Instructions per wave,81077.92,80941.84,81036.94
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.1,0.1,0.09
+L1 Requests per wave,4379761.0,4208050.0,4218700.0
+L1 Hit Rate,12.09,11.96,11.89
+L2 Requests per wave,2071239.47,2062923.16,2058635.75
+L2 Hit Rate,96.17,96.16,96.16
+Wavefront Occupancy (% of peak),153.61,151.15,151.05
+Dependency Wait Cycles per wave,28026854.87,27526414.18,23419316.73
+Issue Wait Cycles per wave,137812.09,137101.7,23926.88
+Grid Size,10240.0,10240.0,10240.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,0.0,0.0,0.0
+Shared Memory Instructions per wave,98125.0,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,98125.0,98125.0,98125.0
+Global Memory Read Instructions per wave,58875.0,58875.0,58875.0
+Global Memory Write Instructions per wave,39250.0,39250.0,39250.0
+Coalesced Instructions (% of peak),35.85,37.31,37.22
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,3841859.31,3831117.28,3826303.18
+Global Write/Atomic Bytes per wave,2766051.25,2740906.59,2782906.63
+SALU Instructions,12972467.2,12950694.399999999,12965910.4
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,700761760.0,673288000.0,674992000.0
+L2 Requests,331398315.2,330067705.59999996,329381720.0
+Dependency Wait Cycles,4484296779.2,4404226268.8,3747090676.8
+Issue Wait Cycles,22049934.4,21936272.0,3828300.8000000003
+Shared Memory Instructions,15700000.0,0.0,0.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,15700000.0,15700000.0,15700000.0
+Global Memory Read Instructions,9420000.0,9420000.0,9420000.0
+Global Memory Write Instructions,6280000.0,6280000.0,6280000.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,614697489.6,612978764.8,612208508.8000001
+Global Write/Atomic Bytes,442568200.0,438545054.4,445265060.79999995

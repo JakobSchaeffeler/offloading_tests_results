@@ -1,0 +1,221 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -O3 -c main.cpp -o main.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -O3 -c morphology.cpp -o morphology.o
+morphology.cpp:172:45: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  172 |       vhgw_horiz<opType>(tmp_d, img_d, sMem.get_pointer(),
+      |                                             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:181:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  181 |       vhgw_vert<opType>(tmp_d, img_d, sMem.get_pointer(), 
+      |                                            ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:172:45: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  172 |       vhgw_horiz<opType>(tmp_d, img_d, sMem.get_pointer(),
+      |                                             ^
+morphology.cpp:171:68: note: while substituting into a lambda expression here
+  171 |       sycl::nd_range<2>(h_gws, h_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:168:37: note: while substituting into a lambda expression here
+  168 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:202:10: note: in instantiation of function template specialization 'morphology<MorphOpType::ERODE>' requested here
+  202 |   return morphology<MorphOpType::ERODE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:181:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  181 |       vhgw_vert<opType>(tmp_d, img_d, sMem.get_pointer(), 
+      |                                            ^
+morphology.cpp:180:68: note: while substituting into a lambda expression here
+  180 |       sycl::nd_range<2>(v_gws, v_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:177:37: note: while substituting into a lambda expression here
+  177 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:202:10: note: in instantiation of function template specialization 'morphology<MorphOpType::ERODE>' requested here
+  202 |   return morphology<MorphOpType::ERODE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:172:45: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  172 |       vhgw_horiz<opType>(tmp_d, img_d, sMem.get_pointer(),
+      |                                             ^
+morphology.cpp:171:68: note: while substituting into a lambda expression here
+  171 |       sycl::nd_range<2>(h_gws, h_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:168:37: note: while substituting into a lambda expression here
+  168 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:215:10: note: in instantiation of function template specialization 'morphology<MorphOpType::DILATE>' requested here
+  215 |   return morphology<MorphOpType::DILATE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:181:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  181 |       vhgw_vert<opType>(tmp_d, img_d, sMem.get_pointer(), 
+      |                                            ^
+morphology.cpp:180:68: note: while substituting into a lambda expression here
+  180 |       sycl::nd_range<2>(v_gws, v_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:177:37: note: while substituting into a lambda expression here
+  177 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:215:10: note: in instantiation of function template specialization 'morphology<MorphOpType::DILATE>' requested here
+  215 |   return morphology<MorphOpType::DILATE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+6 warnings generated.
+morphology.cpp:172:45: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  172 |       vhgw_horiz<opType>(tmp_d, img_d, sMem.get_pointer(),
+      |                                             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:181:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  181 |       vhgw_vert<opType>(tmp_d, img_d, sMem.get_pointer(), 
+      |                                            ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:172:45: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  172 |       vhgw_horiz<opType>(tmp_d, img_d, sMem.get_pointer(),
+      |                                             ^
+morphology.cpp:171:68: note: while substituting into a lambda expression here
+  171 |       sycl::nd_range<2>(h_gws, h_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:168:37: note: while substituting into a lambda expression here
+  168 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:202:10: note: in instantiation of function template specialization 'morphology<MorphOpType::ERODE>' requested here
+  202 |   return morphology<MorphOpType::ERODE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:181:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  181 |       vhgw_vert<opType>(tmp_d, img_d, sMem.get_pointer(), 
+      |                                            ^
+morphology.cpp:180:68: note: while substituting into a lambda expression here
+  180 |       sycl::nd_range<2>(v_gws, v_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:177:37: note: while substituting into a lambda expression here
+  177 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:202:10: note: in instantiation of function template specialization 'morphology<MorphOpType::ERODE>' requested here
+  202 |   return morphology<MorphOpType::ERODE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:172:45: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  172 |       vhgw_horiz<opType>(tmp_d, img_d, sMem.get_pointer(),
+      |                                             ^
+morphology.cpp:171:68: note: while substituting into a lambda expression here
+  171 |       sycl::nd_range<2>(h_gws, h_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:168:37: note: while substituting into a lambda expression here
+  168 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:215:10: note: in instantiation of function template specialization 'morphology<MorphOpType::DILATE>' requested here
+  215 |   return morphology<MorphOpType::DILATE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+morphology.cpp:181:44: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  181 |       vhgw_vert<opType>(tmp_d, img_d, sMem.get_pointer(), 
+      |                                            ^
+morphology.cpp:180:68: note: while substituting into a lambda expression here
+  180 |       sycl::nd_range<2>(v_gws, v_lws), [=] (sycl::nd_item<2> item) {
+      |                                                                    ^
+morphology.cpp:177:37: note: while substituting into a lambda expression here
+  177 |   q.submit([&] (sycl::handler &cgh) {
+      |                                     ^
+morphology.cpp:215:10: note: in instantiation of function template specialization 'morphology<MorphOpType::DILATE>' requested here
+  215 |   return morphology<MorphOpType::DILATE>(q, img_d, tmp_d, width, height, hsize, vsize);
+      |          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+6 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -O3 main.o morphology.o -o sycl 

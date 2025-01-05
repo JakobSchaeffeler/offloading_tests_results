@@ -1,0 +1,21 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c Option.cpp -o Option.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c OptionParser.cpp -o OptionParser.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c QTC.cpp -o QTC.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c comm.cpp -o comm.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 -c libdata.cpp -o libdata.o
+libdata.cpp:23:28: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   23 |     return (float)random()/RAND_MAX;
+      |                           ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+libdata.cpp:23:28: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   23 |     return (float)random()/RAND_MAX;
+      |                           ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 main.o Option.o OptionParser.o QTC.o comm.o libdata.o -o omp 

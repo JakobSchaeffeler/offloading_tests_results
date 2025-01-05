@@ -1,0 +1,2 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c rtm8.cpp -o rtm8.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 rtm8.o -o omp 

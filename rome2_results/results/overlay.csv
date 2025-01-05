@@ -1,0 +1,39 @@
+,omp 160 120 omp offloading kernel,sycl 160 120 sycl kernel,hip 160 120 hip_kernel
+Runtime,165653136.0,100113187.0,91521917.0
+SALU Instructions per wave,61.05,7.62,8.62
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.07,0.03,0.03
+L1 Requests per wave,138.79,78.83,79.38
+L1 Hit Rate,51.08,18.62,22.25
+L2 Requests per wave,22.13,26.05,23.47
+L2 Hit Rate,6.37,23.76,38.73
+Wavefront Occupancy (% of peak),80.93,166.07,74.7
+Dependency Wait Cycles per wave,9826.77,10590.35,5712.23
+Issue Wait Cycles per wave,14.04,8.06,8.08
+Grid Size,16277.05,17217.65,17153.82
+#Threads,64.0,64.01,64.01
+Shared Memory Allocated,0.0,0.0,0.0
+Shared Memory Instructions per wave,2.17,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,2.17,1.23,1.24
+Global Memory Read Instructions per wave,1.45,0.62,0.62
+Global Memory Write Instructions per wave,0.72,0.62,0.62
+Coalesced Instructions (% of peak),25.0,25.0,26.53
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,689.13,644.61,434.42
+Global Write/Atomic Bytes per wave,625.47,9.82,1.31
+SALU Instructions,15526.7797265625,2049.9764531250003,2310.4051312499996
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,35298.3088984375,21207.3023359375,21276.097368749997
+L2 Requests,5628.298695312499,7008.1216015625005,6290.627428125
+Dependency Wait Cycles,2499231.6660703127,2849077.1824609376,1531040.0815406248
+Issue Wait Cycles,3570.7778437499996,2168.3477968750003,2165.669775
+Shared Memory Instructions,551.8937265625,0.0,0.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,551.8937265625,330.9017109375,332.3552625
+Global Memory Read Instructions,368.7769140625,166.79598437500002,166.17763125
+Global Memory Write Instructions,183.11681249999998,166.79598437500002,166.17763125
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,175265.6791640625,173416.70885156252,116436.91381875
+Global Write/Atomic Bytes,159075.1009921875,2641.8331718750005,351.117253125

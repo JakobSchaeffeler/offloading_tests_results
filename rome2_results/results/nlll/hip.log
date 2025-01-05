@@ -1,0 +1,74 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../nlll-cuda -I../nlll-cuda -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from main.cu:8:
+../nlll-cuda/reference.h:20:66: error: invalid operands to binary expression ('const __half' and '__half')
+      output_acc -= static_cast<accscalar_t>(input[i * kdim + t] * cur_weight);
+                                             ~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~
+main.cu:195:3: note: in instantiation of function template specialization 'reference<__half, __half, int>' requested here
+  reference<scalar_t, scalar_t, index_t>(
+  ^
+main.cu:227:3: note: in instantiation of function template specialization 'driver<__half, int>' requested here
+  driver<half, int>(argv);
+  ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_vector_types.h:1012:27: note: candidate template ignored: could not match 'const HIP_vector_type<T, n>' against 'const __half'
+    HIP_vector_type<T, n> operator*(
+                          ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_vector_types.h:1021:27: note: candidate template ignored: could not match 'const HIP_vector_type<T, n>' against 'const __half'
+    HIP_vector_type<T, n> operator*(
+                          ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_vector_types.h:1030:27: note: candidate template ignored: could not match 'HIP_vector_type<T, n>' against '__half'
+    HIP_vector_type<T, n> operator*(
+                          ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:339:15: note: candidate function not viable: call to __device__ function from __host__ function
+std::uint32_t operator*(__HIP_Coordinates<__HIP_GridDim>::__X,
+              ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:345:15: note: candidate function not viable: call to __device__ function from __host__ function
+std::uint32_t operator*(__HIP_Coordinates<__HIP_BlockDim>::__X,
+              ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:351:15: note: candidate function not viable: call to __device__ function from __host__ function
+std::uint32_t operator*(__HIP_Coordinates<__HIP_GridDim>::__Y,
+              ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:357:15: note: candidate function not viable: call to __device__ function from __host__ function
+std::uint32_t operator*(__HIP_Coordinates<__HIP_BlockDim>::__Y,
+              ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:363:15: note: candidate function not viable: call to __device__ function from __host__ function
+std::uint32_t operator*(__HIP_Coordinates<__HIP_GridDim>::__Z,
+              ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:369:15: note: candidate function not viable: call to __device__ function from __host__ function
+std::uint32_t operator*(__HIP_Coordinates<__HIP_BlockDim>::__Z,
+              ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_fp16.h:278:24: note: candidate function not viable: call to __device__ function from __host__ function
+                __half operator*(const __half& x, const __half& y)
+                       ^
+In file included from main.cu:8:
+../nlll-cuda/reference.h:21:24: error: no viable overloaded '+='
+      total_weight_acc += static_cast<accscalar_t>(cur_weight);
+      ~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_fp16.h:181:25: note: candidate function not viable: call to __device__ function from __host__ function
+                __half& operator+=(const __half& x)
+                        ^
+In file included from main.cu:8:
+../nlll-cuda/reference.h:26:48: error: invalid operands to binary expression ('__half' and '__half')
+    *output = static_cast<scalar_t>(output_acc / total_weight_acc);
+                                    ~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_vector_types.h:1040:27: note: candidate template ignored: could not match 'HIP_vector_type<T, n>' against '__half'
+    HIP_vector_type<T, n> operator/(
+                          ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_vector_types.h:1049:27: note: candidate template ignored: could not match 'HIP_vector_type<T, n>' against '__half'
+    HIP_vector_type<T, n> operator/(
+                          ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_vector_types.h:1058:27: note: candidate template ignored: could not match 'HIP_vector_type<T, n>' against '__half'
+    HIP_vector_type<T, n> operator/(
+                          ^
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_fp16.h:285:24: note: candidate function not viable: call to __device__ function from __host__ function
+                __half operator/(const __half& x, const __half& y)
+                       ^
+3 errors generated when compiling for gfx908.
+make: *** [Makefile:49: main.o] Error 1

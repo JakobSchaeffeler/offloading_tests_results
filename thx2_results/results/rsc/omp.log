@@ -1,0 +1,4 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c model_eval.cpp -o model_eval.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c ../rsc-cuda/model_fitting.cpp -o model_fitting.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -I../rsc-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 main.o model_eval.o model_fitting.o  -o omp -lpthread 

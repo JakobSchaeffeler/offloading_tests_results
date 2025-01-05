@@ -1,0 +1,40 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../ntt-cuda -I../ntt-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:9:
+../ntt-cuda/modP.h:98:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   98 |   register uint64 tx = x;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:99:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   99 |   register uint32 buff[7];
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:179:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  179 |   register uint64 ret;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:188:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  188 |   register uint64 ret;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:280:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  280 |   register uint64 s[8], temp;
+      |   ^~~~~~~~
+../ntt-cuda/modP.h:280:3: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  280 |   register uint64 s[8], temp;
+      |   ^~~~~~~~
+main.cpp:21:7: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   21 |       register uint64 samples[8], s8[8];
+      |       ^~~~~~~~
+main.cpp:21:7: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   21 |       register uint64 samples[8], s8[8];
+      |       ^~~~~~~~
+main.cpp:22:7: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   22 |       register uint32 fmem, tmem, fbuf, tbuf;
+      |       ^~~~~~~~
+main.cpp:22:7: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   22 |       register uint32 fmem, tmem, fbuf, tbuf;
+      |       ^~~~~~~~
+main.cpp:22:7: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   22 |       register uint32 fmem, tmem, fbuf, tbuf;
+      |       ^~~~~~~~
+main.cpp:22:7: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   22 |       register uint32 fmem, tmem, fbuf, tbuf;
+      |       ^~~~~~~~
+12 errors generated.
+make: *** [Makefile:56: main.o] Error 1

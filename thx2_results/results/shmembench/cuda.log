@@ -1,0 +1,3 @@
+nvcc -c  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc -c  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o cuda 

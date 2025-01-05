@@ -1,0 +1,19 @@
+nvcc  -DFLOAT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c main.c -o main.o
+nvcc  -DFLOAT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c base.c -o base.o
+nvcc  -DFLOAT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c param.c -o param.o
+param.c: In function ‘read_dangle’:
+param.c:345:18: warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    (*d)[i][j][k] = val;
+    ~~~~~~~~~~~~~~^~~~~
+param.c:345:18: warning: ‘i’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+param.c: In function ‘read_stack’:
+param.c:196:21: warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    (*p)[j][i][k][l] = val;
+    ~~~~~~~~~~~~~~~~~^~~~~
+param.c:196:21: warning: ‘i’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+nvcc  -DFLOAT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c util.c -o util.o
+nvcc  -DFLOAT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -c prna.cu -o prna.o
+prna.cu:197:12: warning: ‘int int_min(int, int)’ defined but not used [-Wunused-function]
+ DEV HOST static int int_min(int a, int b) { return a < b ? a : b; }
+            ^~~~~~~
+nvcc  -DFLOAT -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math main.o base.o param.o util.o prna.o  -o cuda 

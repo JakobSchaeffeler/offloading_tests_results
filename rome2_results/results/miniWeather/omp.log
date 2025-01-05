@@ -1,0 +1,6 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -DNX=400 -DNZ=200 -DSIM_TIME=600 -DDATA_SPEC=DATA_SPEC_THERMAL -D__STRICT_ANSI__ -DNX=400 -DNZ=200 -DSIM_TIME=600 -DDATA_SPEC=DATA_SPEC_THERMAL -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+main.cpp:13:10: fatal error: 'mpi.h' file not found
+   13 | #include <mpi.h>
+      |          ^~~~~~~
+1 error generated.
+make: *** [Makefile:61: main.o] Error 1

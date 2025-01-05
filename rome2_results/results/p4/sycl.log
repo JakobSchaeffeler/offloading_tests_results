@@ -1,0 +1,6 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../p4-cuda -I../p4-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:97:33: error: use of undeclared identifier 'M_PI'
+   97 |     const float period = (float)M_PI;
+      |                                 ^
+1 error generated.
+make: *** [Makefile:71: main.o] Error 1
