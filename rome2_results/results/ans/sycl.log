@@ -1,7 +1,24 @@
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_util.o src/multians_util.cc
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_output_buffer.o src/multians_output_buffer.cc
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_input_buffer.o src/multians_input_buffer.cc
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -DUSE_GPU -DUSE_GPU -O3 -O3 -I include -c -o bin/multians_gpu_decoder.o src/multians_gpu_decoder.cc
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -Iinclude -Iinclude -Iinclude -Iinclude -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -I include -c -o bin/ans_encoder.o src/ans_encoder.cc
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -Iinclude -Iinclude -Iinclude -Iinclude -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -I include -c -o bin/ans_table_generator.o src/ans_table_generator.cc
+src/ans_table_generator.cc:141:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  141 |     SYMBOL_TYPE symbols[num_states];
+      |                         ^~~~~~~~~~
+src/ans_table_generator.cc:141:25: note: function parameter 'num_states' with unknown value cannot be used in a constant expression
+src/ans_table_generator.cc:137:12: note: declared here
+  137 |     size_t num_states,
+      |            ^
+1 warning generated.
+src/ans_table_generator.cc:141:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  141 |     SYMBOL_TYPE symbols[num_states];
+      |                         ^~~~~~~~~~
+src/ans_table_generator.cc:141:25: note: function parameter 'num_states' with unknown value cannot be used in a constant expression
+src/ans_table_generator.cc:137:12: note: declared here
+  137 |     size_t num_states,
+      |            ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -Iinclude -Iinclude -Iinclude -Iinclude -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -I include -c -o bin/main.o src/main.cc
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -Iinclude -Iinclude -Iinclude -Iinclude -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -I include -c -o bin/multians_codetable.o src/multians_codetable.cc
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -Iinclude -Iinclude -Iinclude -Iinclude -Iinclude -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -I include -c -o bin/multians_gpu_decoder.o src/multians_gpu_decoder.cc
 src/multians_gpu_decoder.cc:614:20: warning: 'get_pointer' is deprecated: accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
   614 |       input_buffer.get_pointer(),
       |                    ^

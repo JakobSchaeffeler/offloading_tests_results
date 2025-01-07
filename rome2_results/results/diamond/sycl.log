@@ -1,20 +1,20 @@
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_blosum45.c -o src/blast/sm_blosum45.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_blosum45.c -o src/blast/sm_blosum45.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_blosum50.c -o src/blast/sm_blosum50.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_blosum50.c -o src/blast/sm_blosum50.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_blosum62.c -o src/blast/sm_blosum62.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_blosum62.c -o src/blast/sm_blosum62.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_blosum80.c -o src/blast/sm_blosum80.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_blosum80.c -o src/blast/sm_blosum80.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_blosum90.c -o src/blast/sm_blosum90.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_blosum90.c -o src/blast/sm_blosum90.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_pam30.c -o src/blast/sm_pam30.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_pam30.c -o src/blast/sm_pam30.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_pam70.c -o src/blast/sm_pam70.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_pam70.c -o src/blast/sm_pam70.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/sm_pam250.c -o src/blast/sm_pam250.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/sm_pam250.c -o src/blast/sm_pam250.o
 clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/run/main.cpp -o src/run/main.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/run/main.cpp -o src/run/main.o
 In file included from src/run/main.cpp:22:
 In file included from src/run/../extra/compare.h:24:
 src/run/../extra/../util/compressed_stream.h:47:2: warning: 'auto_ptr<char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
@@ -73,7 +73,7 @@ src/run/../extra/../util/compressed_stream.h:65:2: warning: 'auto_ptr<char>' is 
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/basic/config.cpp -o src/basic/config.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/basic/config.cpp -o src/basic/config.o
 In file included from src/basic/config.cpp:31:
 In file included from src/basic/../data/sorted_list.h:23:
 In file included from src/basic/../data/seed_histogram.h:28:
@@ -184,8 +184,8 @@ src/basic/config.cpp:347:24: warning: 'auto_ptr<Masking>' is deprecated: use 'st
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 4 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/util/tinythread.cpp -o src/util/tinythread.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/util/compressed_stream.cpp -o src/util/compressed_stream.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/util/tinythread.cpp -o src/util/tinythread.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/util/compressed_stream.cpp -o src/util/compressed_stream.o
 In file included from src/util/compressed_stream.cpp:26:
 src/util/compressed_stream.h:47:2: warning: 'auto_ptr<char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
    47 |         auto_ptr<char> in, out;
@@ -240,10 +240,10 @@ src/util/compressed_stream.h:65:2: warning: 'auto_ptr<char>' is deprecated: use 
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/basic/score_matrix.cpp -o src/basic/score_matrix.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/blast_filter.cpp -o src/blast/blast_filter.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/blast/blast_seg.cpp -o src/blast/blast_seg.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/data/queries.cpp -o src/data/queries.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/basic/score_matrix.cpp -o src/basic/score_matrix.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/blast_filter.cpp -o src/blast/blast_filter.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/blast/blast_seg.cpp -o src/blast/blast_seg.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/data/queries.cpp -o src/data/queries.o
 In file included from src/data/queries.cpp:19:
 In file included from src/data/queries.h:24:
 In file included from src/data/sorted_list.h:23:
@@ -308,7 +308,7 @@ src/data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered_iterator>
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/data/reference.cpp -o src/data/reference.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/data/reference.cpp -o src/data/reference.o
 In file included from src/data/reference.cpp:24:
 In file included from src/data/reference.h:27:
 In file included from src/data/sorted_list.h:23:
@@ -483,7 +483,7 @@ src/data/reference.cpp:87:2: warning: 'auto_ptr<Input_stream>' is deprecated: us
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 6 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/data/seed_histogram.cpp -o src/data/seed_histogram.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/data/seed_histogram.cpp -o src/data/seed_histogram.o
 In file included from src/data/seed_histogram.cpp:19:
 In file included from src/data/seed_histogram.h:28:
 In file included from src/data/seed_set.h:23:
@@ -516,7 +516,7 @@ src/data/../util/hash_table.h:308:2: warning: 'auto_ptr<unsigned char>' is depre
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 1 warning generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/daa_record.cpp -o src/output/daa_record.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/daa_record.cpp -o src/output/daa_record.o
 In file included from src/output/daa_record.cpp:19:
 In file included from src/output/daa_record.h:23:
 In file included from src/output/daa_file.h:30:
@@ -615,7 +615,7 @@ src/output/output.h:129:9: warning: 'auto_ptr<Output_sink>' is deprecated: use '
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 3 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/search/search.cpp -o src/search/search.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/search/search.cpp -o src/search/search.o
 In file included from src/search/search.cpp:19:
 In file included from src/search/align_range.h:23:
 In file included from src/search/../data/sorted_list.h:23:
@@ -680,8 +680,8 @@ src/search/../data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/util/command_line_parser.cpp -o src/util/command_line_parser.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/util/seq_file_format.cpp -o src/util/seq_file_format.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/util/command_line_parser.cpp -o src/util/command_line_parser.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/util/seq_file_format.cpp -o src/util/seq_file_format.o
 In file included from src/util/seq_file_format.cpp:19:
 In file included from src/util/seq_file_format.h:24:
 src/util/compressed_stream.h:47:2: warning: 'auto_ptr<char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
@@ -740,9 +740,9 @@ src/util/compressed_stream.h:65:2: warning: 'auto_ptr<char>' is deprecated: use 
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/util/util.cpp -o src/util/util.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/util/Timer.cpp -o src/util/Timer.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/basic/basic.cpp -o src/basic/basic.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/util/util.cpp -o src/util/util.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/util/Timer.cpp -o src/util/Timer.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/basic/basic.cpp -o src/basic/basic.o
 In file included from src/basic/basic.cpp:25:
 src/basic/masking.h:45:9: warning: 'auto_ptr<Masking>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
    45 |         static auto_ptr<Masking> instance;
@@ -771,10 +771,10 @@ src/basic/masking.h:45:9: warning: 'auto_ptr<Masking>' is deprecated: use 'std::
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 1 warning generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/floating_sw.cpp -o src/dp/floating_sw.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/basic/hssp.cpp -o src/basic/hssp.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/ungapped_align.cpp -o src/dp/ungapped_align.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/run/tools.cpp -o src/run/tools.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/floating_sw.cpp -o src/dp/floating_sw.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/basic/hssp.cpp -o src/basic/hssp.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/ungapped_align.cpp -o src/dp/ungapped_align.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/run/tools.cpp -o src/run/tools.o
 In file included from src/run/tools.cpp:24:
 In file included from src/run/../util/seq_file_format.h:24:
 src/run/../util/compressed_stream.h:47:2: warning: 'auto_ptr<char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
@@ -945,7 +945,7 @@ src/run/tools.cpp:134:2: warning: 'auto_ptr<Input_stream>' is deprecated: use 's
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 6 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/greedy_align.cpp -o src/dp/greedy_align.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/greedy_align.cpp -o src/dp/greedy_align.o
 In file included from src/dp/greedy_align.cpp:29:
 In file included from src/dp/../align/extend_ungapped.h:23:
 In file included from src/dp/../align/../data/reference.h:27:
@@ -1096,7 +1096,7 @@ src/dp/../output/output_format.h:57:8: warning: 'auto_ptr<Output_format>' is dep
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 5 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/run/benchmark.cpp -o src/run/benchmark.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/run/benchmark.cpp -o src/run/benchmark.o
 In file included from src/run/benchmark.cpp:25:
 In file included from src/run/../align/extend_ungapped.h:23:
 In file included from src/run/../align/../data/reference.h:27:
@@ -1247,7 +1247,7 @@ src/run/../output/output_format.h:57:8: warning: 'auto_ptr<Output_format>' is de
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 5 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/search/stage2.cpp -o src/search/stage2.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/search/stage2.cpp -o src/search/stage2.o
 In file included from src/search/stage2.cpp:19:
 In file included from src/search/align_range.h:23:
 In file included from src/search/../data/sorted_list.h:23:
@@ -1312,7 +1312,7 @@ src/search/../data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/output_format.cpp -o src/output/output_format.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/output_format.cpp -o src/output/output_format.o
 In file included from src/output/output_format.cpp:21:
 In file included from src/output/output_format.h:25:
 In file included from src/output/../output/daa_file.h:30:
@@ -1515,7 +1515,7 @@ src/output/output_format.cpp:95:18: warning: 'auto_ptr<Output_format>' is deprec
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 7 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/join_blocks.cpp -o src/output/join_blocks.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/join_blocks.cpp -o src/output/join_blocks.o
 In file included from src/output/join_blocks.cpp:19:
 In file included from src/output/output.h:27:
 In file included from src/output/../data/reference.h:27:
@@ -1719,7 +1719,7 @@ src/output/join_blocks.cpp:246:3: warning: 'auto_ptr<Output_format>' is deprecat
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 8 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/data/frequent_seeds.cpp -o src/data/frequent_seeds.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/data/frequent_seeds.cpp -o src/data/frequent_seeds.o
 In file included from src/data/frequent_seeds.cpp:20:
 In file included from src/data/frequent_seeds.h:23:
 src/data/../util/hash_table.h:308:2: warning: 'auto_ptr<unsigned char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
@@ -1778,7 +1778,7 @@ src/data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered_iterator>
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/align/query_mapper.cpp -o src/align/query_mapper.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/align/query_mapper.cpp -o src/align/query_mapper.o
 In file included from src/align/query_mapper.cpp:19:
 In file included from src/align/query_mapper.h:27:
 In file included from src/align/../data/queries.h:24:
@@ -2003,7 +2003,7 @@ src/align/query_mapper.cpp:182:2: warning: 'auto_ptr<Output_format>' is deprecat
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 8 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/align/align_target.cpp -o src/align/align_target.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/align/align_target.cpp -o src/align/align_target.o
 In file included from src/align/align_target.cpp:19:
 In file included from src/align/query_mapper.h:27:
 In file included from src/align/../data/queries.h:24:
@@ -2072,7 +2072,7 @@ src/align/../data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered_
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/blast_tab_format.cpp -o src/output/blast_tab_format.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/blast_tab_format.cpp -o src/output/blast_tab_format.o
 In file included from src/output/blast_tab_format.cpp:21:
 In file included from src/output/output_format.h:25:
 In file included from src/output/../output/daa_file.h:30:
@@ -2227,8 +2227,8 @@ src/output/output_format.h:57:8: warning: 'auto_ptr<Output_format>' is deprecate
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 5 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/padded_banded_sw.cpp -o src/dp/padded_banded_sw.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/needleman_wunsch.cpp -o src/dp/needleman_wunsch.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/padded_banded_sw.cpp -o src/dp/padded_banded_sw.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/needleman_wunsch.cpp -o src/dp/needleman_wunsch.o
 In file included from src/dp/needleman_wunsch.cpp:26:
 In file included from src/dp/../output/output_format.h:25:
 In file included from src/dp/../output/../output/daa_file.h:30:
@@ -2383,7 +2383,7 @@ src/dp/../output/output_format.h:57:8: warning: 'auto_ptr<Output_format>' is dep
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 5 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/blast_pairwise_format.cpp -o src/output/blast_pairwise_format.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/blast_pairwise_format.cpp -o src/output/blast_pairwise_format.o
 In file included from src/output/blast_pairwise_format.cpp:19:
 In file included from src/output/output_format.h:25:
 In file included from src/output/../output/daa_file.h:30:
@@ -2538,7 +2538,7 @@ src/output/output_format.h:57:8: warning: 'auto_ptr<Output_format>' is deprecate
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 5 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/extra/roc.cpp -o src/extra/roc.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/extra/roc.cpp -o src/extra/roc.o
 In file included from src/extra/roc.cpp:25:
 In file included from src/extra/../util/seq_file_format.h:24:
 src/extra/../util/compressed_stream.h:47:2: warning: 'auto_ptr<char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
@@ -2597,9 +2597,9 @@ src/extra/../util/compressed_stream.h:65:2: warning: 'auto_ptr<char>' is depreca
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/comp_based_stats.cpp -o src/dp/comp_based_stats.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/extra/model_sim.cpp -o src/extra/model_sim.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/run/double_indexed.cpp -o src/run/double_indexed.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/comp_based_stats.cpp -o src/dp/comp_based_stats.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/extra/model_sim.cpp -o src/extra/model_sim.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/run/double_indexed.cpp -o src/run/double_indexed.o
 In file included from src/run/double_indexed.cpp:21:
 In file included from src/run/../data/reference.h:27:
 In file included from src/run/../data/sorted_list.h:23:
@@ -2920,7 +2920,7 @@ src/run/double_indexed.cpp:288:20: warning: 'auto_ptr<Output_stream>' is depreca
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 12 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/search/collision.cpp -o src/search/collision.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/search/collision.cpp -o src/search/collision.o
 In file included from src/search/collision.cpp:19:
 In file included from src/search/collision.h:22:
 In file included from src/search/../data/frequent_seeds.h:23:
@@ -2983,7 +2983,7 @@ src/search/../data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/sam_format.cpp -o src/output/sam_format.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/sam_format.cpp -o src/output/sam_format.o
 In file included from src/output/sam_format.cpp:19:
 In file included from src/output/output_format.h:25:
 In file included from src/output/../output/daa_file.h:30:
@@ -3138,7 +3138,7 @@ src/output/output_format.h:57:8: warning: 'auto_ptr<Output_format>' is deprecate
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 5 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/align/align.cpp -o src/align/align.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/align/align.cpp -o src/align/align.o
 In file included from src/align/align.cpp:21:
 In file included from src/align/../data/reference.h:27:
 In file included from src/align/../data/sorted_list.h:23:
@@ -3407,7 +3407,7 @@ src/align/align.cpp:124:27: warning: 'auto_ptr<Output_sink>' is deprecated: use 
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 10 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/search/setup.cpp -o src/search/setup.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/search/setup.cpp -o src/search/setup.o
 In file included from src/search/setup.cpp:19:
 In file included from src/search/align_range.h:23:
 In file included from src/search/../data/sorted_list.h:23:
@@ -3472,9 +3472,9 @@ src/search/../data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/extra/opt.cpp -o src/extra/opt.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/diag_scores.cpp -o src/dp/diag_scores.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/data/taxonomy.cpp -o src/data/taxonomy.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/extra/opt.cpp -o src/extra/opt.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/diag_scores.cpp -o src/dp/diag_scores.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/data/taxonomy.cpp -o src/data/taxonomy.o
 In file included from src/data/taxonomy.cpp:22:
 src/data/../util/compressed_stream.h:47:2: warning: 'auto_ptr<char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
    47 |         auto_ptr<char> in, out;
@@ -3529,8 +3529,8 @@ src/data/../util/compressed_stream.h:65:2: warning: 'auto_ptr<char>' is deprecat
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/lib/tantan/tantan.cpp -o src/lib/tantan/tantan.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/lib/tantan/tantale.cpp -o src/lib/tantan/tantale.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/lib/tantan/tantan.cpp -o src/lib/tantan/tantan.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/lib/tantan/tantale.cpp -o src/lib/tantan/tantale.o
 src/lib/tantan/tantale.cpp:140:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
   140 |     float probabilities[size];
       |                         ^~~~
@@ -3589,7 +3589,7 @@ src/lib/tantan/tantale.cpp:128:30: note: declared here
   128 |                    const int maxRepeatOffset,
       |                              ^
 4 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/basic/masking.cpp -o src/basic/masking.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/basic/masking.cpp -o src/basic/masking.o
 In file included from src/basic/masking.cpp:19:
 src/basic/masking.h:45:9: warning: 'auto_ptr<Masking>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
    45 |         static auto_ptr<Masking> instance;
@@ -3886,9 +3886,9 @@ src/basic/masking.cpp:284:69: warning: 'get_pointer<sycl::access::target::global
    53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
       |                                      ^
 14 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/swipe.cpp -o src/dp/swipe.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/dp/banded_sw.cpp -o src/dp/banded_sw.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/data/sorted_list.cpp -o src/data/sorted_list.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/swipe.cpp -o src/dp/swipe.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/dp/banded_sw.cpp -o src/dp/banded_sw.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/data/sorted_list.cpp -o src/data/sorted_list.o
 In file included from src/data/sorted_list.cpp:19:
 In file included from src/data/sorted_list.h:23:
 In file included from src/data/seed_histogram.h:28:
@@ -3949,7 +3949,7 @@ src/data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list::buffered_iterator>
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/data/seed_set.cpp -o src/data/seed_set.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/data/seed_set.cpp -o src/data/seed_set.o
 In file included from src/data/seed_set.cpp:19:
 In file included from src/data/seed_set.h:23:
 src/data/../util/hash_table.h:308:2: warning: 'auto_ptr<unsigned char>' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
@@ -3980,8 +3980,8 @@ src/data/../util/hash_table.h:308:2: warning: 'auto_ptr<unsigned char>' is depre
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 1 warning generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/util/binary_file.cpp -o src/util/binary_file.o
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/taxon_format.cpp -o src/output/taxon_format.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/util/binary_file.cpp -o src/util/binary_file.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/taxon_format.cpp -o src/output/taxon_format.o
 In file included from src/output/taxon_format.cpp:20:
 In file included from src/output/output_format.h:25:
 In file included from src/output/../output/daa_file.h:30:
@@ -4136,7 +4136,7 @@ src/output/output_format.h:57:8: warning: 'auto_ptr<Output_format>' is deprecate
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 5 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/view.cpp -o src/output/view.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/view.cpp -o src/output/view.o
 In file included from src/output/view.cpp:22:
 In file included from src/output/daa_file.h:30:
 In file included from src/output/../data/reference.h:27:
@@ -4335,7 +4335,7 @@ src/output/view.cpp:77:2: warning: 'auto_ptr<Output_format>' is deprecated: use 
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 7 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/output_sink.cpp -o src/output/output_sink.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/output_sink.cpp -o src/output/output_sink.o
 In file included from src/output/output_sink.cpp:19:
 In file included from src/output/output.h:27:
 In file included from src/output/../data/reference.h:27:
@@ -4454,7 +4454,7 @@ src/output/output_sink.cpp:25:1: warning: 'auto_ptr<Output_sink>' is deprecated:
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 4 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 -c src/output/target_culling.cpp -o src/output/target_culling.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 -c src/output/target_culling.cpp -o src/output/target_culling.o
 In file included from src/output/target_culling.cpp:20:
 In file included from src/output/target_culling.h:23:
 In file included from src/output/../align/query_mapper.h:27:
@@ -4527,4 +4527,4 @@ src/output/../align/../data/sorted_list.h:230:3: warning: 'auto_ptr<sorted_list:
   100 |   __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
       |                   ^
 2 warnings generated.
-~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../include -DUSE_GPU -DUSE_GPU -O3 -O3 src/blast/sm_blosum45.o src/blast/sm_blosum50.o src/blast/sm_blosum62.o src/blast/sm_blosum80.o src/blast/sm_blosum90.o src/blast/sm_pam30.o src/blast/sm_pam70.o src/blast/sm_pam250.o src/run/main.o src/basic/config.o src/util/tinythread.o src/util/compressed_stream.o src/basic/score_matrix.o src/blast/blast_filter.o src/blast/blast_seg.o src/data/queries.o src/data/reference.o src/data/seed_histogram.o src/output/daa_record.o src/search/search.o src/util/command_line_parser.o src/util/seq_file_format.o src/util/util.o src/util/Timer.o src/basic/basic.o src/dp/floating_sw.o src/basic/hssp.o src/dp/ungapped_align.o src/run/tools.o src/dp/greedy_align.o src/run/benchmark.o src/search/stage2.o src/output/output_format.o src/output/join_blocks.o src/data/frequent_seeds.o src/align/query_mapper.o src/align/align_target.o src/output/blast_tab_format.o src/dp/padded_banded_sw.o src/dp/needleman_wunsch.o src/output/blast_pairwise_format.o src/extra/roc.o src/dp/comp_based_stats.o src/extra/model_sim.o src/run/double_indexed.o src/search/collision.o src/output/sam_format.o src/align/align.o src/search/setup.o src/extra/opt.o src/dp/diag_scores.o src/data/taxonomy.o src/lib/tantan/tantan.o src/lib/tantan/tantale.o src/basic/masking.o src/dp/swipe.o src/dp/banded_sw.o src/data/sorted_list.o src/data/seed_set.o src/util/binary_file.o src/output/taxon_format.o src/output/view.o src/output/output_sink.o src/output/target_culling.o  -o sycl -lz -lpthread
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -DUSE_GPU -O3 src/blast/sm_blosum45.o src/blast/sm_blosum50.o src/blast/sm_blosum62.o src/blast/sm_blosum80.o src/blast/sm_blosum90.o src/blast/sm_pam30.o src/blast/sm_pam70.o src/blast/sm_pam250.o src/run/main.o src/basic/config.o src/util/tinythread.o src/util/compressed_stream.o src/basic/score_matrix.o src/blast/blast_filter.o src/blast/blast_seg.o src/data/queries.o src/data/reference.o src/data/seed_histogram.o src/output/daa_record.o src/search/search.o src/util/command_line_parser.o src/util/seq_file_format.o src/util/util.o src/util/Timer.o src/basic/basic.o src/dp/floating_sw.o src/basic/hssp.o src/dp/ungapped_align.o src/run/tools.o src/dp/greedy_align.o src/run/benchmark.o src/search/stage2.o src/output/output_format.o src/output/join_blocks.o src/data/frequent_seeds.o src/align/query_mapper.o src/align/align_target.o src/output/blast_tab_format.o src/dp/padded_banded_sw.o src/dp/needleman_wunsch.o src/output/blast_pairwise_format.o src/extra/roc.o src/dp/comp_based_stats.o src/extra/model_sim.o src/run/double_indexed.o src/search/collision.o src/output/sam_format.o src/align/align.o src/search/setup.o src/extra/opt.o src/dp/diag_scores.o src/data/taxonomy.o src/lib/tantan/tantan.o src/lib/tantan/tantale.o src/basic/masking.o src/dp/swipe.o src/dp/banded_sw.o src/data/sorted_list.o src/data/seed_set.o src/util/binary_file.o src/output/taxon_format.o src/output/view.o src/output/output_sink.o src/output/target_culling.o  -o sycl -lz -lpthread
