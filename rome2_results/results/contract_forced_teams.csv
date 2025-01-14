@@ -1,0 +1,39 @@
+,omp 32 2 omp offloading kernel,sycl 32 2 sycl kernel,hip 32 2 hip_kernel
+Runtime,2862550259.0,156009681.0,156878629.0
+SALU Instructions per wave,150686.13,94704.09,94736.45
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.11,0.51,0.51
+L1 Requests per wave,7165764.25,1713383.21,1709918.23
+L1 Hit Rate,87.24,51.8,51.93
+L2 Requests per wave,129908.99,70964.41,70538.15
+L2 Hit Rate,99.85,99.82,99.82
+Wavefront Occupancy (% of peak),1135.05,1270.8,1296.29
+Dependency Wait Cycles per wave,56320650.28,12018908.5,12120326.64
+Issue Wait Cycles per wave,149888.44,364563.34,367495.1
+Grid Size,1327104.0,331776.0,331776.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,1024.0,0.0,0.0
+Shared Memory Instructions per wave,176585.96,0.01,0.02
+Shared Memory Bank Conflicts (%),0.0,-3.12,-3.12
+Register Spill Instructions per wave,31.93,0.0,0.0
+Global Memory Instructions per wave,176579.35,42834.58,42618.02
+Global Memory Read Instructions per wave,153833.49,42833.58,42617.02
+Global Memory Write Instructions per wave,22745.87,1.0,0.99
+Coalesced Instructions (% of peak),40.29,62.5,62.5
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,4734.59,9864.83,9703.73
+Global Write/Atomic Bytes per wave,11923.61,318.41,317.16
+SALU Instructions,3124627591.6800003,490946002.56,491113756.8
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,148589287488.0,8882178560.64,8864216104.32
+L2 Requests,2693792816.6400003,367879501.44,365669769.59999996
+Dependency Wait Cycles,1167865004206.08,62306021664.0,62831773301.76
+Issue Wait Cycles,3108086691.84,1889896354.5600002,1905094598.3999999
+Shared Memory Instructions,3661686466.56,51.84,103.68
+Register Spill Instructions,662100.48,0.0,0.0
+Global Memory Instructions,3661549401.6,222054462.72,220931815.67999998
+Global Memory Read Instructions,3189891248.64,222049278.72,220926631.67999998
+Global Memory Write Instructions,471658360.32,5184.0,5132.16
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,98176458.24000001,51139278.72,50304136.32
+Global Write/Atomic Bytes,247247976.96,1650637.4400000002,1644157.4400000002
