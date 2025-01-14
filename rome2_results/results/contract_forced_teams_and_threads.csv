@@ -1,0 +1,39 @@
+,omp 64 5 omp offloading kernel,sycl 64 5 sycl kernel,hip 64 5 hip_kernel
+Runtime,207201054188.0,13222995453.0,12897400093.0
+SALU Instructions per wave,4530320.59,702202.18,704555.81
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.1,0.42,0.44
+L1 Requests per wave,219731762.19,13314779.51,13317768.4
+L1 Hit Rate,88.35,50.87,50.9
+L2 Requests per wave,3625092.7,561809.51,561871.06
+L2 Hit Rate,98.15,59.09,58.13
+Wavefront Occupancy (% of peak),1307.69,2024.55,2102.62
+Dependency Wait Cycles per wave,1891625432.85,169801644.95,171887927.81
+Issue Wait Cycles per wave,3735278.38,4787438.51,5022790.23
+Grid Size,1327104.0,1327104.0,1327104.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,1024.0,0.0,0.0
+Shared Memory Instructions per wave,5412686.17,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,-3.12,-3.12
+Register Spill Instructions per wave,55.98,0.0,0.0
+Global Memory Instructions per wave,5412674.17,332757.4,332944.21
+Global Memory Read Instructions per wave,4726241.2,332756.41,332943.21
+Global Memory Write Instructions per wave,686432.97,1.0,1.0
+Coalesced Instructions (% of peak),40.26,62.5,62.5
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,4697754.1,16569870.87,16925844.49
+Global Write/Atomic Bytes per wave,194907.42,383.78,383.98
+SALU Instructions,93940727754.23999,14560864404.480001,14609669276.160002
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,4556357820771.84,276095267919.36,276157245542.4
+L2 Requests,75169922227.2,11649681999.36,11650958300.160002
+Dependency Wait Cycles,39224744975577.6,3521006909683.1997,3564268071068.16
+Issue Wait Cycles,77454732487.68,99272324943.36,104152578209.28001
+Shared Memory Instructions,112237460421.12,0.0,0.0
+Register Spill Instructions,1160801.28,0.0,0.0
+Global Memory Instructions,112237211589.12,6900057446.400001,6903931138.56
+Global Memory Read Instructions,98003337523.2,6900036917.759999,6903910402.56
+Global Memory Write Instructions,14233874065.92,20736.0,20736.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,97412629017.59999,343592842360.32,350974311344.63995
+Global Write/Atomic Bytes,4041600261.1200004,7958062.079999999,7962209.28
