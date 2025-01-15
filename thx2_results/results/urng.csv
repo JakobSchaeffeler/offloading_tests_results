@@ -1,0 +1,46 @@
+,URNG_Input.bmp 16 16 1000
+Runtime,12081135.0
+HtoD copy time,87285.0
+DtoH copy time,87800.0
+#Threads,256.0
+#Teams,1024.0
+Instructions Executed,1875969672.7900264
+IPC,1.6727900000000218
+Shared Memory Stores,32768000.0
+Shared Memory Loads,8192000.0
+Shared Memory Store Bank Conflicts,393259613.0
+Shared Memory Load Bank Conflicts,38833171.0
+Global Memory Load Instructions,8192000.0
+Global Memory Store Instructions,8192000.0
+Global Memory Load (MB),82472.13000000203
+Global Memory Store (MB),431688.23000000196
+Global Memory Load Throughput (GB/s),81.42212000000043
+Global Memory Store Throughput (GB/s),32.81463000000003
+Global Memory Load Bank Conflicts,5364.0
+Global Memory Store Bank Conflicts,7712.0
+L1 Cache Accesses (Bytes),164243.8200000029
+L1 Cache Hits (%),0.0
+L1 Cache Throughput (GB/s),162.14381999999983
+L2 Cache Accesses (Bytes),164521.54000000207
+L2 Cache Hits (%),51.140129999999544
+L2 Cache Throughput (GB/s),162.42153999999903
+#Divergent Branches,0.0
+Warp Stalls - Barrier Not Issued,0.0
+Warp Stalls - Branch Resolving Not Issued,2389.0
+Warp Stalls - Dispatch Stall Not Issued,5121.0
+Warp Stalls - Drain Not Issued,32732.0
+Warp Stalls - IMC Miss Not Issued,46977.0
+Warp Stalls - LG Throttle Not Issued,0.0
+Warp Stalls - Long Scoreboard Not Issued,93275.0
+Warp Stalls - Math Pipe Throttle Not Issued,8946.0
+Warp Stalls - Membar Not Issued,0.0
+Warp Stalls - MIO Throttle Not Issued,128684.0
+Warp Stalls - Misc Not Issued,394.0
+Warp Stalls - No Instructions Not Issued,31457.0
+Warp Stalls - Not Selected Not Issued,0.0
+Warp Stalls - Selected Not Issued,0.0
+Warp Stalls - Short Scoreboard Not Issued,62597.0
+Warp Stalls - Sleeping Not Issued,0.0
+Warp Stalls - TEX Throttle Not Issued,0.0
+Warp Stalls - Wait Not Issued,68174.0
+Occupancy,58801.70999999994

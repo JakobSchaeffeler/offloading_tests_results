@@ -1,0 +1,1 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DPROFILE_TMP -D__STRICT_ANSI__ -O3 streamcluster.cpp -o streamcluster 

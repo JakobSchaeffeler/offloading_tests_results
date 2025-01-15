@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../wordcount-sycl/main.cpp -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c wc.cu -o wc.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o wc.o -o cuda 

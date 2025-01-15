@@ -1,0 +1,2 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64  -I ../zeropoint-cuda -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  main.o -o omp 

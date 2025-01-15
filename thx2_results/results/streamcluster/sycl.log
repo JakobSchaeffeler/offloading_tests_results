@@ -1,0 +1,10 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DPROFILE_TMP -DUSE_GPU -DPROFILE_TMP -DUSE_GPU -O3 -O3 -c streamcluster.cpp -o streamcluster.o
+streamcluster.cpp:200:15: warning: variable 'open' set but not used [-Wunused-but-set-variable]
+  200 |   static bool open = false;
+      |               ^
+1 warning generated.
+streamcluster.cpp:200:15: warning: variable 'open' set but not used [-Wunused-but-set-variable]
+  200 |   static bool open = false;
+      |               ^
+1 warning generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DPROFILE_TMP -DUSE_GPU -DPROFILE_TMP -DUSE_GPU -O3 -O3 streamcluster.o -o sycl 

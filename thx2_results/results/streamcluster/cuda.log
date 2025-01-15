@@ -1,0 +1,7 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -DPROFILE_TMP -O3 streamcluster.cu -o streamcluster -lm	
+streamcluster.cu(192): warning #550-D: variable "open" was set but never used
+
+streamcluster.cu: In function ‘float pspeedy(Points*, float, long int*, int, pthread_barrier_t*)’:
+streamcluster.cu:192:13: warning: variable ‘open’ set but not used [-Wunused-but-set-variable]
+   static bool open = false;
+             ^~~~

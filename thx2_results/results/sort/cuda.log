@@ -1,0 +1,6 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+main.cu: In function ‘int main(int, char**)’:
+main.cu:131:11: warning: ‘d_out’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cudaMemcpy(h_odata, d_out, size * sizeof(T), cudaMemcpyDeviceToHost);
+   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o cuda 

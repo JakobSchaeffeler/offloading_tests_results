@@ -1,0 +1,6 @@
+~/repos/llvm/build/bin/clang++ -c -o basis.o ../xlqc-cuda/basis.cc -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -L/path/to/gsl/lib -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3
+../xlqc-cuda/basis.cc:27:10: fatal error: 'gsl/gsl_matrix.h' file not found
+   27 | #include <gsl/gsl_matrix.h>
+      |          ^~~~~~~~~~~~~~~~~~
+1 error generated.
+make: *** [Makefile:79: basis.o] Error 1
