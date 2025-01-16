@@ -1,0 +1,39 @@
+,omp 1513 2048 100 omp offloading kernel,sycl 1513 2048 100 sycl kernel,hip 1513 2048 100 hip_kernel
+Runtime,4109702124.0,4356020784.0,4345855587.0
+SALU Instructions per wave,64830.38,78113.47,81134.58
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,1.08,1.07,1.11
+L1 Requests per wave,381201.69,555411.02,550066.76
+L1 Hit Rate,75.61,97.89,98.05
+L2 Requests per wave,2863.71,3192.81,2954.04
+L2 Hit Rate,66.88,56.6,59.84
+Wavefront Occupancy (% of peak),2551.23,3341.01,3361.42
+Dependency Wait Cycles per wave,2926413.73,4388371.21,4220371.71
+Issue Wait Cycles per wave,357208.21,397258.0,561836.05
+Grid Size,774656.0,774656.0,774656.0
+#Threads,512.0,512.0,512.0
+Shared Memory Allocated,512.0,0.0,0.0
+Shared Memory Instructions per wave,6247.84,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,516.11,715.5,516.11
+Global Memory Instructions per wave,6242.75,8860.8,8860.8
+Global Memory Read Instructions per wave,5785.39,8430.73,8430.73
+Global Memory Write Instructions per wave,457.36,430.07,430.07
+Coalesced Instructions (% of peak),31.86,27.5,27.18
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,27068.76,35205.53,32313.04
+Global Write/Atomic Bytes per wave,43712.96,52297.38,43375.14
+SALU Instructions,784706919.52,945485440.88,982052956.32
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,4614065255.76,6722694986.08,6658008063.04
+L2 Requests,34662345.84,38645772.24,35755700.16
+Dependency Wait Cycles,35421311787.92,53116845125.84,51083379177.84
+Issue Wait Cycles,4323648173.84,4808410832.0,6800463549.200001
+Shared Memory Instructions,75623855.36,0.0,0.0
+Register Spill Instructions,6246995.44,8660412.0,6246995.44
+Global Memory Instructions,75562246.0,107251123.19999999,107251123.19999999
+Global Memory Read Instructions,70026360.56,102045555.92,102045555.92
+Global Memory Write Instructions,5535885.44,5205567.28,5205567.28
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,327640271.03999996,426127735.12,391117036.16
+Global Write/Atomic Bytes,529101667.84,633007487.52,525012694.56
