@@ -1,0 +1,39 @@
+,omp 100000000 100 omp offloading kernel,sycl 100000000 100 sycl kernel,hip 100000000 100 hip_kernel
+Runtime,6357049778.0,4044188977.0,3960163718.0
+SALU Instructions per wave,38041.32,101.44,90.11
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.99,1.05,1.04
+L1 Requests per wave,132718.02,374.97,375.0
+L1 Hit Rate,86.68,77.88,77.59
+L2 Requests per wave,18611.87,97.98,99.63
+L2 Hit Rate,33.49,47.47,47.89
+Wavefront Occupancy (% of peak),1646.92,2281.62,2365.56
+Dependency Wait Cycles per wave,1401645.6,3305.72,3321.9
+Issue Wait Cycles per wave,6472408.81,16102.01,16232.11
+Grid Size,307200.0,99009903.52,99009903.52
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,512.0,0.0,0.0
+Shared Memory Instructions per wave,2647.48,0.99,0.13
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,5.73,0.0,0.0
+Global Memory Instructions per wave,2631.73,6.6,6.61
+Global Memory Read Instructions per wave,2631.23,6.6,6.6
+Global Memory Write Instructions per wave,0.25,0.0,0.0
+Coalesced Instructions (% of peak),31.83,30.28,30.28
+Global Atomic Operations per wave,0.25,0.0,0.0
+Global Read Bytes per wave ,502611.04,1471.49,1479.26
+Global Write/Atomic Bytes per wave,3.39,0.05,0.08
+SALU Instructions,182598336.0,156930697.0792,139402850.09667498
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,637046496.0,580089742.545225,580136153.4375
+L2 Requests,89336976.0,151577974.17015,154130573.245275
+Dependency Wait Cycles,6727898880.0,5114047160.377099,5139078101.61075
+Issue Wait Cycles,31067562287.999996,24910288384.032425,25111556953.531673
+Shared Memory Instructions,12707904.0,1531559.445075,201113.866525
+Register Spill Instructions,27504.000000000004,0.0,0.0
+Global Memory Instructions,12632304.0,10210396.3005,10225866.597925
+Global Memory Read Instructions,12629904.0,10210396.3005,10210396.3005
+Global Memory Write Instructions,1200.0,0.0,0.0
+Global Atomic Operations,1200.0,0.0,0.0
+Global Read Bytes ,2412532992.0,2276438795.791325,2288459216.8905497
+Global Write/Atomic Bytes,16272.0,77351.487125,123762.37939999999
