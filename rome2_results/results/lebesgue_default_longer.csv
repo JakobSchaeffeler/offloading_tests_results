@@ -1,0 +1,39 @@
+,omp 1000000 10 omp offloading kernel,sycl 1000000 10 sycl kernel,hip 1000000 10 hip_kernel
+Runtime,488074807.0,414113380.0,401614351.0
+SALU Instructions per wave,3102.89,345.02,339.88
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.43,0.37,0.38
+L1 Requests per wave,121469.95,9345.52,9343.44
+L1 Hit Rate,78.12,61.37,61.61
+L2 Requests per wave,6043.42,863.43,861.93
+L2 Hit Rate,82.35,79.92,79.58
+Wavefront Occupancy (% of peak),1313.14,3375.4,3343.01
+Dependency Wait Cycles per wave,391543.19,78571.95,76407.1
+Issue Wait Cycles per wave,95692.61,55125.44,52265.91
+Grid Size,122880.0,1000192.0,1000192.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,512.0,0.0,0.0
+Shared Memory Instructions per wave,2025.81,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.5,0.0,0.0
+Global Memory Instructions per wave,1898.16,146.02,145.99
+Global Memory Read Instructions per wave,1486.69,95.5,95.48
+Global Memory Write Instructions per wave,411.22,50.49,50.49
+Coalesced Instructions (% of peak),25.03,25.0,25.0
+Global Atomic Operations per wave,0.25,0.04,0.02
+Global Read Bytes per wave ,28608.31,5761.54,5763.77
+Global Write/Atomic Bytes per wave,49743.67,10541.78,10514.97
+SALU Instructions,5957548.8,5391972.56,5311644.64
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,233222304.0,146051786.56,146019280.32000002
+L2 Requests,11603366.4,13493684.04,13470242.04
+Dependency Wait Cycles,751762924.8,1227922434.6,1194090158.8000002
+Issue Wait Cycles,183729811.2,861500376.32,816811641.48
+Shared Memory Instructions,3889555.1999999997,0.0,0.0
+Register Spill Instructions,960.0,0.0,0.0
+Global Memory Instructions,3644467.2,2282000.56,2281531.72
+Global Memory Read Instructions,2854444.8000000003,1492474.0,1492161.4400000002
+Global Memory Write Instructions,789542.4,789057.7200000001,789057.7200000001
+Global Atomic Operations,480.0,625.12,312.56
+Global Read Bytes ,54927955.2,90041347.12,90076197.56
+Global Write/Atomic Bytes,95507846.39999999,164746937.84,164327951.16
