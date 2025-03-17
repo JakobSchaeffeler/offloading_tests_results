@@ -1,0 +1,6 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../p4-cuda -I../p4-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:97:33: error: use of undeclared identifier 'M_PI'
+   97 |     const float period = (float)M_PI;
+      |                                 ^
+1 error generated.
+make: *** [Makefile:71: main.o] Error 1

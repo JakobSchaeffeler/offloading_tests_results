@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -DMILC_COMPLEX -O3 -c su3_nn_bench.cu -o su3_nn_bench.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -DMILC_COMPLEX -O3 su3_nn_bench.o -o cuda 

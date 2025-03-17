@@ -1,0 +1,49 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:31:28: error: use of undeclared identifier 'sinf'
+   31 |   TU1 = GDC_ECCENTRICITY * sinf ( rad_latitude_1 ) /
+      |                            ^
+main.cpp:32:5: error: use of undeclared identifier 'cosf'
+   32 |     cosf ( rad_latitude_1 ) ;
+      |     ^
+main.cpp:33:28: error: use of undeclared identifier 'sinf'
+   33 |   TU2 = GDC_ECCENTRICITY * sinf ( rad_latitude_2 ) /
+      |                            ^
+main.cpp:34:5: error: use of undeclared identifier 'cosf'
+   34 |     cosf ( rad_latitude_2 ) ;
+      |     ^
+main.cpp:36:16: error: use of undeclared identifier 'sqrtf'
+   36 |   CU1 = 1.0f / sqrtf ( TU1 * TU1 + 1.0f ) ;
+      |                ^
+main.cpp:38:16: error: use of undeclared identifier 'sqrtf'
+   38 |   CU2 = 1.0f / sqrtf ( TU2 * TU2 + 1.0f ) ;
+      |                ^
+main.cpp:45:10: error: use of undeclared identifier 'sinf'
+   45 |     SX = sinf ( X ) ;
+      |          ^
+main.cpp:46:10: error: use of undeclared identifier 'cosf'
+   46 |     CX = cosf ( X ) ;
+      |          ^
+main.cpp:49:10: error: use of undeclared identifier 'sqrtf'
+   49 |     SY = sqrtf ( TU1 * TU1 + TU2 * TU2 ) ;
+      |          ^
+main.cpp:51:9: error: use of undeclared identifier 'atan2f'; did you mean 'sycl::atan2'?
+   51 |     Y = atan2f ( SY, CY ) ;
+      |         ^~~~~~
+      |         sycl::atan2
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:152:24: note: 'sycl::atan2' declared here
+  152 | BUILTIN_GENF(TWO_ARGS, atan2)
+      |                        ^
+main.cpp:62:13: error: use of undeclared identifier 'fabsf'
+   62 |   } while ( fabsf ( D - X ) > EPS );
+      |             ^
+main.cpp:64:7: error: use of undeclared identifier 'sqrtf'
+   64 |   X = sqrtf ( GDC_ELLIPSOIDAL * C2A + 1.0f ) + 1.0f ;
+      |       ^
+main.cpp:176:9: error: use of undeclared identifier 'fabs'
+  176 |     if (fabs(output[i] - expected_output[i]) > error_rate) {
+      |         ^
+main.cpp:177:20: error: use of undeclared identifier 'fabs'
+  177 |       error_rate = fabs(output[i] - expected_output[i]);
+      |                    ^
+14 errors generated.
+make: *** [Makefile:71: main.o] Error 1

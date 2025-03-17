@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -arch=sm_70 -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DGPU -O3 -c main.cpp -o main.o
+nvcc  -std=c++14 -arch=sm_70 -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DGPU -O3 -c force_kernel.cu -o force_kernel.o
+nvcc main.o force_kernel.o  -std=c++14 -arch=sm_70 -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DGPU -O3 -o cuda 

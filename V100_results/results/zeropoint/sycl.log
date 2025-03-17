@@ -1,0 +1,27 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../zeropoint-cuda -I../zeropoint-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:50:58: error: no matching function for call to 'abs'
+   50 |     double zero_point_from_min_error = sycl::abs(qmin) + sycl::abs(min_val / static_cast<double>(scale[i]));
+      |                                                          ^~~~~~~~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/integer_functions.inc:68:31: note: candidate template ignored: substitution failure [with T0 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::integer_elem_type, sycl::detail::any_shape, sycl::detail::same_elem_type, double>'
+   28 | DEVICE_IMPL_TEMPLATE(ONE_ARG, abs, builtin_enable_integer_t, [](auto x) {
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:51:58: error: no matching function for call to 'abs'
+   51 |     double zero_point_from_max_error = sycl::abs(qmax) + sycl::abs(max_val / static_cast<double>(scale[i]));
+      |                                                          ^~~~~~~~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/integer_functions.inc:68:31: note: candidate template ignored: substitution failure [with T0 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::integer_elem_type, sycl::detail::any_shape, sycl::detail::same_elem_type, double>'
+   28 | DEVICE_IMPL_TEMPLATE(ONE_ARG, abs, builtin_enable_integer_t, [](auto x) {
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+2 errors generated.
+make: *** [Makefile:72: main.o] Error 1

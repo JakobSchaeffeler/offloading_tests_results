@@ -1,0 +1,93 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:16:67: error: no matching constructor for initialization of 'sycl::ext::oneapi::experimental::device_global<const double[512]>'
+   16 | sycl::ext::oneapi::experimental::device_global<const double[512]> D3 {
+      |                                                                   ^  ~
+   17 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   18 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   19 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   20 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   21 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   22 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   23 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   24 |   1.0, 0.0, 1.0, 0.0,
+      |   ~~~~~~~~~~~~~~~~~~~
+   25 |   1.0, 0.0, 0.98078528040323043, (-0.19509032201612825),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   26 |   0.99518472667219693, (-0.098017140329560604), 0.95694033573220882, (-0.29028467725446233),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   27 |   0.99969881869620425, (-0.024541228522912288), 0.97570213003852857, (-0.2191012401568698),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   28 |   0.99247953459870997, (-0.1224106751992162), 0.94952818059303667, (-0.31368174039889152),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   29 |   0.99879545620517241, (-0.049067674327418015), 0.97003125319454397, (-0.24298017990326387),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |   0.98917650996478101, (-0.14673047445536175), 0.94154406518302081, (-0.33688985339222005),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 |   0.99729045667869021, (-0.073564563599667426), 0.96377606579543984, (-0.26671275747489837),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/ext/oneapi/device_global/device_global.hpp:120:13: note: candidate inherited constructor not viable: requires 1 argument, but 512 were provided
+  120 |   constexpr device_global_base(const device_global_base<OtherT, OtherProps> &) {
+      |             ^                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/ext/oneapi/device_global/device_global.hpp:237:57: note: constructor from base class 'device_global_base<const double[512], sycl::ext::oneapi::experimental::properties<std::tuple<>>>' inherited here
+  237 |   using detail::device_global_base<T, property_list_t>::device_global_base;
+      |                                                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/ext/oneapi/device_global/device_global.hpp:122:13: note: candidate inherited constructor not viable: requires 1 argument, but 512 were provided
+  122 |   constexpr device_global_base(const device_global_base &) {}
+      |             ^                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/ext/oneapi/device_global/device_global.hpp:237:57: note: constructor from base class 'device_global_base<const double[512], sycl::ext::oneapi::experimental::properties<std::tuple<>>>' inherited here
+  237 |   using detail::device_global_base<T, property_list_t>::device_global_base;
+      |                                                         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/ext/oneapi/device_global/device_global.hpp:239:13: note: candidate constructor not viable: requires single argument 'DG', but 512 arguments were provided
+  239 |   constexpr device_global(const device_global &DG)
+      |             ^             ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/ext/oneapi/device_global/device_global.hpp:242:3: note: candidate constructor not viable: requires 1 argument, but 512 were provided
+  242 |   device_global(const device_global &&) = delete;
+      |   ^             ~~~~~~~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/ext/oneapi/device_global/device_global.hpp:201:5: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 512 were provided
+  201 |     device_global {
+      |     ^
+main.cpp:1634:51: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1634 |         ker_zmddft_fwd_256x256x256_cu0(item, temp.get_pointer(), X, P1);
+      |                                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:1641:51: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1641 |         ker_zmddft_fwd_256x256x256_cu1(item, temp.get_pointer(), P1, P2);
+      |                                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:1648:51: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1648 |         ker_zmddft_fwd_256x256x256_cu2(item, temp.get_pointer(), P2, Y);
+      |                                                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+3 warnings and 1 error generated.
+make: *** [Makefile:71: main.o] Error 1

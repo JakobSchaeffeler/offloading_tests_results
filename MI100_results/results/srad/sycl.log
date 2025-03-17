@@ -1,0 +1,25 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3  ./main.cpp \
+	-c \
+	-o ./main.o \
+	-O3
+~/sycl_workspace/llvm/build/bin/clang++	./util/graphics/graphics.c \
+	-c \
+	-o ./util/graphics/graphics.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/sycl_workspace/llvm/build/bin/clang++	./util/graphics/resize.c \
+	-c \
+	-o ./util/graphics/resize.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/sycl_workspace/llvm/build/bin/clang++	./util/timer/timer.c \
+	-c \
+	-o ./util/timer/timer.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3	./main.o \
+	./util/graphics/graphics.o \
+	./util/graphics/resize.o \
+	./util/timer/timer.o \
+	-lm \
+	 -o srad

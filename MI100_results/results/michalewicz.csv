@@ -1,0 +1,39 @@
+,omp 25000000 25 omp offloading kernel,sycl 25000000 25 sycl kernel,hip 25000000 25 hip_kernel
+Runtime,537855032.0,245732173.0,240277191.0
+SALU Instructions per wave,36415.21,98.3,86.12
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.93,1.04,1.03
+L1 Requests per wave,147661.49,364.41,364.41
+L1 Hit Rate,86.33,74.81,74.62
+L2 Requests per wave,28740.17,99.11,99.84
+L2 Hit Rate,40.36,47.06,47.39
+Wavefront Occupancy (% of peak),1301.23,3544.39,3522.77
+Dependency Wait Cycles per wave,1468937.01,3660.35,3572.6
+Issue Wait Cycles per wave,3004134.62,31352.33,30493.03
+Grid Size,122880.0,24038656.0,24038656.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,512.0,0.0,0.0
+Shared Memory Instructions per wave,3886.03,0.96,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.5,0.0,0.0
+Global Memory Instructions per wave,2307.77,6.43,6.43
+Global Memory Read Instructions per wave,2307.27,6.42,6.42
+Global Memory Write Instructions per wave,0.25,0.01,0.01
+Coalesced Instructions (% of peak),25.02,32.29,32.29
+Global Atomic Operations per wave,0.25,0.0,0.0
+Global Read Bytes per wave ,303275.16,1593.83,1591.19
+Global Write/Atomic Bytes per wave,1.37,0.31,0.31
+SALU Instructions,69917203.2,36921873.199999996,32347016.48
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,283510060.79999995,136873853.64000002,136873853.64000002
+L2 Requests,55181126.4,37226112.44,37500303.36
+Dependency Wait Cycles,2820359059.2,1374842101.3999999,1341882850.3999999
+Issue Wait Cycles,5767938470.400001,11776060557.320002,11453304040.119999
+Shared Memory Instructions,7461177.600000001,360579.83999999997,0.0
+Register Spill Instructions,960.0,0.0,0.0
+Global Memory Instructions,4430918.4,2415133.7199999997,2415133.7199999997
+Global Memory Read Instructions,4429958.4,2411377.68,2411377.68
+Global Memory Write Instructions,480.0,3756.04,3756.04
+Global Atomic Operations,480.0,0.0,0.0
+Global Read Bytes ,582288307.1999999,598648923.3199999,597657328.76
+Global Write/Atomic Bytes,2630.4,116437.24,116437.24

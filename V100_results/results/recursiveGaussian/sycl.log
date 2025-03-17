@@ -1,0 +1,125 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+main.cpp:273:84: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  273 |       Transpose(item, d_BufTmp, d_BufOut, uiImageWidth, uiImageHeight, uiLocalBuff.get_pointer());
+      |                                                                                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:310:84: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  310 |       Transpose(item, d_BufTmp, d_BufOut, uiImageHeight, uiImageWidth, uiLocalBuff.get_pointer());
+      |                                                                                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+2 warnings generated.
+main.cpp:273:84: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  273 |       Transpose(item, d_BufTmp, d_BufOut, uiImageWidth, uiImageHeight, uiLocalBuff.get_pointer());
+      |                                                                                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:310:84: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  310 |       Transpose(item, d_BufTmp, d_BufOut, uiImageHeight, uiImageWidth, uiLocalBuff.get_pointer());
+      |                                                                                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+2 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c RecursiveGaussianHost.cpp -o RecursiveGaussianHost.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c shrUtils.cpp -o shrUtils.o
+shrUtils.cpp:67:12: warning: unused variable 'DeltaT' [-Wunused-variable]
+   67 |     double DeltaT;
+      |            ^~~~~~
+shrUtils.cpp:373:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:373:47: note: treat the string as an argument to avoid this
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:377:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:377:63: note: treat the string as an argument to avoid this
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:380:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:380:67: note: treat the string as an argument to avoid this
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+shrUtils.cpp:175:12: warning: variable 'szNumWritten' set but not used [-Wunused-but-set-variable]
+  175 |     size_t szNumWritten = 0;
+      |            ^
+shrUtils.cpp:1347:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1347 |     bool result = true;
+      |          ^
+shrUtils.cpp:1389:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1389 |     bool result = true;
+      |          ^
+7 warnings generated.
+shrUtils.cpp:67:12: warning: unused variable 'DeltaT' [-Wunused-variable]
+   67 |     double DeltaT;
+      |            ^~~~~~
+shrUtils.cpp:150:1: warning: non-void function does not return a value [-Wreturn-type]
+  150 | } 
+      | ^
+shrUtils.cpp:373:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:373:47: note: treat the string as an argument to avoid this
+  373 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:377:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:377:63: note: treat the string as an argument to avoid this
+  377 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:380:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:380:67: note: treat the string as an argument to avoid this
+  380 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+shrUtils.cpp:175:12: warning: variable 'szNumWritten' set but not used [-Wunused-but-set-variable]
+  175 |     size_t szNumWritten = 0;
+      |            ^
+shrUtils.cpp:1347:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1347 |     bool result = true;
+      |          ^
+shrUtils.cpp:1389:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1389 |     bool result = true;
+      |          ^
+8 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 main.o RecursiveGaussianHost.o shrUtils.o -o sycl 

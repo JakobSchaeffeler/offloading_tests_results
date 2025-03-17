@@ -1,0 +1,31 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../meanshift-cuda -I../meanshift-cuda -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from main.cu:5:
+../meanshift-cuda/utils.h:13:21: warning: nested namespace definition is a C++17 extension; define each namespace separately [-Wc++17-extensions]
+namespace mean_shift::gpu::utils {
+                    ^~~~~~~~~~~~
+                     { namespace gpu { namespace utils
+../meanshift-cuda/utils.h:17:19: error: no member named 'filesystem' in namespace 'std'
+      assert(std::filesystem::exists(path));
+             ~~~~~^
+/usr/include/assert.h:90:27: note: expanded from macro 'assert'
+     (static_cast <bool> (expr)                                         \
+                          ^~~~
+In file included from main.cu:6:
+../meanshift-cuda/constants.h:6:21: warning: nested namespace definition is a C++17 extension; define each namespace separately [-Wc++17-extensions]
+namespace mean_shift::gpu {
+                    ^~~~~
+                     { namespace gpu
+main.cu:8:21: warning: nested namespace definition is a C++17 extension; define each namespace separately [-Wc++17-extensions]
+namespace mean_shift::gpu {
+                    ^~~~~
+                     { namespace gpu
+3 warnings and 1 error generated when compiling for gfx908.
+make: *** [Makefile:49: main.o] Error 1

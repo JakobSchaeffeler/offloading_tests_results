@@ -1,0 +1,116 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:30:
+./norm3.h:82:5: error: SYCL kernel cannot call a recursive function
+   82 |     recursive_norm3(i, j, n_2, ca, c1, c2);
+      |     ^
+./norm3.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm3(int i, int j, int n_2, double *ca,
+      | ^
+In file included from main.cpp:29:
+./norm2.h:85:5: error: SYCL kernel cannot call a recursive function
+   85 |     recursive_norm2(i, j, n_2, ca, c1, c2);
+      |     ^
+./norm2.h:31:1: note: function implemented using recursion declared here
+   31 | double recursive_norm2(int i, int j, int n_2, double *ca,
+      | ^
+In file included from main.cpp:28:
+./norm1.h:49:25: error: SYCL kernel cannot call a recursive function
+   49 |     *ca_ij = sycl::fmax(recursive_norm1(i - 1, 1, n_2, ca, c1, c2), norm1(i, 1, c1, c2));
+      |                         ^
+./norm1.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm1(int i, int j, int n_2, double *ca,
+      | ^
+./norm1.h:53:25: error: SYCL kernel cannot call a recursive function
+   53 |     *ca_ij = sycl::fmax(recursive_norm1(1, j - 1, n_2, ca, c1, c2), norm1(1, j, c1, c2));
+      |                         ^
+./norm1.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm1(int i, int j, int n_2, double *ca,
+      | ^
+./norm1.h:59:13: error: SYCL kernel cannot call a recursive function
+   59 |             recursive_norm1(i - 1, j    , n_2, ca, c1, c2),
+      |             ^
+./norm1.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm1(int i, int j, int n_2, double *ca,
+      | ^
+./norm1.h:60:13: error: SYCL kernel cannot call a recursive function
+   60 |             recursive_norm1(i - 1, j - 1, n_2, ca, c1, c2)),
+      |             ^
+./norm1.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm1(int i, int j, int n_2, double *ca,
+      | ^
+./norm1.h:61:13: error: SYCL kernel cannot call a recursive function
+   61 |             recursive_norm1(i,     j - 1, n_2, ca, c1, c2)),
+      |             ^
+./norm1.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm1(int i, int j, int n_2, double *ca,
+      | ^
+./norm1.h:82:5: error: SYCL kernel cannot call a recursive function
+   82 |     recursive_norm1(i, j, n_2, ca, c1, c2);
+      |     ^
+./norm1.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm1(int i, int j, int n_2, double *ca,
+      | ^
+In file included from main.cpp:30:
+./norm3.h:49:25: error: SYCL kernel cannot call a recursive function
+   49 |     *ca_ij = sycl::fmax(recursive_norm3(i - 1, 1, n_2, ca, c1, c2), norm3(i, 1, c1, c2));
+      |                         ^
+./norm3.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm3(int i, int j, int n_2, double *ca,
+      | ^
+./norm3.h:53:25: error: SYCL kernel cannot call a recursive function
+   53 |     *ca_ij = sycl::fmax(recursive_norm3(1, j - 1, n_2, ca, c1, c2), norm3(1, j, c1, c2));
+      |                         ^
+./norm3.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm3(int i, int j, int n_2, double *ca,
+      | ^
+./norm3.h:59:13: error: SYCL kernel cannot call a recursive function
+   59 |             recursive_norm3(i - 1, j    , n_2, ca, c1, c2),
+      |             ^
+./norm3.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm3(int i, int j, int n_2, double *ca,
+      | ^
+./norm3.h:60:13: error: SYCL kernel cannot call a recursive function
+   60 |             recursive_norm3(i - 1, j - 1, n_2, ca, c1, c2)),
+      |             ^
+./norm3.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm3(int i, int j, int n_2, double *ca,
+      | ^
+./norm3.h:61:13: error: SYCL kernel cannot call a recursive function
+   61 |             recursive_norm3(i,     j - 1, n_2, ca, c1, c2)),
+      |             ^
+./norm3.h:28:1: note: function implemented using recursion declared here
+   28 | double recursive_norm3(int i, int j, int n_2, double *ca,
+      | ^
+In file included from main.cpp:29:
+./norm2.h:52:25: error: SYCL kernel cannot call a recursive function
+   52 |     *ca_ij = sycl::fmax(recursive_norm2(i - 1, 1, n_2, ca, c1, c2), norm2(i, 1, c1, c2));
+      |                         ^
+./norm2.h:31:1: note: function implemented using recursion declared here
+   31 | double recursive_norm2(int i, int j, int n_2, double *ca,
+      | ^
+./norm2.h:56:25: error: SYCL kernel cannot call a recursive function
+   56 |     *ca_ij = sycl::fmax(recursive_norm2(1, j - 1, n_2, ca, c1, c2), norm2(1, j, c1, c2));
+      |                         ^
+./norm2.h:31:1: note: function implemented using recursion declared here
+   31 | double recursive_norm2(int i, int j, int n_2, double *ca,
+      | ^
+./norm2.h:62:13: error: SYCL kernel cannot call a recursive function
+   62 |             recursive_norm2(i - 1, j    , n_2, ca, c1, c2),
+      |             ^
+./norm2.h:31:1: note: function implemented using recursion declared here
+   31 | double recursive_norm2(int i, int j, int n_2, double *ca,
+      | ^
+./norm2.h:63:13: error: SYCL kernel cannot call a recursive function
+   63 |             recursive_norm2(i - 1, j - 1, n_2, ca, c1, c2)),
+      |             ^
+./norm2.h:31:1: note: function implemented using recursion declared here
+   31 | double recursive_norm2(int i, int j, int n_2, double *ca,
+      | ^
+./norm2.h:64:13: error: SYCL kernel cannot call a recursive function
+   64 |             recursive_norm2(i,     j - 1, n_2, ca, c1, c2)),
+      |             ^
+./norm2.h:31:1: note: function implemented using recursion declared here
+   31 | double recursive_norm2(int i, int j, int n_2, double *ca,
+      | ^
+18 errors generated.
+make: *** [Makefile:71: main.o] Error 1

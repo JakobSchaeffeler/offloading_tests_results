@@ -1,0 +1,48 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c shrUtils.cpp -o shrUtils.o
+shrUtils.cpp:284:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  284 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:284:47: note: treat the string as an argument to avoid this
+  284 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:288:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  288 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:288:63: note: treat the string as an argument to avoid this
+  288 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:291:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  291 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:291:67: note: treat the string as an argument to avoid this
+  291 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+3 warnings generated.
+shrUtils.cpp:284:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  284 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:284:47: note: treat the string as an argument to avoid this
+  284 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:288:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  288 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:288:63: note: treat the string as an argument to avoid this
+  288 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:291:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  291 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:291:67: note: treat the string as an argument to avoid this
+  291 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+3 warnings generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c MedianFilterHost.cpp -o MedianFilterHost.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 main.o shrUtils.o MedianFilterHost.o -o omp 

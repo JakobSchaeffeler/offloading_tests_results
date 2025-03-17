@@ -1,0 +1,68 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c FDTD3dReference.cpp -o FDTD3dReference.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c FDTD3dGPU.cpp -o FDTD3dGPU.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c shrUtils.cpp -o shrUtils.o
+shrUtils.cpp:284:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  284 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:284:37: note: treat the string as an argument to avoid this
+  284 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^
+      |                                     "%s", 
+shrUtils.cpp:288:53: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  288 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:288:53: note: treat the string as an argument to avoid this
+  288 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^
+      |                                                     "%s", 
+shrUtils.cpp:291:55: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  291 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:291:55: note: treat the string as an argument to avoid this
+  291 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^
+      |                                                       "%s", 
+shrUtils.cpp:86:10: warning: variable 'szNumWritten' set but not used [-Wunused-but-set-variable]
+   86 |   size_t szNumWritten = 0;
+      |          ^
+shrUtils.cpp:1458:8: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1458 |   bool result = true;
+      |        ^
+shrUtils.cpp:1500:8: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1500 |   bool result = true;
+      |        ^
+6 warnings generated.
+shrUtils.cpp:284:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  284 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:284:37: note: treat the string as an argument to avoid this
+  284 |               szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                     ^
+      |                                     "%s", 
+shrUtils.cpp:288:53: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  288 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:288:53: note: treat the string as an argument to avoid this
+  288 |               szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                     ^
+      |                                                     "%s", 
+shrUtils.cpp:291:55: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  291 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:291:55: note: treat the string as an argument to avoid this
+  291 |                 szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                       ^
+      |                                                       "%s", 
+shrUtils.cpp:86:10: warning: variable 'szNumWritten' set but not used [-Wunused-but-set-variable]
+   86 |   size_t szNumWritten = 0;
+      |          ^
+shrUtils.cpp:1458:8: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1458 |   bool result = true;
+      |        ^
+shrUtils.cpp:1500:8: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1500 |   bool result = true;
+      |        ^
+6 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c cmd_arg_reader.cpp -o cmd_arg_reader.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 main.o FDTD3dReference.o FDTD3dGPU.o shrUtils.o cmd_arg_reader.o -o sycl 

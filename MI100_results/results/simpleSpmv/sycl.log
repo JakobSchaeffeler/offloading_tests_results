@@ -1,0 +1,23 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c ../simpleSpmv-cuda/main.cpp -o main.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c kernels.cpp -o kernels.o
+kernels.cpp:251:40: warning: attribute argument 32 is invalid and will be ignored; amdgcn requires sub_group size 64 [-Wincorrect-sub-group-size]
+  251 |            [[sycl::reqd_sub_group_size(warpSize)]] {
+      |                                        ^
+kernels.cpp:258:40: warning: attribute argument 32 is invalid and will be ignored; amdgcn requires sub_group size 64 [-Wincorrect-sub-group-size]
+  258 |            [[sycl::reqd_sub_group_size(warpSize)]] {
+      |                                        ^
+kernels.cpp:265:40: warning: attribute argument 32 is invalid and will be ignored; amdgcn requires sub_group size 64 [-Wincorrect-sub-group-size]
+  265 |            [[sycl::reqd_sub_group_size(warpSize)]] {
+      |                                        ^
+kernels.cpp:272:40: warning: attribute argument 32 is invalid and will be ignored; amdgcn requires sub_group size 64 [-Wincorrect-sub-group-size]
+  272 |            [[sycl::reqd_sub_group_size(warpSize)]] {
+      |                                        ^
+kernels.cpp:279:40: warning: attribute argument 32 is invalid and will be ignored; amdgcn requires sub_group size 64 [-Wincorrect-sub-group-size]
+  279 |            [[sycl::reqd_sub_group_size(warpSize)]] {
+      |                                        ^
+kernels.cpp:286:40: warning: attribute argument 32 is invalid and will be ignored; amdgcn requires sub_group size 64 [-Wincorrect-sub-group-size]
+  286 |            [[sycl::reqd_sub_group_size(warpSize)]] {
+      |                                        ^
+6 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -c ../simpleSpmv-cuda/utils.cpp -o utils.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -I../simpleSpmv-cuda -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 main.o kernels.o utils.o -o sycl 

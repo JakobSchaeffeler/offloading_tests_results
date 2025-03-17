@@ -1,0 +1,12 @@
+nvcc  -I../debayer-sycl -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+In file included from main.cu:5:
+../debayer-sycl/util.h:18: warning: "assert" redefined
+ #define assert(X)
+ 
+In file included from /home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/crt/common_functions.h:174,
+                 from /home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_runtime.h:115,
+                 from <command-line>:
+/usr/include/assert.h:89: note: this is the location of the previous definition
+ #  define assert(expr)       \
+ 
+nvcc  -I../debayer-sycl -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o cuda 

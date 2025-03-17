@@ -1,0 +1,6 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:17:10: fatal error: 'oneapi/dpl/execution' file not found
+   17 | #include <oneapi/dpl/execution>
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make: *** [Makefile:71: main.o] Error 1

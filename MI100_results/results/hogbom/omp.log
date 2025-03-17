@@ -1,0 +1,5 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../hogbom-cuda -D__STRICT_ANSI__ -O3 -c ../hogbom-cuda/main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../hogbom-cuda -D__STRICT_ANSI__ -O3 -c kernels.cpp -o kernels.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../hogbom-cuda -D__STRICT_ANSI__ -O3 -c ../hogbom-cuda/reference.cpp -o reference.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../hogbom-cuda -D__STRICT_ANSI__ -O3 -c ../hogbom-cuda/timer.cpp -o timer.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../hogbom-cuda -D__STRICT_ANSI__ -O3 main.o kernels.o reference.o timer.o -o omp 

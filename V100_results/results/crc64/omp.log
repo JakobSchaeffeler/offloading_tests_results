@@ -1,0 +1,10 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c CRC64.cpp -o CRC64.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -c CRC64Test.cpp -o CRC64Test.o
+CRC64Test.cpp:40:9: warning: '_XOPEN_SOURCE' macro redefined [-Wmacro-redefined]
+   40 | #define _XOPEN_SOURCE 600
+      |         ^
+/usr/include/features.h:202:10: note: previous definition is here
+  202 | # define _XOPEN_SOURCE  700
+      |          ^
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 CRC64.o CRC64Test.o -o omp 

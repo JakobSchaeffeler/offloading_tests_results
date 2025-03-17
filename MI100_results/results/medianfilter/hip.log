@@ -1,0 +1,80 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c shrUtils.cu -o shrUtils.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+shrUtils.cu:284:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                        szNumWritten = printf(sFormatSpec.c_str());                             // console 
+                                              ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:284:47: note: treat the string as an argument to avoid this
+                        szNumWritten = printf(sFormatSpec.c_str());                             // console 
+                                              ^
+                                              "%s", 
+shrUtils.cu:288:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                        szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+                                                              ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:288:63: note: treat the string as an argument to avoid this
+                        szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+                                                              ^
+                                                              "%s", 
+shrUtils.cu:291:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                            szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+                                                                  ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:291:67: note: treat the string as an argument to avoid this
+                            szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+                                                                  ^
+                                                                  "%s", 
+3 warnings generated when compiling for gfx908.
+shrUtils.cu:284:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                        szNumWritten = printf(sFormatSpec.c_str());                             // console 
+                                              ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:284:47: note: treat the string as an argument to avoid this
+                        szNumWritten = printf(sFormatSpec.c_str());                             // console 
+                                              ^
+                                              "%s", 
+shrUtils.cu:288:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                        szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+                                                              ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:288:63: note: treat the string as an argument to avoid this
+                        szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+                                                              ^
+                                                              "%s", 
+shrUtils.cu:291:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                            szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+                                                                  ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:291:67: note: treat the string as an argument to avoid this
+                            szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+                                                                  ^
+                                                                  "%s", 
+3 warnings generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c MedianFilterHost.cu -o MedianFilterHost.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 main.o shrUtils.o MedianFilterHost.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

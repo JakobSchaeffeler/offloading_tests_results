@@ -1,0 +1,50 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../openmp-omp -I../openmp-omp -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -I../openmp-omp -I../openmp-omp -O3 -O3 main.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+ld.lld: error: undefined symbol: omp_get_num_procs
+>>> referenced by main.cu
+>>>               main.o:(main)
+
+ld.lld: error: undefined symbol: omp_get_wtime
+>>> referenced by main.cu
+>>>               main.o:(main)
+>>> referenced by main.cu
+>>>               main.o:(main)
+>>> referenced by main.cu
+>>>               main.o:(main)
+>>> referenced 1 more times
+
+ld.lld: error: undefined symbol: omp_set_num_threads
+>>> referenced by main.cu
+>>>               main.o:(main)
+>>> referenced by main.cu
+>>>               main.o:(main)
+
+ld.lld: error: undefined symbol: omp_get_thread_num
+>>> referenced by main.cu
+>>>               main.o:(main)
+>>> referenced by main.cu
+>>>               main.o:(main)
+
+ld.lld: error: undefined symbol: omp_get_num_threads
+>>> referenced by main.cu
+>>>               main.o:(main)
+>>> referenced by main.cu
+>>>               main.o:(main)
+clang-15: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile:46: hip] Error 1

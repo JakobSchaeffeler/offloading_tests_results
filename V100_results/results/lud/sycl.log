@@ -1,0 +1,23 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c lud.cpp -o lud.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c utils.cpp -o utils.o
+utils.cpp:148:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  148 |   float coe[2*size-1];
+      |             ^~~~~~~~
+utils.cpp:148:15: note: function parameter 'size' with unknown value cannot be used in a constant expression
+  148 |   float coe[2*size-1];
+      |               ^
+utils.cpp:144:42: note: declared here
+  144 | func_ret_t create_matrix(float **mp, int size){
+      |                                          ^
+1 warning generated.
+utils.cpp:148:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  148 |   float coe[2*size-1];
+      |             ^~~~~~~~
+utils.cpp:148:15: note: function parameter 'size' with unknown value cannot be used in a constant expression
+  148 |   float coe[2*size-1];
+      |               ^
+utils.cpp:144:42: note: declared here
+  144 | func_ret_t create_matrix(float **mp, int size){
+      |                                          ^
+1 warning generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 lud.o utils.o -o sycl 

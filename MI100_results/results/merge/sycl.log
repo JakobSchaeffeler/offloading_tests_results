@@ -1,0 +1,796 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:159:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, false>' requested here
+  159 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:159:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, false>' requested here
+  159 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:160:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, true>' requested here
+  160 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:160:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, true>' requested here
+  160 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:162:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, false>' requested here
+  162 |   PS("float",    size)  mergeType<float,    blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:162:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, false>' requested here
+  162 |   PS("float",    size)  mergeType<float,    blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:163:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, true>' requested here
+  163 |   PS("float",    size)  mergeType<float,    blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:163:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, true>' requested here
+  163 |   PS("float",    size)  mergeType<float,    blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:165:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, false>' requested here
+  165 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:165:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, false>' requested here
+  165 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:166:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, true>' requested here
+  166 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:166:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, true>' requested here
+  166 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:168:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, false>' requested here
+  168 |   PS("double", size)    mergeType<double,   blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:168:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, false>' requested here
+  168 |   PS("double", size)    mergeType<double,   blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:169:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, true>' requested here
+  169 |   PS("double", size)    mergeType<double,   blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:169:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, true>' requested here
+  169 |   PS("double", size)    mergeType<double,   blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+17 warnings generated.
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:159:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, false>' requested here
+  159 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:159:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, false>' requested here
+  159 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:160:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, true>' requested here
+  160 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:160:25: note: in instantiation of function template specialization 'mergeType<unsigned int, 112U, 128U, true>' requested here
+  160 |   PS("uint32_t", size)  mergeType<uint32_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:162:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, false>' requested here
+  162 |   PS("float",    size)  mergeType<float,    blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:162:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, false>' requested here
+  162 |   PS("float",    size)  mergeType<float,    blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:163:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, true>' requested here
+  163 |   PS("float",    size)  mergeType<float,    blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:163:25: note: in instantiation of function template specialization 'mergeType<float, 112U, 128U, true>' requested here
+  163 |   PS("float",    size)  mergeType<float,    blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:165:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, false>' requested here
+  165 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:165:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, false>' requested here
+  165 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:166:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, true>' requested here
+  166 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:166:25: note: in instantiation of function template specialization 'mergeType<unsigned long, 112U, 128U, true>' requested here
+  166 |   PS("uint64_t", size)  mergeType<uint64_t, blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:168:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, false>' requested here
+  168 |   PS("double", size)    mergeType<double,   blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:168:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, false>' requested here
+  168 |   PS("double", size)    mergeType<double,   blocks, threads, false>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:104:28: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  104 |           found, oneorzero.get_pointer(),
+      |                            ^
+main.cpp:101:66: note: while substituting into a lambda expression here
+  101 |         sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                  ^
+main.cpp:93:39: note: while substituting into a lambda expression here
+   93 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:169:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, true>' requested here
+  169 |   PS("double", size)    mergeType<double,   blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:121:19: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  121 |           item, A.get_pointer(), xt, yt, xs, ys,
+      |                   ^
+main.cpp:119:68: note: while substituting into a lambda expression here
+  119 |         sycl::nd_range<1>(gws2, lws2), [=] (sycl::nd_item<1> item) {
+      |                                                                    ^
+main.cpp:112:39: note: while substituting into a lambda expression here
+  112 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:169:25: note: in instantiation of function template specialization 'mergeType<double, 112U, 128U, true>' requested here
+  169 |   PS("double", size)    mergeType<double,   blocks, threads, true>(q, size, runs); printf("\n");
+      |                         ^
+main.cpp:192:3: note: in instantiation of function template specialization 'mergeAllTypes<112U, 128U>' requested here
+  192 |   mergeAllTypes<blocks, threads>(q, length, runs);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+17 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 

@@ -1,0 +1,39 @@
+,omp 2000 100 omp offloading kernel,sycl 2000 100 sycl kernel,hip 2000 100 hip_kernel
+Runtime,597698892.0,590601793.0,589822415.0
+SALU Instructions per wave,21653.2,20017.0,20010.0
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.4,0.38,0.39
+L1 Requests per wave,384076.67,320063.89,320063.89
+L1 Hit Rate,0.0,0.0,0.0
+L2 Requests per wave,80439.21,67032.18,67032.16
+L2 Hit Rate,74.43,74.11,74.11
+Wavefront Occupancy (% of peak),1433.89,2101.77,2100.82
+Dependency Wait Cycles per wave,5323820.49,6858843.49,6921801.02
+Issue Wait Cycles per wave,418624.02,435079.81,406371.91
+Grid Size,122880.0,147456.0,147456.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,0.0,0.0,0.0
+Shared Memory Instructions per wave,9604.8,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,9604.8,8004.0,8004.0
+Global Memory Read Instructions per wave,7202.4,6002.0,6002.0
+Global Memory Write Instructions per wave,2402.4,2002.0,2002.0
+Coalesced Instructions (% of peak),40.01,40.01,40.01
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,1315868.98,1110156.89,1110288.26
+Global Write/Atomic Bytes per wave,114657.17,156476.11,156964.32
+SALU Instructions,41574144.0,46119168.0,46103040.0
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,737427206.4,737427202.5600001,737427202.5600001
+L2 Requests,154443283.20000002,154442142.71999997,154442096.64000002
+Dependency Wait Cycles,10221735340.800001,15802775400.960001,15947829550.079998
+Issue Wait Cycles,803758118.4000001,1002423882.24,936280880.64
+Shared Memory Instructions,18441216.0,0.0,0.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,18441216.0,18441216.0,18441216.0
+Global Memory Read Instructions,13828608.0,13828608.0,13828608.0
+Global Memory Write Instructions,4612608.0,4612608.0,4612608.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,2526468441.6,2557801474.56,2558104151.04
+Global Write/Atomic Bytes,220141766.4,360520957.43999994,361645793.28000003

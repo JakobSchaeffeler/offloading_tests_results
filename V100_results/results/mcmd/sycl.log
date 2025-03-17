@@ -1,0 +1,346 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../mcmd-cuda -I../mcmd-cuda -I../mcmd-cuda -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -O3 -O3 -O3 -c ../mcmd-cuda/main.cpp -o main.o
+In file included from ../mcmd-cuda/main.cpp:39:
+../mcmd-cuda/system.cpp:36:21: warning: unused variable 'thetime' [-Wunused-variable]
+   36 |         std::time_t thetime = std::chrono::system_clock::to_time_t(now);
+      |                     ^~~~~~~
+In file included from ../mcmd-cuda/main.cpp:42:
+../mcmd-cuda/system_functions.cpp:52:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   52 |   double xtemp[size];
+      |                ^~~~
+../mcmd-cuda/system_functions.cpp:52:16: note: read of non-const variable 'size' is not allowed in a constant expression
+../mcmd-cuda/system_functions.cpp:50:7: note: declared here
+   50 |   int size = system.constants.total_atoms;
+      |       ^
+../mcmd-cuda/system_functions.cpp:53:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   53 |   double ytemp[size];
+      |                ^~~~
+../mcmd-cuda/system_functions.cpp:53:16: note: read of non-const variable 'size' is not allowed in a constant expression
+../mcmd-cuda/system_functions.cpp:50:7: note: declared here
+   50 |   int size = system.constants.total_atoms;
+      |       ^
+../mcmd-cuda/system_functions.cpp:54:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   54 |   double ztemp[size];
+      |                ^~~~
+../mcmd-cuda/system_functions.cpp:54:16: note: read of non-const variable 'size' is not allowed in a constant expression
+../mcmd-cuda/system_functions.cpp:50:7: note: declared here
+   50 |   int size = system.constants.total_atoms;
+      |       ^
+In file included from ../mcmd-cuda/main.cpp:43:
+../mcmd-cuda/bonding.cpp:1140:16: warning: variable 'local_bonds' set but not used [-Wunused-but-set-variable]
+ 1140 |   unsigned int local_bonds=0;
+      |                ^
+../mcmd-cuda/bonding.cpp:1147:16: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+ 1147 |   unsigned int c=1;
+      |                ^
+In file included from ../mcmd-cuda/main.cpp:44:
+In file included from ../mcmd-cuda/mc.cpp:9:
+In file included from ../mcmd-cuda/potential.cpp:14:
+In file included from ../mcmd-cuda/polar.cpp:6:
+../mcmd-cuda/thole_iterative.cpp:202:7: warning: variable 'hits' set but not used [-Wunused-but-set-variable]
+  202 |   int hits=0;
+      |       ^
+../mcmd-cuda/thole_iterative.cpp:203:7: warning: variable 'paircount' set but not used [-Wunused-but-set-variable]
+  203 |   int paircount=0;
+      |       ^
+In file included from ../mcmd-cuda/main.cpp:44:
+In file included from ../mcmd-cuda/mc.cpp:9:
+In file included from ../mcmd-cuda/potential.cpp:14:
+../mcmd-cuda/polar.cpp:160:16: warning: unused variable 'explrcut' [-Wunused-variable]
+  160 |   const double explrcut = exp(-l*rcut);
+      |                ^~~~~~~~
+In file included from ../mcmd-cuda/main.cpp:47:
+../mcmd-cuda/kernels.cpp:52:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   52 |   d_atom H[N]; // host atoms
+      |            ^
+../mcmd-cuda/kernels.cpp:52:12: note: initializer of 'N' is not a constant expression
+../mcmd-cuda/kernels.cpp:34:13: note: declared here
+   34 |   const int N = (int)system.constants.total_atoms;
+      |             ^
+../mcmd-cuda/kernels.cpp:36:13: warning: unused variable 'atoms_array_size' [-Wunused-variable]
+   36 |   const int atoms_array_size=sizeof(d_atom)*N;
+      |             ^~~~~~~~~~~~~~~~
+In file included from ../mcmd-cuda/main.cpp:52:
+../mcmd-cuda/sp.cpp:201:16: warning: unused variable 'Ni' [-Wunused-variable]
+  201 |         double Ni = (double)system.constants.elements[system.molecules[0].atoms[i].name];
+      |                ^~
+In file included from ../mcmd-cuda/main.cpp:53:
+../mcmd-cuda/io.cpp:890:10: warning: unused variable 'lz' [-Wunused-variable]
+  890 |   double lz = sqrt(c*c - xz*xz - yz*yz);
+      |          ^~
+In file included from ../mcmd-cuda/main.cpp:57:
+../mcmd-cuda/averages.cpp:58:10: warning: unused variable 'placeholder' [-Wunused-variable]
+   58 |   double placeholder = getTotalPotential(system); // getTotPot sends values to stat vars
+      |          ^~~~~~~~~~~
+../mcmd-cuda/averages.cpp:601:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  601 |     double D[(int)system.proto.size()];
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/averages.cpp:601:19: note: function parameter 'system' with unknown value cannot be used in a constant expression
+  601 |     double D[(int)system.proto.size()];
+      |                   ^
+../mcmd-cuda/averages.cpp:415:37: note: declared here
+  415 | void calculateObservablesMD(System &system) { 
+      |                                     ^
+../mcmd-cuda/averages.cpp:637:14: warning: variable 'D_vacf_sum' set but not used [-Wunused-but-set-variable]
+  637 |       double D_vacf_sum=0;
+      |              ^
+../mcmd-cuda/averages.cpp:421:18: warning: variable 'wsq' set but not used [-Wunused-but-set-variable]
+  421 |   double vsq=0., wsq=0.;
+      |                  ^
+../mcmd-cuda/main.cpp:114:9: warning: unused variable 'whatever' [-Wunused-variable]
+  114 |     int whatever=std::system(command.c_str());
+      |         ^~~~~~~~
+../mcmd-cuda/main.cpp:133:9: warning: unused variable 'whatever' [-Wunused-variable]
+  133 |     int whatever=std::system(command.c_str()); //remove( system.stats.radial_file.c_str() );
+      |         ^~~~~~~~
+../mcmd-cuda/main.cpp:151:9: warning: unused variable 'whatever' [-Wunused-variable]
+  151 |     int whatever = std::system(delit.c_str());
+      |         ^~~~~~~~
+../mcmd-cuda/main.cpp:171:9: warning: unused variable 'whatev' [-Wunused-variable]
+  171 |     int whatev = std::system(del.c_str());
+      |         ^~~~~~
+../mcmd-cuda/main.cpp:421:14: warning: unused variable 'total_steps' [-Wunused-variable]
+  421 |     long int total_steps = (long int)thing;
+      |              ^~~~~~~~~~~
+../mcmd-cuda/main.cpp:77:7: warning: variable 'zzz' set but not used [-Wunused-but-set-variable]
+   77 |   int zzz=std::system(hostcom.c_str());
+      |       ^
+23 warnings generated.
+In file included from ../mcmd-cuda/main.cpp:39:
+../mcmd-cuda/system.cpp:36:21: warning: unused variable 'thetime' [-Wunused-variable]
+   36 |         std::time_t thetime = std::chrono::system_clock::to_time_t(now);
+      |                     ^~~~~~~
+In file included from ../mcmd-cuda/main.cpp:42:
+../mcmd-cuda/system_functions.cpp:52:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   52 |   double xtemp[size];
+      |                ^~~~
+../mcmd-cuda/system_functions.cpp:52:16: note: read of non-const variable 'size' is not allowed in a constant expression
+../mcmd-cuda/system_functions.cpp:50:7: note: declared here
+   50 |   int size = system.constants.total_atoms;
+      |       ^
+../mcmd-cuda/system_functions.cpp:53:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   53 |   double ytemp[size];
+      |                ^~~~
+../mcmd-cuda/system_functions.cpp:53:16: note: read of non-const variable 'size' is not allowed in a constant expression
+../mcmd-cuda/system_functions.cpp:50:7: note: declared here
+   50 |   int size = system.constants.total_atoms;
+      |       ^
+../mcmd-cuda/system_functions.cpp:54:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   54 |   double ztemp[size];
+      |                ^~~~
+../mcmd-cuda/system_functions.cpp:54:16: note: read of non-const variable 'size' is not allowed in a constant expression
+../mcmd-cuda/system_functions.cpp:50:7: note: declared here
+   50 |   int size = system.constants.total_atoms;
+      |       ^
+In file included from ../mcmd-cuda/main.cpp:43:
+../mcmd-cuda/bonding.cpp:1140:16: warning: variable 'local_bonds' set but not used [-Wunused-but-set-variable]
+ 1140 |   unsigned int local_bonds=0;
+      |                ^
+../mcmd-cuda/bonding.cpp:1147:16: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+ 1147 |   unsigned int c=1;
+      |                ^
+In file included from ../mcmd-cuda/main.cpp:44:
+In file included from ../mcmd-cuda/mc.cpp:9:
+In file included from ../mcmd-cuda/potential.cpp:14:
+In file included from ../mcmd-cuda/polar.cpp:6:
+../mcmd-cuda/thole_iterative.cpp:202:7: warning: variable 'hits' set but not used [-Wunused-but-set-variable]
+  202 |   int hits=0;
+      |       ^
+../mcmd-cuda/thole_iterative.cpp:203:7: warning: variable 'paircount' set but not used [-Wunused-but-set-variable]
+  203 |   int paircount=0;
+      |       ^
+In file included from ../mcmd-cuda/main.cpp:44:
+In file included from ../mcmd-cuda/mc.cpp:9:
+In file included from ../mcmd-cuda/potential.cpp:14:
+../mcmd-cuda/polar.cpp:160:16: warning: unused variable 'explrcut' [-Wunused-variable]
+  160 |   const double explrcut = exp(-l*rcut);
+      |                ^~~~~~~~
+In file included from ../mcmd-cuda/main.cpp:44:
+In file included from ../mcmd-cuda/mc.cpp:10:
+../mcmd-cuda/rotatepoint.cpp:23:16: warning: variable 'finalx' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   23 |     } else if (plane == 2) {
+      |                ^~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:30:17: note: uninitialized use occurs here
+   30 |     output[0] = finalx;
+      |                 ^~~~~~
+../mcmd-cuda/rotatepoint.cpp:23:12: note: remove the 'if' if its condition is always true
+   23 |     } else if (plane == 2) {
+      |            ^~~~~~~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:12:18: note: initialize the variable 'finalx' to silence this warning
+   12 |     double finalx, finaly, finalz;
+      |                  ^
+      |                   = 0.0
+../mcmd-cuda/rotatepoint.cpp:23:16: warning: variable 'finaly' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   23 |     } else if (plane == 2) {
+      |                ^~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:31:17: note: uninitialized use occurs here
+   31 |     output[1] = finaly;
+      |                 ^~~~~~
+../mcmd-cuda/rotatepoint.cpp:23:12: note: remove the 'if' if its condition is always true
+   23 |     } else if (plane == 2) {
+      |            ^~~~~~~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:12:26: note: initialize the variable 'finaly' to silence this warning
+   12 |     double finalx, finaly, finalz;
+      |                          ^
+      |                           = 0.0
+../mcmd-cuda/rotatepoint.cpp:23:16: warning: variable 'finalz' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   23 |     } else if (plane == 2) {
+      |                ^~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:32:17: note: uninitialized use occurs here
+   32 |     output[2] = finalz;
+      |                 ^~~~~~
+../mcmd-cuda/rotatepoint.cpp:23:12: note: remove the 'if' if its condition is always true
+   23 |     } else if (plane == 2) {
+      |            ^~~~~~~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:12:34: note: initialize the variable 'finalz' to silence this warning
+   12 |     double finalx, finaly, finalz;
+      |                                  ^
+      |                                   = 0.0
+../mcmd-cuda/rotatepoint.cpp:47:16: warning: variable 'finalx' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   47 |     } else if (plane == 2) {
+      |                ^~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:54:17: note: uninitialized use occurs here
+   54 |     output[0] = finalx;
+      |                 ^~~~~~
+../mcmd-cuda/rotatepoint.cpp:47:12: note: remove the 'if' if its condition is always true
+   47 |     } else if (plane == 2) {
+      |            ^~~~~~~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:38:18: note: initialize the variable 'finalx' to silence this warning
+   38 |     double finalx, finaly, finalz;
+      |                  ^
+      |                   = 0.0
+../mcmd-cuda/rotatepoint.cpp:47:16: warning: variable 'finaly' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   47 |     } else if (plane == 2) {
+      |                ^~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:55:17: note: uninitialized use occurs here
+   55 |     output[1] = finaly;
+      |                 ^~~~~~
+../mcmd-cuda/rotatepoint.cpp:47:12: note: remove the 'if' if its condition is always true
+   47 |     } else if (plane == 2) {
+      |            ^~~~~~~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:38:26: note: initialize the variable 'finaly' to silence this warning
+   38 |     double finalx, finaly, finalz;
+      |                          ^
+      |                           = 0.0
+../mcmd-cuda/rotatepoint.cpp:47:16: warning: variable 'finalz' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   47 |     } else if (plane == 2) {
+      |                ^~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:56:17: note: uninitialized use occurs here
+   56 |     output[2] = finalz;
+      |                 ^~~~~~
+../mcmd-cuda/rotatepoint.cpp:47:12: note: remove the 'if' if its condition is always true
+   47 |     } else if (plane == 2) {
+      |            ^~~~~~~~~~~~~~~
+../mcmd-cuda/rotatepoint.cpp:38:34: note: initialize the variable 'finalz' to silence this warning
+   38 |     double finalx, finaly, finalz;
+      |                                  ^
+      |                                   = 0.0
+In file included from ../mcmd-cuda/main.cpp:44:
+In file included from ../mcmd-cuda/mc.cpp:11:
+../mcmd-cuda/boltzmann.cpp:83:9: warning: variable 'bf' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   83 |     if (movetype == MOVETYPE_DISPLACE) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:94:7: note: uninitialized use occurs here
+   94 |   if (bf > MAXVALUE) {
+      |       ^~
+../mcmd-cuda/boltzmann.cpp:83:5: note: remove the 'if' if its condition is always true
+   83 |     if (movetype == MOVETYPE_DISPLACE) {
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:82:12: warning: variable 'bf' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   82 |   else if (system.constants.ensemble == ENSEMBLE_NVE) {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:94:7: note: uninitialized use occurs here
+   94 |   if (bf > MAXVALUE) {
+      |       ^~
+../mcmd-cuda/boltzmann.cpp:82:8: note: remove the 'if' if its condition is always true
+   82 |   else if (system.constants.ensemble == ENSEMBLE_NVE) {
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:76:14: warning: variable 'bf' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   76 |     else if (movetype == MOVETYPE_DISPLACE) {
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:94:7: note: uninitialized use occurs here
+   94 |   if (bf > MAXVALUE) {
+      |       ^~
+../mcmd-cuda/boltzmann.cpp:76:10: note: remove the 'if' if its condition is always true
+   76 |     else if (movetype == MOVETYPE_DISPLACE) {
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:58:9: warning: variable 'bf' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   58 |     if (movetype == MOVETYPE_DISPLACE) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:94:7: note: uninitialized use occurs here
+   94 |   if (bf > MAXVALUE) {
+      |       ^~
+../mcmd-cuda/boltzmann.cpp:58:5: note: remove the 'if' if its condition is always true
+   58 |     if (movetype == MOVETYPE_DISPLACE) {
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:51:14: warning: variable 'bf' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+   51 |     else if (movetype == MOVETYPE_DISPLACE) {
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:94:7: note: uninitialized use occurs here
+   94 |   if (bf > MAXVALUE) {
+      |       ^~
+../mcmd-cuda/boltzmann.cpp:51:10: note: remove the 'if' if its condition is always true
+   51 |     else if (movetype == MOVETYPE_DISPLACE) {
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/boltzmann.cpp:13:12: note: initialize the variable 'bf' to silence this warning
+   13 |   double bf, MAXVALUE=1e4; // we won't care about huge bf's for averaging
+      |            ^
+      |             = 0.0
+In file included from ../mcmd-cuda/main.cpp:47:
+../mcmd-cuda/kernels.cpp:52:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   52 |   d_atom H[N]; // host atoms
+      |            ^
+../mcmd-cuda/kernels.cpp:52:12: note: initializer of 'N' is not a constant expression
+../mcmd-cuda/kernels.cpp:34:13: note: declared here
+   34 |   const int N = (int)system.constants.total_atoms;
+      |             ^
+../mcmd-cuda/kernels.cpp:36:13: warning: unused variable 'atoms_array_size' [-Wunused-variable]
+   36 |   const int atoms_array_size=sizeof(d_atom)*N;
+      |             ^~~~~~~~~~~~~~~~
+In file included from ../mcmd-cuda/main.cpp:52:
+../mcmd-cuda/sp.cpp:201:16: warning: unused variable 'Ni' [-Wunused-variable]
+  201 |         double Ni = (double)system.constants.elements[system.molecules[0].atoms[i].name];
+      |                ^~
+In file included from ../mcmd-cuda/main.cpp:53:
+../mcmd-cuda/io.cpp:890:10: warning: unused variable 'lz' [-Wunused-variable]
+  890 |   double lz = sqrt(c*c - xz*xz - yz*yz);
+      |          ^~
+In file included from ../mcmd-cuda/main.cpp:57:
+../mcmd-cuda/averages.cpp:58:10: warning: unused variable 'placeholder' [-Wunused-variable]
+   58 |   double placeholder = getTotalPotential(system); // getTotPot sends values to stat vars
+      |          ^~~~~~~~~~~
+../mcmd-cuda/averages.cpp:601:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  601 |     double D[(int)system.proto.size()];
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+../mcmd-cuda/averages.cpp:601:19: note: function parameter 'system' with unknown value cannot be used in a constant expression
+  601 |     double D[(int)system.proto.size()];
+      |                   ^
+../mcmd-cuda/averages.cpp:415:37: note: declared here
+  415 | void calculateObservablesMD(System &system) { 
+      |                                     ^
+../mcmd-cuda/averages.cpp:637:14: warning: variable 'D_vacf_sum' set but not used [-Wunused-but-set-variable]
+  637 |       double D_vacf_sum=0;
+      |              ^
+../mcmd-cuda/averages.cpp:421:18: warning: variable 'wsq' set but not used [-Wunused-but-set-variable]
+  421 |   double vsq=0., wsq=0.;
+      |                  ^
+../mcmd-cuda/main.cpp:114:9: warning: unused variable 'whatever' [-Wunused-variable]
+  114 |     int whatever=std::system(command.c_str());
+      |         ^~~~~~~~
+../mcmd-cuda/main.cpp:133:9: warning: unused variable 'whatever' [-Wunused-variable]
+  133 |     int whatever=std::system(command.c_str()); //remove( system.stats.radial_file.c_str() );
+      |         ^~~~~~~~
+../mcmd-cuda/main.cpp:151:9: warning: unused variable 'whatever' [-Wunused-variable]
+  151 |     int whatever = std::system(delit.c_str());
+      |         ^~~~~~~~
+../mcmd-cuda/main.cpp:171:9: warning: unused variable 'whatev' [-Wunused-variable]
+  171 |     int whatev = std::system(del.c_str());
+      |         ^~~~~~
+../mcmd-cuda/main.cpp:421:14: warning: unused variable 'total_steps' [-Wunused-variable]
+  421 |     long int total_steps = (long int)thing;
+      |              ^~~~~~~~~~~
+../mcmd-cuda/main.cpp:77:7: warning: variable 'zzz' set but not used [-Wunused-but-set-variable]
+   77 |   int zzz=std::system(hostcom.c_str());
+      |       ^
+34 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../mcmd-cuda -I../mcmd-cuda -I../mcmd-cuda -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -O3 -O3 -O3 -c force_kernel.cpp -o force_kernel.o
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I../mcmd-cuda -I../mcmd-cuda -I../mcmd-cuda -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__ -DSYCL -DGPU -O3 -O3 -O3 main.o force_kernel.o -o sycl 

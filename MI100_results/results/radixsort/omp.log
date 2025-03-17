@@ -1,0 +1,20 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c RadixSort.cpp -o RadixSort.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c Scan.cpp -o Scan.o
+In file included from Scan.cpp:12:
+./Scan.h:21:18: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+   21 | static const int WORKGROUP_SIZE = 256;
+      |                  ^
+./Scan_kernels.cpp:109:16: note: used here
+  109 |     if( lid < (WORKGROUP_SIZE / WARP_SIZE) ){
+      |                ^~~~~~~~~~~~~~
+1 warning generated.
+In file included from Scan.cpp:12:
+./Scan.h:21:18: warning: declaration is not declared in any declare target region [-Wopenmp-target]
+   21 | static const int WORKGROUP_SIZE = 256;
+      |                  ^
+./Scan_kernels.cpp:109:16: note: used here
+  109 |     if( lid < (WORKGROUP_SIZE / WARP_SIZE) ){
+      |                ^~~~~~~~~~~~~~
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 main.o RadixSort.o Scan.o -o omp 

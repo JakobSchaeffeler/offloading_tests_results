@@ -1,0 +1,9 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+main.cu: In function ‘int main(int, char**)’:
+main.cu:101:16: warning: ‘kernel_starttime’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   kernel_runtime = kernel_endtime-kernel_starttime;
+   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+main.cu:87:8: note: ‘kernel_starttime’ was declared here
+   double kernel_starttime, kernel_endtime, kernel_runtime;
+        ^~~~~~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o cuda 

@@ -1,0 +1,2 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c histogram_compare_base.cpp -o histogram_compare_base.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 histogram_compare_base.o -o omp 

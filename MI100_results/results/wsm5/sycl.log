@@ -1,0 +1,68 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DMKX=4 -DUSE_GPU -DMKX=4 -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:6:
+./kernel.h:527:16: error: no matching function for call to 'abs'
+  527 |               *sycl::abs(vt2s-vt2i)*acrfac*.25f ;
+      |                ^~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/integer_functions.inc:68:31: note: candidate template ignored: substitution failure [with T0 = float]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::integer_elem_type, sycl::detail::any_shape, sycl::detail::same_elem_type, float>'
+   28 | DEVICE_IMPL_TEMPLATE(ONE_ARG, abs, builtin_enable_integer_t, [](auto x) {
+      |                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+In file included from main.cpp:6:
+./kernel.h:544:16: error: no matching function for call to 'abs'
+  544 |             if(sycl::abs(prevp_reg+pidep_reg) >= sycl::abs(satdt)) ifsat = 1 ;
+      |                ^~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/integer_functions.inc:68:31: note: candidate template ignored: substitution failure [with T0 = float]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::integer_elem_type, sycl::detail::any_shape, sycl::detail::same_elem_type, float>'
+   28 | DEVICE_IMPL_TEMPLATE(ONE_ARG, abs, builtin_enable_integer_t, [](auto x) {
+      |                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+In file included from main.cpp:6:
+./kernel.h:544:50: error: no matching function for call to 'abs'
+  544 |             if(sycl::abs(prevp_reg+pidep_reg) >= sycl::abs(satdt)) ifsat = 1 ;
+      |                                                  ^~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/integer_functions.inc:68:31: note: candidate template ignored: substitution failure [with T0 = float]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::integer_elem_type, sycl::detail::any_shape, sycl::detail::same_elem_type, float>'
+   28 | DEVICE_IMPL_TEMPLATE(ONE_ARG, abs, builtin_enable_integer_t, [](auto x) {
+      |                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+In file included from main.cpp:6:
+./kernel.h:562:16: error: no matching function for call to 'abs'
+  562 |             if(sycl::abs(prevp_reg+pidep_reg+psdep_reg) >= sycl::abs(satdt))
+      |                ^~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/integer_functions.inc:68:31: note: candidate template ignored: substitution failure [with T0 = float]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::integer_elem_type, sycl::detail::any_shape, sycl::detail::same_elem_type, float>'
+   28 | DEVICE_IMPL_TEMPLATE(ONE_ARG, abs, builtin_enable_integer_t, [](auto x) {
+      |                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+In file included from main.cpp:6:
+./kernel.h:562:60: error: no matching function for call to 'abs'
+  562 |             if(sycl::abs(prevp_reg+pidep_reg+psdep_reg) >= sycl::abs(satdt))
+      |                                                            ^~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/integer_functions.inc:68:31: note: candidate template ignored: substitution failure [with T0 = float]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::integer_elem_type, sycl::detail::any_shape, sycl::detail::same_elem_type, float>'
+   28 | DEVICE_IMPL_TEMPLATE(ONE_ARG, abs, builtin_enable_integer_t, [](auto x) {
+      |                               ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+5 errors generated.
+make: *** [Makefile:71: main.o] Error 1

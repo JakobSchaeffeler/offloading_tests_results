@@ -1,0 +1,39 @@
+,omp 100 omp offloading kernel,sycl 100 sycl kernel,hip 100 hip_kernel
+Runtime,1425952408.0,1099172747.0,1019632268.0
+SALU Instructions per wave,1089.75,124.47,347.14
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.63,0.86,1.07
+L1 Requests per wave,21218.63,2592.04,2592.04
+L1 Hit Rate,77.32,85.83,86.08
+L2 Requests per wave,1079.46,96.78,79.43
+L2 Hit Rate,40.23,62.29,55.88
+Wavefront Occupancy (% of peak),1441.89,2731.28,2421.36
+Dependency Wait Cycles per wave,101381.3,12737.46,5887.71
+Issue Wait Cycles per wave,40395.26,13924.86,13555.84
+Grid Size,122880.0,1010773.33,1010773.33
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,0.0,0.0,0.0
+Shared Memory Instructions per wave,535.07,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,535.07,65.4,65.4
+Global Memory Read Instructions per wave,526.94,64.4,64.4
+Global Memory Write Instructions per wave,8.14,0.99,0.99
+Coalesced Instructions (% of peak),63.24,63.35,63.35
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,3560.12,417.79,396.26
+Global Write/Atomic Bytes per wave,520.83,27.7,33.7
+SALU Instructions,2092320.0,1965796.1935171874,5482497.715253125
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,40739769.6,40936951.59833125,40936951.59833125
+L2 Requests,2072563.2000000002,1528478.794959375,1254464.4625296874
+Dependency Wait Cycles,194652096.0,201166950.9365906,92986566.29334843
+Issue Wait Cycles,77558899.2,219919954.8747469,214091899.0273
+Shared Memory Instructions,1027334.4000000001,0.0,0.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,1027334.4000000001,1032883.9965937501,1032883.9965937501
+Global Memory Read Instructions,1011724.8,1017090.6633125,1017090.6633125
+Global Memory Write Instructions,15628.800000000001,15635.3999484375,15635.3999484375
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,6835430.399999999,6598296.711573438,6258266.246028124
+Global Write/Atomic Bytes,999993.6000000001,437475.33189062495,532235.331578125

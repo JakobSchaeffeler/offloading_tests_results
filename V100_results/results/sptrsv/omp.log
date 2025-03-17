@@ -1,0 +1,14 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../sptrsv-sycl -I../sptrsv-sycl -I../sptrsv-sycl -DVALUE_TYPE=double -D__STRICT_ANSI__ -DVALUE_TYPE=double -D__STRICT_ANSI__ -DVALUE_TYPE=double -D__STRICT_ANSI__ -O3 -O3 -O3 -c ../sptrsv-sycl/main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../sptrsv-sycl -I../sptrsv-sycl -I../sptrsv-sycl -DVALUE_TYPE=double -D__STRICT_ANSI__ -DVALUE_TYPE=double -D__STRICT_ANSI__ -DVALUE_TYPE=double -D__STRICT_ANSI__ -O3 -O3 -O3 -c sptrsv_syncfree.cpp -o sptrsv_syncfree.o
+sptrsv_syncfree.cpp:14:3: error: the statement for 'atomic read' must be an expression statement of form 'v = x;', where v and x are both lvalue expressions with scalar type
+   14 |   const int value = *vaddr;
+      |   ^~~~~
+sptrsv_syncfree.cpp:14:3: note: expected an expression statement
+   14 |   const int value = *vaddr;
+      |   ^~~~~
+sptrsv_syncfree.cpp:19:10: error: use of undeclared identifier 'value'; did you mean 'false'?
+   19 |   return value; 
+      |          ^~~~~
+      |          false
+2 errors generated.
+make: *** [Makefile:63: sptrsv_syncfree.o] Error 1

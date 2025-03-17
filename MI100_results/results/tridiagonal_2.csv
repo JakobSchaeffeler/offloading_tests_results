@@ -1,0 +1,39 @@
+,omp --vec4 -num_systems=524288 omp offloading kernel,sycl --vec4 -num_systems=524288 sycl kernel,hip --vec4 -num_systems=524288 hip_kernel
+Runtime,2356654061.0,2116045677.0,2275124765.0
+SALU Instructions per wave,113.72,103.03,93.33
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.74,0.69,0.69
+L1 Requests per wave,2100.8,2100.8,2100.8
+L1 Hit Rate,0.92,0.01,0.0
+L2 Requests per wave,478.43,524.51,525.27
+L2 Hit Rate,1.16,1.95,1.81
+Wavefront Occupancy (% of peak),3214.47,3222.47,3215.52
+Dependency Wait Cycles per wave,77850.12,86939.43,77648.2
+Issue Wait Cycles per wave,24303.51,13845.34,27426.74
+Grid Size,53739520.0,53739520.0,53739520.0
+#Threads,172.8,172.8,172.8
+Shared Memory Allocated,1997.0,1997.0,1997.0
+Shared Memory Instructions per wave,108.35,63.4,63.4
+Shared Memory Bank Conflicts (%),0.84,2.36,2.36
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,35.83,35.83,35.83
+Global Memory Read Instructions per wave,25.18,25.18,25.18
+Global Memory Write Instructions per wave,10.65,10.65,10.65
+Coalesced Instructions (% of peak),92.5,92.5,92.5
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,20304.66,20318.15,20836.57
+Global Write/Atomic Bytes per wave,10059.57,10029.91,10058.07
+SALU Instructions,95488409.6,86512230.4,78367334.4
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,1763999744.0000002,1763999744.0000002,1763999744.0000002
+L2 Requests,401728102.4,440420556.8,441058713.59999996
+Dependency Wait Cycles,65369188761.6,73001300582.4,65199640576.0
+Issue Wait Cycles,20407171276.8,11625655091.2,23029685043.2
+Shared Memory Instructions,90979328.0,53235712.0,53235712.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,30085734.4,30085734.4,30085734.4
+Global Memory Read Instructions,21143142.4,21143142.4,21143142.4
+Global Memory Write Instructions,8942592.0,8942592.0,8942592.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,17049416908.8,17060744192.000002,17496051097.6
+Global Write/Atomic Bytes,8446819737.599999,8421914828.8,8445560217.599999

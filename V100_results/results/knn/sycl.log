@@ -1,0 +1,9 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:253:10: error: use of undeclared identifier 'sqrtf'
+  253 |   return sqrtf(sum);
+      |          ^
+main.cpp:412:9: error: use of undeclared identifier 'fabs'
+  412 |     if (fabs(dist[i] - knn_dist[i]) <= precision) {
+      |         ^
+2 errors generated.
+make: *** [Makefile:71: main.o] Error 1

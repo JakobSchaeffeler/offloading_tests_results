@@ -1,0 +1,33 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c CRC64.cpp -o CRC64.o
+CRC64.cpp:549:24: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  549 |     uint64_t thread_cs[nthreads];
+      |                        ^~~~~~~~
+CRC64.cpp:549:24: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+CRC64.cpp:550:22: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  550 |     size_t thread_sz[nthreads];
+      |                      ^~~~~~~~
+CRC64.cpp:550:22: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+2 warnings generated.
+CRC64.cpp:549:24: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  549 |     uint64_t thread_cs[nthreads];
+      |                        ^~~~~~~~
+CRC64.cpp:549:24: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+CRC64.cpp:550:22: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  550 |     size_t thread_sz[nthreads];
+      |                      ^~~~~~~~
+CRC64.cpp:550:22: note: read of non-const variable 'nthreads' is not allowed in a constant expression
+CRC64.cpp:544:9: note: declared here
+  544 |     int nthreads = 96*8*32;
+      |         ^
+2 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 -c CRC64Test.cpp -o CRC64Test.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -O3 CRC64.o CRC64Test.o -o sycl 

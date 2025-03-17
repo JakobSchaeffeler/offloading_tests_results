@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c CRC64.cu -o CRC64.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c CRC64Test.cu -o CRC64Test.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 CRC64.o CRC64Test.o -o cuda 

@@ -1,0 +1,39 @@
+,omp 50 omp offloading kernel,sycl 50 sycl kernel,hip 50 hip_kernel
+Runtime,31465590297.0,17374184912.0,24699594884.0
+SALU Instructions per wave,167880.2,95997.0,167004.8
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.37,0.32,0.32
+L1 Requests per wave,6861822.4,3506379.2,3486718.4
+L1 Hit Rate,22.98,32.56,52.42
+L2 Requests per wave,3436112.35,870722.31,1696142.62
+L2 Hit Rate,98.48,95.1,97.07
+Wavefront Occupancy (% of peak),949.88,744.26,964.45
+Dependency Wait Cycles per wave,41812263.52,25196337.05,31602740.97
+Issue Wait Cycles per wave,5165774.32,1344591.25,1466363.16
+Grid Size,178585.6,129433.6,178585.6
+#Threads,230.4,230.4,230.4
+Shared Memory Allocated,20685.0,20685.0,20685.0
+Shared Memory Instructions per wave,181412.08,73272.82,63493.43
+Shared Memory Bank Conflicts (%),3.64,4.18,2.86
+Register Spill Instructions per wave,1228.8,1228.8,0.0
+Global Memory Instructions per wave,108139.3,55710.5,55710.5
+Global Memory Read Instructions per wave,108138.6,55709.8,55709.8
+Global Memory Write Instructions per wave,0.7,0.7,0.7
+Coalesced Instructions (% of peak),44.5,44.5,40.0
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,18452116.57,21279531.15,21022175.38
+Global Write/Atomic Bytes per wave,989.12,947.99,98.88
+SALU Instructions,468452910.08000004,194144332.8,466010193.91999996
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,19147229224.960003,7091301294.080001,9729339023.36
+L2 Requests,9588127901.44,1760948799.7440002,4732916366.848001
+Dependency Wait Cycles,116672940126.20801,50957072049.920006,88184288402.688
+Issue Wait Cycles,14414576662.528002,2719301344.0,4091739761.664
+Shared Memory Instructions,506212268.032,148186951.168,177172067.072
+Register Spill Instructions,3428843.52,2485125.12,0.0
+Global Memory Instructions,301751902.72,112668915.2,155454579.20000002
+Global Memory Read Instructions,301749949.44,112667499.52000001,155452625.92000002
+Global Memory Write Instructions,1953.28,1415.68,1953.28
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,51488786076.928,43035723797.76,58660278180.352
+Global Write/Atomic Bytes,2760040.4480000003,1917214.976,275914.752

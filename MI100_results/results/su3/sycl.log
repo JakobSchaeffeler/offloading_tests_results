@@ -1,0 +1,10 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DMILC_COMPLEX -DUSE_GPU -DMILC_COMPLEX -DUSE_GPU -O3 -O3 -c su3_nn_bench.cpp -o su3_nn_bench.o
+su3_nn_bench.cpp:133:18: warning: passing 8-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  133 |   make_lattice(a.data(), ldim, Complx{1.0,0.0});
+      |                  ^
+1 warning generated.
+su3_nn_bench.cpp:133:18: warning: passing 8-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  133 |   make_lattice(a.data(), ldim, Complx{1.0,0.0});
+      |                  ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DMILC_COMPLEX -DUSE_GPU -DMILC_COMPLEX -DUSE_GPU -O3 -O3 su3_nn_bench.o -o sycl 

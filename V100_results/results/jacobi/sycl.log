@@ -1,0 +1,9 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:148:21: error: no member named 'shuffle_down' in 'sycl::sub_group'
+  148 |           err += sg.shuffle_down(err, offset);
+      |                  ~~ ^
+main.cpp:167:23: error: no member named 'shuffle_down' in 'sycl::sub_group'
+  167 |             err += sg.shuffle_down(err, offset);
+      |                    ~~ ^
+2 errors generated.
+make: *** [Makefile:71: main.o] Error 1

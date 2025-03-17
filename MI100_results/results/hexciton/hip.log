@@ -1,0 +1,772 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from main.cu:7:
+./kernels.cu:135:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:91:9: note: previous definition is here
+#define sigma_real(i, j) (sigma_id + 2 * ((i) * dim + (j)))
+        ^
+./kernels.cu:136:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:92:9: note: previous definition is here
+#define sigma_imag(i, j) (sigma_id + 2 * ((i) * dim + (j)) + 1)
+        ^
+./kernels.cu:138:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:93:9: note: previous definition is here
+#define ham_real(i, j) (2 * ((i) * dim + (j)))
+        ^
+./kernels.cu:139:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:94:9: note: previous definition is here
+#define ham_imag(i, j) (2 * ((i) * dim + (k)) + 1)
+        ^
+./kernels.cu:174:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:132:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+        ^
+./kernels.cu:177:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:135:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:178:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:136:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:180:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:138:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:181:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:139:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:271:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+        ^
+./kernels.cu:214:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:274:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:217:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:275:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:218:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:277:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:220:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:278:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:221:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:308:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:271:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+        ^
+./kernels.cu:311:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:274:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:312:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:275:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:314:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:277:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:315:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:278:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:386:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:345:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:387:9: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+#define sigma_id threadIdx.x
+        ^
+./kernels.cu:346:9: note: previous definition is here
+#define sigma_id (gid % VEC_LENGTH_AUTO)
+        ^
+./kernels.cu:389:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:348:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:390:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:349:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:392:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:351:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:393:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:352:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:425:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:386:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:428:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:389:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:429:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:390:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:431:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:392:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:432:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:393:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:517:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:464:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:520:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:467:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:521:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:468:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:523:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:470:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:524:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:471:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:552:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:517:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:555:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:520:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:556:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:521:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:557:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:523:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:558:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:524:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:629:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id (gid * dim * dim * 2)
+        ^
+./kernels.cu:586:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:631:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+        ^
+./kernels.cu:589:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:632:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+        ^
+./kernels.cu:590:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:634:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:592:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:635:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:593:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:669:11: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  #define package_id (gid * DIM * DIM * 2)
+          ^
+./kernels.cu:629:9: note: previous definition is here
+#define package_id (gid * dim * dim * 2)
+        ^
+./kernels.cu:671:11: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+          ^
+./kernels.cu:631:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+        ^
+./kernels.cu:672:11: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+          ^
+./kernels.cu:632:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+        ^
+./kernels.cu:674:11: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  #define ham_real(i, j) ((i) * DIM + (j))
+          ^
+./kernels.cu:634:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:675:11: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+          ^
+./kernels.cu:635:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:807:11: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  #define package_id (gid * dim * dim * 2)
+          ^
+./kernels.cu:763:11: note: previous definition is here
+  #define package_id (gid * DIM * DIM * 2)
+          ^
+./kernels.cu:809:11: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+          ^
+./kernels.cu:765:11: note: previous definition is here
+  #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+          ^
+./kernels.cu:810:11: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+          ^
+./kernels.cu:766:11: note: previous definition is here
+  #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+          ^
+./kernels.cu:812:11: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  #define ham_real(i, j) ((i) * dim + (j))
+          ^
+./kernels.cu:768:11: note: previous definition is here
+  #define ham_real(i, j) ((i) * DIM + (j))
+          ^
+./kernels.cu:813:11: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+          ^
+./kernels.cu:769:11: note: previous definition is here
+  #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+          ^
+./kernels.cu:842:11: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  #define package_id (gid * DIM * DIM * 2)
+          ^
+./kernels.cu:807:11: note: previous definition is here
+  #define package_id (gid * dim * dim * 2)
+          ^
+./kernels.cu:844:11: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+          ^
+./kernels.cu:809:11: note: previous definition is here
+  #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+          ^
+./kernels.cu:845:11: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+          ^
+./kernels.cu:810:11: note: previous definition is here
+  #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+          ^
+./kernels.cu:847:11: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  #define ham_real(i, j) ((i) * DIM + (j))
+          ^
+./kernels.cu:812:11: note: previous definition is here
+  #define ham_real(i, j) ((i) * dim + (j))
+          ^
+./kernels.cu:848:11: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+          ^
+./kernels.cu:813:11: note: previous definition is here
+  #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+          ^
+./kernels.cu:954:11: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+  #define sigma_id(i,j,m) ((m) * DIM * DIM + ((i) * DIM + (j)))
+          ^
+./kernels.cu:587:9: note: previous definition is here
+#define sigma_id threadIdx.x
+        ^
+61 warnings generated when compiling for gfx908.
+In file included from main.cu:7:
+./kernels.cu:135:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:91:9: note: previous definition is here
+#define sigma_real(i, j) (sigma_id + 2 * ((i) * dim + (j)))
+        ^
+./kernels.cu:136:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:92:9: note: previous definition is here
+#define sigma_imag(i, j) (sigma_id + 2 * ((i) * dim + (j)) + 1)
+        ^
+./kernels.cu:138:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:93:9: note: previous definition is here
+#define ham_real(i, j) (2 * ((i) * dim + (j)))
+        ^
+./kernels.cu:139:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:94:9: note: previous definition is here
+#define ham_imag(i, j) (2 * ((i) * dim + (k)) + 1)
+        ^
+./kernels.cu:174:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:132:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+        ^
+./kernels.cu:177:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:135:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:178:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:136:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:180:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:138:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:181:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:139:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:271:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+        ^
+./kernels.cu:214:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:274:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:217:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:275:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:218:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:277:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:220:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:278:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:221:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:308:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:271:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+        ^
+./kernels.cu:311:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:274:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:312:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:275:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:314:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:277:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:315:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:278:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:386:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:345:9: note: previous definition is here
+#define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+        ^
+./kernels.cu:387:9: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+#define sigma_id threadIdx.x
+        ^
+./kernels.cu:346:9: note: previous definition is here
+#define sigma_id (gid % VEC_LENGTH_AUTO)
+        ^
+./kernels.cu:389:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:348:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+        ^
+./kernels.cu:390:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:349:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+        ^
+./kernels.cu:392:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:351:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:393:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:352:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:425:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:386:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:428:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:389:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:429:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:390:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:431:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:392:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:432:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:393:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:517:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:464:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:520:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:467:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:521:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:468:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:523:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:470:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:524:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:471:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:552:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:517:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+        ^
+./kernels.cu:555:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:520:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:556:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:521:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:557:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:523:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:558:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:524:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:629:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+#define package_id (gid * dim * dim * 2)
+        ^
+./kernels.cu:586:9: note: previous definition is here
+#define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+        ^
+./kernels.cu:631:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+#define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+        ^
+./kernels.cu:589:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+        ^
+./kernels.cu:632:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+#define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+        ^
+./kernels.cu:590:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+        ^
+./kernels.cu:634:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:592:9: note: previous definition is here
+#define ham_real(i, j) ((i) * DIM + (j))
+        ^
+./kernels.cu:635:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:593:9: note: previous definition is here
+#define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+        ^
+./kernels.cu:669:11: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  #define package_id (gid * DIM * DIM * 2)
+          ^
+./kernels.cu:629:9: note: previous definition is here
+#define package_id (gid * dim * dim * 2)
+        ^
+./kernels.cu:671:11: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+          ^
+./kernels.cu:631:9: note: previous definition is here
+#define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+        ^
+./kernels.cu:672:11: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+          ^
+./kernels.cu:632:9: note: previous definition is here
+#define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+        ^
+./kernels.cu:674:11: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  #define ham_real(i, j) ((i) * DIM + (j))
+          ^
+./kernels.cu:634:9: note: previous definition is here
+#define ham_real(i, j) ((i) * dim + (j))
+        ^
+./kernels.cu:675:11: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+          ^
+./kernels.cu:635:9: note: previous definition is here
+#define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+        ^
+./kernels.cu:807:11: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  #define package_id (gid * dim * dim * 2)
+          ^
+./kernels.cu:763:11: note: previous definition is here
+  #define package_id (gid * DIM * DIM * 2)
+          ^
+./kernels.cu:809:11: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+          ^
+./kernels.cu:765:11: note: previous definition is here
+  #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+          ^
+./kernels.cu:810:11: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+          ^
+./kernels.cu:766:11: note: previous definition is here
+  #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+          ^
+./kernels.cu:812:11: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  #define ham_real(i, j) ((i) * dim + (j))
+          ^
+./kernels.cu:768:11: note: previous definition is here
+  #define ham_real(i, j) ((i) * DIM + (j))
+          ^
+./kernels.cu:813:11: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+          ^
+./kernels.cu:769:11: note: previous definition is here
+  #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+          ^
+./kernels.cu:842:11: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  #define package_id (gid * DIM * DIM * 2)
+          ^
+./kernels.cu:807:11: note: previous definition is here
+  #define package_id (gid * dim * dim * 2)
+          ^
+./kernels.cu:844:11: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+          ^
+./kernels.cu:809:11: note: previous definition is here
+  #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+          ^
+./kernels.cu:845:11: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+          ^
+./kernels.cu:810:11: note: previous definition is here
+  #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+          ^
+./kernels.cu:847:11: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  #define ham_real(i, j) ((i) * DIM + (j))
+          ^
+./kernels.cu:812:11: note: previous definition is here
+  #define ham_real(i, j) ((i) * dim + (j))
+          ^
+./kernels.cu:848:11: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+          ^
+./kernels.cu:813:11: note: previous definition is here
+  #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+          ^
+./kernels.cu:954:11: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+  #define sigma_id(i,j,m) ((m) * DIM * DIM + ((i) * DIM + (j)))
+          ^
+./kernels.cu:587:9: note: previous definition is here
+#define sigma_id threadIdx.x
+        ^
+61 warnings generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c utils.cu -o utils.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -c reference.cu -o reference.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 main.o utils.o reference.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

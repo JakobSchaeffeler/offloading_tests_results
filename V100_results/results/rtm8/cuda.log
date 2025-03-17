@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -fopenmp -Xcompiler -Wall -arch=sm_70 -O3 -c rtm8.cu -o rtm8.o
+nvcc  -std=c++14 -Xcompiler -fopenmp -Xcompiler -Wall -arch=sm_70 -O3 rtm8.o -o cuda 

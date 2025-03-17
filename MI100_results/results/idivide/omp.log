@@ -1,0 +1,50 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../idivide-cuda -D__STRICT_ANSI__ -O3 -c main.cpp -o main.o
+In file included from main.cpp:9:
+./kernels.h:17:19: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   17 |     if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                   ^~~~~~~~~~~~
+./kernels.h:17:19: note: place parentheses around the '==' expression to silence this warning
+   17 |     if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                   ^           
+      |                     (         )
+./kernels.h:17:19: note: place parentheses around the & expression to evaluate it first
+   17 |     if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                   ^
+      |         (                )
+./kernels.h:50:11: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   50 |     if (x & dummy == 1) buf[0] = x;
+      |           ^~~~~~~~~~~~
+./kernels.h:50:11: note: place parentheses around the '==' expression to silence this warning
+   50 |     if (x & dummy == 1) buf[0] = x;
+      |           ^           
+      |             (         )
+./kernels.h:50:11: note: place parentheses around the & expression to evaluate it first
+   50 |     if (x & dummy == 1) buf[0] = x;
+      |           ^
+      |         (        )
+2 warnings generated.
+In file included from main.cpp:9:
+./kernels.h:17:19: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   17 |     if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                   ^~~~~~~~~~~~
+./kernels.h:17:19: note: place parentheses around the '==' expression to silence this warning
+   17 |     if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                   ^           
+      |                     (         )
+./kernels.h:17:19: note: place parentheses around the & expression to evaluate it first
+   17 |     if (aggregate & dummy == 1) buf[0] = aggregate;
+      |                   ^
+      |         (                )
+./kernels.h:50:11: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+   50 |     if (x & dummy == 1) buf[0] = x;
+      |           ^~~~~~~~~~~~
+./kernels.h:50:11: note: place parentheses around the '==' expression to silence this warning
+   50 |     if (x & dummy == 1) buf[0] = x;
+      |           ^           
+      |             (         )
+./kernels.h:50:11: note: place parentheses around the & expression to evaluate it first
+   50 |     if (x & dummy == 1) buf[0] = x;
+      |           ^
+      |         (        )
+2 warnings generated.
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -I../idivide-cuda -D__STRICT_ANSI__ -O3 main.o -o omp 

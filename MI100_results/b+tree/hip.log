@@ -1,0 +1,103 @@
+hipcc	--rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14   ./main.cu \
+		-c \
+		-o ./main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+./main.cu:856:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+      else
+      ^
+./main.cu:914:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+      printf("(%x)", n);
+               ~~    ^
+./main.cu:917:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+        printf("%x ", n->pointers[i]);
+                ~~    ^~~~~~~~~~~~~~
+./main.cu:925:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+        printf("%x ", n->pointers[order - 1]);
+                ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.cu:927:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+        printf("%x ", n->pointers[n->num_keys]);
+                ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated when compiling for gfx908.
+./main.cu:856:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+      else
+      ^
+./main.cu:914:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+      printf("(%x)", n);
+               ~~    ^
+./main.cu:917:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+        printf("%x ", n->pointers[i]);
+                ~~    ^~~~~~~~~~~~~~
+./main.cu:925:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+        printf("%x ", n->pointers[order - 1]);
+                ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.cu:927:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+        printf("%x ", n->pointers[n->num_keys]);
+                ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated when compiling for host.
+hipcc  ./kernel/kernel_wrapper.cu \
+			-c \
+			-o ./kernel/kernel_wrapper.o \
+			--rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc  ./kernel/kernel2_wrapper.cu \
+			-c \
+			-o ./kernel/kernel2_wrapper.o \
+			--rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc	./util/timer/timer.c \
+		-c \
+		-o ./util/timer/timer.o 
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc	./util/num/num.c \
+		-c \
+		-o ./util/num/num.o 
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc	--rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14  ./main.o \
+		./kernel/kernel_wrapper.o \
+		./kernel/kernel2_wrapper.o \
+		./util/timer/timer.o \
+		./util/num/num.o \
+		-lm  -o b+tree.out
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

@@ -1,0 +1,49 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+main.cu(18): error: more than one conversion function from "const half" to "char" applies:
+            function "__half::operator float() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(204): here
+            function "__half::operator short() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(222): here
+            function "__half::operator unsigned short() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(225): here
+            function "__half::operator int() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(228): here
+            function "__half::operator unsigned int() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(231): here
+            function "__half::operator long long() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(234): here
+            function "__half::operator unsigned long long() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(237): here
+            function "__half::operator __nv_bool() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(241): here
+          detected during:
+            instantiation of "void cvt(Td *, const Ts *, int) [with Td=char, Ts=half]" 
+(36): here
+            instantiation of "void convert<Td,Ts>(int, int) [with Td=char, Ts=half]" 
+(80): here
+
+main.cu(18): error: more than one conversion function from "const half" to "uchar" applies:
+            function "__half::operator float() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(204): here
+            function "__half::operator short() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(222): here
+            function "__half::operator unsigned short() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(225): here
+            function "__half::operator int() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(228): here
+            function "__half::operator unsigned int() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(231): here
+            function "__half::operator long long() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(234): here
+            function "__half::operator unsigned long long() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(237): here
+            function "__half::operator __nv_bool() const"
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/cuda-11.8.0-73hsah6duh3rhwsq72nljzldluz3lgbc/bin/../targets/sbsa-linux/include/cuda_fp16.hpp(241): here
+          detected during:
+            instantiation of "void cvt(Td *, const Ts *, int) [with Td=uchar, Ts=half]" 
+(36): here
+            instantiation of "void convert<Td,Ts>(int, int) [with Td=uchar, Ts=half]" 
+(82): here
+
+2 errors detected in the compilation of "main.cu".
+make: *** [Makefile:50: main.o] Error 1

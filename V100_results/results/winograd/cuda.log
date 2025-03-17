@@ -1,0 +1,13 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -DMAP_SIZE=1024 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -DMAP_SIZE=1024 -O3 -c utils.cu -o utils.o
+utils.cu:52: warning: ignoring #pragma omp parallel [-Wunknown-pragmas]
+   #pragma omp parallel
+ 
+utils.cu:54: warning: ignoring #pragma omp for [-Wunknown-pragmas]
+     #pragma omp for
+ 
+utils.cu: In function ‘void WinogradConv2D_2x2_omp(float*, float*, float*, size_t*)’:
+utils.cu:53:29: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+   for (int tile_i = 0; tile_i < cpu_global_size[0]; tile_i++) {
+                      ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -DMAP_SIZE=1024 -O3 main.o utils.o -o cuda 

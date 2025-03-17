@@ -1,0 +1,75 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -c Option.cpp -o Option.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -c OptionParser.cpp -o OptionParser.o
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -c S3D.cpp -o S3D.o
+In file included from S3D.cpp:161:
+./ratt.h:3:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    3 |     const register real ALOGT = LOG(TEMP);
+      |           ^~~~~~~~
+In file included from S3D.cpp:167:
+./rdsmh.h:6:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    6 |     const register real TN1 = TLOG - (real)1.0;
+      |           ^~~~~~~~
+In file included from S3D.cpp:179:
+./ratt2.h:10:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   10 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:185:
+./ratt3.h:3:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    3 |     const register real SMALL_INV = (real)1e37;
+      |           ^~~~~~~~
+./ratt3.h:8:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    8 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:191:
+./ratt4.h:3:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    3 |     const register real SMALL_INV = (real)1e37;
+      |           ^~~~~~~~
+./ratt4.h:7:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    7 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:197:
+./ratt5.h:3:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    3 |     const register real SMALL_INV = (real)1e37;
+      |           ^~~~~~~~
+./ratt5.h:8:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    8 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:202:
+./ratt6.h:4:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    4 |     const register real SMALL_INV = (real)1e37;
+      |           ^~~~~~~~
+./ratt6.h:8:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    8 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:207:
+./ratt7.h:3:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    3 |     const register real SMALL_INV = (real)1e37;
+      |           ^~~~~~~~
+./ratt7.h:7:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    7 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:212:
+./ratt8.h:3:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    3 |     const register real SMALL_INV = (real)1e37;
+      |           ^~~~~~~~
+./ratt8.h:7:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    7 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:217:
+./ratt9.h:4:11: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    4 |     const register real SMALL_INV = (real)1e37;
+      |           ^~~~~~~~
+./ratt9.h:8:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    8 |     register real rtemp_inv;
+      |     ^~~~~~~~
+In file included from S3D.cpp:234:
+./ratxb.h:4:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    4 |     register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+      |     ^~~~~~~~
+./ratxb.h:4:5: error: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+    4 |     register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+      |     ^~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile:67: S3D.o] Error 1

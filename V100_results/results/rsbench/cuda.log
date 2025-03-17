@@ -1,0 +1,7 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c simulation.cu -o simulation.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c io.cu -o io.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c init.cu -o init.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c material.cu -o material.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c utils.cu -o utils.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o simulation.o io.o init.o material.o utils.o -o cuda -lm

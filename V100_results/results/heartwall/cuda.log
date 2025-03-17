@@ -1,0 +1,52 @@
+nvcc	-DOUTPUT  ./main.cu \
+	-I./util/timer/ \
+	-I./util/file/ \
+	-c \
+	-o ./main.o 
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3   ./kernel/kernel.cu \
+	-c \
+	-o ./kernel/kernel.o 
+nvcc	 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 ./util/avi/avilib.c \
+	-I./util/avi \
+	-c \
+	-o ./util/avi/avilib.o 
+./util/avi/avilib.c: In function ‘AVI_write_frame’:
+./util/avi/avilib.c:907:28: warning: ‘%1d’ directive writing between 1 and 11 bytes into a region of size 4 [-Wformat-overflow=]
+    sprintf((char *)astr, "0%1dwb", AVI->aptr+1);
+                            ^~~
+./util/avi/avilib.c:907:26: note: directive argument in the range [-2147483647, 2147483647]
+    sprintf((char *)astr, "0%1dwb", AVI->aptr+1);
+                          ^~~~~~~~
+./util/avi/avilib.c:907:4: note: ‘sprintf’ output between 5 and 15 bytes into a destination of size 5
+    sprintf((char *)astr, "0%1dwb", AVI->aptr+1);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./util/avi/avilib.c: In function ‘AVI_write_audio’:
+./util/avi/avilib.c:907:28: warning: ‘%1d’ directive writing between 1 and 11 bytes into a region of size 4 [-Wformat-overflow=]
+    sprintf((char *)astr, "0%1dwb", AVI->aptr+1);
+                            ^~~
+./util/avi/avilib.c:907:26: note: directive argument in the range [-2147483647, 2147483647]
+    sprintf((char *)astr, "0%1dwb", AVI->aptr+1);
+                          ^~~~~~~~
+./util/avi/avilib.c:907:4: note: ‘sprintf’ output between 5 and 15 bytes into a destination of size 5
+    sprintf((char *)astr, "0%1dwb", AVI->aptr+1);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nvcc	 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 ./util/avi/avimod.c \
+	-I./util/avi \
+	-c \
+	-o ./util/avi/avimod.o 
+nvcc	 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 ./util/file/file.c \
+	-I./util/file \
+	-I./util/timer \
+	-c \
+	-o ./util/file/file.o 
+nvcc	 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 ./util/timer/timer.c \
+	-I./util/timer \
+	-c \
+	-o ./util/timer/timer.o 
+nvcc	 -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 ./main.o \
+	./kernel/kernel.o \
+	./util/avi/avilib.o \
+	./util/avi/avimod.o \
+	./util/file/file.o \
+	./util/timer/timer.o \
+	-lm -o heartwall

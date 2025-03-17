@@ -1,0 +1,7 @@
+clang++ -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx908 -DVERIFY -D__STRICT_ANSI__ -DVERIFY -D__STRICT_ANSI__ -DVERIFY -D__STRICT_ANSI__ -DVERIFY -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c ../fluidSim-cuda/main.cpp -o main.o
+In file included from ../fluidSim-cuda/main.cpp:3:
+../fluidSim-cuda/utils.h:7:10: fatal error: 'cuda.h' file not found
+    7 | #include <cuda.h>
+      |          ^~~~~~~~
+1 error generated.
+make: *** [Makefile:63: main.o] Error 1

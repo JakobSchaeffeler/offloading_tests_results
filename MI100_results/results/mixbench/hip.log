@@ -1,0 +1,35 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+main.cu:66:5: error: cannot initialize a parameter of type 'hipStream_t' (aka 'ihipStream_t *') with an lvalue of type 'float *'
+    hipLaunchKernelGGL(benchmark_func, grid_dim, 0, 0, d_cd, block_dim, i);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:251:46: note: expanded from macro 'hipLaunchKernelGGL'
+#define hipLaunchKernelGGL(kernelName, ...)  hipLaunchKernelGGLInternal((kernelName), __VA_ARGS__)
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:248:64: note: expanded from macro 'hipLaunchKernelGGLInternal'
+        kernelName<<<(numBlocks), (numThreads), (memPerBlock), (streamId)>>>(__VA_ARGS__);         \
+                                                               ^~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:4940:51: note: passing argument to parameter 'stream' here
+                                      hipStream_t stream __dparm(0));
+                                                  ^
+main.cu:73:5: error: cannot initialize a parameter of type 'hipStream_t' (aka 'ihipStream_t *') with an lvalue of type 'float *'
+    hipLaunchKernelGGL(benchmark_func, grid_dim, 0, 0, d_cd, block_dim, i);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:251:46: note: expanded from macro 'hipLaunchKernelGGL'
+#define hipLaunchKernelGGL(kernelName, ...)  hipLaunchKernelGGLInternal((kernelName), __VA_ARGS__)
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/amd_detail/amd_hip_runtime.h:248:64: note: expanded from macro 'hipLaunchKernelGGLInternal'
+        kernelName<<<(numBlocks), (numThreads), (memPerBlock), (streamId)>>>(__VA_ARGS__);         \
+                                                               ^~~~~~~~~~
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:4940:51: note: passing argument to parameter 'stream' here
+                                      hipStream_t stream __dparm(0));
+                                                  ^
+2 errors generated when compiling for gfx908.
+make: *** [Makefile:50: main.o] Error 1

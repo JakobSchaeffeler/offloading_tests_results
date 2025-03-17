@@ -1,0 +1,39 @@
+,omp 100 omp offloading kernel,sycl 100 sycl kernel,hip 100 hip_kernel
+Runtime,6953233613.0,7709964300.0,7910480101.0
+SALU Instructions per wave,19256.57,29129.46,32690.21
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.22,0.32,0.35
+L1 Requests per wave,763682.32,763026.11,764301.72
+L1 Hit Rate,41.11,41.13,41.19
+L2 Requests per wave,57552.1,57531.28,57776.7
+L2 Hit Rate,79.31,12.98,12.9
+Wavefront Occupancy (% of peak),462.33,1745.14,1743.87
+Dependency Wait Cycles per wave,2249438.1,9578166.84,9651323.58
+Issue Wait Cycles per wave,144789.94,2139784.62,2176818.07
+Grid Size,1000192.0,1000192.0,1000192.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,0.0,0.0,0.0
+Shared Memory Instructions per wave,29.87,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,-3.12
+Register Spill Instructions per wave,18107.39,18071.62,18127.56
+Global Memory Instructions per wave,29.87,27.87,33.87
+Global Memory Read Instructions per wave,24.87,22.87,28.87
+Global Memory Write Instructions per wave,5.0,5.0,5.0
+Coalesced Instructions (% of peak),38.0,37.95,38.02
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,672861.83,2574271.86,2582347.58
+Global Write/Atomic Bytes per wave,320739.86,760341.46,785493.13
+SALU Instructions,300941675.96,455235200.88,510882601.88
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,11934827296.96,11924572047.08,11944507280.16
+L2 Requests,899424218.8,899098843.84,902934267.5999999
+Dependency Wait Cycles,35154218626.8,149687591375.52,150830884908.24
+Issue Wait Cycles,2262777182.32,33440554041.36,34019312797.96
+Shared Memory Instructions,466808.36000000004,0.0,0.0
+Register Spill Instructions,282982290.92,282423277.35999995,283297507.68
+Global Memory Instructions,466808.36000000004,435552.36000000004,529320.36
+Global Memory Read Instructions,388668.36000000004,357412.36000000004,451180.36000000004
+Global Memory Write Instructions,78140.0,78140.0,78140.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,10515484679.24,40230720628.079994,40356927980.24
+Global Write/Atomic Bytes,5012522532.08,11882616336.88,12275686635.64

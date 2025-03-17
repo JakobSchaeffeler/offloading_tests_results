@@ -1,0 +1,64 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:6:
+./kernels.h:1:22: error: unknown type name 'float3'; did you mean 'float'?
+    1 | inline uint rgbToyuv(float3 rgba)
+      |                      ^~~~~~
+      |                      float
+./kernels.h:3:3: error: use of undeclared identifier 'float3'; did you mean 'float'?
+    3 |   float3 yuv;
+      |   ^~~~~~
+      |   float
+./kernels.h:4:6: error: member reference base type 'float' is not a structure or union
+    4 |   yuv.x() = 0.299f*rgba.x() + 0.587f*rgba.y()+0.114f*rgba.z();
+      |   ~~~^~
+./kernels.h:4:24: error: member reference base type 'float' is not a structure or union
+    4 |   yuv.x() = 0.299f*rgba.x() + 0.587f*rgba.y()+0.114f*rgba.z();
+      |                    ~~~~^~
+./kernels.h:4:42: error: member reference base type 'float' is not a structure or union
+    4 |   yuv.x() = 0.299f*rgba.x() + 0.587f*rgba.y()+0.114f*rgba.z();
+      |                                      ~~~~^~
+./kernels.h:4:58: error: member reference base type 'float' is not a structure or union
+    4 |   yuv.x() = 0.299f*rgba.x() + 0.587f*rgba.y()+0.114f*rgba.z();
+      |                                                      ~~~~^~
+./kernels.h:5:6: error: member reference base type 'float' is not a structure or union
+    5 |   yuv.y() = 0.713f*(rgba.x() - yuv.x()) + 0.5f;
+      |   ~~~^~
+./kernels.h:5:25: error: member reference base type 'float' is not a structure or union
+    5 |   yuv.y() = 0.713f*(rgba.x() - yuv.x()) + 0.5f;
+      |                     ~~~~^~
+./kernels.h:5:35: error: member reference base type 'float' is not a structure or union
+    5 |   yuv.y() = 0.713f*(rgba.x() - yuv.x()) + 0.5f;
+      |                                ~~~^~
+./kernels.h:6:6: error: member reference base type 'float' is not a structure or union
+    6 |   yuv.z() = 0.564f*(rgba.z() - yuv.x()) + 0.5f;
+      |   ~~~^~
+./kernels.h:6:25: error: member reference base type 'float' is not a structure or union
+    6 |   yuv.z() = 0.564f*(rgba.z() - yuv.x()) + 0.5f;
+      |                     ~~~~^~
+./kernels.h:6:35: error: member reference base type 'float' is not a structure or union
+    6 |   yuv.z() = 0.564f*(rgba.z() - yuv.x()) + 0.5f;
+      |                                ~~~^~
+./kernels.h:7:6: error: member reference base type 'float' is not a structure or union
+    7 |   yuv.x() = sycl::clamp(yuv.x(), 0.f, 1.f);
+      |   ~~~^~
+./kernels.h:7:28: error: member reference base type 'float' is not a structure or union
+    7 |   yuv.x() = sycl::clamp(yuv.x(), 0.f, 1.f);
+      |                         ~~~^~
+./kernels.h:8:6: error: member reference base type 'float' is not a structure or union
+    8 |   yuv.y() = sycl::clamp(yuv.y(), 0.f, 1.f);
+      |   ~~~^~
+./kernels.h:8:28: error: member reference base type 'float' is not a structure or union
+    8 |   yuv.y() = sycl::clamp(yuv.y(), 0.f, 1.f);
+      |                         ~~~^~
+./kernels.h:9:6: error: member reference base type 'float' is not a structure or union
+    9 |   yuv.z() = sycl::clamp(yuv.z(), 0.f, 1.f);
+      |   ~~~^~
+./kernels.h:9:28: error: member reference base type 'float' is not a structure or union
+    9 |   yuv.z() = sycl::clamp(yuv.z(), 0.f, 1.f);
+      |                         ~~~^~
+./kernels.h:10:37: error: member reference base type 'float' is not a structure or union
+   10 |   return (uint(255)<<24) | (uint(yuv.z()*255.f) << 16) | (uint(yuv.y()*255.f) << 8) | uint(yuv.x()*255.f);
+      |                                  ~~~^~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile:71: main.o] Error 1

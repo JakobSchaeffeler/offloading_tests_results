@@ -1,0 +1,6 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -DCUDNN_CONV -O3 -c main.cu -o main.o
+main.cu:22:10: fatal error: cudnn.h: No such file or directory
+ #include <cudnn.h>
+          ^~~~~~~~~
+compilation terminated.
+make: *** [Makefile:57: main.o] Error 1

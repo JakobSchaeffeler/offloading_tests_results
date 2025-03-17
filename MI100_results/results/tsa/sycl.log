@@ -1,0 +1,80 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../tsa-cuda -I../tsa-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:8:
+./kernels.h:62:9: warning: 'multi_ptr<float[96][16], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   62 |   sycl::multi_ptr<T[BLOCK_Y][BLOCK_X], sycl::access::address_space::local_space> im_ptr =
+      |         ^
+main.cpp:92:9: note: in instantiation of function template specialization 'tsa_kernel<float, 1, 16, 96, 3, 4, 16>' requested here
+   92 |         tsa_kernel<T, STEPS, BLOCK_X, BLOCK_Y, MARGIN_X, MARGIN_Y, STRIDE_Y>
+      |         ^
+main.cpp:150:3: note: in instantiation of function template specialization 'tsa<float>' requested here
+  150 |   tsa<float>(q, width, height, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[96][16], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:8:
+./kernels.h:62:9: warning: 'multi_ptr<double[32][16], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   62 |   sycl::multi_ptr<T[BLOCK_Y][BLOCK_X], sycl::access::address_space::local_space> im_ptr =
+      |         ^
+main.cpp:92:9: note: in instantiation of function template specialization 'tsa_kernel<double, 1, 16, 32, 3, 4, 16>' requested here
+   92 |         tsa_kernel<T, STEPS, BLOCK_X, BLOCK_Y, MARGIN_X, MARGIN_Y, STRIDE_Y>
+      |         ^
+main.cpp:155:3: note: in instantiation of function template specialization 'tsa<double>' requested here
+  155 |   tsa<double>(q, width, height, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<double[32][16], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+2 warnings generated.
+In file included from main.cpp:8:
+./kernels.h:62:9: warning: 'multi_ptr<float[96][16], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   62 |   sycl::multi_ptr<T[BLOCK_Y][BLOCK_X], sycl::access::address_space::local_space> im_ptr =
+      |         ^
+main.cpp:92:9: note: in instantiation of function template specialization 'tsa_kernel<float, 1, 16, 96, 3, 4, 16>' requested here
+   92 |         tsa_kernel<T, STEPS, BLOCK_X, BLOCK_Y, MARGIN_X, MARGIN_Y, STRIDE_Y>
+      |         ^
+main.cpp:150:3: note: in instantiation of function template specialization 'tsa<float>' requested here
+  150 |   tsa<float>(q, width, height, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<float[96][16], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:8:
+./kernels.h:62:9: warning: 'multi_ptr<double[32][16], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   62 |   sycl::multi_ptr<T[BLOCK_Y][BLOCK_X], sycl::access::address_space::local_space> im_ptr =
+      |         ^
+main.cpp:92:9: note: in instantiation of function template specialization 'tsa_kernel<double, 1, 16, 32, 3, 4, 16>' requested here
+   92 |         tsa_kernel<T, STEPS, BLOCK_X, BLOCK_Y, MARGIN_X, MARGIN_Y, STRIDE_Y>
+      |         ^
+main.cpp:155:3: note: in instantiation of function template specialization 'tsa<double>' requested here
+  155 |   tsa<double>(q, width, height, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<double[32][16], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+2 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../tsa-cuda -I../tsa-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 

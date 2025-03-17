@@ -1,0 +1,202 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c csr_matrix.cpp -o csr_matrix.o
+csr_matrix.cpp:423:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  423 |    hypre_assert( num_rows == hypre_CSRMatrixNumRows(B) );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:133:1: note: expanded from here
+  133 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:424:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  424 |    if ( col_map_offd_B ) hypre_assert( col_map_offd_A );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:136:1: note: expanded from here
+  136 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:425:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  425 |    if ( col_map_offd_A ) hypre_assert( col_map_offd_B );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:139:1: note: expanded from here
+  139 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:547:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  547 |    hypre_assert( mc == num_nonzeros );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:142:1: note: expanded from here
+  142 | "csr_matrix.cpp"
+      | ^
+4 warnings generated.
+csr_matrix.cpp:423:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  423 |    hypre_assert( num_rows == hypre_CSRMatrixNumRows(B) );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:149:1: note: expanded from here
+  149 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:424:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  424 |    if ( col_map_offd_B ) hypre_assert( col_map_offd_A );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:152:1: note: expanded from here
+  152 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:425:26: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  425 |    if ( col_map_offd_A ) hypre_assert( col_map_offd_B );
+      |                          ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:155:1: note: expanded from here
+  155 | "csr_matrix.cpp"
+      | ^
+csr_matrix.cpp:547:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  547 |    hypre_assert( mc == num_nonzeros );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:158:1: note: expanded from here
+  158 | "csr_matrix.cpp"
+      | ^
+4 warnings generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c csr_matvec.cpp -o csr_matvec.o
+csr_matvec.cpp:94:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   94 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:148:1: note: expanded from here
+  148 | "csr_matvec.cpp"
+      | ^
+csr_matvec.cpp:263:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  263 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:151:1: note: expanded from here
+  151 | "csr_matvec.cpp"
+      | ^
+2 warnings generated.
+csr_matvec.cpp:94:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   94 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:164:1: note: expanded from here
+  164 | "csr_matvec.cpp"
+      | ^
+csr_matvec.cpp:263:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  263 |     hypre_assert( num_vectors == hypre_VectorNumVectors(y) );
+      |     ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:167:1: note: expanded from here
+  167 | "csr_matvec.cpp"
+      | ^
+2 warnings generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c hypre_error.cpp -o hypre_error.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c hypre_memory.cpp -o hypre_memory.o
+hypre_memory.cpp:78:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   78 |    hypre_error(HYPRE_ERROR_MEMORY);
+      |    ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:45:1: note: expanded from here
+   45 | "hypre_memory.cpp"
+      | ^
+1 warning generated.
+hypre_memory.cpp:78:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   78 |    hypre_error(HYPRE_ERROR_MEMORY);
+      |    ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:51:1: note: expanded from here
+   51 | "hypre_memory.cpp"
+      | ^
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c laplace.cpp -o laplace.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c vector.cpp -o vector.o
+vector.cpp:177:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  177 |    hypre_assert( hypre_VectorNumVectors(vector) == 1 );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:134:1: note: expanded from here
+  134 | "vector.cpp"
+      | ^
+1 warning generated.
+vector.cpp:177:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  177 |    hypre_assert( hypre_VectorNumVectors(vector) == 1 );
+      |    ^
+./utilities.h:353:88: note: expanded from macro 'hypre_assert'
+  353 | #define hypre_assert(EX) if (!(EX)) {fprintf(stderr,"hypre_assert failed: %s\n", #EX); hypre_error(1);}
+      |                                                                                        ^
+./utilities.h:348:48: note: expanded from macro 'hypre_error'
+  348 | #define hypre_error(IERR)  hypre_error_handler(__FILE__, __LINE__, IERR)
+      |                                                ^
+<scratch space>:150:1: note: expanded from here
+  150 | "vector.cpp"
+      | ^
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 csr_matrix.o csr_matvec.o hypre_error.o hypre_memory.o laplace.o main.o vector.o -o omp 

@@ -1,0 +1,5 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c sobol.cpp -o sobol.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c sobol_gold.cpp -o sobol_gold.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c sobol_gpu.cpp -o sobol_gpu.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  -c sobol_primitives.cpp -o sobol_primitives.o
+clang++ -fopenmp -fopenmp-targets=nvptx64  sobol.o sobol_gold.o sobol_gpu.o sobol_primitives.o -o omp 

@@ -1,0 +1,4 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c nfautil.cu -o nfautil.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c regex.cu -o regex.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o nfautil.o regex.o -o cuda 

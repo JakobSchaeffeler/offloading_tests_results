@@ -1,0 +1,6 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -dc main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -dc cosine.cu -o cosine.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -dc fresnel.cu -o fresnel.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -dc sine.cu -o sine.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math -dc xchebyshev.cu -o xchebyshev.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -use_fast_math main.o cosine.o fresnel.o sine.o xchebyshev.o -o cuda 

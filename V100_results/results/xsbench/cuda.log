@@ -1,0 +1,10 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c Main.cu -o Main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c Simulation.cu -o Simulation.o
+Simulation.cu:101: warning: ignoring #pragma omp parallel [-Wunknown-pragmas]
+   #pragma omp parallel for
+ 
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c io.cu -o io.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c GridInit.cu -o GridInit.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c Materials.cu -o Materials.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c XSutils.cu -o XSutils.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 Main.o Simulation.o io.o GridInit.o Materials.o XSutils.o -o cuda -lm

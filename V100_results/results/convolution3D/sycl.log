@@ -1,0 +1,7 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DONEDNN_CONV -DUSE_GPU -DONEDNN_CONV -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:21:
+./onednn_utils.hpp:30:10: fatal error: 'dnnl.hpp' file not found
+   30 | #include "dnnl.hpp"
+      |          ^~~~~~~~~~
+1 error generated.
+make: *** [Makefile:77: main.o] Error 1

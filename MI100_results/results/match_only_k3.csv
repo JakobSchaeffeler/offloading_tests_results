@@ -1,0 +1,39 @@
+,omp 25 omp offloading kernel,sycl 25 sycl kernel,hip 25 hip_kernel
+Runtime,580890782.0,155925198.0,699609135.0
+SALU Instructions per wave,45125.18,29761.35,42108.79
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.51,0.2,0.36
+L1 Requests per wave,131208.0,131208.0,131208.0
+L1 Hit Rate,10.11,0.0,64.78
+L2 Requests per wave,29546.39,32806.47,11553.73
+L2 Hit Rate,99.59,98.32,98.94
+Wavefront Occupancy (% of peak),1331.95,255.47,1364.01
+Dependency Wait Cycles per wave,5496209.96,7355751.89,9764521.19
+Issue Wait Cycles per wave,3960727.72,486700.35,2556915.71
+Grid Size,262144.0,16384.0,262144.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,17920.0,17920.0,17920.0
+Shared Memory Instructions per wave,150544.5,142344.07,109576.0
+Shared Memory Bank Conflicts (%),1.53,1.58,1.58
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,8200.5,8200.5,8200.5
+Global Memory Read Instructions per wave,8200.0,8200.0,8200.0
+Global Memory Write Instructions per wave,0.5,0.5,0.5
+Coalesced Instructions (% of peak),100.0,100.0,100.0
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,7677.87,35169.81,7803.08
+Global Write/Atomic Bytes per wave,32.0,1.28,31.62
+SALU Instructions,184832737.28,7618905.6,172477603.84
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,537427968.0,33589248.0,537427968.0
+L2 Requests,121022013.44,8398456.32,47324078.08
+Dependency Wait Cycles,22512475996.16,1883072483.84,39995478794.24
+Issue Wait Cycles,16223140741.12,124595289.6,10473126748.16
+Shared Memory Instructions,616630272.0,36440081.92,448823296.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,33589248.0,2099328.0,33589248.0
+Global Memory Read Instructions,33587200.0,2099200.0,33587200.0
+Global Memory Write Instructions,2048.0,128.0,2048.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,31448555.52,9003471.36,31961415.68
+Global Write/Atomic Bytes,131072.0,327.68,129515.52

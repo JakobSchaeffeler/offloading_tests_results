@@ -1,0 +1,114 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../backprop-cuda -I../backprop-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c backprop.cpp -o backprop.o
+backprop.cpp:98:31: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   98 |      w[i][j] = (float) rand()/RAND_MAX;
+      |                              ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+backprop.cpp:98:31: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   98 |      w[i][j] = (float) rand()/RAND_MAX;
+      |                              ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../backprop-cuda -I../backprop-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c facetrain.cpp -o facetrain.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../backprop-cuda -I../backprop-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c imagenet.cpp -o imagenet.o
+imagenet.cpp:20:30: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   20 |           units[k] = (float) rand()/RAND_MAX ;
+      |                                    ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+imagenet.cpp:20:30: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   20 |           units[k] = (float) rand()/RAND_MAX ;
+      |                                    ~^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:38:36: note: used here
+   38 | __DEVICE__ void __brkpt(int __a) { __brkpt(); }
+      |                                    ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1189:22: note: used here
+ 1189 |   return __bool2mask(__vseteq2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1189:10: note: used here
+ 1189 |   return __bool2mask(__vseteq2(__a, __b), 16);
+      |          ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1199:22: note: used here
+ 1199 |   return __bool2mask(__vseteq4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1209:22: note: used here
+ 1209 |   return __bool2mask(__vsetges2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1219:22: note: used here
+ 1219 |   return __bool2mask(__vsetges4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1229:22: note: used here
+ 1229 |   return __bool2mask(__vsetgeu2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1239:22: note: used here
+ 1239 |   return __bool2mask(__vsetgeu4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1249:22: note: used here
+ 1249 |   return __bool2mask(__vsetgts2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1259:22: note: used here
+ 1259 |   return __bool2mask(__vsetgts4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1269:22: note: used here
+ 1269 |   return __bool2mask(__vsetgtu2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1279:22: note: used here
+ 1279 |   return __bool2mask(__vsetgtu4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1289:22: note: used here
+ 1289 |   return __bool2mask(__vsetles2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1299:22: note: used here
+ 1299 |   return __bool2mask(__vsetles4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1309:22: note: used here
+ 1309 |   return __bool2mask(__vsetleu2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1319:22: note: used here
+ 1319 |   return __bool2mask(__vsetleu4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1329:22: note: used here
+ 1329 |   return __bool2mask(__vsetlts2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1339:22: note: used here
+ 1339 |   return __bool2mask(__vsetlts4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1349:22: note: used here
+ 1349 |   return __bool2mask(__vsetltu2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1359:22: note: used here
+ 1359 |   return __bool2mask(__vsetltu4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1369:22: note: used here
+ 1369 |   return __bool2mask(__vsetne2(__a, __b), 16);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1379:22: note: used here
+ 1379 |   return __bool2mask(__vsetne4(__a, __b), 8);
+      |                      ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1399:21: note: used here
+ 1399 |     unsigned mask = __vcmpgts2(__a, __b);
+      |                     ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1493:60: note: used here
+ 1493 | __DEVICE__ unsigned int __vneg2(unsigned int __a) { return __vsub2(0, __a); }
+      |                                                            ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1502:60: note: used here
+ 1502 | __DEVICE__ unsigned int __vneg4(unsigned int __a) { return __vsub4(0, __a); }
+      |                                                            ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1511:10: note: used here
+ 1511 |   return __vsubss2(0, __a);
+      |          ^
+/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-8.5.0/llvm-19.1.3-4mftqt7vkxakldplvrx7g4f6fyqtqib4/lib/clang/19/include/__clang_cuda_device_functions.h:1521:10: note: used here
+ 1521 |   return __vsubss4(0, __a);
+      |          ^
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../backprop-cuda -I../backprop-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -I../backprop-cuda -I../backprop-cuda -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 backprop.o facetrain.o imagenet.o main.o -o omp 

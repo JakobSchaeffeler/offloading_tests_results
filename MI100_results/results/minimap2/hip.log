@@ -1,0 +1,42 @@
+Creating directories
+make[1]: Entering directory '/home/ga27mex2/master/rome2_tests/offloading_tests/HeCBench/src/minimap2-hip'
+Compiling: src/host_data_io.cpp -> build/host_data_io.o
+g++  -std=c++11 -Wall -Wextra -g -I include/ -I /usr/local/include -MP -MMD -c src/host_data_io.cpp -o build/host_data_io.o
+Compiling: src/host_kernel.cpp -> build/host_kernel.o
+g++  -std=c++11 -Wall -Wextra -g -I include/ -I /usr/local/include -MP -MMD -c src/host_kernel.cpp -o build/host_kernel.o
+Compiling: src/main.cpp -> build/main.o
+g++  -std=c++11 -Wall -Wextra -g -I include/ -I /usr/local/include -MP -MMD -c src/main.cpp -o build/main.o
+Compiling: src/memory_scheduler.cpp -> build/memory_scheduler.o
+g++  -std=c++11 -Wall -Wextra -g -I include/ -I /usr/local/include -MP -MMD -c src/memory_scheduler.cpp -o build/memory_scheduler.o
+Compiling: device/device_kernel.cu -> build/hip/device_kernel.o
+hipcc   -std=c++11 -g -O3  -I include/ -I /usr/local/include -c device/device_kernel.cu -o build/hip/device_kernel.o
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+Compiling: device/device_kernel_wrapper.cu -> build/hip/device_kernel_wrapper.o
+hipcc   -std=c++11 -g -O3  -I include/ -I /usr/local/include -c device/device_kernel_wrapper.cu -o build/hip/device_kernel_wrapper.o
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+Linking: build/bin/kernel
+hipcc  build/host_data_io.o build/host_kernel.o build/main.o build/memory_scheduler.o build/hip/device_kernel.o build/hip/device_kernel_wrapper.o -o build/bin/kernel
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm-5.4.3/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+Making symlink: kernel -> build/bin/kernel
+make[1]: Leaving directory '/home/ga27mex2/master/rome2_tests/offloading_tests/HeCBench/src/minimap2-hip'

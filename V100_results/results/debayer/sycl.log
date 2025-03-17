@@ -1,0 +1,804 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:8:
+./util.h:18:9: warning: 'assert' macro redefined [-Wmacro-redefined]
+   18 | #define assert(X)
+      |         ^
+/usr/include/assert.h:89:11: note: previous definition is here
+   89 | #  define assert(expr)                                                  \
+      |           ^
+In file included from main.cpp:9:
+./image.h:52:30: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   52 | INLINE uchar* image_line_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p, const uint r) {
+      |                              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:52:8: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   52 | INLINE uchar* image_line_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p, const uint r) {
+      |        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:59:31: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   59 | INLINE uchar* image_pixel_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p,
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:59:8: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   59 | INLINE uchar* image_pixel_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p,
+      |        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:67:28: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   67 | INLINE uchar* image_tex2D_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch,
+      |                            ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:67:8: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   67 | INLINE uchar* image_tex2D_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch,
+      |        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:100:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  100 | typedef PIXELT PixelT;
+      |         ^
+./image.h:86:16: note: expanded from macro 'PIXELT'
+   86 | #define PIXELT uchar
+      |                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:101:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  101 | typedef RGBPIXELBASET RGBPixelBaseT;
+      |         ^
+./image.h:90:23: note: expanded from macro 'RGBPIXELBASET'
+   90 | #define RGBPIXELBASET PIXELT
+      |                       ^
+./image.h:86:16: note: expanded from macro 'PIXELT'
+   86 | #define PIXELT uchar
+      |                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:6:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+    6 |   const uchar *__restrict input_image_p,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:8:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+    8 |         uchar *__restrict output_image_p,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:29:59: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   29 |     apron[apron_read_row * apron_cols + apron_read_col] = tex2D_at(PixelT, input_image, ag_r, ag_c);
+      |                                                           ^
+./image.h:118:40: note: expanded from macro 'tex2D_at'
+  118 | #define tex2D_at(type, basename, r, c) image_tex2D(type, PASTE_2(basename, _p), height, width, PASTE_2(basename, _pitch), (r), (c), ADDRESS_REFLECT_BORDER_EXCLUSIVE)
+      |                                        ^
+./image.h:75:30: note: expanded from macro 'image_tex2D'
+   75 |    *(PixelT *) image_tex2D_((uchar *)(im_p), (im_rows), (im_cols), (image_pitch), (r), (c), sizeof(PixelT), (sample_method)))
+      |                              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:103:27: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  103 |   const RGBPixelBaseT R = output_pixel_cast(
+      |                           ^
+./image.h:121:30: note: expanded from macro 'output_pixel_cast'
+  121 | #define output_pixel_cast(x) PASTE3(convert_,RGBPIXELBASET,_sat)((x))
+      |                              ^
+./util.h:47:26: note: expanded from macro 'PASTE3'
+   47 | #define PASTE3( a, b, c) PASTE_3( a, b, c)
+      |                          ^
+./util.h:46:27: note: expanded from macro 'PASTE_3'
+   46 | #define PASTE_3( a, b, c) a##b##c
+      |                           ^
+<scratch space>:54:1: note: expanded from here
+   54 | convert_uchar_sat
+      | ^
+./util.h:24:32: note: expanded from macro 'convert_uchar_sat'
+   24 | #define convert_uchar_sat(x) ((uchar) (x > 255 ? 255 : (x < 0 ? 0 : x)))
+      |                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:113:27: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  113 |   const RGBPixelBaseT B = output_pixel_cast(
+      |                           ^
+./image.h:121:30: note: expanded from macro 'output_pixel_cast'
+  121 | #define output_pixel_cast(x) PASTE3(convert_,RGBPIXELBASET,_sat)((x))
+      |                              ^
+./util.h:47:26: note: expanded from macro 'PASTE3'
+   47 | #define PASTE3( a, b, c) PASTE_3( a, b, c)
+      |                          ^
+./util.h:46:27: note: expanded from macro 'PASTE_3'
+   46 | #define PASTE_3( a, b, c) a##b##c
+      |                           ^
+<scratch space>:56:1: note: expanded from here
+   56 | convert_uchar_sat
+      | ^
+./util.h:24:32: note: expanded from macro 'convert_uchar_sat'
+   24 | #define convert_uchar_sat(x) ((uchar) (x > 255 ? 255 : (x < 0 ? 0 : x)))
+      |                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:122:27: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  122 |   const RGBPixelBaseT G = output_pixel_cast(Fij * is_green_pixel + G_at_red_or_blue * (!is_green_pixel));
+      |                           ^
+./image.h:121:30: note: expanded from macro 'output_pixel_cast'
+  121 | #define output_pixel_cast(x) PASTE3(convert_,RGBPIXELBASET,_sat)((x))
+      |                              ^
+./util.h:47:26: note: expanded from macro 'PASTE3'
+   47 | #define PASTE3( a, b, c) PASTE_3( a, b, c)
+      |                          ^
+./util.h:46:27: note: expanded from macro 'PASTE_3'
+   46 | #define PASTE_3( a, b, c) a##b##c
+      |                           ^
+<scratch space>:58:1: note: expanded from here
+   58 | convert_uchar_sat
+      | ^
+./util.h:24:32: note: expanded from macro 'convert_uchar_sat'
+   24 | #define convert_uchar_sat(x) ((uchar) (x > 255 ? 255 : (x < 0 ? 0 : x)))
+      |                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:136:5: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  136 |     pixel_at(RGBPixelT, output_image, g_r, g_c) = output;
+      |     ^
+./image.h:117:40: note: expanded from macro 'pixel_at'
+  117 | #define pixel_at(type, basename, r, c) image_pixel_at(type, PASTE_2(basename, _p), height, width, PASTE_2(basename, _pitch), (r), (c))
+      |                                        ^
+./image.h:65:106: note: expanded from macro 'image_pixel_at'
+   65 | #define image_pixel_at(PixelT, im_p, im_rows, im_cols, image_pitch, r, c) (*((PixelT *) image_pixel_at_((uchar *)(im_p), (im_rows), (im_cols), (image_pitch), (r), (c), sizeof(PixelT))))
+      |                                                                                                          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:26:48: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   26 |   const int input_image_size = numPix * sizeof(uchar);
+      |                                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:27:53: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   27 |   const int output_image_size = numPix * 4 * sizeof(uchar);
+      |                                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   29 |   uchar *input = (uchar*) malloc (input_image_size);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:19: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   29 |   uchar *input = (uchar*) malloc (input_image_size);
+      |                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:30:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   30 |   uchar *output = (uchar*) malloc (output_image_size);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:30:20: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   30 |   uchar *output = (uchar*) malloc (output_image_size);
+      |                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:47:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   47 |   uchar *d_input = malloc_device<uchar>(numPix, q);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:47:34: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   47 |   uchar *d_input = malloc_device<uchar>(numPix, q);
+      |                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:50:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   50 |   uchar *d_output = malloc_device<uchar>(numPix * 4, q);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:50:35: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   50 |   uchar *d_output = malloc_device<uchar>(numPix * 4, q);
+      |                                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:68:23: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   68 |           item, apron.get_pointer(), height, width, 
+      |                       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+27 warnings generated.
+In file included from main.cpp:8:
+./util.h:18:9: warning: 'assert' macro redefined [-Wmacro-redefined]
+   18 | #define assert(X)
+      |         ^
+/usr/include/assert.h:89:11: note: previous definition is here
+   89 | #  define assert(expr)                                                  \
+      |           ^
+In file included from main.cpp:9:
+./image.h:52:30: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   52 | INLINE uchar* image_line_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p, const uint r) {
+      |                              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:52:8: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   52 | INLINE uchar* image_line_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p, const uint r) {
+      |        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:59:31: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   59 | INLINE uchar* image_pixel_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p,
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:59:8: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   59 | INLINE uchar* image_pixel_at_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch_p,
+      |        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:67:28: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   67 | INLINE uchar* image_tex2D_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch,
+      |                            ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:67:8: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   67 | INLINE uchar* image_tex2D_(uchar *im_p, const uint im_rows, const uint im_cols, const uint image_pitch,
+      |        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:100:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  100 | typedef PIXELT PixelT;
+      |         ^
+./image.h:86:16: note: expanded from macro 'PIXELT'
+   86 | #define PIXELT uchar
+      |                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:9:
+./image.h:101:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  101 | typedef RGBPIXELBASET RGBPixelBaseT;
+      |         ^
+./image.h:90:23: note: expanded from macro 'RGBPIXELBASET'
+   90 | #define RGBPIXELBASET PIXELT
+      |                       ^
+./image.h:86:16: note: expanded from macro 'PIXELT'
+   86 | #define PIXELT uchar
+      |                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:6:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+    6 |   const uchar *__restrict input_image_p,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:8:9: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+    8 |         uchar *__restrict output_image_p,
+      |         ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:29:59: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   29 |     apron[apron_read_row * apron_cols + apron_read_col] = tex2D_at(PixelT, input_image, ag_r, ag_c);
+      |                                                           ^
+./image.h:118:40: note: expanded from macro 'tex2D_at'
+  118 | #define tex2D_at(type, basename, r, c) image_tex2D(type, PASTE_2(basename, _p), height, width, PASTE_2(basename, _pitch), (r), (c), ADDRESS_REFLECT_BORDER_EXCLUSIVE)
+      |                                        ^
+./image.h:75:30: note: expanded from macro 'image_tex2D'
+   75 |    *(PixelT *) image_tex2D_((uchar *)(im_p), (im_rows), (im_cols), (image_pitch), (r), (c), sizeof(PixelT), (sample_method)))
+      |                              ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:103:27: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  103 |   const RGBPixelBaseT R = output_pixel_cast(
+      |                           ^
+./image.h:121:30: note: expanded from macro 'output_pixel_cast'
+  121 | #define output_pixel_cast(x) PASTE3(convert_,RGBPIXELBASET,_sat)((x))
+      |                              ^
+./util.h:47:26: note: expanded from macro 'PASTE3'
+   47 | #define PASTE3( a, b, c) PASTE_3( a, b, c)
+      |                          ^
+./util.h:46:27: note: expanded from macro 'PASTE_3'
+   46 | #define PASTE_3( a, b, c) a##b##c
+      |                           ^
+<scratch space>:756:1: note: expanded from here
+  756 | convert_uchar_sat
+      | ^
+./util.h:24:32: note: expanded from macro 'convert_uchar_sat'
+   24 | #define convert_uchar_sat(x) ((uchar) (x > 255 ? 255 : (x < 0 ? 0 : x)))
+      |                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:113:27: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  113 |   const RGBPixelBaseT B = output_pixel_cast(
+      |                           ^
+./image.h:121:30: note: expanded from macro 'output_pixel_cast'
+  121 | #define output_pixel_cast(x) PASTE3(convert_,RGBPIXELBASET,_sat)((x))
+      |                              ^
+./util.h:47:26: note: expanded from macro 'PASTE3'
+   47 | #define PASTE3( a, b, c) PASTE_3( a, b, c)
+      |                          ^
+./util.h:46:27: note: expanded from macro 'PASTE_3'
+   46 | #define PASTE_3( a, b, c) a##b##c
+      |                           ^
+<scratch space>:758:1: note: expanded from here
+  758 | convert_uchar_sat
+      | ^
+./util.h:24:32: note: expanded from macro 'convert_uchar_sat'
+   24 | #define convert_uchar_sat(x) ((uchar) (x > 255 ? 255 : (x < 0 ? 0 : x)))
+      |                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:122:27: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  122 |   const RGBPixelBaseT G = output_pixel_cast(Fij * is_green_pixel + G_at_red_or_blue * (!is_green_pixel));
+      |                           ^
+./image.h:121:30: note: expanded from macro 'output_pixel_cast'
+  121 | #define output_pixel_cast(x) PASTE3(convert_,RGBPIXELBASET,_sat)((x))
+      |                              ^
+./util.h:47:26: note: expanded from macro 'PASTE3'
+   47 | #define PASTE3( a, b, c) PASTE_3( a, b, c)
+      |                          ^
+./util.h:46:27: note: expanded from macro 'PASTE_3'
+   46 | #define PASTE_3( a, b, c) a##b##c
+      |                           ^
+<scratch space>:760:1: note: expanded from here
+  760 | convert_uchar_sat
+      | ^
+./util.h:24:32: note: expanded from macro 'convert_uchar_sat'
+   24 | #define convert_uchar_sat(x) ((uchar) (x > 255 ? 255 : (x < 0 ? 0 : x)))
+      |                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:10:
+./kernel.h:136:5: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+  136 |     pixel_at(RGBPixelT, output_image, g_r, g_c) = output;
+      |     ^
+./image.h:117:40: note: expanded from macro 'pixel_at'
+  117 | #define pixel_at(type, basename, r, c) image_pixel_at(type, PASTE_2(basename, _p), height, width, PASTE_2(basename, _pitch), (r), (c))
+      |                                        ^
+./image.h:65:106: note: expanded from macro 'image_pixel_at'
+   65 | #define image_pixel_at(PixelT, im_p, im_rows, im_cols, image_pitch, r, c) (*((PixelT *) image_pixel_at_((uchar *)(im_p), (im_rows), (im_cols), (image_pitch), (r), (c), sizeof(PixelT))))
+      |                                                                                                          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:26:48: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   26 |   const int input_image_size = numPix * sizeof(uchar);
+      |                                                ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:27:53: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   27 |   const int output_image_size = numPix * 4 * sizeof(uchar);
+      |                                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   29 |   uchar *input = (uchar*) malloc (input_image_size);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:29:19: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   29 |   uchar *input = (uchar*) malloc (input_image_size);
+      |                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:30:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   30 |   uchar *output = (uchar*) malloc (output_image_size);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:30:20: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   30 |   uchar *output = (uchar*) malloc (output_image_size);
+      |                    ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:47:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   47 |   uchar *d_input = malloc_device<uchar>(numPix, q);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:47:34: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   47 |   uchar *d_input = malloc_device<uchar>(numPix, q);
+      |                                  ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:50:3: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   50 |   uchar *d_output = malloc_device<uchar>(numPix * 4, q);
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:50:35: warning: 'uchar' is deprecated [-Wdeprecated-declarations]
+   50 |   uchar *d_output = malloc_device<uchar>(numPix * 4, q);
+      |                                   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/aliases.hpp:95:13: note: 'uchar' has been explicitly marked deprecated here
+   95 | using uchar __SYCL2020_DEPRECATED("") = unsigned char;
+      |             ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:68:23: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+   68 |           item, apron.get_pointer(), height, width, 
+      |                       ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+27 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 

@@ -1,0 +1,465 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -O3 -c main.cu -o main.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -O3 -c Option.cu -o Option.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -O3 -c OptionParser.cu -o OptionParser.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -O3 -c S3D.cu -o S3D.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+In file included from S3D.cu:10:
+./ratt.h:14:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real ALOGT = LOG(TEMP);
+          ^~~~~~~~~
+./ratt.h:15:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real TI = (real)1.0e0/(TEMP);
+          ^~~~~~~~~
+./ratt.h:250:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real TN1 = TLOG - (real)1.0;
+          ^~~~~~~~~
+In file included from S3D.cu:11:
+./ratt2.h:18:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:23:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:110:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:115:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:202:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:206:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:293:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:298:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:386:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:390:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:476:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:480:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:567:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:571:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:658:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:662:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:764:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real TEMP = T[threadIdx.x + (blockIdx.x * blockDim.x)]*TCONV;
+          ^~~~~~~~~
+./ratt2.h:765:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real ALOGT = LOG(TEMP);
+          ^~~~~~~~~
+In file included from S3D.cu:12:
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC;
+    ^~~~~~~~~
+./ratx.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC;
+    ^~~~~~~~~
+./ratx.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC;
+    ^~~~~~~~~
+./ratx.h:18:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real SQR;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+In file included from S3D.cu:13:
+./qssa.h:11:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real DEN;
+    ^~~~~~~~~
+./qssa.h:134:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real DEN;
+    ^~~~~~~~~
+In file included from S3D.cu:14:
+./qssa2.h:12:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq4 = A(4,0);
+    ^~~~~~~~~
+./qssa2.h:13:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq3 = A(3,0) +A(3,4)*xq4;
+    ^~~~~~~~~
+./qssa2.h:14:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq7 = A(7,0) +A(7,4)*xq4 +A(7,3)*xq3;
+    ^~~~~~~~~
+./qssa2.h:15:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq2 = A(2,0) +A(2,4)*xq4 +A(2,3)*xq3 +A(2,7)*xq7;
+    ^~~~~~~~~
+./qssa2.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq1 = A(1,0) +A(1,4)*xq4 +A(1,3)*xq3 +A(1,7)*xq7 +A(1,2)*xq2;
+    ^~~~~~~~~
+./qssa2.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq8 = A(8,0) +A(8,4)*xq4 +A(8,3)*xq3;
+    ^~~~~~~~~
+./qssa2.h:18:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq6 = A(6,0) +A(6,3)*xq3 +A(6,7)*xq7 +A(6,2)*xq2;
+    ^~~~~~~~~
+./qssa2.h:19:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq9 = A(9,0) +A(9,4)*xq4 +A(9,7)*xq7;
+    ^~~~~~~~~
+./qssa2.h:20:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq5 = A(5,0) +A(5,3)*xq3;
+    ^~~~~~~~~
+./qssa2.h:21:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq10 = A(10,0) +A(10,8)*xq8;
+    ^~~~~~~~~
+S3D.cu:135:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_t,        n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:136:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_p,        n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:137:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_y, Y_SIZE*n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:138:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_wdot,WDOT_SIZE*n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:139:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_molwt,WDOT_SIZE*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+58 warnings generated when compiling for gfx908.
+In file included from S3D.cu:10:
+./ratt.h:14:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real ALOGT = LOG(TEMP);
+          ^~~~~~~~~
+./ratt.h:15:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real TI = (real)1.0e0/(TEMP);
+          ^~~~~~~~~
+./ratt.h:250:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real TN1 = TLOG - (real)1.0;
+          ^~~~~~~~~
+In file included from S3D.cu:11:
+./ratt2.h:18:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:23:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:110:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:115:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:202:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:206:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:293:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:298:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:386:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:390:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:476:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:480:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:567:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:571:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:658:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real SMALL_INV = (real)1e37;
+          ^~~~~~~~~
+./ratt2.h:662:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real rtemp_inv;
+    ^~~~~~~~~
+./ratt2.h:764:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real TEMP = T[threadIdx.x + (blockIdx.x * blockDim.x)]*TCONV;
+          ^~~~~~~~~
+./ratt2.h:765:11: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    const register real ALOGT = LOG(TEMP);
+          ^~~~~~~~~
+In file included from S3D.cu:12:
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC;
+    ^~~~~~~~~
+./ratx.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC;
+    ^~~~~~~~~
+./ratx.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC;
+    ^~~~~~~~~
+./ratx.h:18:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real SQR;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:216:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real PR, PCOR, PRLOG, FCENT, FCLOG, XN;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+./ratx.h:217:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real CPRLOG, FLOG, FC, SQR;
+    ^~~~~~~~~
+In file included from S3D.cu:13:
+./qssa.h:11:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real DEN;
+    ^~~~~~~~~
+./qssa.h:134:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real DEN;
+    ^~~~~~~~~
+In file included from S3D.cu:14:
+./qssa2.h:12:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq4 = A(4,0);
+    ^~~~~~~~~
+./qssa2.h:13:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq3 = A(3,0) +A(3,4)*xq4;
+    ^~~~~~~~~
+./qssa2.h:14:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq7 = A(7,0) +A(7,4)*xq4 +A(7,3)*xq3;
+    ^~~~~~~~~
+./qssa2.h:15:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq2 = A(2,0) +A(2,4)*xq4 +A(2,3)*xq3 +A(2,7)*xq7;
+    ^~~~~~~~~
+./qssa2.h:16:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq1 = A(1,0) +A(1,4)*xq4 +A(1,3)*xq3 +A(1,7)*xq7 +A(1,2)*xq2;
+    ^~~~~~~~~
+./qssa2.h:17:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq8 = A(8,0) +A(8,4)*xq4 +A(8,3)*xq3;
+    ^~~~~~~~~
+./qssa2.h:18:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq6 = A(6,0) +A(6,3)*xq3 +A(6,7)*xq7 +A(6,2)*xq2;
+    ^~~~~~~~~
+./qssa2.h:19:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq9 = A(9,0) +A(9,4)*xq4 +A(9,7)*xq7;
+    ^~~~~~~~~
+./qssa2.h:20:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq5 = A(5,0) +A(5,3)*xq3;
+    ^~~~~~~~~
+./qssa2.h:21:5: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+    register real xq10 = A(10,0) +A(10,8)*xq8;
+    ^~~~~~~~~
+S3D.cu:135:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_t,        n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:136:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_p,        n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:137:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_y, Y_SIZE*n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:138:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_wdot,WDOT_SIZE*n*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+S3D.cu:139:18: warning: 'hipMallocHost' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  CUDA_SAFE_CALL(hipMallocHost((void**)&host_molwt,WDOT_SIZE*sizeof(real)));
+                 ^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:2682:1: note: 'hipMallocHost' has been explicitly marked deprecated here
+DEPRECATED("use hipHostMalloc instead")
+^
+/opt/rocm-5.4.3/include/hip/hip_runtime_api.h:487:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+58 warnings generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -O3 -O3 -O3 -O3 -O3 main.o Option.o OptionParser.o S3D.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

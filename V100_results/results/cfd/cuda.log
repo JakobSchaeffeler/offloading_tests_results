@@ -1,0 +1,11 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -DOUTPUT -c euler3d.cu -o euler3d.o
+euler3d.cu:44:2: warning: #warning "the kernels may fail too launch on some systems if the block length is too large" [-Wcpp]
+ #warning "the kernels may fail too launch on some systems if the block length is too large"
+  ^~~~~~~
+euler3d.cu:44:2: warning: #warning "the kernels may fail too launch on some systems if the block length is too large" [-Wcpp]
+ #warning "the kernels may fail too launch on some systems if the block length is too large"
+  ^~~~~~~
+util.h:97: warning: ignoring #pragma omp parallel [-Wunknown-pragmas]
+ #pragma omp parallel for
+ 
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -DOUTPUT euler3d.o -o cuda 

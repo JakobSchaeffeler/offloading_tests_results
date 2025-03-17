@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../bfs-sycl -O3 -c bfs.cu -o bfs.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../bfs-sycl -O3 bfs.o -o cuda 

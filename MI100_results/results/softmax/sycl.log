@@ -1,0 +1,12 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:17:17: error: use of undeclared identifier 'expf'
+   17 |       float e = expf(src[i * sliceSize + j] - max_);
+      |                 ^
+main.cpp:72:39: warning: attribute argument 32 is invalid and will be ignored; amdgcn requires sub_group size 64 [-Wincorrect-sub-group-size]
+   72 |           [[sycl::reqd_sub_group_size(32)]] {
+      |                                       ^
+main.cpp:137:9: error: use of undeclared identifier 'fabsf'
+  137 |     if (fabsf(output_cpu[i] - output_gpu[i]) > 1e-3) {
+      |         ^
+1 warning and 2 errors generated.
+make: *** [Makefile:71: main.o] Error 1

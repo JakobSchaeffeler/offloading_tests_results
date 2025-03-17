@@ -1,0 +1,2848 @@
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_blosum45.c -o ../diamond-sycl/src/blast/sm_blosum45.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_blosum50.c -o ../diamond-sycl/src/blast/sm_blosum50.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_blosum62.c -o ../diamond-sycl/src/blast/sm_blosum62.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_blosum80.c -o ../diamond-sycl/src/blast/sm_blosum80.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_blosum90.c -o ../diamond-sycl/src/blast/sm_blosum90.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_pam30.c -o ../diamond-sycl/src/blast/sm_pam30.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_pam70.c -o ../diamond-sycl/src/blast/sm_pam70.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/sm_pam250.c -o ../diamond-sycl/src/blast/sm_pam250.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/run/main.cpp -o ../diamond-sycl/src/run/main.o
+In file included from ../diamond-sycl/src/run/../extra/compare.h:23,
+                 from ../diamond-sycl/src/run/main.cpp:22:
+../diamond-sycl/src/run/../extra/match_file.h: In member function ‘bool match_file::get(blast_match&, const blast_format&)’:
+../diamond-sycl/src/run/../extra/match_file.h:151:11: warning: unused variable ‘q’ [-Wunused-variable]
+   Letter *q = queryseq, *s = subjectseq;
+           ^
+../diamond-sycl/src/run/../extra/match_file.h:151:26: warning: unused variable ‘s’ [-Wunused-variable]
+   Letter *q = queryseq, *s = subjectseq;
+                          ^
+../diamond-sycl/src/run/../extra/match_file.h:152:12: warning: unused variable ‘match_mask’ [-Wunused-variable]
+   unsigned match_mask = 0, current_len = 0;
+            ^~~~~~~~~~
+../diamond-sycl/src/run/../extra/match_file.h:152:28: warning: unused variable ‘current_len’ [-Wunused-variable]
+   unsigned match_mask = 0, current_len = 0;
+                            ^~~~~~~~~~~
+In file included from ../diamond-sycl/src/run/../extra/compare.h:24,
+                 from ../diamond-sycl/src/run/main.cpp:22:
+../diamond-sycl/src/run/../extra/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/run/../extra/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../extra/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../extra/compare.h:24,
+                 from ../diamond-sycl/src/run/main.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../extra/compare.h:24,
+                 from ../diamond-sycl/src/run/main.cpp:22:
+../diamond-sycl/src/run/../extra/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../extra/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../extra/compare.h:24,
+                 from ../diamond-sycl/src/run/main.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/main.cpp:22:
+../diamond-sycl/src/run/../extra/compare.h: In function ‘void get_target_seq(std::vector<blast_match>::const_iterator&, std::vector<blast_match>::const_iterator&, const const_iterator&, const const_iterator&, Cmp_stats&)’:
+../diamond-sycl/src/run/../extra/compare.h:80:10: warning: unused variable ‘q’ [-Wunused-variable]
+   double q = sc_j / sc_i;
+          ^
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/basic/config.cpp -o ../diamond-sycl/src/basic/config.o
+In file included from ../diamond-sycl/src/basic/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/basic/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/basic/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/basic/config.cpp:31:
+../diamond-sycl/src/basic/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/basic/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/basic/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/basic/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/basic/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/basic/config.cpp:31:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/basic/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/basic/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/basic/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/basic/config.cpp:31:
+../diamond-sycl/src/basic/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/basic/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/basic/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/basic/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/basic/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/basic/config.cpp:31:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/basic/config.cpp:31:
+../diamond-sycl/src/basic/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/basic/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/basic/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/basic/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/basic/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/basic/config.cpp:31:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/basic/config.cpp:32:
+../diamond-sycl/src/basic/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/basic/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/basic/config.cpp:34:
+../diamond-sycl/src/basic/masking.h: At global scope:
+../diamond-sycl/src/basic/masking.h:45:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Masking> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/basic/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/basic/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/basic/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/basic/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/basic/config.cpp:31:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/basic/config.cpp: In constructor ‘Config::Config(int, const char**)’:
+../diamond-sycl/src/basic/config.cpp:347:24: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+    Masking::instance = auto_ptr<Masking>(new Masking(score_matrix));
+                        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/basic/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/basic/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/basic/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/basic/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/basic/config.cpp:31:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/util/tinythread.cpp -o ../diamond-sycl/src/util/tinythread.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/util/compressed_stream.cpp -o ../diamond-sycl/src/util/compressed_stream.o
+In file included from ../diamond-sycl/src/util/compressed_stream.cpp:26:
+../diamond-sycl/src/util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/util/compressed_stream.cpp:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/util/compressed_stream.cpp:26:
+../diamond-sycl/src/util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/util/compressed_stream.cpp:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/basic/score_matrix.cpp -o ../diamond-sycl/src/basic/score_matrix.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/blast_filter.cpp -o ../diamond-sycl/src/blast/blast_filter.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/blast/blast_seg.cpp -o ../diamond-sycl/src/blast/blast_seg.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/data/queries.cpp -o ../diamond-sycl/src/data/queries.o
+In file included from ../diamond-sycl/src/data/queries.h:22,
+                 from ../diamond-sycl/src/data/queries.cpp:19:
+../diamond-sycl/src/data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/queries.h:24,
+                 from ../diamond-sycl/src/data/queries.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h: At global scope:
+../diamond-sycl/src/data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/queries.h:24,
+                 from ../diamond-sycl/src/data/queries.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/queries.h:24,
+                 from ../diamond-sycl/src/data/queries.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/queries.h:24,
+                 from ../diamond-sycl/src/data/queries.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/queries.h:24,
+                 from ../diamond-sycl/src/data/queries.cpp:19:
+../diamond-sycl/src/data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/queries.h:24,
+                 from ../diamond-sycl/src/data/queries.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/data/reference.cpp -o ../diamond-sycl/src/data/reference.o
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/reference.h:27,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+../diamond-sycl/src/data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/reference.h:22,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/reference.h:27,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+../diamond-sycl/src/data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/reference.h:22,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/reference.h:27,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+../diamond-sycl/src/data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/reference.h:22,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/load_seqs.h:24,
+                 from ../diamond-sycl/src/data/reference.cpp:26:
+../diamond-sycl/src/data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/data/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/data/load_seqs.h:25,
+                 from ../diamond-sycl/src/data/reference.cpp:26:
+../diamond-sycl/src/data/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/data/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/reference.h:22,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/data/load_seqs.h:25,
+                 from ../diamond-sycl/src/data/reference.cpp:26:
+../diamond-sycl/src/data/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/reference.h:22,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/reference.cpp:26:
+../diamond-sycl/src/data/load_seqs.h: In function ‘size_t push_seq(Sequence_set&, Sequence_set**, const std::vector<char>&, unsigned int)’:
+../diamond-sycl/src/data/load_seqs.h:56:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+../diamond-sycl/src/data/load_seqs.h:46:27: warning: unused variable ‘queries’ [-Wunused-variable]
+   vector<Letter>  const * queries = proteins;
+                           ^~~~~~~
+In file included from ../diamond-sycl/src/data/reference.cpp:29:
+../diamond-sycl/src/data/../basic/masking.h: At global scope:
+../diamond-sycl/src/data/../basic/masking.h:45:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Masking> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/reference.h:22,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/data/reference.cpp: In function ‘void make_db()’:
+../diamond-sycl/src/data/reference.cpp:87:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Input_stream> db_file (Compressed_istream::auto_detect(config.input_ref_file));
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/reference.h:22,
+                 from ../diamond-sycl/src/data/reference.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/data/seed_histogram.cpp -o ../diamond-sycl/src/data/seed_histogram.o
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/seed_histogram.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/seed_histogram.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/seed_histogram.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/seed_histogram.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/daa_record.cpp -o ../diamond-sycl/src/output/daa_record.o
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/daa_record.h:23,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+../diamond-sycl/src/output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/daa_record.h:23,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/daa_record.h:23,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+../diamond-sycl/src/output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/daa_record.h:23,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/daa_record.h:23,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+../diamond-sycl/src/output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/daa_record.h:23,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/daa_record.h:26,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+../diamond-sycl/src/output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/daa_record.cpp:20:
+../diamond-sycl/src/output/output.h: At global scope:
+../diamond-sycl/src/output/output.h:129:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Output_sink> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/daa_record.h:23,
+                 from ../diamond-sycl/src/output/daa_record.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/output/daa_record.cpp: In function ‘Binary_buffer::Iterator& operator>>(Binary_buffer::Iterator&, DAA_query_record::Match&)’:
+../diamond-sycl/src/output/daa_record.cpp:59:27: warning: ‘subject_begin’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  r.subject_range.begin_ = (int)subject_begin;
+                           ^~~~~~~~~~~~~~~~~~
+../diamond-sycl/src/output/daa_record.cpp:56:11: warning: ‘query_begin’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  uint32_t query_begin, subject_begin;
+           ^~~~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/search/search.cpp -o ../diamond-sycl/src/search/search.o
+In file included from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/search.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/search.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/search.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/search.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/search.cpp:19:
+../diamond-sycl/src/search/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/search.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/../data/queries.h:22,
+                 from ../diamond-sycl/src/search/hit_filter.h:27,
+                 from ../diamond-sycl/src/search/search.cpp:20:
+../diamond-sycl/src/search/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/search/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/util/command_line_parser.cpp -o ../diamond-sycl/src/util/command_line_parser.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/util/seq_file_format.cpp -o ../diamond-sycl/src/util/seq_file_format.o
+In file included from ../diamond-sycl/src/util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/util/seq_file_format.cpp:19:
+../diamond-sycl/src/util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/util/seq_file_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/util/seq_file_format.cpp:19:
+../diamond-sycl/src/util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/util/seq_file_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/util/util.cpp -o ../diamond-sycl/src/util/util.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/util/Timer.cpp -o ../diamond-sycl/src/util/Timer.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/basic/basic.cpp -o ../diamond-sycl/src/basic/basic.o
+In file included from ../diamond-sycl/src/basic/basic.cpp:22:
+../diamond-sycl/src/basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/basic/basic.cpp:25:
+../diamond-sycl/src/basic/masking.h: At global scope:
+../diamond-sycl/src/basic/masking.h:45:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Masking> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/basic/masking.h:20,
+                 from ../diamond-sycl/src/basic/basic.cpp:25:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/floating_sw.cpp -o ../diamond-sycl/src/dp/floating_sw.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/basic/hssp.cpp -o ../diamond-sycl/src/basic/hssp.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/ungapped_align.cpp -o ../diamond-sycl/src/dp/ungapped_align.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/run/tools.cpp -o ../diamond-sycl/src/run/tools.o
+In file included from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+../diamond-sycl/src/run/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+../diamond-sycl/src/run/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/queries.h:22,
+                 from ../diamond-sycl/src/run/tools.cpp:25:
+../diamond-sycl/src/run/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/run/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/run/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/run/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../data/queries.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:25:
+../diamond-sycl/src/run/../data/../util/hash_table.h: At global scope:
+../diamond-sycl/src/run/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/run/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/run/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../data/queries.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:25:
+../diamond-sycl/src/run/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/queries.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:25:
+../diamond-sycl/src/run/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/tools.cpp:26:
+../diamond-sycl/src/run/../data/load_seqs.h: In function ‘size_t push_seq(Sequence_set&, Sequence_set**, const std::vector<char>&, unsigned int)’:
+../diamond-sycl/src/run/../data/load_seqs.h:56:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+../diamond-sycl/src/run/../data/load_seqs.h:46:27: warning: unused variable ‘queries’ [-Wunused-variable]
+   vector<Letter>  const * queries = proteins;
+                           ^~~~~~~
+In file included from ../diamond-sycl/src/run/tools.cpp:28:
+../diamond-sycl/src/run/../extra/match_file.h: In member function ‘bool match_file::get(blast_match&, const blast_format&)’:
+../diamond-sycl/src/run/../extra/match_file.h:151:11: warning: unused variable ‘q’ [-Wunused-variable]
+   Letter *q = queryseq, *s = subjectseq;
+           ^
+../diamond-sycl/src/run/../extra/match_file.h:151:26: warning: unused variable ‘s’ [-Wunused-variable]
+   Letter *q = queryseq, *s = subjectseq;
+                          ^
+../diamond-sycl/src/run/../extra/match_file.h:152:12: warning: unused variable ‘match_mask’ [-Wunused-variable]
+   unsigned match_mask = 0, current_len = 0;
+            ^~~~~~~~~~
+../diamond-sycl/src/run/../extra/match_file.h:152:28: warning: unused variable ‘current_len’ [-Wunused-variable]
+   unsigned match_mask = 0, current_len = 0;
+                            ^~~~~~~~~~~
+In file included from ../diamond-sycl/src/run/tools.cpp:29:
+../diamond-sycl/src/run/../basic/masking.h: At global scope:
+../diamond-sycl/src/run/../basic/masking.h:45:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Masking> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/run/tools.cpp: In function ‘void fastq2fasta()’:
+../diamond-sycl/src/run/tools.cpp:134:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Input_stream> f(Compressed_istream::auto_detect(config.query_file));
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/tools.cpp:24:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/greedy_align.cpp -o ../diamond-sycl/src/dp/greedy_align.o
+In file included from ../diamond-sycl/src/dp/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/dp/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/dp/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/dp/../align/../data/reference.h:27,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:23,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+../diamond-sycl/src/dp/../align/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/../align/../dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:22,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/dp/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/dp/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/dp/../align/../data/reference.h:27,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:23,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+../diamond-sycl/src/dp/../align/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/../align/../dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:22,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../align/../data/reference.h:27,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:23,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+../diamond-sycl/src/dp/../align/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/../align/../dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:22,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/dp/../output/output_format.h:26,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:31:
+../diamond-sycl/src/dp/../output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/dp/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/output_format.h:27,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:31:
+../diamond-sycl/src/dp/../output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/dp/../output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/../align/../dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:22,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/output_format.h:27,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:31:
+../diamond-sycl/src/dp/../output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/../align/../dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:22,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/greedy_align.cpp:31:
+../diamond-sycl/src/dp/../output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/../align/../dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/../align/extend_ungapped.h:22,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/dp/greedy_align.cpp: In instantiation of ‘void Greedy_aligner2::forward_pass(_it, _it, bool, double) [with _it = Index_iterator]’:
+../diamond-sycl/src/dp/greedy_align.cpp:530:93:   required from here
+../diamond-sycl/src/dp/greedy_align.cpp:294:30: warning: unused variable ‘shift’ [-Wunused-variable]
+     const int de = j->first, shift = dd - de;
+                              ^~~~~
+../diamond-sycl/src/dp/greedy_align.cpp:327:30: warning: unused variable ‘shift’ [-Wunused-variable]
+     const int de = j->first, shift = dd - de;
+                              ^~~~~
+../diamond-sycl/src/dp/greedy_align.cpp: In member function ‘int Greedy_aligner2::get_approximate_link(int, int, double, int)’:
+../diamond-sycl/src/dp/greedy_align.cpp:266:234: warning: ‘path_min’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     cout << "Link n=" << e_idx << " d=" << e.diag() << " i_end=" << e.query_end() << " max_i=" << max_i << " shift=" << shift << " space=" << space << " prefix_score=" << prefix_score << " link_score=" << link_score << " path_min="<<path_min<<endl;
+                                                                                                                                                                                                                                          ^~~~~~~~
+../diamond-sycl/src/dp/greedy_align.cpp:264:31: warning: ‘path_max’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    diags.add_edge(Diag_graph::Edge(prefix_score, path_max, link_j, d_idx, e_idx, prefix_score == path_max ? prefix_score : path_min, prefix_score_begin));
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../diamond-sycl/src/dp/../align/extend_ungapped.h:22,
+                 from ../diamond-sycl/src/dp/greedy_align.cpp:29:
+../diamond-sycl/src/dp/../align/../dp/dp.h:309:21: warning: ‘prefix_score_begin’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    node_out(node_out)
+                     ^
+../diamond-sycl/src/dp/greedy_align.cpp:223:80: note: ‘prefix_score_begin’ was declared here
+   int prefix_score = 0, link_score = 0, link_j, diff1 = 0, path_max, path_min, prefix_score_begin;
+                                                                                ^~~~~~~~~~~~~~~~~~
+../diamond-sycl/src/dp/greedy_align.cpp:223:41: warning: ‘link_j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   int prefix_score = 0, link_score = 0, link_j, diff1 = 0, path_max, path_min, prefix_score_begin;
+                                         ^~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/run/benchmark.cpp -o ../diamond-sycl/src/run/benchmark.o
+In file included from ../diamond-sycl/src/run/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/run/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/run/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../align/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/../align/extend_ungapped.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:25:
+../diamond-sycl/src/run/../align/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/run/../dp/floating_sw.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/run/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/run/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../align/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/../align/extend_ungapped.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:25:
+../diamond-sycl/src/run/../align/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/run/../dp/floating_sw.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../align/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/../align/extend_ungapped.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:25:
+../diamond-sycl/src/run/../align/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/run/../dp/floating_sw.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/run/../output/output_format.h:26,
+                 from ../diamond-sycl/src/run/benchmark.cpp:28:
+../diamond-sycl/src/run/../output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/run/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/run/../output/output_format.h:27,
+                 from ../diamond-sycl/src/run/benchmark.cpp:28:
+../diamond-sycl/src/run/../output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/run/../output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/run/../dp/floating_sw.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../output/output_format.h:27,
+                 from ../diamond-sycl/src/run/benchmark.cpp:28:
+../diamond-sycl/src/run/../output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/run/../dp/floating_sw.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/benchmark.cpp:28:
+../diamond-sycl/src/run/../output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../dp/../align/align.h:22,
+                 from ../diamond-sycl/src/run/../dp/floating_sw.h:23,
+                 from ../diamond-sycl/src/run/benchmark.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/run/benchmark.cpp: In function ‘void benchmark_greedy(const Sequence_set&, unsigned int, unsigned int)’:
+../diamond-sycl/src/run/benchmark.cpp:192:12: warning: unused variable ‘d’ [-Wunused-variable]
+  const int d = (int)qa - (int)sa, band = 7;
+            ^
+../diamond-sycl/src/run/benchmark.cpp:192:35: warning: unused variable ‘band’ [-Wunused-variable]
+  const int d = (int)qa - (int)sa, band = 7;
+                                   ^~~~
+../diamond-sycl/src/run/benchmark.cpp: In function ‘void benchmark_sw()’:
+../diamond-sycl/src/run/benchmark.cpp:300:11: warning: variable ‘qa’ set but not used [-Wunused-but-set-variable]
+  unsigned qa = 0, sa = 0;
+           ^~
+../diamond-sycl/src/run/benchmark.cpp:300:19: warning: variable ‘sa’ set but not used [-Wunused-but-set-variable]
+  unsigned qa = 0, sa = 0;
+                   ^~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/search/stage2.cpp -o ../diamond-sycl/src/search/stage2.o
+In file included from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/stage2.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/stage2.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/stage2.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/stage2.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/stage2.cpp:19:
+../diamond-sycl/src/search/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/stage2.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/../data/queries.h:22,
+                 from ../diamond-sycl/src/search/stage2.cpp:22:
+../diamond-sycl/src/search/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/search/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/output_format.cpp -o ../diamond-sycl/src/output/output_format.o
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+../diamond-sycl/src/output/../output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/output/output_format.h:26,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+../diamond-sycl/src/output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+../diamond-sycl/src/output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+../diamond-sycl/src/output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.cpp:21:
+../diamond-sycl/src/output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/output/output_format.cpp:26:1: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ auto_ptr<Output_format> output_format;
+ ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/output/output_format.cpp: In function ‘void init_output()’:
+../diamond-sycl/src/output/output_format.cpp:95:18: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  output_format = auto_ptr<Output_format>(get_output_format());
+                  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/output_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/join_blocks.cpp -o ../diamond-sycl/src/output/join_blocks.o
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+../diamond-sycl/src/output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+../diamond-sycl/src/output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+../diamond-sycl/src/output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/join_blocks.cpp:19:
+../diamond-sycl/src/output/output.h:129:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Output_sink> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/queries.h:22,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:21:
+../diamond-sycl/src/output/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:23:
+../diamond-sycl/src/output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:23:
+../diamond-sycl/src/output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/join_blocks.cpp:23:
+../diamond-sycl/src/output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/output/join_blocks.cpp: In member function ‘Target* Join_records::get_target()’:
+../diamond-sycl/src/output/join_blocks.cpp:148:11: warning: unused variable ‘t’ [-Wunused-variable]
+   Target *t = new Target(records.front().info_.score);
+           ^
+../diamond-sycl/src/output/join_blocks.cpp: In function ‘void join_worker(Task_queue<Text_buffer, Join_writer>*)’:
+../diamond-sycl/src/output/join_blocks.cpp:246:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<Output_format> f(output_format->clone());
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output.h:25,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+../diamond-sycl/src/output/../util/text_buffer.h:69:3: warning: ‘out’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   ptr_ += sizeof(_t);
+   ^~~~
+../diamond-sycl/src/output/join_blocks.cpp:228:15: note: ‘out’ was declared here
+  Text_buffer *out;
+               ^~~
+In file included from ../diamond-sycl/src/output/../output/../align/align.h:26,
+                 from ../diamond-sycl/src/output/../output/daa_write.h:28,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:22:
+../diamond-sycl/src/output/../output/../align/../util/task_queue.h:135:26: warning: ‘n’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  { return (head_idx_ + n - head_)%limit_; }
+           ~~~~~~~~~~~~~~~^~~~~~~~
+../diamond-sycl/src/output/join_blocks.cpp:227:9: note: ‘n’ was declared here
+  size_t n;
+         ^
+In file included from ../diamond-sycl/src/output/output.h:25,
+                 from ../diamond-sycl/src/output/join_blocks.cpp:19:
+../diamond-sycl/src/output/../util/text_buffer.h:226:19: warning: ‘seek_pos’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   return data_[pos];
+                   ^
+../diamond-sycl/src/output/join_blocks.cpp:234:10: note: ‘seek_pos’ was declared here
+   size_t seek_pos;
+          ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/data/frequent_seeds.cpp -o ../diamond-sycl/src/data/frequent_seeds.o
+In file included from ../diamond-sycl/src/data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/data/frequent_seeds.cpp:20:
+../diamond-sycl/src/data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/data/frequent_seeds.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/data/frequent_seeds.cpp:20:
+../diamond-sycl/src/data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/data/frequent_seeds.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/frequent_seeds.h:24,
+                 from ../diamond-sycl/src/data/frequent_seeds.cpp:20:
+../diamond-sycl/src/data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/data/frequent_seeds.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/align/query_mapper.cpp -o ../diamond-sycl/src/align/query_mapper.o
+In file included from ../diamond-sycl/src/align/../data/queries.h:22,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+../diamond-sycl/src/align/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/align/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+../diamond-sycl/src/align/../data/../util/hash_table.h: At global scope:
+../diamond-sycl/src/align/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+../diamond-sycl/src/align/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+../diamond-sycl/src/align/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/query_mapper.cpp:22:
+../diamond-sycl/src/align/../output/output.h:129:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Output_sink> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../output/output_format.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:23:
+../diamond-sycl/src/align/../output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../output/output_format.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:23:
+../diamond-sycl/src/align/../output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/query_mapper.cpp:23:
+../diamond-sycl/src/align/../output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/align/query_mapper.cpp: In member function ‘bool Query_mapper::generate_output(Text_buffer&, Statistics&)’:
+../diamond-sycl/src/align/query_mapper.cpp:178:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Target_culling> target_culling(Target_culling::get(targets.empty() ? 0 : &targets[0]));
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/align/query_mapper.cpp:182:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Output_format> f(output_format->clone());
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/query_mapper.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/align/align_target.cpp -o ../diamond-sycl/src/align/align_target.o
+In file included from ../diamond-sycl/src/align/../data/queries.h:22,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/align_target.cpp:19:
+../diamond-sycl/src/align/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/align/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/align_target.cpp:19:
+../diamond-sycl/src/align/../data/../util/hash_table.h: At global scope:
+../diamond-sycl/src/align/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/align_target.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/align_target.cpp:19:
+../diamond-sycl/src/align/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/align_target.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/align_target.cpp:19:
+../diamond-sycl/src/align/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/queries.h:24,
+                 from ../diamond-sycl/src/align/query_mapper.h:27,
+                 from ../diamond-sycl/src/align/align_target.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/blast_tab_format.cpp -o ../diamond-sycl/src/output/blast_tab_format.o
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+../diamond-sycl/src/output/../output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/output/output_format.h:26,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+../diamond-sycl/src/output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+../diamond-sycl/src/output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+../diamond-sycl/src/output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+../diamond-sycl/src/output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_tab_format.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/padded_banded_sw.cpp -o ../diamond-sycl/src/dp/padded_banded_sw.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/needleman_wunsch.cpp -o ../diamond-sycl/src/dp/needleman_wunsch.o
+In file included from ../diamond-sycl/src/dp/../output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/dp/../output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/dp/../output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/dp/../output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/dp/../output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/dp/../output/output_format.h:25,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:26:
+../diamond-sycl/src/dp/../output/../output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/dp/../output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/dp/../output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/dp/../output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/dp/../output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/dp/../output/output_format.h:25,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:26:
+../diamond-sycl/src/dp/../output/../output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/dp/../output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/dp/../output/output_format.h:25,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:26:
+../diamond-sycl/src/dp/../output/../output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/dp/../output/output_format.h:26,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:26:
+../diamond-sycl/src/dp/../output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/dp/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/output_format.h:27,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:26:
+../diamond-sycl/src/dp/../output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/dp/../output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/../output/output_format.h:27,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:26:
+../diamond-sycl/src/dp/../output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/dp/needleman_wunsch.cpp:26:
+../diamond-sycl/src/dp/../output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/dp/../align/align.h:22,
+                 from ../diamond-sycl/src/dp/dp.h:26,
+                 from ../diamond-sycl/src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/dp/needleman_wunsch.cpp: In function ‘int needleman_wunsch(sequence, sequence, int, int, int, int, unsigned int, unsigned int, Diag_graph&, bool)’:
+../diamond-sycl/src/dp/needleman_wunsch.cpp:181:17: warning: unused variable ‘d’ [-Wunused-variable]
+  Diagonal_node *d = &diags[node];
+                 ^
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/blast_pairwise_format.cpp -o ../diamond-sycl/src/output/blast_pairwise_format.o
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+../diamond-sycl/src/output/../output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/output/output_format.h:26,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+../diamond-sycl/src/output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+../diamond-sycl/src/output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+../diamond-sycl/src/output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+../diamond-sycl/src/output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/extra/roc.cpp -o ../diamond-sycl/src/extra/roc.o
+In file included from ../diamond-sycl/src/extra/roc.cpp:24:
+../diamond-sycl/src/extra/match_file.h: In member function ‘bool match_file::get(blast_match&, const blast_format&)’:
+../diamond-sycl/src/extra/match_file.h:151:11: warning: unused variable ‘q’ [-Wunused-variable]
+   Letter *q = queryseq, *s = subjectseq;
+           ^
+../diamond-sycl/src/extra/match_file.h:151:26: warning: unused variable ‘s’ [-Wunused-variable]
+   Letter *q = queryseq, *s = subjectseq;
+                          ^
+../diamond-sycl/src/extra/match_file.h:152:12: warning: unused variable ‘match_mask’ [-Wunused-variable]
+   unsigned match_mask = 0, current_len = 0;
+            ^~~~~~~~~~
+../diamond-sycl/src/extra/match_file.h:152:28: warning: unused variable ‘current_len’ [-Wunused-variable]
+   unsigned match_mask = 0, current_len = 0;
+                            ^~~~~~~~~~~
+In file included from ../diamond-sycl/src/extra/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/extra/roc.cpp:25:
+../diamond-sycl/src/extra/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/extra/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/extra/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/extra/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/extra/roc.cpp:25:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/extra/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/extra/roc.cpp:25:
+../diamond-sycl/src/extra/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/extra/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/extra/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/extra/roc.cpp:25:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/comp_based_stats.cpp -o ../diamond-sycl/src/dp/comp_based_stats.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/extra/model_sim.cpp -o ../diamond-sycl/src/extra/model_sim.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/run/double_indexed.cpp -o ../diamond-sycl/src/run/double_indexed.o
+In file included from ../diamond-sycl/src/run/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/run/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/run/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/run/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/run/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/queries.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:22:
+../diamond-sycl/src/run/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/run/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:26:
+../diamond-sycl/src/run/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/run/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../util/seq_file_format.h:24,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:26:
+../diamond-sycl/src/run/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/double_indexed.cpp:27:
+../diamond-sycl/src/run/../data/load_seqs.h: In function ‘size_t push_seq(Sequence_set&, Sequence_set**, const std::vector<char>&, unsigned int)’:
+../diamond-sycl/src/run/../data/load_seqs.h:56:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+../diamond-sycl/src/run/../data/load_seqs.h:46:27: warning: unused variable ‘queries’ [-Wunused-variable]
+   vector<Letter>  const * queries = proteins;
+                           ^~~~~~~
+In file included from ../diamond-sycl/src/run/double_indexed.cpp:28:
+../diamond-sycl/src/run/../output/output_format.h: At global scope:
+../diamond-sycl/src/run/../output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../output/daa_write.h:24,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:30:
+../diamond-sycl/src/run/../output/output.h:129:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Output_sink> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/double_indexed.cpp:32:
+../diamond-sycl/src/run/../basic/masking.h:45:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Masking> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/run/double_indexed.cpp: In function ‘void master_thread(Database_file&, Timer&)’:
+../diamond-sycl/src/run/double_indexed.cpp:258:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+         auto_ptr<Input_stream> d_query_file(Compressed_istream::auto_detect(config.query_file));
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/run/double_indexed.cpp:274:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Input_stream> query_file(Compressed_istream::auto_detect(config.query_file));
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/run/double_indexed.cpp:281:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Output_stream> master_out(config.compression == 1
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/run/double_indexed.cpp:286:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Output_stream> unaligned_file;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/run/double_indexed.cpp:288:20: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   unaligned_file = auto_ptr<Output_stream>(new Output_stream(config.unaligned));
+                    ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/run/../data/reference.h:22,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/seed_histogram.h: In instantiation of ‘Partitioned_histogram::Partitioned_histogram(const Sequence_set&, bool, const _filter*) [with _filter = Seed_set]’:
+../diamond-sycl/src/run/double_indexed.cpp:130:71:   required from here
+../diamond-sycl/src/run/../data/seed_histogram.h:96:10: warning: ‘void* memset(void*, int, size_t)’ clearing an object of non-trivial type ‘struct Array<unsigned int, 1024>’; use assignment or value-initialization instead [-Wclass-memaccess]
+    memset(data_[s].data(), 0, (p_.size() - 1)*sizeof(unsigned)*Const::seedp);
+    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/sorted_list.h:22,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/../util/util.h:333:8: note: ‘struct Array<unsigned int, 1024>’ declared here
+ struct Array
+        ^~~~~
+In file included from ../diamond-sycl/src/run/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/seed_histogram.h: In instantiation of ‘Partitioned_histogram::Partitioned_histogram(const Sequence_set&, bool, const _filter*) [with _filter = Hashed_seed_set]’:
+../diamond-sycl/src/run/double_indexed.cpp:132:77:   required from here
+../diamond-sycl/src/run/../data/seed_histogram.h:96:10: warning: ‘void* memset(void*, int, size_t)’ clearing an object of non-trivial type ‘struct Array<unsigned int, 1024>’; use assignment or value-initialization instead [-Wclass-memaccess]
+    memset(data_[s].data(), 0, (p_.size() - 1)*sizeof(unsigned)*Const::seedp);
+    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/sorted_list.h:22,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/../util/util.h:333:8: note: ‘struct Array<unsigned int, 1024>’ declared here
+ struct Array
+        ^~~~~
+In file included from ../diamond-sycl/src/run/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/seed_histogram.h: In instantiation of ‘Partitioned_histogram::Partitioned_histogram(const Sequence_set&, bool, const _filter*) [with _filter = No_filter]’:
+../diamond-sycl/src/run/double_indexed.cpp:134:70:   required from here
+../diamond-sycl/src/run/../data/seed_histogram.h:96:10: warning: ‘void* memset(void*, int, size_t)’ clearing an object of non-trivial type ‘struct Array<unsigned int, 1024>’; use assignment or value-initialization instead [-Wclass-memaccess]
+    memset(data_[s].data(), 0, (p_.size() - 1)*sizeof(unsigned)*Const::seedp);
+    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../diamond-sycl/src/run/../data/sorted_list.h:22,
+                 from ../diamond-sycl/src/run/../data/reference.h:27,
+                 from ../diamond-sycl/src/run/double_indexed.cpp:21:
+../diamond-sycl/src/run/../data/../util/util.h:333:8: note: ‘struct Array<unsigned int, 1024>’ declared here
+ struct Array
+        ^~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/search/collision.cpp -o ../diamond-sycl/src/search/collision.o
+In file included from ../diamond-sycl/src/search/../data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/search/collision.h:22,
+                 from ../diamond-sycl/src/search/collision.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/search/collision.h:22,
+                 from ../diamond-sycl/src/search/collision.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/../data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/search/collision.h:22,
+                 from ../diamond-sycl/src/search/collision.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/search/collision.h:22,
+                 from ../diamond-sycl/src/search/collision.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/../data/frequent_seeds.h:24,
+                 from ../diamond-sycl/src/search/collision.h:22,
+                 from ../diamond-sycl/src/search/collision.cpp:19:
+../diamond-sycl/src/search/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/frequent_seeds.h:23,
+                 from ../diamond-sycl/src/search/collision.h:22,
+                 from ../diamond-sycl/src/search/collision.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/sam_format.cpp -o ../diamond-sycl/src/output/sam_format.o
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+../diamond-sycl/src/output/../output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/output/output_format.h:26,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+../diamond-sycl/src/output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+../diamond-sycl/src/output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+../diamond-sycl/src/output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/sam_format.cpp:19:
+../diamond-sycl/src/output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/sam_format.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/align/align.cpp -o ../diamond-sycl/src/align/align.o
+In file included from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/reference.h:27,
+                 from ../diamond-sycl/src/align/align.cpp:21:
+../diamond-sycl/src/align/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/align/../data/reference.h:27,
+                 from ../diamond-sycl/src/align/align.cpp:21:
+../diamond-sycl/src/align/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../data/reference.h:27,
+                 from ../diamond-sycl/src/align/align.cpp:21:
+../diamond-sycl/src/align/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/align/../output/output_format.h:26,
+                 from ../diamond-sycl/src/align/align.cpp:22:
+../diamond-sycl/src/align/../output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/align/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/align/../output/output_format.h:27,
+                 from ../diamond-sycl/src/align/align.cpp:22:
+../diamond-sycl/src/align/../output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/align/../output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/../output/output_format.h:27,
+                 from ../diamond-sycl/src/align/align.cpp:22:
+../diamond-sycl/src/align/../output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/align.cpp:22:
+../diamond-sycl/src/align/../output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/align/align.cpp:24:
+../diamond-sycl/src/align/../output/output.h:129:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Output_sink> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/align/align.cpp:60:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Queue> queue_;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/align/align.cpp: In static member function ‘static void Align_fetcher::init(size_t, size_t, std::vector<hit, std::allocator<hit> >::iterator, std::vector<hit, std::allocator<hit> >::iterator)’:
+../diamond-sycl/src/align/align.cpp:37:12: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   queue_ = auto_ptr<Queue>(new Queue(qbegin, qend));
+            ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/align/align.cpp: At global scope:
+../diamond-sycl/src/align/align.cpp:63:1: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ auto_ptr<Queue> Align_fetcher::queue_;
+ ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/align/align.cpp: In function ‘void align_queries(Trace_pt_buffer&, Output_stream*)’:
+../diamond-sycl/src/align/align.cpp:124:27: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   Output_sink::instance = auto_ptr<Output_sink>(new Output_sink(query_range.first, output_file));
+                           ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/align/align.h:22,
+                 from ../diamond-sycl/src/align/align.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/search/setup.cpp -o ../diamond-sycl/src/search/setup.o
+In file included from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/setup.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/setup.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/setup.cpp:19:
+../diamond-sycl/src/search/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/setup.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/setup.cpp:19:
+../diamond-sycl/src/search/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/search/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/search/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/search/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/search/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/search/align_range.h:23,
+                 from ../diamond-sycl/src/search/setup.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/extra/opt.cpp -o ../diamond-sycl/src/extra/opt.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/diag_scores.cpp -o ../diamond-sycl/src/dp/diag_scores.o
+../diamond-sycl/src/dp/diag_scores.cpp: In function ‘void score_diagonal2(const Letter*, const Bias_correction&, const Letter*, int, int, int, std::vector<Diagonal_node>&, int)’:
+../diamond-sycl/src/dp/diag_scores.cpp:29:13: warning: unused variable ‘j’ [-Wunused-variable]
+  int i = 0, j = 0, begin = 0, end = 0, l = 0;
+             ^
+../diamond-sycl/src/dp/diag_scores.cpp: In member function ‘void Diag_scores::get_diag(int, int, int, int, int, std::vector<Diagonal_node>&, int, bool, const Bias_correction&)’:
+../diamond-sycl/src/dp/diag_scores.cpp:238:51: warning: unused variable ‘p_begin’ [-Wunused-variable]
+  int p = std::max((j_begin - j) / block_len, b0), p_begin = p, p_end = std::min((j_end - j + block_len - 1) / block_len, b1), best = -1, best_score = -1, begin = -1, max_score, last = p;
+                                                   ^~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/data/taxonomy.cpp -o ../diamond-sycl/src/data/taxonomy.o
+In file included from ../diamond-sycl/src/data/taxonomy.cpp:22:
+../diamond-sycl/src/data/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/data/taxonomy.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/taxonomy.cpp:22:
+../diamond-sycl/src/data/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/compressed_stream.h:23,
+                 from ../diamond-sycl/src/data/taxonomy.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/taxonomy.cpp:21:
+In constructor ‘Taxonomy::Accession::Accession(const string&)’,
+    inlined from ‘void Taxonomy::get_taxids(const char*, std::set<unsigned int>&) const’ at ../diamond-sycl/src/data/taxonomy.cpp:109:37:
+../diamond-sycl/src/data/taxonomy.h:49:12: warning: ‘char* strncpy(char*, const char*, size_t)’ specified bound 14 equals destination size [-Wstringop-truncation]
+     strncpy(this->s, t.c_str(), max_accesion_len);
+     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/lib/tantan/tantan.cpp -o ../diamond-sycl/src/lib/tantan/tantan.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/lib/tantan/tantale.cpp -o ../diamond-sycl/src/lib/tantan/tantale.o
+../diamond-sycl/src/lib/tantan/tantale.cpp:46: warning: ignoring #pragma omp simd [-Wunknown-pragmas]
+       #pragma omp simd reduction(+:accu)
+ 
+../diamond-sycl/src/lib/tantan/tantale.cpp:64: warning: ignoring #pragma omp simd [-Wunknown-pragmas]
+         #pragma omp simd
+ 
+../diamond-sycl/src/lib/tantan/tantale.cpp:75: warning: ignoring #pragma omp simd [-Wunknown-pragmas]
+    #pragma omp simd reduction(+:accu)
+ 
+../diamond-sycl/src/lib/tantan/tantale.cpp:96: warning: ignoring #pragma omp simd [-Wunknown-pragmas]
+         #pragma omp simd
+ 
+../diamond-sycl/src/lib/tantan/tantale.cpp:107: warning: ignoring #pragma omp simd [-Wunknown-pragmas]
+       #pragma omp simd reduction(+:accu)
+ 
+../diamond-sycl/src/lib/tantan/tantale.cpp:184: warning: ignoring #pragma omp simd [-Wunknown-pragmas]
+    #pragma omp simd
+ 
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/swipe.cpp -o ../diamond-sycl/src/dp/swipe.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/dp/banded_sw.cpp -o ../diamond-sycl/src/dp/banded_sw.o
+../diamond-sycl/src/dp/banded_sw.cpp: In function ‘void banded_sw(const sequence&, const sequence&, int, int, int, int, Hsp_data&)’:
+../diamond-sycl/src/dp/banded_sw.cpp:282:6: warning: unused variable ‘n’ [-Wunused-variable]
+  int n=0;
+      ^
+../diamond-sycl/src/dp/banded_sw.cpp:315:11: warning: ‘max_j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  traceback(query, subject, mtx.scores(), band, d_begin + j_begin, max_i, max_j, out);
+  ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../diamond-sycl/src/dp/banded_sw.cpp:315:11: warning: ‘max_i’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/data/sorted_list.cpp -o ../diamond-sycl/src/data/sorted_list.o
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/sorted_list.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/sorted_list.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/sorted_list.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/sorted_list.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/sorted_list.cpp:19:
+../diamond-sycl/src/data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/data/sorted_list.h:23,
+                 from ../diamond-sycl/src/data/sorted_list.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/queries.h:22,
+                 from ../diamond-sycl/src/data/sorted_list.cpp:21:
+../diamond-sycl/src/data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/data/seed_set.cpp -o ../diamond-sycl/src/data/seed_set.o
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_set.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_set.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_set.cpp:19:
+../diamond-sycl/src/data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/data/seed_set.h:23,
+                 from ../diamond-sycl/src/data/seed_set.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/util/binary_file.cpp -o ../diamond-sycl/src/util/binary_file.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/taxon_format.cpp -o ../diamond-sycl/src/output/taxon_format.o
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+../diamond-sycl/src/output/../output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+../diamond-sycl/src/output/../output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/output/output_format.h:26,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+../diamond-sycl/src/output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+../diamond-sycl/src/output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+../diamond-sycl/src/output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/taxon_format.cpp:20:
+../diamond-sycl/src/output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/../output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/output_format.h:25,
+                 from ../diamond-sycl/src/output/taxon_format.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/view.cpp -o ../diamond-sycl/src/output/view.o
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+../diamond-sycl/src/output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+../diamond-sycl/src/output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+../diamond-sycl/src/output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../output/daa_record.h:26,
+                 from ../diamond-sycl/src/output/output_format.h:26,
+                 from ../diamond-sycl/src/output/view.cpp:24:
+../diamond-sycl/src/output/../output/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/view.cpp:24:
+../diamond-sycl/src/output/../util/compressed_stream.h: At global scope:
+../diamond-sycl/src/output/../util/compressed_stream.h:47:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> in, out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_format.h:27,
+                 from ../diamond-sycl/src/output/view.cpp:24:
+../diamond-sycl/src/output/../util/compressed_stream.h:65:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<char> out;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/view.cpp:24:
+../diamond-sycl/src/output/output_format.h:57:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ extern auto_ptr<Output_format> output_format;
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/output/view.cpp:48:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Output_stream> f_;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+../diamond-sycl/src/output/view.cpp: In function ‘void view_query(DAA_query_record&, Text_buffer&, Output_format&)’:
+../diamond-sycl/src/output/view.cpp:77:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<Output_format> f(format.clone());
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/daa_file.h:30,
+                 from ../diamond-sycl/src/output/view.cpp:22:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/view.cpp:25:
+../diamond-sycl/src/output/../util/task_queue.h: In function ‘void View_context::operator()(unsigned int)’:
+../diamond-sycl/src/output/../util/task_queue.h:135:26: warning: ‘n’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  { return (head_idx_ + n - head_)%limit_; }
+           ~~~~~~~~~~~~~~~^~~~~~~~
+../diamond-sycl/src/output/view.cpp:102:11: note: ‘n’ was declared here
+    size_t n;
+           ^
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/output_sink.cpp -o ../diamond-sycl/src/output/output_sink.o
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+../diamond-sycl/src/output/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+../diamond-sycl/src/output/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/reference.h:27,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+../diamond-sycl/src/output/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/output_sink.cpp:19:
+../diamond-sycl/src/output/output.h:129:9: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Output_sink> instance;
+         ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../data/queries.h:22,
+                 from ../diamond-sycl/src/output/output_sink.cpp:20:
+../diamond-sycl/src/output/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+../diamond-sycl/src/output/output_sink.cpp: At global scope:
+../diamond-sycl/src/output/output_sink.cpp:25:1: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ auto_ptr<Output_sink> Output_sink::instance;
+ ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../data/reference.h:22,
+                 from ../diamond-sycl/src/output/output.h:27,
+                 from ../diamond-sycl/src/output/output_sink.cpp:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c ../diamond-sycl/src/output/target_culling.cpp -o ../diamond-sycl/src/output/target_culling.o
+In file included from ../diamond-sycl/src/output/../align/../data/queries.h:22,
+                 from ../diamond-sycl/src/output/../align/query_mapper.h:27,
+                 from ../diamond-sycl/src/output/target_culling.h:23,
+                 from ../diamond-sycl/src/output/target_culling.cpp:20:
+../diamond-sycl/src/output/../align/../data/../basic/translate.h: In static member function ‘static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)’:
+../diamond-sycl/src/output/../align/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+                                         if ( (j-p) >= runLen)
+                                              ~~~~~~^~~~~~~~~
+In file included from ../diamond-sycl/src/output/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/queries.h:24,
+                 from ../diamond-sycl/src/output/../align/query_mapper.h:27,
+                 from ../diamond-sycl/src/output/target_culling.h:23,
+                 from ../diamond-sycl/src/output/target_culling.cpp:20:
+../diamond-sycl/src/output/../align/../data/../util/hash_table.h: At global scope:
+../diamond-sycl/src/output/../align/../data/../util/hash_table.h:207:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<entry> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/output/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/queries.h:24,
+                 from ../diamond-sycl/src/output/../align/query_mapper.h:27,
+                 from ../diamond-sycl/src/output/target_culling.h:23,
+                 from ../diamond-sycl/src/output/target_culling.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/queries.h:24,
+                 from ../diamond-sycl/src/output/../align/query_mapper.h:27,
+                 from ../diamond-sycl/src/output/target_culling.h:23,
+                 from ../diamond-sycl/src/output/target_culling.cpp:20:
+../diamond-sycl/src/output/../align/../data/../util/hash_table.h:308:2: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  auto_ptr<fp> table;
+  ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/output/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/queries.h:24,
+                 from ../diamond-sycl/src/output/../align/query_mapper.h:27,
+                 from ../diamond-sycl/src/output/target_culling.h:23,
+                 from ../diamond-sycl/src/output/target_culling.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from ../diamond-sycl/src/output/../align/../data/queries.h:24,
+                 from ../diamond-sycl/src/output/../align/query_mapper.h:27,
+                 from ../diamond-sycl/src/output/target_culling.h:23,
+                 from ../diamond-sycl/src/output/target_culling.cpp:20:
+../diamond-sycl/src/output/../align/../data/sorted_list.h:230:3: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   auto_ptr<sorted_list::buffered_iterator> it;
+   ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from ../diamond-sycl/src/output/../align/../data/../util/hash_table.h:24,
+                 from ../diamond-sycl/src/output/../align/../data/seed_set.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/seed_histogram.h:28,
+                 from ../diamond-sycl/src/output/../align/../data/sorted_list.h:23,
+                 from ../diamond-sycl/src/output/../align/../data/queries.h:24,
+                 from ../diamond-sycl/src/output/../align/query_mapper.h:27,
+                 from ../diamond-sycl/src/output/target_culling.h:23,
+                 from ../diamond-sycl/src/output/target_culling.cpp:20:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c masking.cu -o masking.o
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(39): warning #815-D: type qualifier on return type is meaningless
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+
+masking.cu(368): warning #177-D: variable "cnt" was declared but never referenced
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(39): warning #815-D: type qualifier on return type is meaningless
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+
+../diamond-sycl/src/basic/masking.h:45:13: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  static auto_ptr<Masking> instance;
+             ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:53:25: note: declared here
+   template<typename> class auto_ptr;
+                         ^~~~~~~~
+masking.cu:209:6: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+ auto_ptr<Masking> Masking::instance;
+      ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:53:25: note: declared here
+   template<typename> class auto_ptr;
+                         ^~~~~~~~
+masking.cu: In function ‘void mask_seqs(Sequence_set&, const Masking&, bool)’:
+masking.cu:422:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+       for (int j = 0; j < seqs.length(i); j++) {
+                 ~~^~~~~~~~~~~~~~~~
+masking.cu:426:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+       for (int j = 0; j < seqs.length(i); j++)
+                 ~~^~~~~~~~~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 ../diamond-sycl/src/blast/sm_blosum45.o ../diamond-sycl/src/blast/sm_blosum50.o ../diamond-sycl/src/blast/sm_blosum62.o ../diamond-sycl/src/blast/sm_blosum80.o ../diamond-sycl/src/blast/sm_blosum90.o ../diamond-sycl/src/blast/sm_pam30.o ../diamond-sycl/src/blast/sm_pam70.o ../diamond-sycl/src/blast/sm_pam250.o ../diamond-sycl/src/run/main.o ../diamond-sycl/src/basic/config.o ../diamond-sycl/src/util/tinythread.o ../diamond-sycl/src/util/compressed_stream.o ../diamond-sycl/src/basic/score_matrix.o ../diamond-sycl/src/blast/blast_filter.o ../diamond-sycl/src/blast/blast_seg.o ../diamond-sycl/src/data/queries.o ../diamond-sycl/src/data/reference.o ../diamond-sycl/src/data/seed_histogram.o ../diamond-sycl/src/output/daa_record.o ../diamond-sycl/src/search/search.o ../diamond-sycl/src/util/command_line_parser.o ../diamond-sycl/src/util/seq_file_format.o ../diamond-sycl/src/util/util.o ../diamond-sycl/src/util/Timer.o ../diamond-sycl/src/basic/basic.o ../diamond-sycl/src/dp/floating_sw.o ../diamond-sycl/src/basic/hssp.o ../diamond-sycl/src/dp/ungapped_align.o ../diamond-sycl/src/run/tools.o ../diamond-sycl/src/dp/greedy_align.o ../diamond-sycl/src/run/benchmark.o ../diamond-sycl/src/search/stage2.o ../diamond-sycl/src/output/output_format.o ../diamond-sycl/src/output/join_blocks.o ../diamond-sycl/src/data/frequent_seeds.o ../diamond-sycl/src/align/query_mapper.o ../diamond-sycl/src/align/align_target.o ../diamond-sycl/src/output/blast_tab_format.o ../diamond-sycl/src/dp/padded_banded_sw.o ../diamond-sycl/src/dp/needleman_wunsch.o ../diamond-sycl/src/output/blast_pairwise_format.o ../diamond-sycl/src/extra/roc.o ../diamond-sycl/src/dp/comp_based_stats.o ../diamond-sycl/src/extra/model_sim.o ../diamond-sycl/src/run/double_indexed.o ../diamond-sycl/src/search/collision.o ../diamond-sycl/src/output/sam_format.o ../diamond-sycl/src/align/align.o ../diamond-sycl/src/search/setup.o ../diamond-sycl/src/extra/opt.o ../diamond-sycl/src/dp/diag_scores.o ../diamond-sycl/src/data/taxonomy.o ../diamond-sycl/src/lib/tantan/tantan.o ../diamond-sycl/src/lib/tantan/tantale.o ../diamond-sycl/src/dp/swipe.o ../diamond-sycl/src/dp/banded_sw.o ../diamond-sycl/src/data/sorted_list.o ../diamond-sycl/src/data/seed_set.o ../diamond-sycl/src/util/binary_file.o ../diamond-sycl/src/output/taxon_format.o ../diamond-sycl/src/output/view.o ../diamond-sycl/src/output/output_sink.o ../diamond-sycl/src/output/target_culling.o ./masking.o  -o cuda -lz -lpthread

@@ -1,0 +1,39 @@
+~/repos/llvm/build/bin/clang++	-DOUTPUT  ./main.c \
+	-I./util/timer/ \
+	-I./util/file/ \
+	-c \
+	-o ./main.o 
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -I./util/timer/ -I./util/file/ -I./util/avi -I./util/avi -I./util/file -I./util/timer -I./util/timer -DOUTPUT -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3   ./kernel/kernel.cpp \
+	-c \
+	-o ./kernel/kernel.o 
+In file included from ./kernel/kernel.cpp:361:
+./kernel/kernel.sycl:1316:28: error: use of undeclared identifier 'sqrt'; did you mean 'sycl::sqrt'?
+ 1316 |     in2_sqr_sub2[ei_new] = sqrt(temp2);
+      |                            ^~~~
+      |                            sycl::sqrt
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:188:34: note: 'sycl::sqrt' declared here
+  188 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, sqrt)
+      |                                  ^
+In file included from ./kernel/kernel.cpp:361:
+./kernel/kernel.sycl:1522:17: error: use of undeclared identifier 'sqrt'; did you mean 'sycl::sqrt'?
+ 1522 |     deviation = sqrt(variance);                                // gets standard deviation of ROI
+      |                 ^~~~
+      |                 sycl::sqrt
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:188:34: note: 'sycl::sqrt' declared here
+  188 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, sqrt)
+      |                                  ^
+In file included from ./kernel/kernel.cpp:361:
+./kernel/kernel.sycl:1525:17: error: use of undeclared identifier 'sqrt'; did you mean 'sycl::sqrt'?
+ 1525 |     denomT[0] = sqrt((float)(common.in_elem-1))*deviation;
+      |                 ^~~~
+      |                 sycl::sqrt
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:188:34: note: 'sycl::sqrt' declared here
+  188 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, sqrt)
+      |                                  ^
+In file included from ./kernel/kernel.cpp:361:
+./kernel/kernel.sycl:1832:31: error: use of undeclared identifier 'fabs'
+ 1832 |       largest_value_current = fabs(mask_conv[largest_coordinate_current]);
+      |                               ^
+4 errors generated.
+make: *** [Makefile:115: kernel/kernel.o] Error 1

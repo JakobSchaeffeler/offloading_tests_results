@@ -1,0 +1,152 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c main.c -o main.o
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c fbase.c -o fbase.o
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+fbase.c:46:46: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+   46 |   do { c = fgetc(f); } while (c != '\n' && c != EOF);
+      |                                            ~ ^  ~~~
+fbase.c:84:28: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+   84 |   while ((c = fgetc(f)), c != EOF && c != '1')
+      |                          ~ ^  ~~~
+fbase.c:91:28: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+   91 |   while ((c = fgetc(f)), c != EOF && c != '1')
+      |                          ~ ^  ~~~
+3 warnings generated.
+fbase.c:46:46: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+   46 |   do { c = fgetc(f); } while (c != '\n' && c != EOF);
+      |                                            ~ ^  ~~~
+fbase.c:84:28: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+   84 |   while ((c = fgetc(f)), c != EOF && c != '1')
+      |                          ~ ^  ~~~
+fbase.c:91:28: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+   91 |   while ((c = fgetc(f)), c != EOF && c != '1')
+      |                          ~ ^  ~~~
+3 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c fparam.c -o fparam.o
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c util.c -o util.o
+clang++: warning: treating 'c' input as 'c++' when -fsycl is used [-Wexpected-file-type]
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 -c frna.cpp -o frna.o
+frna.cpp:1012:40: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1012 |         calc_V_bulge_internal(wi, lmem.get_pointer(), d, n, d_s, d_v, d_pm);
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1034:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1034 |         calc_coaxial(wi, lmem.get_pointer(), d, n, d_s, d_v, d_w, d_w5, d_w3, d_pm);
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1049:26: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1049 |         calc_WM(wi, lmem.get_pointer(), d, n, d_s, d_w, d_wm, d_pm);
+      |                          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1057:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1057 |         calc_wl_coax(wi, lmem.get_pointer(), d, n, d_s, d_v, d_w, d_wm, d_pm, d_wca);
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1065:33: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1065 |         calc_w5_and_w3(wi, lmem.get_pointer(), d, n, d_s, d_v, d_w5, d_w3, d_pm, d_wca);
+      |                                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+5 warnings generated.
+frna.cpp:1012:40: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1012 |         calc_V_bulge_internal(wi, lmem.get_pointer(), d, n, d_s, d_v, d_pm);
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1034:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1034 |         calc_coaxial(wi, lmem.get_pointer(), d, n, d_s, d_v, d_w, d_w5, d_w3, d_pm);
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1049:26: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1049 |         calc_WM(wi, lmem.get_pointer(), d, n, d_s, d_w, d_wm, d_pm);
+      |                          ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1057:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1057 |         calc_wl_coax(wi, lmem.get_pointer(), d, n, d_s, d_v, d_w, d_wm, d_pm, d_wca);
+      |                               ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+frna.cpp:1065:33: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+ 1065 |         calc_w5_and_w3(wi, lmem.get_pointer(), d, n, d_s, d_v, d_w5, d_w3, d_pm, d_wca);
+      |                                 ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+5 warnings generated.
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -D__CUDACC__ -DINT -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3 main.o fbase.o fparam.o util.o frna.o  -o sycl 

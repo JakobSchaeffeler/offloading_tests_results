@@ -1,0 +1,237 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:31:14: error: no matching function for call to 'pow'
+   31 |              sycl::pow<double>((T / 1e3), (-0.2)) *
+      |              ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:32:28: error: no matching function for call to 'pow'
+   32 |              (1.0 / (1.0 + sycl::pow<double>((T / 1e6), (0.7))));
+      |                            ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:33:28: error: no matching function for call to 'pow'
+   33 |   alpha_hep = (1.5e-10) * (sycl::pow<double>(T, (-0.6353)));
+      |                            ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:34:25: error: no matching function for call to 'pow'
+   34 |   alpha_d = (1.9e-3) * (sycl::pow<double>(T, (-1.5))) *
+      |                         ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:37:16: error: no matching function for call to 'pow'
+   37 |                sycl::pow<double>((T / 1e3), (-0.2)) *
+      |                ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:38:30: error: no matching function for call to 'pow'
+   38 |                (1.0 / (1.0 + sycl::pow<double>((T / 1e6), (0.7))));
+      |                              ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:87:25: error: no matching function for call to 'pow'
+   87 |   le_hep = (5.54e-17) * sycl::pow<double>(T, (-0.397)) *
+      |                         ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:96:40: error: no matching function for call to 'pow'
+   96 |   lr_hp = (8.70e-27) * sycl::sqrt(T) * sycl::pow<double>((T / 1e3), (-0.2)) *
+      |                                        ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:97:25: error: no matching function for call to 'pow'
+   97 |           (1.0 / (1.0 + sycl::pow<double>((T / 1e6), (0.7)))) * n_e * n_hp;
+      |                         ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:98:25: error: no matching function for call to 'pow'
+   98 |   lr_hep = (1.55e-26) * sycl::pow<double>(T, (0.3647)) * n_e * n_hep;
+      |                         ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:99:42: error: no matching function for call to 'pow'
+   99 |   lr_hepp = (3.48e-26) * sycl::sqrt(T) * sycl::pow<double>((T / 1e3), (-0.2)) *
+      |                                          ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:100:27: error: no matching function for call to 'pow'
+  100 |             (1.0 / (1.0 + sycl::pow<double>((T / 1e6), (0.7)))) * n_e * n_hepp;
+      |                           ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+main.cpp:101:25: error: no matching function for call to 'pow'
+  101 |   ld_hep = (1.24e-13) * sycl::pow<double>(T, (-1.5)) *
+      |                         ^~~~~~~~~~~~~~~~~
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: candidate template ignored: substitution failure [with T0 = double, T1 = double]: no type named 'type' in 'sycl::detail::builtin_enable<sycl::detail::default_ret_type, sycl::detail::fp_elem_type, sycl::detail::non_scalar_only, sycl::detail::same_elem_type, double, double>'
+   57 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:95:40: note: expanded from macro 'BUILTIN_GENF'
+   95 |   BUILTIN_GENF_DEVICE_COMMON(NUM_ARGS, NAME, __spirv_ocl_##NAME)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:89:34: note: expanded from macro 'BUILTIN_GENF_DEVICE_COMMON'
+   89 |   DEVICE_IMPL_TEMPLATE(NUM_ARGS, NAME, builtin_enable_math_t, VEC_IMPL)
+      |                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:205:50: note: expanded from macro 'DEVICE_IMPL_TEMPLATE'
+  205 |   DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE(NUM_ARGS, NAME, ENABLER,                \
+      |                                                  ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/helper_macros.hpp:193:45: note: expanded from macro 'DEVICE_IMPL_TEMPLATE_CUSTOM_DELEGATE'
+  193 |   detail::ENABLER<NUM_ARGS##_TEMPLATE_TYPE>(NAME)(                             \
+      |                                             ^
+13 errors generated.
+make: *** [Makefile:71: main.o] Error 1

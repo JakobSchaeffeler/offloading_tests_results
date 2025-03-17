@@ -1,0 +1,5 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -D__STRICT_ANSI__ -O3 main.o -o omp 
+nvlink warning : Stack size for entry function '__omp_offloading_34_6728e6f__Z14distance_norm3iiPdPKdS1__l76' cannot be statically determined
+nvlink warning : Stack size for entry function '__omp_offloading_34_6728e6e__Z14distance_norm2iiPdPKdS1__l79' cannot be statically determined
+nvlink warning : Stack size for entry function '__omp_offloading_34_6728e6d__Z14distance_norm1iiPdPKdS1__l76' cannot be statically determined

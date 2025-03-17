@@ -1,0 +1,92 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../hellinger-cuda -I../include -I../hellinger-cuda -DUSE_GPU -DVERIFY -DUSE_GPU -DVERIFY -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:5:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from main.cpp:5:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:5:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:5:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+4 warnings generated.
+In file included from main.cpp:5:
+In file included from ../include/common.h:4:
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/CL/sycl.hpp:14:2: warning: "CL/sycl.hpp is deprecated, use sycl/sycl.hpp" [-W#warnings]
+   14 | #warning "CL/sycl.hpp is deprecated, use sycl/sycl.hpp"
+      |  ^
+In file included from main.cpp:5:
+../include/common.h:14:58: warning: 'constant_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   14 | constexpr access::target sycl_cmem     = access::target::constant_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:24:19: note: 'constant_buffer' has been explicitly marked deprecated here
+   24 |   constant_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2015,
+      |                   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:5:
+../include/common.h:15:58: warning: 'global_buffer' is deprecated: use 'target::device' instead [-Wdeprecated-declarations]
+   15 | constexpr access::target sycl_gmem     = access::target::global_buffer;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:23:17: note: 'global_buffer' has been explicitly marked deprecated here
+   23 |   global_buffer __SYCL2020_DEPRECATED("use 'target::device' instead") = 2014,
+      |                 ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+In file included from main.cpp:5:
+../include/common.h:16:58: warning: 'local' is deprecated: use `local_accessor` instead [-Wdeprecated-declarations]
+   16 | constexpr access::target sycl_lmem     = access::target::local;
+      |                                                          ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/access/access.hpp:25:9: note: 'local' has been explicitly marked deprecated here
+   25 |   local __SYCL2020_DEPRECATED("use `local_accessor` instead") = 2016,
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+4 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../include -I../hellinger-cuda -I../include -I../hellinger-cuda -DUSE_GPU -DVERIFY -DUSE_GPU -DVERIFY -O3 -O3 main.o -o sycl 

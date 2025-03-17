@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../extend2-sycl -O3 -o main.o -c main.cu
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../extend2-sycl -O3 -o read_data.o -c ../extend2-sycl/read_data.cpp
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -I../extend2-sycl -O3 main.o read_data.o -o cuda 

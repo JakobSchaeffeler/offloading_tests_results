@@ -1,0 +1,27 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:268:36: error: use of undeclared identifier 'log'; did you mean 'long'?
+  268 |       cLPattanaik =  yLPattanaik * log(deltaPattanaik + yLPattanaik / yLuminance) +
+      |                                    ^
+main.cpp:273:11: error: use of undeclared identifier 'pow'; did you mean 'sycl::pow'?
+  273 |       r = pow((r1 / yLuminance), gammaPattanaik) * yDPattanaik;
+      |           ^~~
+      |           sycl::pow
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: 'sycl::pow' declared here
+  161 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+main.cpp:274:11: error: use of undeclared identifier 'pow'; did you mean 'sycl::pow'?
+  274 |       g = pow((g1 / yLuminance), gammaPattanaik) * yDPattanaik;
+      |           ^~~
+      |           sycl::pow
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: 'sycl::pow' declared here
+  161 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+main.cpp:275:11: error: use of undeclared identifier 'pow'; did you mean 'sycl::pow'?
+  275 |       b = pow((b1 / yLuminance), gammaPattanaik) * yDPattanaik;
+      |           ^~~
+      |           sycl::pow
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:161:24: note: 'sycl::pow' declared here
+  161 | BUILTIN_GENF(TWO_ARGS, pow)
+      |                        ^
+4 errors generated.
+make: *** [Makefile:71: main.o] Error 1

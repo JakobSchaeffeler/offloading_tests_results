@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c curvilinear4sg.cu -o curvilinear4sg.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o curvilinear4sg.o -o cuda 

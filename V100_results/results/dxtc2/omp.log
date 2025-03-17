@@ -1,0 +1,48 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c main.cpp -o main.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c shrUtils.cpp -o shrUtils.o
+shrUtils.cpp:283:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  283 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:283:47: note: treat the string as an argument to avoid this
+  283 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:287:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  287 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:287:63: note: treat the string as an argument to avoid this
+  287 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:290:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  290 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:290:67: note: treat the string as an argument to avoid this
+  290 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+3 warnings generated.
+shrUtils.cpp:283:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  283 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:283:47: note: treat the string as an argument to avoid this
+  283 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cpp:287:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  287 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:287:63: note: treat the string as an argument to avoid this
+  287 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cpp:290:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  290 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cpp:290:67: note: treat the string as an argument to avoid this
+  290 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+3 warnings generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -c block.cpp -o block.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -DUSE_GPU -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 main.o shrUtils.o block.o -o omp 

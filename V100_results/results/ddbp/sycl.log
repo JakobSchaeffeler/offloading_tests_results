@@ -1,0 +1,39 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:578:37: error: call to 'cos' is ambiguous
+  578 |     double rtubeY = ((tubeY - isoY)*cos(theta) - (tubeZ - isoZ)*sin(theta)) + isoY;
+      |                                     ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:79:37: note: candidate function
+   79 | extern __DPCPP_SYCL_EXTERNAL double cos(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:179:34: note: candidate function
+  179 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, cos)
+      |                                  ^
+main.cpp:578:65: error: call to 'sin' is ambiguous
+  578 |     double rtubeY = ((tubeY - isoY)*cos(theta) - (tubeZ - isoZ)*sin(theta)) + isoY;
+      |                                                                 ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:77:37: note: candidate function
+   77 | extern __DPCPP_SYCL_EXTERNAL double sin(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:187:34: note: candidate function
+  187 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, sin)
+      |                                  ^
+main.cpp:579:37: error: call to 'sin' is ambiguous
+  579 |     double rtubeZ = ((tubeY - isoY)*sin(theta) + (tubeZ - isoZ)*cos(theta)) + isoZ;
+      |                                     ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:77:37: note: candidate function
+   77 | extern __DPCPP_SYCL_EXTERNAL double sin(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:187:34: note: candidate function
+  187 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, sin)
+      |                                  ^
+main.cpp:579:65: error: call to 'cos' is ambiguous
+  579 |     double rtubeZ = ((tubeY - isoY)*sin(theta) + (tubeZ - isoZ)*cos(theta)) + isoZ;
+      |                                                                 ^~~
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/stl_wrappers/cmath:79:37: note: candidate function
+   79 | extern __DPCPP_SYCL_EXTERNAL double cos(double x);
+      |                                     ^
+/home/ga27mex2/repos/llvm/build/bin/../include/sycl/detail/builtins/math_functions.inc:179:34: note: candidate function
+  179 | BUILTIN_GENF_NATIVE_OPT(ONE_ARG, cos)
+      |                                  ^
+4 errors generated.
+make: *** [Makefile:72: main.o] Error 1

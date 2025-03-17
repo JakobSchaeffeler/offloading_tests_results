@@ -1,0 +1,3 @@
+nvc++  -stdpar=gpu -std=c++17 -Wall -cudalib=cublas -gpu=sm_70 -O3 -c main.cu -o main.o
+make: nvc++: Command not found
+make: *** [Makefile:53: main.o] Error 127

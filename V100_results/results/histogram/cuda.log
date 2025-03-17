@@ -1,0 +1,59 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c histogram_compare.cu -o histogram_compare.o
+mersenne.h: In function ‘void mersenne::init_genrand(unsigned int)’:
+mersenne.h:62:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+     for (mti = 1; mti < N; mti++)
+               ~~~~^~~
+mersenne.h: In function ‘void mersenne::init_by_array(unsigned int*, int)’:
+mersenne.h:86:9: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+     k = (N > key_length ? N : key_length);
+       ~~^~~~~~~~~~~~
+mersenne.h:94:7: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+         if (i >= N)
+       ^ ~~
+mersenne.h:106:7: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+         if (i >= N)
+       ^ ~~
+mersenne.h: In function ‘unsigned int mersenne::genrand_int32()’:
+mersenne.h:124:9: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+     if (mti >= N)
+     ~~~~^~~~
+mersenne.h:131:17: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+         for (kk = 0; kk < N - M; kk++)
+              ~~~^~~~~~~~~
+mersenne.h:136:11: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+         for (; kk < N - 1; kk++)
+         ~~^~~~~~~~~~~
+test_util.h: In function ‘bool IsNaN(T) [with T = float]’:
+test_util.h:314:59: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     volatile unsigned int bits = reinterpret_cast<unsigned int &>(val);
+                                                           ^
+test_util.h: In function ‘bool IsNaN(T) [with T = double]’:
+test_util.h:349:38: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     volatile unsigned long long bits = *reinterpret_cast<unsigned long long *>(&val);
+                                     ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+histogram_compare.cu: In function ‘void ReadTga(uchar4*&, int&, int&, const char*)’:
+histogram_compare.cu:242:44: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+             if (fread(tga_pixel, 1, pixel_bytes, fptr) != pixel_bytes)
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+histogram_compare.cu:253:48: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+             if (fread(tga_pixel, 1, pixel_bytes + 1, fptr) != pixel_bytes + 1)
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+histogram_compare.cu:276:44: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+                     if (fread(tga_pixel, 1, pixel_bytes, fptr) != pixel_bytes)
+                     ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+histogram_compare.cu: In function ‘int main(int, char**)’:
+histogram_compare.cu:649:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::__cxx11::basic_string<char> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+         for (int i = 0; i < file_tests.size(); ++i)
+                 ~~^~~~~~~~~~~~~~~~~~~
+histogram_compare.cu: In instantiation of ‘void TestMethods(PixelType*, int, int, int, double) [with int NUM_CHANNELS = 1; int ACTIVE_CHANNELS = 1; int NUM_BINS = 256; PixelType = uchar1]’:
+histogram_compare.cu:522:88:   required from here
+histogram_compare.cu:480:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::pair<std::__cxx11::basic_string<char>, double> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+         for (int i = 0; i < timings.size(); i++)
+                 ~~^~~~~~~~~~~~~~~~
+histogram_compare.cu: In instantiation of ‘void TestMethods(PixelType*, int, int, int, double) [with int NUM_CHANNELS = 4; int ACTIVE_CHANNELS = 3; int NUM_BINS = 256; PixelType = uchar4]’:
+histogram_compare.cu:529:88:   required from here
+histogram_compare.cu:480:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::pair<std::__cxx11::basic_string<char>, double> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+histogram_compare.cu: In instantiation of ‘void TestMethods(PixelType*, int, int, int, double) [with int NUM_CHANNELS = 4; int ACTIVE_CHANNELS = 3; int NUM_BINS = 256; PixelType = float4]’:
+histogram_compare.cu:546:88:   required from here
+histogram_compare.cu:480:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::pair<std::__cxx11::basic_string<char>, double> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 histogram_compare.o -o cuda 

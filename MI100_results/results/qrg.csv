@@ -1,0 +1,39 @@
+,omp 12500 omp offloading kernel,sycl 12500 sycl kernel,hip 12500 hip_kernel
+Runtime,4102905868.0,2603505312.0,2791059609.0
+SALU Instructions per wave,3020.79,1927.34,2627.97
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.53,0.44,0.48
+L1 Requests per wave,26591.99,11012.32,11012.32
+L1 Hit Rate,49.26,47.04,47.04
+L2 Requests per wave,315.08,557.98,557.93
+L2 Hit Rate,25.49,13.14,13.2
+Wavefront Occupancy (% of peak),740.16,452.01,474.39
+Dependency Wait Cycles per wave,172991.65,102093.57,108500.7
+Issue Wait Cycles per wave,4307.25,1450.62,1765.74
+Grid Size,51120.0,32799.5,32799.5
+#Threads,106.5,191.5,191.5
+Shared Memory Allocated,0.0,0.0,0.0
+Shared Memory Instructions per wave,555.48,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,555.48,577.56,577.56
+Global Memory Read Instructions per wave,491.32,449.6,449.6
+Global Memory Write Instructions per wave,64.15,127.96,127.96
+Coalesced Instructions (% of peak),66.19,90.65,90.65
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,42.06,81.92,58.69
+Global Write/Atomic Bytes per wave,13145.02,21386.11,21866.33
+SALU Instructions,2412856.0125,987746.69265625,1346814.093984375
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,21240352.012500003,5643727.96625,5643727.96625
+L2 Requests,251670.15,285960.39078125,285934.766171875
+Dependency Wait Cycles,138177080.4375,52322157.01898438,55605761.08828125
+Issue Wait Cycles,3440415.9375,743431.41703125,904927.95515625
+Shared Memory Instructions,443689.65,0.0,0.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,443689.65,295994.9878125,295994.9878125
+Global Memory Read Instructions,392441.85,230416.48750000002,230416.48750000002
+Global Memory Write Instructions,51239.81250000001,65578.5003125,65578.5003125
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,33595.425,41983.36,30078.166484375
+Global Write/Atomic Bytes,10499584.725,10960214.296015626,11206323.294296876

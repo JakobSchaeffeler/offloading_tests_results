@@ -1,0 +1,8 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c nearestNeighbor.cu -o nearestNeighbor.o
+In function ‘int parseCommandline(int, char**, char*, int*, float*, float*, int*, int*, int*)’,
+    inlined from ‘int main(int, char**)’ at nearestNeighbor.cu:179:5:
+nearestNeighbor.cu:183:8: warning: ‘char* strncpy(char*, const char*, size_t)’ specified bound 100 equals destination size [-Wstringop-truncation]
+   strncpy(filename,argv[1],100);
+   ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c utils.cu -o utils.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 nearestNeighbor.o utils.o -o cuda 

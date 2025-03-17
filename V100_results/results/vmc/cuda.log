@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c vmc2.cu -o vmc2.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 vmc2.o -o cuda 

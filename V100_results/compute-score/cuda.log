@@ -1,0 +1,13 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+scoped_ptrs.h(33): warning #550-D: variable "rc" was set but never used
+
+main.cu(134): warning #68-D: integer conversion resulted in a change of sign
+
+main.cu(134): warning #68-D: integer conversion resulted in a change of sign
+
+scoped_ptrs.h: In function ‘void* aocl_utils::alignedMalloc(size_t)’:
+scoped_ptrs.h:33:5: warning: variable ‘rc’ set but not used [-Wunused-but-set-variable]
+   int rc;
+     ^~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -c options.cu -o options.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 main.o options.o -o cuda 

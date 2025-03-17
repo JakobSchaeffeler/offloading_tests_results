@@ -1,0 +1,39 @@
+,omp 64 5 omp offloading kernel,sycl 64 5 sycl kernel,hip 64 5 hip_kernel
+Runtime,21337174284.0,13184576423.0,12936743560.0
+SALU Instructions per wave,707553.81,702582.25,704539.95
+VALU Instructions per wave,0.0,0.0,0.0
+IPC,0.24,0.42,0.44
+L1 Requests per wave,13479897.48,13317768.4,13317768.4
+L1 Hit Rate,51.48,50.87,50.9
+L2 Requests per wave,560561.4,561984.96,561845.59
+L2 Hit Rate,80.26,59.08,58.24
+Wavefront Occupancy (% of peak),3056.92,2016.12,2100.62
+Dependency Wait Cycles per wave,448244962.46,169931577.44,171846645.5
+Issue Wait Cycles per wave,3940933.0,4790824.7,5025660.46
+Grid Size,1327104.0,1327104.0,1327104.0
+#Threads,256.0,256.0,256.0
+Shared Memory Allocated,0.0,0.0,0.0
+Shared Memory Instructions per wave,336866.25,0.0,0.0
+Shared Memory Bank Conflicts (%),0.0,0.0,0.0
+Register Spill Instructions per wave,0.0,0.0,0.0
+Global Memory Instructions per wave,336866.25,332944.21,332944.21
+Global Memory Read Instructions per wave,336865.25,332943.21,332943.21
+Global Memory Write Instructions per wave,1.0,1.0,1.0
+Coalesced Instructions (% of peak),62.46,62.5,62.5
+Global Atomic Operations per wave,0.0,0.0,0.0
+Global Read Bytes per wave ,8125630.91,16565613.4,16933700.32
+Global Write/Atomic Bytes per wave,383.89,383.95,384.0
+SALU Instructions,14671835804.160002,14568745536.0,14609340403.199999
+VALU Instructions,0.0,0.0,0.0
+L1 Requests,279519154145.28,276157245542.4,276157245542.4
+L2 Requests,11623801190.4,11653320130.56,11650430154.24
+Dependency Wait Cycles,9294807541570.559,3523701189795.84,3563412041088.0
+Issue Wait Cycles,81719186688.0,99342540979.2,104212095298.56
+Shared Memory Instructions,6985258560.0,0.0,0.0
+Register Spill Instructions,0.0,0.0,0.0
+Global Memory Instructions,6985258560.0,6903931138.56,6903931138.56
+Global Memory Read Instructions,6985237824.0,6903910402.56,6903910402.56
+Global Memory Write Instructions,20736.0,20736.0,20736.0
+Global Atomic Operations,0.0,0.0,0.0
+Global Read Bytes ,168493082549.76,343504559462.4,351137209835.52
+Global Write/Atomic Bytes,7960343.04,7961587.2,7962624.0

@@ -1,0 +1,26 @@
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -DMILC_COMPLEX -DPRECISION -DMILC_COMPLEX -DPRECISION -O3 -O3 -c su3_nn_bench.cu -o su3_nn_bench.o
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")
+su3_nn_bench.cu:152:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  make_lattice(a.data(), ldim, Complx{1.0,0.0});
+                 ^
+1 warning generated when compiling for gfx908.
+su3_nn_bench.cu:152:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  make_lattice(a.data(), ldim, Complx{1.0,0.0});
+                 ^
+1 warning generated when compiling for host.
+hipcc --rocm-path=/opt/rocm -I/home/ga27mex2/rocm/hipCUB/build/_CPack_Packages/Linux/RPM/hipcub-3.3.0-Linux/devel/opt/rocm/include -std=c++14 -DMILC_COMPLEX -DPRECISION -DMILC_COMPLEX -DPRECISION -O3 -O3 su3_nn_bench.o -o hip 
+/opt/rocm/bin/rocm_agent_enumerator:95: SyntaxWarning: invalid escape sequence '\w'
+  @staticVars(search_name=re.compile("gfx[0-9a-fA-F]+:[-+:\w]+"))
+/opt/rocm/bin/rocm_agent_enumerator:152: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(amdgcn-amd-amdhsa--gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:154: SyntaxWarning: invalid escape sequence '\A'
+  line_search_term = re.compile("\A\s+Name:\s+(gfx\d+)")
+/opt/rocm/bin/rocm_agent_enumerator:175: SyntaxWarning: invalid escape sequence '\w'
+  target_search_term = re.compile("1002:\w+")

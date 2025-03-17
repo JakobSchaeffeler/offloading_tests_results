@@ -1,0 +1,28 @@
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -c main.c -o main.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -c base.c -o base.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+base.c:55:46: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+   55 |   do { c = fgetc(f); } while (c != '\n' && c != EOF);
+      |                                            ~ ^  ~~~
+base.c:101:28: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+  101 |   while ((c = fgetc(f)), c != EOF && c != '1')
+      |                          ~ ^  ~~~
+base.c:108:28: warning: result of comparison of constant -1 with expression of type 'char' is always true [-Wtautological-constant-out-of-range-compare]
+  108 |   while ((c = fgetc(f)), c != EOF && c != '1')
+      |                          ~ ^  ~~~
+3 warnings generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -c param.c -o param.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+param.c:881:11: warning: floating-point comparison is always true; constant cannot be represented exactly in type 'float' [-Wliteral-range]
+  881 |   if (chk != CHK)
+      |       ~~~ ^  ~~~
+1 warning generated.
+param.c:881:11: warning: floating-point comparison is always true; constant cannot be represented exactly in type 'float' [-Wliteral-range]
+  881 |   if (chk != CHK)
+      |       ~~~ ^  ~~~
+1 warning generated.
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -c util.c -o util.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -c prna.cpp -o prna.o
+clang++ -fopenmp -fopenmp-targets=nvptx64 -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -DFLOAT -DOMP_TARGET -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 main.o base.o param.o util.o prna.o  -o omp 

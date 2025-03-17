@@ -1,0 +1,25 @@
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3  ./main.cpp \
+	-c \
+	-o ./main.o \
+	-O3
+~/repos/llvm/build/bin/clang++	./util/graphics/graphics.c \
+	-c \
+	-o ./util/graphics/graphics.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/repos/llvm/build/bin/clang++	./util/graphics/resize.c \
+	-c \
+	-o ./util/graphics/resize.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/repos/llvm/build/bin/clang++	./util/timer/timer.c \
+	-c \
+	-o ./util/timer/timer.o \
+	-O3
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+~/repos/llvm/build/bin/clang++ -std=c++17 -Wall -fsycl --gcc-toolchain=/home/ga27mex2/spack_thx2/spack/opt/spack/linux-centos8-thunderx2/gcc-14.1.0/gcc-14.1.0-kl6fnbyj4mhv4v5emwvqi6nmxb4kvjae -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend --cuda-gpu-arch=sm_70 -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -O3 -O3 -O3	./main.o \
+	./util/graphics/graphics.o \
+	./util/graphics/resize.o \
+	./util/timer/timer.o \
+	-lm \
+	 -o srad

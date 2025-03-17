@@ -1,0 +1,23 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c lud.cpp -o lud.o
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 -c utils.cpp -o utils.o
+utils.cpp:148:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  148 |   float coe[2*size-1];
+      |             ^~~~~~~~
+utils.cpp:148:15: note: function parameter 'size' with unknown value cannot be used in a constant expression
+  148 |   float coe[2*size-1];
+      |               ^
+utils.cpp:144:42: note: declared here
+  144 | func_ret_t create_matrix(float **mp, int size){
+      |                                          ^
+1 warning generated.
+utils.cpp:148:13: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  148 |   float coe[2*size-1];
+      |             ^~~~~~~~
+utils.cpp:148:15: note: function parameter 'size' with unknown value cannot be used in a constant expression
+  148 |   float coe[2*size-1];
+      |               ^
+utils.cpp:144:42: note: declared here
+  144 | func_ret_t create_matrix(float **mp, int size){
+      |                                          ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -DUSE_GPU -O3 -O3 -O3 lud.o utils.o -o sycl 

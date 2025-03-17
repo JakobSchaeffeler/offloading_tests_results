@@ -1,0 +1,1924 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 128>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 128>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 128>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 128>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 128>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 128>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 128>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 128>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 256>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 256>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 256>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 256>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 256>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 256>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 256>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 256>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 512>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 512>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 512>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 512>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 512>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 512>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 512>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 512>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 1024>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 1024>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 1024>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 1024>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 1024>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 1024>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 1024>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 1024>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 2048>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 2048>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 2048>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 2048>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 2048>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 2048>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 2048>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 2048>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+40 warnings generated.
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 128>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 128>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 128>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 128>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 128>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 128>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 128>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 128>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:257:3: note: in instantiation of function template specialization 'run<128>' requested here
+  257 |   run< 128>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 256>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 256>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 256>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 256>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 256>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 256>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 256>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 256>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:258:3: note: in instantiation of function template specialization 'run<256>' requested here
+  258 |   run< 256>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 512>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 512>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 512>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 512>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 512>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 512>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 512>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 512>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:259:3: note: in instantiation of function template specialization 'run<512>' requested here
+  259 |   run< 512>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 1024>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 1024>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 1024>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 1024>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 1024>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 1024>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 1024>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 1024>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:260:3: note: in instantiation of function template specialization 'run<1024>' requested here
+  260 |   run<1024>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 2048>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:235:5: note: in instantiation of function template specialization 'runTest<char, 2048>' requested here
+  235 |     runTest< char, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 2048>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:236:5: note: in instantiation of function template specialization 'runTest<short, 2048>' requested here
+  236 |     runTest<short, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 2048>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:237:5: note: in instantiation of function template specialization 'runTest<int, 2048>' requested here
+  237 |     runTest<  int, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:185:31: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  185 |         scan<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                               ^
+main.cpp:184:99: note: while substituting into a lambda expression here
+  184 |       cgh.parallel_for<class base<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                   ^
+main.cpp:182:39: note: while substituting into a lambda expression here
+  182 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 2048>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+main.cpp:207:36: warning: 'get_pointer' is deprecated: local_accessor::get_pointer() is deprecated, please use get_multi_ptr() [-Wdeprecated-declarations]
+  207 |         scan_bcao<T, N>(item, temp.get_pointer(), num_blocks, d_out, d_in);
+      |                                    ^
+main.cpp:206:98: note: while substituting into a lambda expression here
+  206 |       cgh.parallel_for<class opt<T, N>>(sycl::nd_range<1>(gws, lws), [=] (sycl::nd_item<1> item) {
+      |                                                                                                  ^
+main.cpp:204:39: note: while substituting into a lambda expression here
+  204 |     q.submit([&] (sycl::handler &cgh) {
+      |                                       ^
+main.cpp:238:5: note: in instantiation of function template specialization 'runTest<long, 2048>' requested here
+  238 |     runTest< long, N>(q, n, repeat, report_timing);
+      |     ^
+main.cpp:261:3: note: in instantiation of function template specialization 'run<2048>' requested here
+  261 |   run<2048>(q, n, repeat);
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/accessor.hpp:2565:3: note: 'get_pointer' has been explicitly marked deprecated here
+ 2565 |   __SYCL2020_DEPRECATED(
+      |   ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+40 warnings generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 

@@ -1,0 +1,180 @@
+clang++  -fopenmp -fopenmp-targets=nvptx64 -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -I./meschach_lib -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -D__STRICT_ANSI__ -O3 -O3 -O3 -O3 -O3 -O3 -O3 -O3 detect_main.c -c
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:5:
+In file included from ./meschach_lib/matrix.h:38:
+In file included from ./meschach_lib/err.h:37:
+./meschach_lib/machine.h:191:12: error: 'isatty' is missing exception specification 'throw()'
+  191 | extern  int     isatty(int);
+      |                 ^          
+      |                             throw()
+./meschach_lib/machine.h:191:12: note: previous declaration is here
+  191 | extern  int     isatty(int);
+      |                 ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:5:
+./meschach_lib/matrix.h:203:8: error: a type specifier is required for all declarations
+  203 | extern  m_free(MAT *),v_free(VEC *),px_free(PERM *);
+      | ~~~~~~  ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:45:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:195:9: error: expected unqualified-id
+  195 |     min(const _Tp& __a, const _Tp& __b)
+      |         ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:195:9: error: expected ')'
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:195:5: note: to match this '('
+  195 |     min(const _Tp& __a, const _Tp& __b)
+      |     ^
+./meschach_lib/matrix.h:156:19: note: expanded from macro 'min'
+  156 | #define min(a,b)        ((a) > (b) ? (b) : (a))
+      |                          ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:45:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:195:5: error: expected ')'
+  195 |     min(const _Tp& __a, const _Tp& __b)
+      |     ^
+./meschach_lib/matrix.h:156:23: note: expanded from macro 'min'
+  156 | #define min(a,b)        ((a) > (b) ? (b) : (a))
+      |                              ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:195:5: note: to match this '('
+./meschach_lib/matrix.h:156:18: note: expanded from macro 'min'
+  156 | #define min(a,b)        ((a) > (b) ? (b) : (a))
+      |                         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:45:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:219:9: error: expected unqualified-id
+  219 |     max(const _Tp& __a, const _Tp& __b)
+      |         ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:219:9: error: expected ')'
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:219:5: note: to match this '('
+  219 |     max(const _Tp& __a, const _Tp& __b)
+      |     ^
+./meschach_lib/matrix.h:153:19: note: expanded from macro 'max'
+  153 | #define max(a,b)        ((a) > (b) ? (a) : (b))
+      |                          ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:45:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:219:5: error: expected ')'
+  219 |     max(const _Tp& __a, const _Tp& __b)
+      |     ^
+./meschach_lib/matrix.h:153:23: note: expanded from macro 'max'
+  153 | #define max(a,b)        ((a) > (b) ? (a) : (b))
+      |                              ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:219:5: note: to match this '('
+./meschach_lib/matrix.h:153:18: note: expanded from macro 'max'
+  153 | #define max(a,b)        ((a) > (b) ? (a) : (b))
+      |                         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:45:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:243:41: error: too many arguments provided to function-like macro invocation
+  243 |     min(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |                                         ^
+./meschach_lib/matrix.h:156:9: note: macro 'min' defined here
+  156 | #define min(a,b)        ((a) > (b) ? (b) : (a))
+      |         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:45:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:246:7: error: expected expression
+  246 |       if (__comp(__b, __a))
+      |       ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:249:6: error: expected ';' after top level declarator
+  249 |     }
+      |      ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:265:41: error: too many arguments provided to function-like macro invocation
+  265 |     max(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |                                         ^
+./meschach_lib/matrix.h:153:9: note: macro 'max' defined here
+  153 | #define max(a,b)        ((a) > (b) ? (a) : (b))
+      |         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:45:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/stl_algobase.h:919:34: error: expected unqualified-id
+  919 |           if (const size_t __len = std::min(__len1, __len2))
+      |                                         ^
+./meschach_lib/matrix.h:156:18: note: expanded from macro 'min'
+  156 | #define min(a,b)        ((a) > (b) ? (b) : (a))
+      |                         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:46:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/limits:317:11: error: too few arguments provided to function-like macro invocation
+  317 |       min() _GLIBCXX_USE_NOEXCEPT { return _Tp(); }
+      |           ^
+./meschach_lib/matrix.h:156:9: note: macro 'min' defined here
+  156 | #define min(a,b)        ((a) > (b) ? (b) : (a))
+      |         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:46:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/limits:317:10: error: expected ';' at end of declaration list
+  317 |       min() _GLIBCXX_USE_NOEXCEPT { return _Tp(); }
+      |          ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/limits:321:11: error: too few arguments provided to function-like macro invocation
+  321 |       max() _GLIBCXX_USE_NOEXCEPT { return _Tp(); }
+      |           ^
+./meschach_lib/matrix.h:153:9: note: macro 'max' defined here
+  153 | #define max(a,b)        ((a) > (b) ? (a) : (b))
+      |         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:46:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/limits:388:11: error: too few arguments provided to function-like macro invocation
+  388 |       min() _GLIBCXX_USE_NOEXCEPT { return false; }
+      |           ^
+./meschach_lib/matrix.h:156:9: note: macro 'min' defined here
+  156 | #define min(a,b)        ((a) > (b) ? (b) : (a))
+      |         ^
+In file included from detect_main.c:2:
+In file included from ./track_ellipse.h:4:
+In file included from ./find_ellipse.h:7:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/math.h:36:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/cmath:1892:
+In file included from /usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/bits/specfun.h:46:
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/limits:388:7: error: constexpr variable 'min' must be initialized by a constant expression
+  388 |       min() _GLIBCXX_USE_NOEXCEPT { return false; }
+      |       ^
+/usr/lib/gcc/aarch64-redhat-linux/8/../../../../include/c++/8/limits:388:10: error: expected ';' at end of declaration list
+  388 |       min() _GLIBCXX_USE_NOEXCEPT { return false; }
+      |          ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile:56: detect_main.o] Error 1

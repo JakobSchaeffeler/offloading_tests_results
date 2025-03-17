@@ -1,0 +1,5 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -o hybridsort.o -c hybridsort.cu
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -o bucketsort.o -c bucketsort.cu
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -o mergesort.o -c mergesort.cu
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_70 -O3 -o hybridsort    \
+	hybridsort.o bucketsort.o mergesort.o -lm

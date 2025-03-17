@@ -1,0 +1,44 @@
+,omp 10000000 1000 omp offloading kernel,sycl 10000000 1000 sycl kernel,cuda 10000000 1000 cuda_kernel
+Runtime,337070370.0,310950180.0,311557405.0
+HtoD copy time,11266685.0,12002055.0,11011520.0
+DtoH copy time,14015870.0,20986745.0,20969395.0
+Instructions Executed,58570199651.84137,31562558183.700718,29062557999.070015
+IPC,1.82591999999998,1.0918499999999696,0.9995350000000003
+Shared Memory Stores,1301216000.0,0.0,0.0
+Shared Memory Loads,625000000.0,0.0,0.0
+Shared Memory Store Bank Conflicts,1786485.0,0.0,0.0
+Shared Memory Load Bank Conflicts,10901480.0,0.0,0.0
+Global Memory Load Instructions,1250000000.0,1250000000.0,1250000000.0
+Global Memory Store Instructions,625000000.0,625000000.0,625000000.0
+Global Memory Load (MB),1056264.6200000006,1142474.6500000018,1136422.5400000054
+Global Memory Store (MB),579349.8099999997,639204.3199999989,635849.2700000029
+Global Memory Load Throughput (GB/s),448.13203999999985,491.23711000000054,488.21109500000154
+Global Memory Store Throughput (GB/s),250.6719349999999,280.99107999999995,279.3629350000003
+Global Memory Load Bank Conflicts,91700158.0,109886326.0,98027942.0
+Global Memory Store Bank Conflicts,37140816.0,36002540.0,35762475.0
+L1 Cache Accesses (Bytes),1651401.139999996,1805591.5400000014,1796770.3599999778
+L1 Cache Hits (%),0.0,0.0,0.0
+L1 Cache Throughput (GB/s),705.7005699999984,782.7957700000009,778.3851799999928
+L2 Cache Accesses (Bytes),1651575.2600000172,1805652.2699999968,1796827.3999999927
+L2 Cache Hits (%),37.6398999999997,37.598484999999556,37.596379999999634
+L2 Cache Throughput (GB/s),705.7773699999997,782.8258049999977,778.413449999999
+#Divergent Branches,0.0,0.0,0.0
+Warp Stalls - Barrier Not Issued,742596.0,0.0,0.0
+Warp Stalls - Branch Resolving Not Issued,74335.0,91046.0,97074.0
+Warp Stalls - Dispatch Stall Not Issued,1281.0,2550.0,10513.0
+Warp Stalls - Drain Not Issued,2044.0,53009.0,71856.0
+Warp Stalls - IMC Miss Not Issued,49760.0,58271.0,65219.0
+Warp Stalls - LG Throttle Not Issued,140.0,14.0,63.0
+Warp Stalls - Long Scoreboard Not Issued,6879154.0,9658166.0,9515646.0
+Warp Stalls - Math Pipe Throttle Not Issued,167316.0,116854.0,197022.0
+Warp Stalls - Membar Not Issued,0.0,0.0,0.0
+Warp Stalls - MIO Throttle Not Issued,9214.0,11866.0,10891.0
+Warp Stalls - Misc Not Issued,417.0,1633.0,4471.0
+Warp Stalls - No Instructions Not Issued,40992.0,47908.0,48379.0
+Warp Stalls - Not Selected Not Issued,0.0,0.0,0.0
+Warp Stalls - Selected Not Issued,0.0,0.0,0.0
+Warp Stalls - Short Scoreboard Not Issued,129868.0,113756.0,123062.0
+Warp Stalls - Sleeping Not Issued,0.0,0.0,0.0
+Warp Stalls - TEX Throttle Not Issued,7193.0,0.0,0.0
+Warp Stalls - Wait Not Issued,582901.0,346321.0,395452.0
+Occupancy,142757.28,179008.22999999972,177183.4300000001

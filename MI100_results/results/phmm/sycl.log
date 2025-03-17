@@ -1,0 +1,30 @@
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../phmm-cuda -I../phmm-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 -c main.cpp -o main.o
+In file included from main.cpp:7:
+./kernel.h:22:9: warning: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   22 |   sycl::multi_ptr<double[1][batch][2], sycl::access::address_space::local_space>
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+In file included from main.cpp:7:
+./kernel.h:22:9: warning: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' is deprecated: decorated::legacy multi_ptr specialization is deprecated since SYCL 2020. [-Wdeprecated-declarations]
+   22 |   sycl::multi_ptr<double[1][batch][2], sycl::access::address_space::local_space>
+      |         ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/multi_ptr.hpp:752:7: note: 'multi_ptr<double[1][4][2], sycl::access::address_space::local_space>' has been explicitly marked deprecated here
+  752 | class __SYCL2020_DEPRECATED(
+      |       ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:62:40: note: expanded from macro '__SYCL2020_DEPRECATED'
+   62 | #define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)
+      |                                        ^
+/home/ga27mex2/sycl_workspace/llvm/build/bin/../include/sycl/detail/defines_elementary.hpp:53:38: note: expanded from macro '__SYCL_DEPRECATED'
+   53 | #define __SYCL_DEPRECATED(message) [[deprecated(message)]]
+      |                                      ^
+1 warning generated.
+~/sycl_workspace/llvm/build/bin/clang++ -fsycl --gcc-toolchain=/home/ga27mex2/spack_rome2/spack/opt/spack/linux-sle_hpc15-zen2/gcc-14.2.0/gcc-14.2.0-5o6uafvyeefoza5cmnze5vcuwbdhzj6o/ -fsycl-targets=amdgcn-amd-amdhsa -Xsycl-target-backend --offload-arch=gfx908 -I/home/ga27mex2/sycl_workspace/llvm/build/lib/libsycl.so.8 -I../phmm-cuda -I../phmm-cuda -DUSE_GPU -DUSE_GPU -O3 -O3 main.o -o sycl 
